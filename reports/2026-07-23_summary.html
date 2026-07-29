@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股市场观点汇总 · 2026-07-23</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --text-secondary: #6c757d;
+    --border: #e9ecef;
+    --red: #dc3545;
+    --green: #28a745;
+    --blue: #2563eb;
+    --orange: #fd7e14;
+    --purple: #7c3aed;
+    --teal: #0d9488;
+    --gold: #d4a017;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .header h1 { font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
+  .header .subtitle { font-size: 14px; opacity: 0.8; }
+  .header .meta {
+    display: flex; justify-content: center; gap: 24px;
+    margin-top: 16px; font-size: 13px; opacity: 0.9;
+  }
+  .header .meta span { display: flex; align-items: center; gap: 6px; }
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .icon { font-size: 22px; }
+  .market-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .stat-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+  }
+  .stat-card .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .stat-card .value { font-size: 18px; font-weight: 700; }
+  .stat-card .change { font-size: 12px; margin-top: 2px; }
+  .red { color: var(--red); }
+  .green { color: var(--green); }
+  .blue { color: var(--blue); }
+  .orange { color: var(--orange); }
+  .view-item {
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--blue);
+  }
+  .view-item .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  .sector-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+  }
+  .sector-table th {
+    background: #f1f3f5;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+  .sector-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    vertical-align: top;
+  }
+  .sector-table tr:hover { background: #f8f9fa; }
+  .heat-bar {
+    display: inline-block;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--orange), var(--red));
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .stock-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--purple);
+  }
+  .stock-card .stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .stock-card .stock-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .stock-card .stock-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e0e7ff;
+    color: var(--blue);
+  }
+  .stock-card .stock-logic {
+    font-size: 13px;
+    color: #495057;
+    line-height: 1.7;
+  }
+  .stock-card .stock-source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+  .sentiment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .sentiment-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .sentiment-card .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .sentiment-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .sentiment-card li {
+    font-size: 13px;
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+  .sentiment-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+  }
+  .focus-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .focus-list li {
+    padding: 10px 14px;
+    background: #fff3cd;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    border-left: 4px solid var(--gold);
+  }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+  @media (max-width: 600px) {
+    .market-overview { grid-template-columns: repeat(2, 1fr); }
+    .sentiment-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>A股市场观点每日汇总</h1>
+  <div class="subtitle">基于15个飞书交流群的当日消息整理</div>
+  <div class="meta">
+    <span>📅 2026年7月23日（周四）</span>
+    <span>💬 监控群数：15</span>
+    <span>📊 消息总数：367</span>
+    <span>🕐 生成时间：21:10</span>
+  </div>
+</div>
+
+<!-- 大盘观点 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📈</span> 大盘走势与核心观点</div>
+  
+  <div class="market-overview">
+    <div class="stat-card">
+      <div class="label">三市成交额</div>
+      <div class="value">22,098亿</div>
+      <div class="change red">↓ 较昨日减少4,590亿</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">主力净流出</div>
+      <div class="value red">-222.8亿</div>
+      <div class="change">连续流出</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">两融余额</div>
+      <div class="value">27,197.75亿</div>
+      <div class="change green">↑ 较昨日增加14.93亿</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">中信净空单</div>
+      <div class="value">65,695</div>
+      <div class="change red">今日加空564</div>
+    </div>
+  </div>
+
+  <div class="view-item">
+    <strong>指数底部区域确立，反转仍需时间</strong><br>
+    指数如期再度收小阳线，底部区域已经确定。市场想要反转有两条路：一是美伊冲突彻底平息，短期难度较大；二是汪汪队持续呵护，逐步夯实底部，这条路需要时间。现阶段持续缩量，即便指数震荡上行，也很难操作，切勿频繁追高。
+    <div class="source">—— 核心逻辑社 / 洛飞小群 / 潘凤</div>
+  </div>
+
+  <div class="view-item">
+    <strong>三桶油与算力跷跷板效应明显</strong><br>
+    量化策略已将美伊冲突（石油）纳入交易因子。美伊冲突升级=双创（算力）弱势震荡，美伊冲突缓和=双创大涨。三桶油+四大行拉升吸血，算力被迫走弱。对比美股，英伟达和埃克森美孚可以同步走强，但大A缩量环境下属于典型零和博弈。
+    <div class="source">—— 核心逻辑社</div>
+  </div>
+
+  <div class="view-item">
+    <strong>公募AI持仓比例达58.57%，抱团风险引关注</strong><br>
+    公募基金二季报显示，主动偏股型公募在AI上的持仓比例已达58.57%，规模约3.5万亿。金融地产配置比例仅2.25%、医药5.65%、消费5.47%，均创或接近历史最低。高估值泡沫+无对手盘组合风险较高。
+    <div class="source">—— 信息早知道</div>
+  </div>
+
+  <div class="view-item">
+    <strong>操作建议：国产算力+指数ETF，不要满仓</strong><br>
+    节奏上一部分国产算力，一部分指数ETF。美伊冲突缓和前切勿满仓，不加杠杆。最近少折腾，守着国产算力+指数ETF躺好即可，逻辑持续加强，只要市场稍好，迟早还会爆发。
+    <div class="source">—— 核心逻辑社</div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔥</span> 板块热度排行</div>
+  <table class="sector-table">
+    <thead>
+      <tr>
+        <th style="width:40px">排名</th>
+        <th style="width:100px">板块</th>
+        <th style="width:120px">热度</th>
+        <th>核心逻辑与主要观点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>算力/国产算力</strong></td>
+        <td><span class="heat-bar" style="width:80px"></span>★★★★★</td>
+        <td>谷歌上调全年Capex至1950-2050亿美元，预告27年继续大幅增加；梁文锋4小时交流实录强调"算力远远不够"，国产芯片替代是历史性机会；华为超节点Atlas 950可平替英伟达GB200/GB300；芯原股份146.53亿新签订单+字节170万颗排产</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>半导体</strong></td>
+        <td><span class="heat-bar" style="width:68px"></span>★★★★☆</td>
+        <td>长鑫科技周一上市预期引发抢跑与虹吸担忧（参考中芯国际上市时科创50跌8.82%）；8英寸硅片供给缺口（Novara厂占全球5.5%）利好TCL中环、立昂微等；mSAP工艺供需缺口2027年预计35%；半导体设备短期调整系流动性影响，景气度持续向好</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>电力设备/燃气轮机</strong></td>
+        <td><span class="heat-bar" style="width:64px"></span>★★★★☆</td>
+        <td>GEV 26Q2新签订单12.1GW创新高，在手订单116GW，首次提出2030年产能30GW目标；安萨尔多重返美国市场签北美订单；杰瑞股份签99.5亿燃机合同；思源电气增资4亿扩超容产能，目标27年40xPE对应2400亿市值</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>有色金属</strong></td>
+        <td><span class="heat-bar" style="width:56px"></span>★★★★☆</td>
+        <td>铜价涨至接近1.4万美元，LME铜0-3转升水、BACK结构加深，现货偏紧；金价在4000美元筑底反复确认，出利空不跌更像是见底信号；灵宝黄金Q2业绩兑现最佳，28年仅4x估值看翻倍空间；紫金矿业、洛阳钼业、西部矿业等铜标的28年6-9x估值</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>医药/军团菌</strong></td>
+        <td><span class="heat-bar" style="width:44px"></span>★★★☆☆</td>
+        <td>美国纽约暴发军团病疫情，累计感染超60人、5人死亡；特一药业（红霉素片）、国药现代（克拉霉素片）、之江生物（检测试剂盒）等概念股受关注</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>零食量贩</strong></td>
+        <td><span class="heat-bar" style="width:40px"></span>★★★☆☆</td>
+        <td>鸣鸣很忙签约门店达3万家，26年开店有望达9000家；万辰26H1开店超25年全年；两者均处于15XPE以下，回调即布局点位，社区折扣零售天花板依然海阔天空</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>储能/锂电池</strong></td>
+        <td><span class="heat-bar" style="width:36px"></span>★★★☆☆</td>
+        <td>鹏辉能源26Q2储能出货12-13GWh环比增超20%，Wh净利提升至0.04元；消费税影响有限（海外为主）；26/27年PE分别14/10X</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>数据标注/AI数据</strong></td>
+        <td><span class="heat-bar" style="width:28px"></span>★★☆☆☆</td>
+        <td>文峰发言引爆全网，核心研究员一半工作量在标数据；海天瑞声为国内第一大训练数据集供应商，DeepSeek、阿里、字节等均为客户</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股分析 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🎯</span> 重点个股推荐与分析</div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">思源电气</span>
+      <span class="stock-tag">电力设备 · 中长线</span>
+    </div>
+    <div class="stock-logic">
+      增资4亿扩超容产能，数据中心应用场景进入批量阶段。26年目标收入270亿（+25%），目标订单375亿（+30%），海外订单增速超40%。预估26/27年归母净利润40亿+/60亿，当前对应27年仅20xPE处历史低位，参考GEV估值目标27年40xPE对应2400亿市值。
+    </div>
+    <div class="stock-source">来源：信息早知道（券商研报）</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">灵宝黄金</span>
+      <span class="stock-tag">有色金属 · 中长线</span>
+    </div>
+    <div class="stock-logic">
+      Q2业绩兑现最好的黄金股，下半年将迎密集催化。4500金价假设下28年仅4x估值，看翻倍空间。万国黄金集团28年5x，高成长高兑现。A股推荐赤峰黄金、山金国际。
+    </div>
+    <div class="stock-source">来源：信息早知道（券商研报）</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">鹏辉能源</span>
+      <span class="stock-tag">储能 · 中长线</span>
+    </div>
+    <div class="stock-logic">
+      26Q2储能出货12-13GWh环比增超20%，Wh净利提升至0.04元。消费税影响有限（海外为主+传导能力强）。产品结构持续改善（587Ah大储电芯、户储升级、海外占比提升），26/27年20/27亿元，对应PE 14/10X。
+    </div>
+    <div class="stock-source">来源：信息早知道（长江电新）</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">芯原股份</span>
+      <span class="stock-tag">半导体 · 中长线</span>
+    </div>
+    <div class="stock-logic">
+      146.53亿新签订单+字节Ada1芯片170万颗排产。若市场给予正反馈，国产AI芯片方向可能修复。NPU IP及芯片定制服务，端侧AI SoC赛道核心标的。
+    </div>
+    <div class="stock-source">来源：信息早知道 / 核心逻辑社</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">杰瑞股份</span>
+      <span class="stock-tag">燃气轮机 · 中长线</span>
+    </div>
+    <div class="stock-logic">
+      子公司签署约99.5亿元燃气轮机发电机组供应合同。燃机集成&模块化装备，受益AI基建电力需求。GEV订单创新高验证产业景气度。
+    </div>
+    <div class="stock-source">来源：信息早知道（券商研报）</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">新朋股份</span>
+      <span class="stock-tag">液冷 · 短线</span>
+    </div>
+    <div class="stock-logic">
+      液冷供货戴尔、超微，7月份海关供货单已确认。对标美股超微电脑大涨20%，A股AI服务器产业链受益。
+    </div>
+    <div class="stock-source">来源：信息早知道</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">万邦/有研g</span>
+      <span class="stock-tag">短线交易</span>
+    </div>
+    <div class="stock-logic">
+      小锦鲤群主当天做T万邦（-5加仓、+3减半、+8踢完底仓），下午切换有研g。科技调整下午最有抵抗的是国产方向，明天修复也优先这块，有研应该能出机构。
+    </div>
+    <div class="stock-source">来源：小锦鲤</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">浪潮信息 / 翱捷科技</span>
+      <span class="stock-tag">算力 · 短中线</span>
+    </div>
+    <div class="stock-logic">
+      翱捷科技业绩不错，浪潮信息有机会当龙头。AI服务器国内第一，对标美股超微电脑。中科曙光（高性能计算+液冷）、工业富联（全球最大AI服务器代工）、紫光股份（新华三）等亦受益。
+    </div>
+    <div class="stock-source">来源：猫十三 / 信息早知道</div>
+  </div>
+</div>
+
+<!-- 市场情绪与风险 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🌡️</span> 市场情绪与风险提示</div>
+  <div class="sentiment-grid">
+    <div class="sentiment-card">
+      <div class="title red">⚠️ 主要风险</div>
+      <ul>
+        <li>美伊冲突持续升级，石油因子压制科技股</li>
+        <li>长鑫科技周一上市，可能产生虹吸效应</li>
+        <li>公募AI抱团比例58.57%，一致性预期裂痕风险</li>
+        <li>市场持续缩量，存量资金内卷加剧</li>
+        <li>量化趋同交易导致题材暴涨暴跌</li>
+        <li>中信期货累计加空564手，净空65,695</li>
+      </ul>
+    </div>
+    <div class="sentiment-card">
+      <div class="title green">💡 积极信号</div>
+      <ul>
+        <li>指数底部区域基本确立，汪汪队持续呵护</li>
+        <li>谷歌/特斯拉/Alphabet业绩超预期，AI需求强劲</li>
+        <li>梁文锋强调国产算力历史性机会，华为超节点可平替</li>
+        <li>主要玩家今日减空1,822手，空头有所收敛</li>
+        <li>两融余额增加14.93亿，杠杆资金小幅回流</li>
+        <li>有色板块底部反弹，低估值+筹码干净</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 明日关注 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔔</span> 明日关注要点</div>
+  <ul class="focus-list">
+    <li><strong>算力能否切换：</strong>银行已反弹两天，市场关注明天或下周一算力是否迎来切换反弹</li>
+    <li><strong>长鑫科技上市节奏：</strong>周一上市预期下，半导体板块可能继续调整或抢跑</li>
+    <li><strong>美伊冲突动向：</strong>石油因子是当前压制科技的核心变量，关注地缘缓和信号</li>
+    <li><strong>成交量变化：</strong>今日缩量至2.2万亿，若继续缩量则题材持续性极差</li>
+    <li><strong>国产算力修复：</strong>科技今日调整，下午最有抵抗的是国产方向，明日修复优先关注</li>
+    <li><strong>有色板块延续：</strong>铜金共振，有色持仓从Q2的4%低位回升，关注资金持续流入</li>
+  </ul>
+</div>
+
+<div class="footer">
+  本报告由 WorkBuddy 自动整理生成 · 数据来源：15个飞书交流群 · 仅供个人参考，不构成投资建议
+</div>
+
+</div>
+</body>
+</html>
