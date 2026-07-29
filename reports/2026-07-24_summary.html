@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股市场观点汇总 · 2026-07-24</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --text-secondary: #6c757d;
+    --border: #e9ecef;
+    --red: #dc3545;
+    --green: #28a745;
+    --blue: #2563eb;
+    --orange: #fd7e14;
+    --purple: #7c3aed;
+    --teal: #0d9488;
+    --gold: #d4a017;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .header h1 { font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
+  .header .subtitle { font-size: 14px; opacity: 0.8; }
+  .header .meta {
+    display: flex; justify-content: center; gap: 24px;
+    margin-top: 16px; font-size: 13px; opacity: 0.9;
+  }
+  .header .meta span { display: flex; align-items: center; gap: 6px; }
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .icon { font-size: 22px; }
+  .market-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .stat-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+  }
+  .stat-card .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+  .stat-card .value { font-size: 18px; font-weight: 700; }
+  .stat-card .change { font-size: 12px; margin-top: 2px; }
+  .red { color: var(--red); }
+  .green { color: var(--green); }
+  .blue { color: var(--blue); }
+  .orange { color: var(--orange); }
+  .view-item {
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--blue);
+  }
+  .view-item .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+  }
+  .sector-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+  }
+  .sector-table th {
+    background: #f1f3f5;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+  }
+  .sector-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    vertical-align: top;
+  }
+  .sector-table tr:hover { background: #f8f9fa; }
+  .heat-bar {
+    display: inline-block;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--orange), var(--red));
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .stock-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--purple);
+  }
+  .stock-card .stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  .stock-card .stock-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .stock-card .stock-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e0e7ff;
+    color: var(--blue);
+  }
+  .stock-card .stock-logic {
+    font-size: 13px;
+    color: #495057;
+    line-height: 1.7;
+  }
+  .stock-card .stock-source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+  .sentiment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .sentiment-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .sentiment-card .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .sentiment-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .sentiment-card li {
+    font-size: 13px;
+    padding: 4px 0;
+    padding-left: 16px;
+    position: relative;
+  }
+  .sentiment-card li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+  }
+  .focus-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .focus-list li {
+    padding: 10px 14px;
+    background: #fff3cd;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    border-left: 4px solid var(--gold);
+  }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 4px;
+  }
+  .tag-bull { background: #fde8e8; color: var(--red); }
+  .tag-bear { background: #e8f5e9; color: var(--green); }
+  .tag-neutral { background: #f1f3f5; color: var(--text-secondary); }
+  .tag-hot { background: #fff3cd; color: var(--gold); }
+  .role-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-weight: 600;
+  }
+  .role-core { background: #fde8e8; color: var(--red); }
+  .role-hot { background: #fff3cd; color: var(--gold); }
+  .role-watch { background: #e0e7ff; color: var(--blue); }
+  .role-short { background: #e8f5e9; color: var(--green); }
+  .warning-box {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>A股群聊观点汇总</h1>
+  <div class="subtitle">15个飞书交流群 · 市场观点与个股分析</div>
+  <div class="meta">
+    <span>📅 2026年7月24日（周五）</span>
+    <span>💬 383条消息</span>
+    <span>📊 11个活跃群</span>
+    <span>🔍 33只个股 · 11个板块</span>
+  </div>
+</div>
+
+<!-- 市场概况 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📈</span> 市场概况</div>
+  <div class="market-overview">
+    <div class="stat-card">
+      <div class="label">三市成交</div>
+      <div class="value">19,447亿</div>
+      <div class="change green">↓ 减少2651亿</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">主力净流出</div>
+      <div class="value green">774.61亿</div>
+      <div class="change">两融余额27,103亿</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">中信净空单</div>
+      <div class="value">65,397</div>
+      <div class="change green">今日减空178</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">主要玩家净空</div>
+      <div class="value">137,246</div>
+      <div class="change green">今日减空1,656</div>
+    </div>
+  </div>
+  <div class="warning-box">
+    <strong>⚠️ 核心矛盾：</strong>美伊冲突持续升温（特朗普称正"认真考虑"重启对伊朗大规模作战行动），原油期货拉升压制科技股。市场进入"石油因子"主导阶段——科创与三桶油走势完全镜像。沪指距3850关口争夺激烈，汪汪队盘中呵护但力度不足。长鑫科技下周一（7/27）科创板上市，抽血预期即将落地。
+  </div>
+</div>
+
+<!-- 核心市场观点 -->
+<div class="section">
+  <div class="section-title"><span class="icon">💡</span> 核心市场观点</div>
+
+  <div class="view-item">
+    <strong>核心逻辑社：</strong>指数处于底部区域，回调即机会。国产算力五大方向清晰：1）华为超节点=交换机芯片和交换机（平替达子芯片）；2）国产算力瓶颈=先进封装（封测）+代工（产能不够+韬定律）；3）国产AI瓶颈=算力芯片；4）全球共振存储=存储芯片+半导体设备；5）AI应用芯片=端侧芯片。策略：一部分指数+一部分国产算力，仓位5成左右，美伊不确定下不要满仓。已披露业绩的绩优股走势更强。
+    <div class="source">来源：核心逻辑社 · 11:34 全面梳理</div>
+  </div>
+
+  <div class="view-item">
+    <strong>陈果（中信建投）：</strong>美股从AI转向"非AI"，美国走向"有GDP没ROE"。AI只会进步不会退步，但美股AI牛可以止步——美股科技杀估值行情，资本主张"Show me the FCF"。A股老登资产估值更安全，不要因为美国科技恶化而自己吓自己。中长期坚定看好全球AI技术进步，尤其看好中国真科技龙头。
+    <div class="source">来源：信息早知道 · 08:37 转发</div>
+  </div>
+
+  <div class="view-item">
+    <strong>浙商AI战队：</strong>华为超节点深度——万卡一机，灵衢铸基。过去8年单节点算力增长40倍而节点间带宽仅增长4-8倍，通信墙、内存墙瓶颈凸显。Atlas 950实现百卡向万卡级Scale-up跃迁，多个LLM训练任务线性度超95%，成本效益约为传统Clos的2.04倍。建议关注算力芯片价值链、华为整机及系统、其他国产智算平台。
+    <div class="source">来源：信息早知道 · 08:31 浙商证券研报</div>
+  </div>
+
+  <div class="view-item">
+    <strong>华源前瞻科技：</strong>强call富满微&明微电子——成熟制程芯片从"涨价"逐步演绎成"缺货"，重视2021年弹性复现。AI需求挤占传统产能，全球成熟制程产能维持动态平衡，缺货现象频发。富满微季度业绩从-1.2亿恢复到8000-9000万，预计26Q3有望创历史新高。科技板块调整进入尾声，成熟制程价值重估为主线。
+    <div class="source">来源：信息早知道 · 10:05 华源证券</div>
+  </div>
+
+  <div class="view-item">
+    <strong>国泰海通电新（徐强团队）：</strong>8月排产从弱预期到强现实——中国锂电全市场总排产约304GWh，环比+7.4%。核心拉动力在储能赛道。锂电板块龙头普遍跌幅30-50%，宁德时代26年仅17.7倍PE、27年仅14倍，估值性价比极高。周五晚宁德时代半年报或为板块催化剂。
+    <div class="source">来源：信息早知道 · 08:08 国泰海通研报</div>
+  </div>
+
+  <div class="view-item">
+    <strong>潘凤：</strong>当前为退潮期，投机没有正式确认，建议空仓或轻仓等待。半导体板块都是GJD资金做轮动，长鑫科技上市后是否撤出不确定。GJD虽在呵护但也不能不尊重市场规律。这次AI退潮比新能源退潮更狠，大佬爆仓速度前所未有。建议等下周再考虑投机。
+    <div class="source">来源：潘凤 · 10:48-14:45 多条消息</div>
+  </div>
+
+  <div class="view-item">
+    <strong>猫十三：</strong>国产方向已明确，继续加浪潮。中石油上市那天的事提前半个月跌完了，长鑫上市就是把中石油当天的跌幅掩饰成了这半个月的杀跌。浪潮集团即将与北京数据集团签订超百亿算力服务器订单。翱捷科技是典型量化在砸盘，但今天好像不一样了。
+    <div class="source">来源：猫十三 · 09:52-13:17</div>
+  </div>
+
+  <div class="view-item">
+    <strong>小锦鲤：</strong>竞价冰点开，中芯红开。手上冲高减。科技修复预判对了，就是没选好。按计划吸的医药，长鑫落地前佛系点。万邦挺争气的。缩量市场佛系踢踢手上的也行。
+    <div class="source">来源：小锦鲤 · 09:27-14:57</div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔥</span> 板块热度排行</div>
+  <table class="sector-table">
+    <thead>
+      <tr>
+        <th>板块</th>
+        <th>热度</th>
+        <th>核心逻辑</th>
+        <th>主要来源</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>国产算力</strong></td>
+        <td><span class="heat-bar" style="width:50px"></span> 5</td>
+        <td>华为超节点深度发酵，五大方向清晰（交换机/封测/代工/存储/端侧），Atlas 950万卡级Scale-up，线性度超95%</td>
+        <td>核心逻辑社</td>
+      </tr>
+      <tr>
+        <td><strong>半导体设备</strong></td>
+        <td><span class="heat-bar" style="width:50px"></span> 5</td>
+        <td>下午全面炸裂！全球设备交期延长至1.5-2倍，五大供应商正常6个月交期延长至一年</td>
+        <td>核心逻辑社</td>
+      </tr>
+      <tr>
+        <td><strong>先进封装/封测</strong></td>
+        <td><span class="heat-bar" style="width:40px"></span> 4</td>
+        <td>国产算力瓶颈在产能=先进封装。通富微电盘中回封，封测全面炸裂，绩优股走势更强</td>
+        <td>洛飞小群</td>
+      </tr>
+      <tr>
+        <td><strong>存储芯片</strong></td>
+        <td><span class="heat-bar" style="width:40px"></span> 4</td>
+        <td>长鑫科技7/27上市（合理市值2.5-3万亿），普冉+1925%，江波龙/澜起大额回购，全球缺存储</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><strong>锂电/储能</strong></td>
+        <td><span class="heat-bar" style="width:30px"></span> 3</td>
+        <td>8月排产304GWh环比+7.4%，储能为核心拉动力。宁德时代26年仅17.7x PE，半年报催化剂</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><strong>成熟制程芯片</strong></td>
+        <td><span class="heat-bar" style="width:30px"></span> 3</td>
+        <td>从"涨价"演变成"缺货"，对标2021年弹性。富满微季度业绩-1.2亿→8000-9000万，26Q3有望创历史新高</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><strong>光通信/LPO</strong></td>
+        <td><span class="heat-bar" style="width:30px"></span> 3</td>
+        <td>联特科技LPO切入谷歌，不需要DSP，4-5倍空间。旭创港股下周四上市。英特尔Q2超预期</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><strong>AIoT</strong></td>
+        <td><span class="heat-bar" style="width:30px"></span> 3</td>
+        <td>海康威视半年报+39.57%超预期，高分红（每10股派5.5元），AIoT平台升级</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><strong>PCB/类载板</strong></td>
+        <td><span class="heat-bar" style="width:20px"></span> 2</td>
+        <td>鹏鼎100亿投资AI高阶类载板，红板50亿mSAP项目，AI封装推动PCB升级</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><strong>AI大模型</strong></td>
+        <td><span class="heat-bar" style="width:20px"></span> 2</td>
+        <td>高盛4倍上调MiniMax，M3 Pro+H3全模态即将发布，港股通催化。当前市值仅85亿美元深度折价</td>
+        <td>傅里叶的猫</td>
+      </tr>
+      <tr>
+        <td><strong>AI数据</strong></td>
+        <td><span class="heat-bar" style="width:20px"></span> 2</td>
+        <td>DeepSeek数据采集方向，海天瑞声、拓尔思为相关标的</td>
+        <td>信息早知道</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股 -->
+<div class="section">
+  <div class="section-title"><span class="icon">💹</span> 重点个股分析</div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">海光信息 (688041) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">国产算力 · 中长线</span>
+    </div>
+    <div class="stock-logic">华为超节点算力芯片价值链核心标的。国产AI的瓶颈是算力芯片，国内缺卡，海光信息为国产算力芯片主力。Atlas 950实现百卡向万卡级Scale-up跃迁，多个LLM训练任务线性度超95%。</div>
+    <div class="stock-source">来源：核心逻辑社 · 浙商AI战队推荐</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">北方华创 (002371) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">半导体设备 · 中长线</span>
+    </div>
+    <div class="stock-logic">全球半导体设备交期延长至1.5-2倍，五大供应商正常6个月交期延长至一年。下午半导体设备全面炸裂，北方华创领涨。华为超节点价值链标的，全球共振的存储=半导体设备方向。</div>
+    <div class="stock-source">来源：核心逻辑社</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">通富微电 (002156) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">先进封装 · 短线</span>
+    </div>
+    <div class="stock-logic">国产算力瓶颈在产能=先进封装（封测）。洛飞小群重点操作标的，盘中回封。下午封测全面炸裂。已披露业绩的绩优股走势更强。</div>
+    <div class="stock-source">来源：洛飞小群</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--orange);">
+    <div class="stock-header">
+      <span class="stock-name">长鑫科技 <span class="role-badge role-hot">核心</span></span>
+      <span class="stock-tag">存储芯片 · 中长线</span>
+    </div>
+    <div class="stock-logic">7月27日科创板上市，发行价8.66/股，发行市值5792亿。按26年上半年660-750亿利润、21倍PE计算，合理市值2.5-3万亿，对应股价40-48元。市场担忧抽血效应，但政府已做详细安排。开盘涨幅超500%不建议参与，300%以下可考虑。</div>
+    <div class="stock-source">来源：信息早知道</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--orange);">
+    <div class="stock-header">
+      <span class="stock-name">海康威视 (002415) <span class="role-badge role-hot">核心</span></span>
+      <span class="stock-tag">AIoT · 中长线</span>
+    </div>
+    <div class="stock-logic">半年报利润显著超预期，上半年归母净利78.96亿同比+39.57%，2Q26单季约51.15亿同比+41%，显著高于市场约42亿预期。拟每10股派5.5元高分红。从安防龙头向AIoT平台型企业升级，估值中枢仍有修复空间。</div>
+    <div class="stock-source">来源：信息早知道</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">联特科技 (688569) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">光通信 · 中长线</span>
+    </div>
+    <div class="stock-logic">LPO方案切入谷歌，不需要DSP，上量已无限制。明年不带DSP方案在多个项目快速落地。近期光芯片供给端大幅上修，当前看4-5倍空间。</div>
+    <div class="stock-source">来源：信息早知道</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">富满微 (300671) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">成熟制程 · 中长线</span>
+    </div>
+    <div class="stock-logic">成熟制程芯片从涨价演变成缺货，重视21年弹性复现。AI需求挤占传统产能，缺货现象频发。季度业绩从-1.2亿恢复到8000-9000万，预计26Q3有望创历史新高。华源前瞻强call。</div>
+    <div class="stock-source">来源：信息早知道 · 华源前瞻科技</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">浪潮信息 (000977) <span class="role-badge role-hot">热门</span></span>
+      <span class="stock-tag">国产算力 · 中长线</span>
+    </div>
+    <div class="stock-logic">据知情人士透露，浪潮集团即将与北京数据集团签订超百亿算力服务器订单，三年内交付。猫十三继续加仓，国产方向明确。</div>
+    <div class="stock-source">来源：猫十三</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">宁德时代 (300750) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">锂电/储能 · 中长线</span>
+    </div>
+    <div class="stock-logic">8月排产环比+7.4%，旺季来临+锂电低位。26年仅17.7倍PE，27年仅14倍，估值性价比极高。周五晚半年报或为板块有力催化剂。</div>
+    <div class="stock-source">来源：信息早知道 · 国泰海通</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">MiniMax <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">AI大模型 · 中长线</span>
+    </div>
+    <div class="stock-logic">高盛4倍上调目标价。M3模型日处理数万亿tokens，9-10月发布M3 Pro（3万亿参数），H3全模态模型即将发布。8月起符合港股通准入。当前市值仅85亿美元，相比智谱710亿深度折价。</div>
+    <div class="stock-source">来源：傅里叶的猫</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">普冉股份 (688086) <span class="role-badge role-hot">热门</span></span>
+      <span class="stock-tag">存储芯片 · 中长线</span>
+    </div>
+    <div class="stock-logic">预计2026年半年度净利润8.25亿元，同比增长1925%，业绩爆发式增长。存储芯片景气度上行受益。</div>
+    <div class="stock-source">来源：信息早知道</div>
+  </div>
+
+  <div class="stock-card">
+    <div class="stock-header">
+      <span class="stock-name">中芯国际 (688981) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">国产算力 · 中长线</span>
+    </div>
+    <div class="stock-logic">国产算力瓶颈在产能=代工。中芯国际为国内代工龙头，产能不够+韬定律是核心矛盾。华为超节点价值链标的。</div>
+    <div class="stock-source">来源：核心逻辑社</div>
+  </div>
+</div>
+
+<!-- 市场情绪 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🎯</span> 市场情绪</div>
+  <div class="sentiment-grid">
+    <div class="sentiment-card">
+      <div class="title red">🔴 看多因素</div>
+      <ul>
+        <li>指数处于底部区域，回调即机会，汪汪队持续呵护</li>
+        <li>国产算力五大方向清晰，华为超节点技术突破</li>
+        <li>半导体设备全球交期延长1.5-2倍，景气度持续</li>
+        <li>长鑫科技上市抽血预期下周一利空落地</li>
+        <li>宁德时代半年报周五晚或为锂电板块催化剂</li>
+        <li>海康威视半年报超预期+高分红，价值重估</li>
+        <li>公募基金总规模达39.67万亿再创新高</li>
+        <li>中美探讨300亿美元对等降税框架</li>
+      </ul>
+    </div>
+    <div class="sentiment-card">
+      <div class="title green">🟢 风险因素</div>
+      <ul>
+        <li>美伊冲突持续升温，特朗普考虑重启大规模作战</li>
+        <li>美国对华加征12.5%新关税，实际税率达22.2%</li>
+        <li>三市成交缩量至19447亿，主力净流出774亿</li>
+        <li>长鑫科技上市抽血预期（虽落地但情绪影响待观察）</li>
+        <li>AI退潮期，大佬爆仓速度前所未有</li>
+        <li>科创与石油完全镜像，石油因子主导短期走势</li>
+        <li>美联储/欧央行利率维持高位，外围不确定性</li>
+        <li>GJD虽呵护但不能不尊重市场规律</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 下周关注 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📌</span> 下周关注重点</div>
+  <ul class="focus-list">
+    <li><strong>🚀 长鑫科技7月27日（周一）科创板上市</strong>——发行市值5792亿，合理市值2.5-3万亿。开盘涨幅超500%不建议参与，300%以下可考虑。抽血预期利空落地。</li>
+    <li><strong>💳 宁德时代半年报</strong>——周五晚发布，或为锂电板块有力催化剂，提振27年需求信心。</li>
+    <li><strong>🌟 港股旭创上市</strong>——下周四（7/30）港股上市，光通信方向催化。</li>
+    <li><strong>🕐 美伊局势</strong>——最大不确定因素，若缓和则科技股有望反攻。</li>
+    <li><strong>💹 半导体设备方向</strong>——下午全面炸裂，全球交期延长1.5-2倍，关注持续性。</li>
+    <li><strong>📣 国产算力绩优股</strong>——已披露业绩的封测、设备、端侧芯片走势更强。</li>
+    <li><strong>🔄 MiniMax港股通</strong>——8月起符合南向准入条件，关注估值修复催化。</li>
+  </ul>
+</div>
+
+<!-- 重要新闻 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📰</span> 重要新闻速递</div>
+  <div style="font-size: 13px; line-height: 2.2;">
+    <strong>宏观：</strong>央行5000亿MLF操作（1年期）| 公募基金总规模39.67万亿创新高 | 证监会强调逆周期调节、推动中长期资金入市 | 中美探讨300亿美元对等降税框架<br>
+    <strong>地缘：</strong>特朗普"认真考虑"重启对伊朗大规模作战 | 美国对中国加征12.5%新关税（实际税率22.2%）| 俄罗斯讨论延长柴/汽油出口禁令<br>
+    <strong>科技：</strong>英特尔Q2营收161亿美元+25%（十五年最强增长），玻璃基板预期升温 | AMD预计2030年AI加速器市场达1.4万亿美元 | 北京印发智能体引领发展措施，鼓励Token经济<br>
+    <strong>产业：</strong>长鑫科技7/27科创板上市 | 鹏鼎控股100亿投建AI类载板 | 云南锗业签订5.7-8.55亿磷化铟晶片供货协议 | 普冉股份半年报净利+1925%<br>
+    <strong>海外：</strong>美股三大指数集体收跌（纳指-2.15%），特斯拉大跌超14% | 欧央行维持利率不变 | 美SEC批准纳斯达克退市新规
+  </div>
+</div>
+
+<div class="footer">
+  <p>本报告由15个飞书交流群聊消息自动汇总生成 | 仅供研究参考，不构成投资建议</p>
+  <p>生成时间：2026-07-24 | 消息来源：鑫多多、信息早知道、核心逻辑社、杰哥进阶、小锦鲤、洛飞小群、潘凤、傅里叶的猫、震哥-胡汉三、猫十三、彭域</p>
+</div>
+
+</div>
+</body>
+</html>
