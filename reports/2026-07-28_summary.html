@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股群聊市场观点汇总 - 2026年7月28日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.7;
+  padding: 20px;
+}
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.header h1 { font-size: 26px; margin-bottom: 8px; }
+.header .subtitle { font-size: 14px; opacity: 0.8; margin-bottom: 16px; }
+.header-meta { display: flex; gap: 28px; flex-wrap: wrap; }
+.header-meta .meta-item {
+  background: rgba(255,255,255,0.12);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.header-meta .meta-item strong { color: #ffd700; font-size: 18px; }
+
+/* Section */
+.section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #e8ecf1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title .icon { font-size: 22px; }
+
+/* Core viewpoints */
+.viewpoint-card {
+  background: #f8f9fb;
+  border-left: 4px solid #4a6cf7;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.viewpoint-card .vp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.viewpoint-card .vp-source {
+  font-size: 12px;
+  color: #fff;
+  background: #4a6cf7;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.viewpoint-card .vp-tag {
+  font-size: 12px;
+  color: #666;
+}
+.viewpoint-card .vp-content { font-size: 14px; color: #333; }
+
+/* Sector table */
+.sector-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.sector-table th {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+.sector-table th:first-child { border-radius: 8px 0 0 0; }
+.sector-table th:last-child { border-radius: 0 8px 0 0; }
+.sector-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef0f3;
+}
+.sector-table tr:hover { background: #f8f9fb; }
+.star { color: #ff9500; letter-spacing: 1px; }
+.rank-badge {
+  display: inline-block;
+  width: 28px; height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+}
+.rank-1 { background: #ff4757; }
+.rank-2 { background: #ff6b6b; }
+.rank-3 { background: #ffa502; }
+.rank-other { background: #a4b0be; }
+
+/* Stock cards */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+.stock-card {
+  background: #f8f9fb;
+  border: 1px solid #e8ecf1;
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stock-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.stock-card .stock-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+.stock-card .stock-tags { margin-bottom: 10px; }
+.stock-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-weight: 600;
+}
+.tag-red { background: #ffe0e0; color: #c0392b; }
+.tag-blue { background: #e3f0ff; color: #2980b9; }
+.tag-green { background: #e0f5e0; color: #27ae60; }
+.tag-orange { background: #fff3e0; color: #e67e22; }
+.tag-purple { background: #f3e5f5; color: #8e44ad; }
+.stock-card .stock-logic { font-size: 13px; color: #555; margin-bottom: 8px; }
+.stock-card .stock-source { font-size: 12px; color: #999; }
+
+/* Risk & Signal */
+.dual-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.risk-card, .signal-card {
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.risk-card { background: #fff5f5; border: 1px solid #ffd5d5; }
+.signal-card { background: #f0fff4; border: 1px solid #c6efce; }
+.risk-card h3 { color: #c0392b; margin-bottom: 12px; font-size: 16px; }
+.signal-card h3 { color: #27ae60; margin-bottom: 12px; font-size: 16px; }
+.risk-card ul, .signal-card ul { list-style: none; }
+.risk-card li, .signal-card li {
+  font-size: 13px;
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.risk-card li::before { content: "⚠"; position: absolute; left: 0; }
+.signal-card li::before { content: "✅"; position: absolute; left: 0; }
+
+/* Focus cards */
+.focus-list { display: grid; gap: 12px; }
+.focus-card {
+  background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%);
+  border: 1px solid #ffe082;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.focus-card .focus-icon { font-size: 18px; flex-shrink: 0; }
+
+/* Market data bar */
+.market-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.market-stat {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.market-stat .stat-label { font-size: 12px; color: #888; margin-bottom: 6px; }
+.market-stat .stat-value { font-size: 22px; font-weight: 700; }
+.stat-red { color: #e74c3c; }
+.stat-green { color: #27ae60; }
+.stat-blue { color: #2980b9; }
+
+/* Disclaimer */
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dual-col { grid-template-columns: 1fr; }
+  .market-bar { grid-template-columns: 1fr 1fr; }
+  .stock-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+<h1>📊 A股飞书群聊市场观点汇总</h1>
+<div class="subtitle">2026年7月28日（周二）| DUV光刻机量产冲击 · 韩国KOSPI熔断</div>
+<div class="header-meta">
+<div class="meta-item">📅 日期：<strong>2026-07-28</strong></div>
+<div class="meta-item">💬 监控群数：<strong>15</strong></div>
+<div class="meta-item">📨 消息总数：<strong>301</strong></div>
+<div class="meta-item">🕐 生成时间：<strong>23:00</strong></div>
+</div>
+</div>
+<div class="market-bar">
+<div class="market-stat"><div class="stat-label">韩国KOSPI</div><div class="stat-value stat-green">-10.8%</div></div>
+<div class="market-stat"><div class="stat-label">英伟达</div><div class="stat-value stat-green">-5%</div></div>
+<div class="market-stat"><div class="stat-label">三市成交</div><div class="stat-value stat-blue">20393亿</div></div>
+<div class="market-stat"><div class="stat-label">两融余额</div><div class="stat-value stat-red">26986亿</div></div>
+</div>
