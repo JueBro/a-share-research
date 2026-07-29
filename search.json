@@ -1,6 +1,62 @@
 {
   "stocks": [
     {
+      "name": "寒武纪",
+      "code": "688256",
+      "sectors": "AI算力/超节点 | 国产算力",
+      "style": "中长线",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-29",
+      "mention_count": 4,
+      "linked_sectors": [
+        "国产算力",
+        "AI算力/超节点",
+        "AI算力/算芯"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道、核心逻辑社",
+          "sector": "AI算力/超节点",
+          "style": "中长线",
+          "logic": "拟推500万股限制性股票激励计划，业绩考核目标为2026-2028年累计营收不低于1000亿元。核心逻辑社预判下周正式披露半年报，业绩不会差（惯例业绩好提前发）",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "国产算力能否坚守到市场反转不确定"
+        },
+        {
+          "date": "2026-07-27",
+          "group": "核心逻辑社",
+          "sector": "AI算力/超节点",
+          "style": "中长线",
+          "logic": "下周正式披露半年报，惯例业绩好提前发。核心逻辑社预判业绩不会差",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "国产算力能否坚守到市场反转不确定"
+        },
+        {
+          "date": "2026-07-26",
+          "group": "信息早知道",
+          "sector": "国产算力",
+          "style": "中长线",
+          "logic": "DW电子国产算力五大天王之一。超节点大趋势下AI算力芯片核心标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-07-24",
+          "group": "核心逻辑社",
+          "sector": "国产算力",
+          "style": "中长线",
+          "logic": "华为超节点算力芯片价值链标的。国产算力芯片方向确定，AI产业竞争核武器，短期波动不改长期趋势。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "市场需求与商业化风险"
+        }
+      ]
+    },
+    {
       "name": "宁德时代",
       "code": "300750",
       "sectors": "锂电 | 锂电/储能",
@@ -41,51 +97,6 @@
           "sentiment": "看多",
           "target": "",
           "risk": "27年需求不及预期"
-        }
-      ]
-    },
-    {
-      "name": "寒武纪",
-      "code": "688256",
-      "sectors": "AI算力/超节点 | 国产算力",
-      "style": "中长线",
-      "first_seen": "2026-07-24",
-      "last_seen": "2026-07-27",
-      "mention_count": 3,
-      "linked_sectors": [
-        "国产算力",
-        "AI算力/超节点"
-      ],
-      "logs": [
-        {
-          "date": "2026-07-27",
-          "group": "核心逻辑社",
-          "sector": "AI算力/超节点",
-          "style": "中长线",
-          "logic": "下周正式披露半年报，惯例业绩好提前发。核心逻辑社预判业绩不会差",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "国产算力能否坚守到市场反转不确定"
-        },
-        {
-          "date": "2026-07-26",
-          "group": "信息早知道",
-          "sector": "国产算力",
-          "style": "中长线",
-          "logic": "DW电子国产算力五大天王之一。超节点大趋势下AI算力芯片核心标的。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-07-24",
-          "group": "核心逻辑社",
-          "sector": "国产算力",
-          "style": "中长线",
-          "logic": "华为超节点算力芯片价值链标的。国产算力芯片方向确定，AI产业竞争核武器，短期波动不改长期趋势。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "市场需求与商业化风险"
         }
       ]
     },
@@ -182,6 +193,51 @@
       ]
     },
     {
+      "name": "长鑫科技",
+      "code": null,
+      "sectors": "存储/DRAM | 存储芯片",
+      "style": "中长线",
+      "first_seen": "2026-07-24",
+      "last_seen": "2026-07-29",
+      "mention_count": 3,
+      "linked_sectors": [
+        "存储芯片",
+        "存储/DRAM"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道、潘凤、洛飞小群、彭域",
+          "sector": "存储/DRAM",
+          "style": "中长线",
+          "logic": "MSCI公告纳入MSCI中国全股票指数，8月10日正式生效。上市次日机构开始接盘，潘凤认为是'卖给机构'。长鑫是科技核心但也是面子工程+某队维护，量都锁死了，洛飞小群评价'无敌瑞总'。棒股大跌后长鑫超预期有望带科技修复1-2天",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "次日机构抛压；外围棒股继续暴跌可能引发连锁"
+        },
+        {
+          "date": "2026-07-27",
+          "group": "信息早知道",
+          "sector": "存储/DRAM",
+          "style": "中长线",
+          "logic": "国产DRAM龙头，全球第四、国内第一的IDM企业。野村目标价116元（市值7.76万亿），预计2026-28年营收/净利CAGR分别63%/74%。全球DRAM供需缺口延续至2028年，AI推动存储从周期走向超级成长。IPO募资666亿，合肥一期二期及北京三座晶圆厂2026年内达产，月产能30万片+",
+          "sentiment": "看多",
+          "target": "116元（野村）",
+          "risk": "上市首日波动大，公募限制买入传言"
+        },
+        {
+          "date": "2026-07-24",
+          "group": "信息早知道",
+          "sector": "存储芯片",
+          "style": "中长线",
+          "logic": "7月27日科创板上市，发行价8.66/股，发行市值5792亿。按26年上半年660-750亿利润、21倍PE计算，合理市值2.5-3万亿，对应股价40-48元。市场担忧上市抽血效应，但政府已做详细安排。",
+          "sentiment": "中性",
+          "target": "合理市值2.5-3万亿，股价40-48元",
+          "risk": "上市首日涨幅过大导致收益空间窄"
+        }
+      ]
+    },
+    {
       "name": "万邦",
       "code": null,
       "sectors": "半导体",
@@ -212,6 +268,38 @@
           "sentiment": "看多",
           "target": "",
           "risk": "短线交易，注意止损"
+        }
+      ]
+    },
+    {
+      "name": "万邦医药",
+      "code": "",
+      "sectors": "医药",
+      "style": "短线",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "小锦鲤",
+          "sector": "医药",
+          "style": "短线",
+          "logic": "小锦鲤抱团主做标的：-8加、-16接了万邦完成补跌，-4把昨天的清了。明天关键：早上看万邦能否小低开一笔拉红，或直接红开震荡；立新如果止跌收阳线抱团就有修复预期",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "立新负反馈影响抱团情绪"
+        },
+        {
+          "date": "2026-07-27",
+          "group": "小锦鲤",
+          "sector": "医药",
+          "style": "短线",
+          "logic": "小锦鲤抱团主做标的，每天至少踢10个点，连续套利操作",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
         }
       ]
     },
@@ -280,6 +368,108 @@
           "sector": "算力",
           "style": "中长线",
           "logic": "高性能计算+液冷，AI算力基础设施受益标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "兆易创新",
+      "code": "603986",
+      "sectors": "存储/MCU | 存储芯片",
+      "style": "短中线",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "linked_sectors": [
+        "国产算力",
+        "存储芯片",
+        "存储/DRAM"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "杰哥进阶",
+          "sector": "存储/MCU",
+          "style": "短中线",
+          "logic": "杰哥：'我不相信还能跌'猛锤一把。国产存储+MCU龙头，受益于长鑫扩产和存储芯片国产化趋势",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "存储价格波动"
+        },
+        {
+          "date": "2026-07-26",
+          "group": "信息早知道",
+          "sector": "存储芯片",
+          "style": "中长线",
+          "logic": "DW电子国产算力五大天王之一。全球共振存储方向核心标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "哈药股份",
+      "code": "",
+      "sectors": "医药",
+      "style": "短线",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "洛飞小群",
+          "sector": "医药",
+          "style": "短线",
+          "logic": "立新和哈药这几天有点奇怪，只能买尾盘。医药近期有韧性，小票抱团策略",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-07-27",
+          "group": "洛飞小群",
+          "sector": "医药",
+          "style": "短线",
+          "logic": "洛飞小群套利标的，医药近期有韧性，小票抱团策略",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "国瓷材料",
+      "code": "",
+      "sectors": "MLCC/被动元件",
+      "style": "短中线",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "linked_sectors": [
+        "MLCC/被动元件"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "MLCC/被动元件",
+          "style": "短中线",
+          "logic": "MLCC+氧化锆涨价，受益于被动元件缺货涨价景气周期",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-07-27",
+          "group": "信息早知道",
+          "sector": "MLCC/被动元件",
+          "style": "短中线",
+          "logic": "MLCC+氧化锆涨价，受益于被动元件景气周期",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -634,37 +824,36 @@
       ]
     },
     {
-      "name": "长鑫科技",
-      "code": null,
-      "sectors": "存储/DRAM | 存储芯片",
-      "style": "中长线",
-      "first_seen": "2026-07-24",
-      "last_seen": "2026-07-27",
+      "name": "风华高科",
+      "code": "",
+      "sectors": "MLCC/被动元件",
+      "style": "短中线",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
       "mention_count": 2,
       "linked_sectors": [
-        "存储芯片",
-        "存储/DRAM"
+        "MLCC/被动元件"
       ],
       "logs": [
         {
-          "date": "2026-07-27",
+          "date": "2026-07-29",
           "group": "信息早知道",
-          "sector": "存储/DRAM",
-          "style": "中长线",
-          "logic": "国产DRAM龙头，全球第四、国内第一的IDM企业。野村目标价116元（市值7.76万亿），预计2026-28年营收/净利CAGR分别63%/74%。全球DRAM供需缺口延续至2028年，AI推动存储从周期走向超级成长。IPO募资666亿，合肥一期二期及北京三座晶圆厂2026年内达产，月产能30万片+",
+          "sector": "MLCC/被动元件",
+          "style": "短中线",
+          "logic": "三星电机8月1日起MLCC涨价30%，太阳诱电9月1日跟进。全球电子产品需求结构性增长，MLCC缺货涨价延续，风华高科作为国内MLCC龙头受益",
           "sentiment": "看多",
-          "target": "116元（野村）",
-          "risk": "上市首日波动大，公募限制买入传言"
+          "target": "",
+          "risk": ""
         },
         {
-          "date": "2026-07-24",
+          "date": "2026-07-27",
           "group": "信息早知道",
-          "sector": "存储芯片",
-          "style": "中长线",
-          "logic": "7月27日科创板上市，发行价8.66/股，发行市值5792亿。按26年上半年660-750亿利润、21倍PE计算，合理市值2.5-3万亿，对应股价40-48元。市场担忧上市抽血效应，但政府已做详细安排。",
-          "sentiment": "中性",
-          "target": "合理市值2.5-3万亿，股价40-48元",
-          "risk": "上市首日涨幅过大导致收益空间窄"
+          "sector": "MLCC/被动元件",
+          "style": "短中线",
+          "logic": "MLCC涨停，成熟制程芯片从涨价演变为缺货，功率板块业绩进入爆发临界点",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
         }
       ]
     },
@@ -800,6 +989,28 @@
       ]
     },
     {
+      "name": "VC添加剂板块（海科/华盛/孚日/日科/新宙邦）",
+      "code": "",
+      "sectors": "电解液VC添加剂",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "电解液VC添加剂",
+          "style": "短中线",
+          "logic": "VC最新报价21.5万/吨，较月初增长40%，头部企业产能扩产持续delay。8月行业排产环比增长8%，下游现实景气度强势。看下半年VC几乎无新增供给，看好VC价格持续向上",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "新增产能释放节奏"
+        }
+      ]
+    },
+    {
       "name": "万国黄金集团",
       "code": null,
       "sectors": "有色金属",
@@ -848,28 +1059,6 @@
       ]
     },
     {
-      "name": "万邦医药",
-      "code": "",
-      "sectors": "医药",
-      "style": "短线",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "mention_count": 1,
-      "linked_sectors": [],
-      "logs": [
-        {
-          "date": "2026-07-27",
-          "group": "小锦鲤",
-          "sector": "医药",
-          "style": "短线",
-          "logic": "小锦鲤抱团主做标的，每天至少踢10个点，连续套利操作",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
       "name": "三博脑科",
       "code": "",
       "sectors": "脑机接口",
@@ -911,6 +1100,30 @@
           "sector": "PCB设备",
           "style": "中长线",
           "logic": "mSAP扩产浪潮受益标的，电镀环节升级通胀核心标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "东阳光",
+      "code": "",
+      "sectors": "算力租赁",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "算力租赁"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "算力租赁",
+          "style": "短中线",
+          "logic": "ZP+阿里驱动，KIMI K3开源B300紧缺，算力租赁厂商受益",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -1038,6 +1251,30 @@
       ]
     },
     {
+      "name": "中际旭创",
+      "code": "",
+      "sectors": "光模块",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI算力/算芯"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "光模块",
+          "style": "中长线",
+          "logic": "董事长提议40-80亿元回购公司股份。投资者关系活动记录表显示，1.6T的ASP远高于市场传言，部分重点客户已给出2028年新产品指引且金额非常可观",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "之江生物",
       "code": "688317",
       "sectors": "医药",
@@ -1062,6 +1299,28 @@
       ]
     },
     {
+      "name": "九州一轨",
+      "code": "",
+      "sectors": "半导体设备",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "半导体设备",
+          "style": "中长线",
+          "logic": "全资子公司拟投资6.3亿元建设先进半导体晶圆激光隐形切割产业化项目",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "云南锗业",
       "code": "002428",
       "sectors": "半导体材料",
@@ -1077,6 +1336,50 @@
           "sector": "半导体材料",
           "style": "中长线",
           "logic": "子公司签订5.7-8.55亿元磷化铟晶片供货协议。磷化铟为光通信关键材料，受益AI光通信需求。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "五洲医疗",
+      "code": "",
+      "sectors": "医药",
+      "style": "短线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "小锦鲤",
+          "sector": "医药",
+          "style": "短线",
+          "logic": "小锦鲤抱团主做：-9加、-13加完了有差价自行踢掉，整体仓不超过3。首阴明天肯定有弱修复，红开震荡下破0轴得走，红开震荡不破0轴就格局着继续看",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "京东方A",
+      "code": "",
+      "sectors": "面板",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "面板",
+          "style": "中长线",
+          "logic": "控股股东北京电控拟增持5亿至10亿元公司A股股份，彰显信心",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -1130,31 +1433,6 @@
       ]
     },
     {
-      "name": "兆易创新",
-      "code": "603986",
-      "sectors": "存储芯片",
-      "style": "中长线",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-07-26",
-      "mention_count": 1,
-      "linked_sectors": [
-        "国产算力",
-        "存储芯片"
-      ],
-      "logs": [
-        {
-          "date": "2026-07-26",
-          "group": "信息早知道",
-          "sector": "存储芯片",
-          "style": "中长线",
-          "logic": "DW电子国产算力五大天王之一。全球共振存储方向核心标的。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
       "name": "创新医疗",
       "code": "",
       "sectors": "脑机接口",
@@ -1172,6 +1450,30 @@
           "sector": "脑机接口",
           "style": "短线",
           "logic": "视网膜芯片获准在欧上市可帮助患者恢复视力，脑机接口迎重大突破，创新医疗已涨停",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "利通电子",
+      "code": "",
+      "sectors": "算力租赁",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "算力租赁"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "算力租赁",
+          "style": "短中线",
+          "logic": "ZP+DS+KIMI三线驱动，KIMI K3开源算力租赁厂商受益",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -1343,6 +1645,30 @@
       ]
     },
     {
+      "name": "协创数据",
+      "code": "",
+      "sectors": "算力租赁",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "算力租赁"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "算力租赁",
+          "style": "短中线",
+          "logic": "KIMI K3正式开源（1.56TB，2.8T参数，MXFP4），B300紧缺进一步凸显。K3最低配置需16张H200，H系列无原生FP4需转码，实际至少需B300效率，2台B300才能跑动。具备拿卡能力的算力租赁厂商显著受益。深度绑定阿里，ZP已有订单落地",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "南网科技",
       "code": "688248",
       "sectors": "储能/电网",
@@ -1392,48 +1718,26 @@
       ]
     },
     {
-      "name": "哈药股份",
+      "name": "国安股份",
       "code": "",
-      "sectors": "医药",
+      "sectors": "网络安全",
       "style": "短线",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "mention_count": 1,
-      "linked_sectors": [],
-      "logs": [
-        {
-          "date": "2026-07-27",
-          "group": "洛飞小群",
-          "sector": "医药",
-          "style": "短线",
-          "logic": "洛飞小群套利标的，医药近期有韧性，小票抱团策略",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
-      "name": "国瓷材料",
-      "code": "",
-      "sectors": "MLCC/被动元件",
-      "style": "短中线",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
       "mention_count": 1,
       "linked_sectors": [
-        "MLCC/被动元件"
+        "网络安全"
       ],
       "logs": [
         {
-          "date": "2026-07-27",
+          "date": "2026-07-29",
           "group": "信息早知道",
-          "sector": "MLCC/被动元件",
-          "style": "短中线",
-          "logic": "MLCC+氧化锆涨价，受益于被动元件景气周期",
+          "sector": "网络安全",
+          "style": "短线",
+          "logic": "网络安全一字板龙头，板块辨识度强",
           "sentiment": "看多",
           "target": "",
-          "risk": ""
+          "risk": "一字板后续分歧"
         }
       ]
     },
@@ -1486,6 +1790,28 @@
       ]
     },
     {
+      "name": "天晟新材",
+      "code": "",
+      "sectors": "大金融IT",
+      "style": "短线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "大金融IT",
+          "style": "短线",
+          "logic": "指数止跌后大金融IT方向：天晟新材、银之杰、汇金股份、汇金科技、同花顺、东方财富、指南针等",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "短线情绪博弈"
+        }
+      ]
+    },
+    {
       "name": "孚日股份",
       "code": "",
       "sectors": "电解液VC添加剂",
@@ -1503,6 +1829,54 @@
           "sector": "电解液VC添加剂",
           "style": "短中线",
           "logic": "VC出厂价升至20万+，下游排队等货严重供不应求，预计涨至25万+。8月新产能落地每月新增600-700吨，三季度业绩巨大增量",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "安诺其",
+      "code": "",
+      "sectors": "染料/AI算力",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "染料"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "染料/AI算力",
+          "style": "中长线",
+          "logic": "双逻辑叠加：①染料——周末H酸-活性染料大厂开会，H酸今日上涨至10w，对位酯涨至3.2w。龙盛推动H酸工艺由铁粉还原转向加氢还原，老旧产能淘汰。东营安诺其分散染料规划产能30,000吨，山东项目全部建成后80,000吨；②AI算力并购预期",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "染料涨价不及预期；AI并购进度"
+        }
+      ]
+    },
+    {
+      "name": "宏景科技",
+      "code": "",
+      "sectors": "算力租赁",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "算力租赁"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "算力租赁",
+          "style": "短中线",
+          "logic": "阿里+ZP双线驱动，KIMI K3开源B300紧缺，具备拿卡能力受益",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -1775,6 +2149,30 @@
       ]
     },
     {
+      "name": "星网锐捷",
+      "code": "",
+      "sectors": "算力/交换机",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI算力/算芯"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "震哥-胡汉三、核心逻辑社",
+          "sector": "算力/交换机",
+          "style": "中长线",
+          "logic": "机构3日净买入1.6亿。本轮下跌机构一直在加仓！之前盘口就发现有机构的单子，但股价一直跌，这波洗盘很凶悍。核心逻辑社：算芯核心+交换机绩优股仍持有",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "普冉股份",
       "code": "688086",
       "sectors": "存储芯片",
@@ -1795,6 +2193,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "普联软件",
+      "code": "",
+      "sectors": "企业级AI/Agent",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "企业级AI/Agent"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道、杰哥进阶",
+          "sector": "企业级AI/Agent",
+          "style": "中长线",
+          "logic": "7月29日晚公告实控人及一致行动人拟向明略昭辉转让19.07%股权，实控人或变更为明略科技（全球Agentic AI第一股，腾讯持股27%为最大外部股东）。企业级AI标志性事件，Agent时代腾讯系首次希望获得A股上市公司控股权。普联深耕石油石化/建筑地产等国央企二十余年，2025年营收8.25亿元，正处于2027年底国产替代政策红利窗口期",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "股权转让推进不及预期；AI战略落地不及预期；国产替代进程不及预期"
         }
       ]
     },
@@ -1951,7 +2373,8 @@
       "last_seen": "2026-07-27",
       "mention_count": 1,
       "linked_sectors": [
-        "机器人"
+        "机器人",
+        "消费（博弈ZZJ）"
       ],
       "logs": [
         {
@@ -2008,6 +2431,52 @@
           "sector": "铜金板块",
           "style": "中长线",
           "logic": "铜矿重点标的，受益于铜价新高预期和估值修复共振",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "海亮股份",
+      "code": "",
+      "sectors": "铜加工",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "铜加工",
+          "style": "中长线",
+          "logic": "控股股东拟增持6亿至10亿元公司股份",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "海看股份",
+      "code": "",
+      "sectors": "AI短剧/IPTV",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI短剧/IPTV"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "AI短剧/IPTV",
+          "style": "短中线",
+          "logic": "安徽卫视播出国内首部持证AI短剧《桃花潭记》，验证AI短剧合规上星，为各省广电IPTV打开空间。AI漫剧已商业化。手握山东IPTV独家播控权及互联网分发渠道，实现生产、持证、播出、分账闭环。凭借国企背景拥有网络剧制作及播出资质，自研AIGC平台打通'剧本到成片'全链路",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -2133,6 +2602,28 @@
       ]
     },
     {
+      "name": "燕东微",
+      "code": "",
+      "sectors": "半导体",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "半导体",
+          "style": "短中线",
+          "logic": "控股股东一致行动人拟增持1.5亿元至3亿元股份",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "特一药业",
       "code": "002728",
       "sectors": "医药",
@@ -2220,6 +2711,30 @@
           "sector": "PCB/感光干膜",
           "style": "中长线",
           "logic": "mSAP工艺推动感光干膜高端化，高端干膜30-40元/㎡（普通仅5-7元），毛利率50%+。产能全球第一，已进入深南电路、景旺电子供应链，高端载板干膜下半年放量。市场空间明年翻倍增长",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "科创信息",
+      "code": "",
+      "sectors": "网络安全",
+      "style": "短线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "网络安全"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "网络安全",
+          "style": "短线",
+          "logic": "在网络安全领域根据客户需求提供信息安全集成服务，参与国家大数据安全等相关标准的建设",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -2323,6 +2838,30 @@
       ]
     },
     {
+      "name": "蓝天信息",
+      "code": "",
+      "sectors": "网络安全",
+      "style": "短线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "网络安全"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "网络安全",
+          "style": "短线",
+          "logic": "网络安全二板龙头，指数止跌后网安板块整体走强",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "短线情绪博弈"
+        }
+      ]
+    },
+    {
       "name": "蓝思科技",
       "code": "",
       "sectors": "半导体封装",
@@ -2338,6 +2877,30 @@
           "sector": "半导体封装",
           "style": "中长线",
           "logic": "与Intel签署合作备忘录，重点关注TGV先进封装",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "行云科技",
+      "code": "",
+      "sectors": "算力租赁",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "算力租赁"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "算力租赁",
+          "style": "短中线",
+          "logic": "KIMI+ZP+阿里三线驱动，KIMI K3开源B300紧缺，受益于模型参数变大对算力需求提升",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -2441,6 +3004,30 @@
       ]
     },
     {
+      "name": "金山办公",
+      "code": "",
+      "sectors": "软件/AI",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI算力/算芯"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "软件/AI",
+          "style": "中长线",
+          "logic": "预计上半年净利润23.16亿-27.19亿元，同比增长210%-264%。业绩炸裂",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "长川科技",
       "code": "",
       "sectors": "半导体测试设备",
@@ -2538,26 +3125,26 @@
       ]
     },
     {
-      "name": "风华高科",
-      "code": "",
-      "sectors": "MLCC/被动元件",
-      "style": "短中线",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "name": "顺网科技",
+      "code": "300113",
+      "sectors": "游戏/二次元",
+      "style": "短线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
       "mention_count": 1,
       "linked_sectors": [
-        "MLCC/被动元件"
+        "游戏/ChinaJoy"
       ],
       "logs": [
         {
-          "date": "2026-07-27",
+          "date": "2026-07-29",
           "group": "信息早知道",
-          "sector": "MLCC/被动元件",
-          "style": "短中线",
-          "logic": "MLCC涨停，成熟制程芯片从涨价演变为缺货，功率板块业绩进入爆发临界点",
+          "sector": "游戏/二次元",
+          "style": "短线",
+          "logic": "ChinaJoy全网唯一A股上市公司，N1馆C位。7月31日第23届ChinaJoy上海开幕，39国近900家企业参展，抖音/快手亿级流量直播。联袂Intel集结白玉京、苍墨、Story Taco团队。独家展出韩国成人向互动影游（《阿西美女》《夏日美女》），10位人气主演见面会。五五开（卢本伟）或亲临现场",
           "sentiment": "看多",
           "target": "",
-          "risk": ""
+          "risk": "事件驱动炒作，5月开板后波动大"
         }
       ]
     },
@@ -2581,6 +3168,30 @@
           "logic": "签约门店达3万家，26年开店有望达9000家。15XPE以下，回调即布局点位，社区折扣零售天花板海阔天空。",
           "sentiment": "看多",
           "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "鸿远电子",
+      "code": "",
+      "sectors": "MLCC/军工",
+      "style": "中长线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "linked_sectors": [
+        "MLCC/被动元件"
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "MLCC/军工",
+          "style": "中长线",
+          "logic": "高可靠MLCC军工市占超45%，直接配套QW12/FN16肩扛防空导弹等外贸武器。陶瓷管壳25年营收同比+189.81%。叠加MLCC行业缺货涨价（三星电机8月1日涨价30%）+AI封装增量。机构测算净利润有望冲击7-8亿，市值具备320-380亿向上弹性空间",
+          "sentiment": "看多",
+          "target": "320-380亿市值",
           "risk": ""
         }
       ]
@@ -2644,7 +3255,7 @@
           "role": "热门",
           "logic": "AI算力芯片核心标的",
           "mentions": 2,
-          "stock_mentions": 3
+          "stock_mentions": 4
         },
         {
           "name": "浪潮信息",
@@ -2665,7 +3276,7 @@
           "role": "热门",
           "logic": "全球共振存储方向",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 2
         },
         {
           "name": "中科曙光",
@@ -2719,6 +3330,102 @@
       ]
     },
     {
+      "name": "存储/DRAM",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "last_hotness": 5,
+      "linked_stocks": [
+        {
+          "name": "雅克科技",
+          "role": "核心",
+          "logic": "长鑫最核心前驱体供应商，量价齐升",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "长鑫科技",
+          "role": "龙头",
+          "logic": "次日卖给机构+MSCI纳入8月10日生效",
+          "mentions": 2,
+          "stock_mentions": 3
+        },
+        {
+          "name": "海光信息",
+          "role": "热门",
+          "logic": "超节点+DRAM相关",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "兆易创新",
+          "role": "关注",
+          "logic": "杰哥猛锤国产存储+MCU龙头",
+          "mentions": 1,
+          "stock_mentions": 2
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 5,
+          "logic": "长鑫科技次日机构接盘，MSCI纳入8月10日生效。SK海力士Q2利润60.54万亿韩元创新高但被韩国股灾错杀，未来资产证券下调目标价至280万韩元。光KJ突破将压缩存储芯片上行周期，但HBM4已量产+长期协议支撑中期逻辑。长鑫量都锁死了，是面子工程+某队维护",
+          "group": "信息早知道、潘凤、洛飞小群、彭域、核心逻辑社、傅里叶的猫"
+        },
+        {
+          "date": "2026-07-27",
+          "hotness": 5,
+          "logic": "长鑫科技科创板上市，市值3.3万亿创记录。野村目标价116元（市值7.76万亿），中信预计2026-28年营收CAGR 63%。AI推动存储从周期走向超级成长，全球DRAM供需缺口延续至2028年。长鑫DRAM全球市占率从8%提升至2028年18%，中国自给率仅30%有巨大替代空间",
+          "group": "信息早知道、傅里叶的猫、潘凤、核心逻辑社"
+        }
+      ]
+    },
+    {
+      "name": "AI算力/算芯",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 5,
+      "linked_stocks": [
+        {
+          "name": "星网锐捷",
+          "role": "核心",
+          "logic": "机构3日净买入1.6亿，洗盘凶悍",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "寒武纪",
+          "role": "龙头",
+          "logic": "500万股股权激励+2026-2028累计1000亿营收考核",
+          "mentions": 1,
+          "stock_mentions": 4
+        },
+        {
+          "name": "中际旭创",
+          "role": "龙头",
+          "logic": "40-80亿回购+1.6T ASP超预期",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "金山办公",
+          "role": "关注",
+          "logic": "上半年净利预增210%-264%",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 5,
+          "logic": "核心逻辑社反复强调'算力错杀'逻辑：存储芯片中美日韩都有玩家；算芯唯独中美具备设计和量产能力+半球化逻辑。光KJ突破量产后国产算力才能放量+业绩炸裂。今明后三年受制于产能瓶颈，类似去年DS冲击后被杰文斯悖论化解。KIMI K3开源加剧B300紧缺",
+          "group": "信息早知道、核心逻辑社、傅里叶的猫"
+        }
+      ]
+    },
+    {
       "name": "AI算力/超节点",
       "first_seen": "2026-07-27",
       "last_seen": "2026-07-27",
@@ -2758,7 +3465,7 @@
           "role": "热门",
           "logic": "中报即将披露，预判业绩炸裂",
           "mentions": 1,
-          "stock_mentions": 3
+          "stock_mentions": 4
         },
         {
           "name": "壁仞科技",
@@ -2781,44 +3488,6 @@
           "hotness": 5,
           "logic": "大摩定调超节点成国产算力主线。4张昇腾950=1张英伟达B系列，国产卡性价比凸显。华为/海光/壁仞/摩尔线程/沐曦全面推出超节点方案，2026Q2已完成关键测试认证",
           "group": "信息早知道"
-        }
-      ]
-    },
-    {
-      "name": "存储/DRAM",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "mention_count": 1,
-      "last_hotness": 5,
-      "linked_stocks": [
-        {
-          "name": "雅克科技",
-          "role": "核心",
-          "logic": "长鑫最核心前驱体供应商，量价齐升",
-          "mentions": 1,
-          "stock_mentions": 1
-        },
-        {
-          "name": "长鑫科技",
-          "role": "龙头",
-          "logic": "国产DRAM第一IDM，IPO募资666亿，月产能30万片+",
-          "mentions": 1,
-          "stock_mentions": 2
-        },
-        {
-          "name": "海光信息",
-          "role": "热门",
-          "logic": "超节点+DRAM相关",
-          "mentions": 1,
-          "stock_mentions": 3
-        }
-      ],
-      "logs": [
-        {
-          "date": "2026-07-27",
-          "hotness": 5,
-          "logic": "长鑫科技科创板上市，市值3.3万亿创记录。野村目标价116元（市值7.76万亿），中信预计2026-28年营收CAGR 63%。AI推动存储从周期走向超级成长，全球DRAM供需缺口延续至2028年。长鑫DRAM全球市占率从8%提升至2028年18%，中国自给率仅30%有巨大替代空间",
-          "group": "信息早知道、傅里叶的猫、潘凤、核心逻辑社"
         }
       ]
     },
@@ -2900,7 +3569,7 @@
           "role": "核心",
           "logic": "7月27日上市，合理市值2.5-3万亿",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "长鑫存储",
@@ -2914,7 +3583,7 @@
           "role": "核心",
           "logic": "全球共振存储方向核心标的",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 2
         },
         {
           "name": "普冉股份",
@@ -2955,6 +3624,50 @@
           "date": "2026-07-24",
           "hotness": 4,
           "logic": "长鑫科技7月27日科创板上市，合理市值2.5-3万亿，市场担忧抽血效应但政府已做详细安排。全球缺存储共振，普冉股份半年报净利润+1925%，江波龙/澜起科技大额回购。存储芯片为全球共振方向，必须是芯片。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "MLCC/被动元件",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "风华高科",
+          "role": "核心",
+          "logic": "MLCC涨价受益",
+          "mentions": 2,
+          "stock_mentions": 2
+        },
+        {
+          "name": "鸿远电子",
+          "role": "龙头",
+          "logic": "高可靠MLCC军工市占45%+机构测算净利7-8亿",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "国瓷材料",
+          "role": "关注",
+          "logic": "MLCC+氧化锆涨价",
+          "mentions": 2,
+          "stock_mentions": 2
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 4,
+          "logic": "三星电机8月1日起MLCC涨价30%，太阳诱电9月1日跟进。全球电子产品需求结构性增长已对供应链造成压力，'即使价格调整后供应仍不足以完全满足需求'。鸿远电子高可靠MLCC军工市占超45%",
+          "group": "信息早知道"
+        },
+        {
+          "date": "2026-07-27",
+          "hotness": 3,
+          "logic": "风华高科MLCC涨停，国瓷材料MLCC+氧化锆涨价。成熟制程芯片从涨价演变为缺货，功率板块业绩进入爆发临界点，类似2021年供需错配",
           "group": "信息早知道"
         }
       ]
@@ -3114,6 +3827,30 @@
           "hotness": 4,
           "logic": "mSAP扩产浪潮来袭：鹏鼎100亿+红板50亿投资。mSAP工艺对设备精度要求大幅提升，曝光、钻孔、电镀设备价值量较HDI接近翻倍，资本开支与产值比近1:1。光模块带来的mSAP产能需求将倍数式增长，扩产周期长，半导体化迭代通胀延长周期长度。回调创造中长期布局机会。",
           "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "企业级AI/Agent",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "普联软件",
+          "role": "龙头",
+          "logic": "实控人变更明略科技，企业级AI标志性事件",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 4,
+          "logic": "普联软件实控人变更为明略科技（全球Agentic AI第一股，腾讯持股27%为最大外部股东），打造腾讯系AI新入口。Agent时代腾讯系首次希望获得A股上市公司控股权。腾讯系从CodeBuddy到WorkBuddy再到LearnBuddy，明略已推出Agent Ready方案，未来向央企财务、司库等核心系统延伸",
+          "group": "信息早知道、杰哥进阶"
         }
       ]
     },
@@ -3422,6 +4159,58 @@
       ]
     },
     {
+      "name": "算力租赁",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "行云科技",
+          "role": "核心",
+          "logic": "KIMI+ZP+阿里三线驱动",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "利通电子",
+          "role": "核心",
+          "logic": "ZP+DS+KIMI三线驱动",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "协创数据",
+          "role": "龙头",
+          "logic": "深度绑定阿里，ZP已有订单落地",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "东阳光",
+          "role": "关注",
+          "logic": "ZP+阿里双线驱动",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "宏景科技",
+          "role": "关注",
+          "logic": "阿里+ZP双线驱动",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 4,
+          "logic": "KIMI K3开源驱动B300紧缺。K3最低配置需16张H200，H系列无原生FP4需转码，实际至少需B300效率，2台B300才能跑。具备拿卡能力的算力租赁厂商显著受益",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
       "name": "成熟制程芯片",
       "first_seen": "2026-07-24",
       "last_seen": "2026-07-27",
@@ -3455,6 +4244,57 @@
           "hotness": 3,
           "logic": "华源前瞻科技团队强call富满微&明微电子：AI需求爆发挤占传统产能，全球成熟制程产能维持动态平衡，涨价潮开始出现且缺货现象频发。对标2021年功率板块弹性复现，富满微季度业绩从-1.2亿恢复到8000-9000万，预计26Q3有望创历史新高。",
           "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "电解液VC添加剂",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-29",
+      "mention_count": 2,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "华盛锂电",
+          "role": "核心",
+          "logic": "VC添加剂企业受益",
+          "mentions": 2,
+          "stock_mentions": 1
+        },
+        {
+          "name": "海科新源",
+          "role": "核心",
+          "logic": "VC添加剂企业受益",
+          "mentions": 2,
+          "stock_mentions": 1
+        },
+        {
+          "name": "孚日股份",
+          "role": "龙头",
+          "logic": "VC出货价20万+，8月新产能落地",
+          "mentions": 2,
+          "stock_mentions": 1
+        },
+        {
+          "name": "新宙邦",
+          "role": "关注",
+          "logic": "VC添加剂企业受益",
+          "mentions": 1,
+          "stock_mentions": 0
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 3,
+          "logic": "VC最新报价21.5万/吨，较月初增长40%，头部企业产能扩产持续delay。8月行业排产环比增长8%，下游现实景气度强势。看下半年VC几乎无新增供给，看好VC价格持续向上",
+          "group": "信息早知道"
+        },
+        {
+          "date": "2026-07-27",
+          "hotness": 3,
+          "logic": "VC均价20万元/吨，近月涨幅超40%，时隔4年再破20万。下游排队等货严重供不应求，预计涨至25万+。8月新产能落地但缺口依旧很大",
+          "group": "信息早知道、黑火信息差"
         }
       ]
     },
@@ -3557,37 +4397,6 @@
           "date": "2026-07-24",
           "hotness": 3,
           "logic": "海康威视半年报利润显著超预期，上半年归母净利78.96亿同比+39.57%，2Q26单季约51.15亿。拟每10股派5.5元高分红。从安防龙头向AIoT平台型企业升级，业绩超预期+高分红共振。",
-          "group": "信息早知道"
-        }
-      ]
-    },
-    {
-      "name": "MLCC/被动元件",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "mention_count": 1,
-      "last_hotness": 3,
-      "linked_stocks": [
-        {
-          "name": "国瓷材料",
-          "role": "核心",
-          "logic": "MLCC+氧化锆涨价",
-          "mentions": 1,
-          "stock_mentions": 1
-        },
-        {
-          "name": "风华高科",
-          "role": "龙头",
-          "logic": "MLCC涨停",
-          "mentions": 1,
-          "stock_mentions": 1
-        }
-      ],
-      "logs": [
-        {
-          "date": "2026-07-27",
-          "hotness": 3,
-          "logic": "风华高科MLCC涨停，国瓷材料MLCC+氧化锆涨价。成熟制程芯片从涨价演变为缺货，功率板块业绩进入爆发临界点，类似2021年供需错配",
           "group": "信息早知道"
         }
       ]
@@ -3717,40 +4526,102 @@
       ]
     },
     {
-      "name": "电解液VC添加剂",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
+      "name": "染料",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
       "mention_count": 1,
       "last_hotness": 3,
       "linked_stocks": [
         {
-          "name": "华盛锂电",
+          "name": "浙江龙盛",
           "role": "核心",
-          "logic": "VC添加剂企业",
+          "logic": "推动H酸工艺升级，老旧产能淘汰",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 0
         },
         {
-          "name": "海科新源",
-          "role": "核心",
-          "logic": "VC添加剂企业",
-          "mentions": 1,
-          "stock_mentions": 1
-        },
-        {
-          "name": "孚日股份",
+          "name": "安诺其",
           "role": "龙头",
-          "logic": "VC出货价20万+，8月新产能落地",
+          "logic": "东营+山东项目分散染料产能11万吨+AI算力并购",
           "mentions": 1,
           "stock_mentions": 1
         }
       ],
       "logs": [
         {
-          "date": "2026-07-27",
+          "date": "2026-07-29",
           "hotness": 3,
-          "logic": "VC均价20万元/吨，近月涨幅超40%，时隔4年再破20万。下游排队等货严重供不应求，预计涨至25万+。8月新产能落地但缺口依旧很大",
-          "group": "信息早知道、黑火信息差"
+          "logic": "周末H酸-活性染料大厂开会，复刻还原物-分散染料涨价链条。H酸今日上涨至10w，对位酯涨至3.2w。龙盛推动H酸工艺由铁粉还原转向加氢还原，老旧产能淘汰下行业供需缺口极有可能体现",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "消费（博弈ZZJ）",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "比亚迪",
+          "role": "龙头",
+          "logic": "车王进军机器人提升估值",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "特发服务",
+          "role": "关注",
+          "logic": "地产辨识度+ZZJ会议预期",
+          "mentions": 1,
+          "stock_mentions": 0
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 3,
+          "logic": "今天消费股封板一大堆，博弈7月底ZZJ会议释放消费利好预期。核心逻辑社：之前沪指最弱现在最强，资金风水轮流转。尊界下个月发布国产库里南、车王下个月发布机器人。消费绩优股+汽车是试错方向。地产辨识度：特发服务",
+          "group": "核心逻辑社、信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "网络安全",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "国安股份",
+          "role": "核心",
+          "logic": "网络安全一字板",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "蓝天信息",
+          "role": "龙头",
+          "logic": "网络安全二板",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "科创信息",
+          "role": "关注",
+          "logic": "网安+大数据安全标准建设",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 3,
+          "logic": "蓝天信息二板、国安股份一字板、科创信息集体异动。药明康德高开带动医药AI线。指数止跌后大金融IT方向也受关注（天晟新材、银之杰、汇金股份等）",
+          "group": "信息早知道、杰哥进阶"
         }
       ]
     },
@@ -3995,6 +4866,30 @@
       ]
     },
     {
+      "name": "AI短剧/IPTV",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 2,
+      "linked_stocks": [
+        {
+          "name": "海看股份",
+          "role": "龙头",
+          "logic": "山东IPTV独家播控权+AIGC全链路",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 2,
+          "logic": "安徽卫视播出国内首部持证AI短剧《桃花潭记》，验证AI短剧合规上星，为各省广电IPTV打开空间。海看股份凭借国企背景拥有网络剧制作及播出资质，自研AIGC平台打通'剧本到成片'全链路，AI漫剧已商业化",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
       "name": "MLCC",
       "first_seen": "2026-07-26",
       "last_seen": "2026-07-26",
@@ -4057,9 +4952,33 @@
           "group": "信息早知道"
         }
       ]
+    },
+    {
+      "name": "游戏/ChinaJoy",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-07-29",
+      "mention_count": 1,
+      "last_hotness": 2,
+      "linked_stocks": [
+        {
+          "name": "顺网科技",
+          "role": "龙头",
+          "logic": "ChinaJoy全网唯一A股+独家展出韩国成人向影游+五五开流量",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-07-29",
+          "hotness": 2,
+          "logic": "7月31日第23届ChinaJoy上海开幕，39国近900家企业参展，抖音/快手亿级流量直播。顺网科技是全网唯一A股上市公司，N1馆C位，独家展出韩国成人向互动影游，五五开或亲临现场",
+          "group": "信息早知道"
+        }
+      ]
     }
   ],
-  "generated_at": "2026-07-27 22:58:40",
-  "total_stocks": 99,
-  "total_sectors": 35
+  "generated_at": "2026-07-29 22:59:05",
+  "total_stocks": 122,
+  "total_sectors": 43
 }
