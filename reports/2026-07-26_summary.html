@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股市场观点汇总 · 2026-07-26</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --text-secondary: #6c757d;
+    --border: #e9ecef;
+    --red: #dc3545;
+    --green: #28a745;
+    --blue: #2563eb;
+    --orange: #fd7e14;
+    --purple: #7c3aed;
+    --teal: #0d9488;
+    --gold: #d4a017;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .header h1 { font-size: 26px; margin-bottom: 8px; letter-spacing: 1px; }
+  .header .subtitle { font-size: 14px; opacity: 0.8; }
+  .header .meta {
+    display: flex; justify-content: center; gap: 24px;
+    margin-top: 16px; font-size: 13px; opacity: 0.9;
+    flex-wrap: wrap;
+  }
+  .header .meta span { display: flex; align-items: center; gap: 6px; }
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .icon { font-size: 20px; }
+  .view-item {
+    padding: 14px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--blue);
+  }
+  .view-item strong { color: var(--blue); }
+  .view-item .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+  }
+  .warning-box {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #f1f3f5; padding: 10px 12px; text-align: left; font-weight: 600; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .heat-bar { display: inline-block; width: 60px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, var(--orange), var(--red)); margin-right: 6px; vertical-align: middle; }
+  .stock-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+    border-left: 4px solid var(--blue);
+  }
+  .stock-card .stock-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px; flex-wrap: wrap; gap: 6px;
+  }
+  .stock-card .stock-name { font-size: 16px; font-weight: 700; }
+  .stock-card .stock-tag { font-size: 12px; color: var(--text-secondary); }
+  .stock-card .stock-logic { font-size: 14px; color: #495057; line-height: 1.7; }
+  .stock-card .stock-source { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+  .role-badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 500; margin-left: 6px; }
+  .role-core { background: #fde8e8; color: var(--red); }
+  .role-hot { background: #fff3cd; color: var(--orange); }
+  .role-watch { background: #e0e7ff; color: var(--blue); }
+  .role-short { background: #d1fae5; color: var(--green); }
+  .sentiment-box { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sentiment-col { padding: 16px; border-radius: 10px; }
+  .sentiment-bull { background: #fef2f2; border: 1px solid #fecaca; }
+  .sentiment-bear { background: #f0fdf4; border: 1px solid #bbf7d0; }
+  .sentiment-col .title { font-weight: 700; margin-bottom: 10px; font-size: 14px; }
+  .sentiment-col.bull .title { color: var(--red); }
+  .sentiment-col.bear .title { color: var(--green); }
+  .sentiment-col ul { list-style: none; padding: 0; }
+  .sentiment-col li { font-size: 13px; padding: 4px 0; padding-left: 16px; position: relative; }
+  .sentiment-col li::before { content: "•"; position: absolute; left: 0; }
+  .focus-list { list-style: none; padding: 0; }
+  .focus-list li {
+    padding: 12px 16px;
+    background: #fffbf0;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .focus-list li strong { color: var(--orange); }
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+  .news-section { font-size: 13px; line-height: 2.2; }
+  .news-section strong { color: var(--purple); }
+  @media (max-width: 600px) {
+    .sentiment-box { grid-template-columns: 1fr; }
+    .header h1 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>A股市场观点汇总</h1>
+  <div class="subtitle">15个飞书交流群 · 市场观点与个股分析</div>
+  <div class="meta">
+    <span>📅 2026年7月26日（周日）</span>
+    <span>💬 21条消息</span>
+    <span>📊 6个活跃群</span>
+    <span>🔍 16只个股 · 8个板块</span>
+  </div>
+</div>
+
+<!-- 核心观点 -->
+<div class="section">
+  <div class="section-title"><span class="icon">💡</span> 周末核心观点</div>
+
+  <div class="view-item">
+    <strong>信息早知道 · DW电子：</strong>国产算力超节点大趋势不可逆转。本周超节点经历大热，核心催化包括盛科通信上修关联交易额度、WAIC大会超节点成核心议题、腾讯云大规模部署国产化算力、Kimi K3论证超节点需求（2.8万亿参数MoE需64卡以上超节点部署）。市场小作文诋毁超节点的声音完全不需考虑，持续推荐五大天王：寒武纪、海光信息、芯原股份、盛科通信、兆易创新，尤其看好盛科通信。
+    <div class="source">来源：信息早知道 · 11:37 DW电子周思考</div>
+  </div>
+
+  <div class="view-item">
+    <strong>信息早知道 · PCB设备：</strong>mSAP扩产浪潮来袭。鹏鼎100亿+红板50亿投资超预期。mSAP工艺对设备精度要求大幅提升，曝光、钻孔、电镀设备价值量较HDI接近翻倍，资本开支与产值比近1:1。光模块带来的mSAP产能需求将倍数式增长，半导体化迭代通胀延长周期长度。回调创造中长期布局机会，推荐芯碁微装、大族数控、东威科技。
+    <div class="source">来源：信息早知道 · 17:30 PCB设备推荐</div>
+  </div>
+
+  <div class="view-item">
+    <strong>信息早知道 · 刀具进口替代：</strong>海外刀具密集提价周期开启。京瓷、住友、YAMAWA 8月1日调价，山特维克、瓦尔特9月1日调价。Q2日韩刀具价格一度低于国产致国产承压，现海外提价落地+低价进口库存消化，国产需求有望修复。海外APT价格约为国内2.9-3.2倍，国产刀具性价比优势加速回归，三季度将进入黄金增长期。推荐华锐精密、中钨高新、欧科亿。
+    <div class="source">来源：信息早知道 · 19:17 中泰先进产业</div>
+  </div>
+
+  <div class="view-item">
+    <strong>核心逻辑社：</strong>周末利好梳理——①美伊冲突缓和信号（特朗普暂停空袭伊朗，伊朗暂停对等打击，愿继续谈判）②放心嗨接受审查调查（量化推手被抓，全民狂欢）③三星SK海力士与美企签9500亿美元半导体大单 ④英伟达全面上调GPU价格，高通涨两位数百分比 ⑤五大半导体设备供应商交付周期延长50-100% ⑥宁德时代拟200-400亿回购注销（A股史上最大规模回购）⑦黄仁勋/马斯克看好中国AI。
+    <div class="source">来源：核心逻辑社 · 22:34 周末信息梳理</div>
+  </div>
+
+  <div class="view-item">
+    <strong>傅里叶的猫 · 高盛存储专家纪要：</strong>中国本土DRAM供应商产能到2030年可能翻倍以上。合肥、上海、北京扩产项目2028年前后全面运营。HBM3/HBM3E仍是2026年目标，3D DRAM 2027年或有新进展。存储器价格2026下半年涨幅放缓但AI需求支撑2027年继续上涨。
+    <div class="source">来源：傅里叶的猫 · 12:20 高盛纪要</div>
+  </div>
+
+  <div class="warning-box">
+    <strong>⚠️ DeepSeek事件：</strong>梁文锋内部讲话泄露，暴露DeepSeek约2万张H100等效卡算力、华为950性能落后英伟达4倍/周期落后2年、国内几十B参数vs美国800B参数等硬数据。梁文锋叫停融资，既是愤怒也是自保。泄露内容可能提醒美方补上出口管制漏洞，对国产AI环境生存空间构成威胁。
+    <div class="source">来源：信息早知道 · 20:16</div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔥</span> 板块热度排行</div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:40px">#</th>
+        <th>板块</th>
+        <th style="width:80px">热度</th>
+        <th>核心逻辑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>国产算力</strong></td>
+        <td><span class="heat-bar"></span>★★★★★</td>
+        <td>超节点大趋势不可逆转，Kimi K3论证需求。盛科通信CPO合作+腾讯云部署。五大天王持续推荐</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>PCB设备</strong></td>
+        <td><span class="heat-bar"></span>★★★★☆</td>
+        <td>mSAP扩产浪潮：鹏鼎100亿+红板50亿投资。设备价值量翻倍，半导体化通胀延长周期</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>半导体设备</strong></td>
+        <td><span class="heat-bar"></span>★★★★☆</td>
+        <td>五大供应商交付周期延长50-100%，设备成扩产瓶颈。三星9500亿美元大单</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>刀具/进口替代</strong></td>
+        <td><span class="heat-bar"></span>★★★★☆</td>
+        <td>海外刀具密集提价，国产性价比优势加速回归。三季度进入黄金增长期</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>存储芯片</strong></td>
+        <td><span class="heat-bar"></span>★★★★☆</td>
+        <td>高盛纪要：产能2030年翻倍，HBM3/HBM3E为2026年目标。长鑫科技明日上市</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>锂电/储能</strong></td>
+        <td><span class="heat-bar"></span>★★★☆☆</td>
+        <td>宁德时代200-400亿回购注销（A股史上最大），叠加半年报催化</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>储能/电网</strong></td>
+        <td><span class="heat-bar"></span>★★★☆☆</td>
+        <td>十五五能源规划：海风并重、电网适度超前、氢氨醇规模化（2030年200万吨，8倍跃升）</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>MLCC</strong></td>
+        <td><span class="heat-bar"></span>★★☆☆☆</td>
+        <td>黑火梳理核心标的：三环集团、风华高科、国瓷材料、洁美科技</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股 -->
+<div class="section">
+  <div class="section-title"><span class="icon">💹</span> 重点个股分析</div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">盛科通信 (688702) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">国产算力 · 中长线</span>
+    </div>
+    <div class="stock-logic">国产高端交换芯片自研能力核心壁垒，覆盖数据中心高速交换机、智算集群互联设备。与曦智科技达成CPO战略合作，腾讯云大规模部署国产化算力和NPO超节点。Kimi K3论证超节点需求，公司是国产AI互连算力赛道核心受益标的。DW电子持续重点推荐，尤其看好。</div>
+    <div class="stock-source">来源：信息早知道 · DW电子</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">芯碁微装 (688630) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">PCB设备 · 中长线</span>
+    </div>
+    <div class="stock-logic">mSAP扩产浪潮核心受益标的。鹏鼎投资100亿新建深圳第三园区，红板科技投资50亿。mSAP工艺对设备精度要求大幅提升，曝光设备价值量较HDI接近翻倍。回调创造中长期布局机会。</div>
+    <div class="stock-source">来源：信息早知道 · PCB设备推荐</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">华锐精密 (688059) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">刀具/进口替代 · 中长线</span>
+    </div>
+    <div class="stock-logic">海外刀具密集提价（京瓷、住友8月1日调价，山特维克9月调价），国产高端刀具性价比优势加速回归。Q2扰动加速出清，Q3修复基础确立。海外APT价格约为国内2.9-3.2倍，进口替代+出海双逻辑兑现，三季度进入黄金增长期。</div>
+    <div class="stock-source">来源：信息早知道 · 中泰先进产业</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--red);">
+    <div class="stock-header">
+      <span class="stock-name">宁德时代 (300750) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">锂电/储能 · 中长线</span>
+    </div>
+    <div class="stock-logic">拟以200-400亿元回购股份用于注销，A股史上最大规模股票回购方案。叠加周五晚半年报发布，双重利好催化。提振27年需求信心。</div>
+    <div class="stock-source">来源：核心逻辑社 · 周末利好梳理</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--orange);">
+    <div class="stock-header">
+      <span class="stock-name">中岩大地 (003001) <span class="role-badge role-short">短线</span></span>
+      <span class="stock-tag">PCB设备 · 短线</span>
+    </div>
+    <div class="stock-logic">鑫寰宇2028年底全面达产12亿只/年PCB精密钻针，产能完全对标鼎泰高科11.3亿只/年。最小钻径0.03mm优于鼎泰高科(0.05mm)和中钨高新(0.075mm)。客户拓展至胜宏科技、生益电子等。鼎泰高科市值1700亿vs中岩大地35亿，存在重大预期差。</div>
+    <div class="stock-source">来源：信息早知道 · 20:42</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--orange);">
+    <div class="stock-header">
+      <span class="stock-name">海光信息 (688041) <span class="role-badge role-core">核心</span></span>
+      <span class="stock-tag">国产算力 · 中长线</span>
+    </div>
+    <div class="stock-logic">DW电子国产算力五大天王之一。国产算力芯片主力。DeepSeek事件暴露华为950性能落后英伟达4倍，国产替代需求更加迫切。</div>
+    <div class="stock-source">来源：信息早知道 · DW电子</div>
+  </div>
+
+  <div class="stock-card" style="border-left-color: var(--blue);">
+    <div class="stock-header">
+      <span class="stock-name">鹏鼎控股 (002938) <span class="role-badge role-watch">关注</span></span>
+      <span class="stock-tag">PCB · 中长线</span>
+    </div>
+    <div class="stock-logic">投资100亿新建深圳第三园区，建设人工智能高阶类载板及柔性电路板智造基地，2026年7月启动至2033年建成投产。mSAP扩产引领PCB设备升级通胀。</div>
+    <div class="stock-source">来源：信息早知道 · PCB设备</div>
+  </div>
+</div>
+
+<!-- 市场情绪 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🎯</span> 市场情绪</div>
+  <div class="sentiment-box">
+    <div class="sentiment-col bull">
+      <div class="title">🔴 看多因素</div>
+      <ul>
+        <li>美伊冲突缓和信号：特朗普暂停空袭，伊朗愿继续谈判</li>
+        <li>放心嗨被查，量化推手落马，市场拍手称快</li>
+        <li>宁德时代200-400亿回购注销，A股史上最大规模</li>
+        <li>英伟达GPU涨价+高通涨两位数%，半导体涨价周期</li>
+        <li>半导体设备交期延长50-100%，设备商受益</li>
+        <li>超节点产业趋势持续发酵，Kimi K3论证需求</li>
+        <li>海外刀具涨价，国产替代黄金窗口</li>
+        <li>十五五能源规划落地，海风/电网/氢氨醇全面利好</li>
+      </ul>
+    </div>
+    <div class="sentiment-col bear">
+      <div class="title">🟢 风险因素</div>
+      <ul>
+        <li>DeepSeek内部讲话泄露，暴露国产AI算力巨大差距</li>
+        <li>华为950性能落后英伟达4倍、周期落后2年</li>
+        <li>国内模型参数（几十B）vs美国（800B）断层巨大</li>
+        <li>泄露内容可能提醒美方补上出口管制漏洞</li>
+        <li>DeepSeek融资停摆，国产AI环境生存空间受威胁</li>
+        <li>美伊局势仍有不确定性，11月中期选举前TACO概率</li>
+        <li>PCB设备板块受市场风格和流动性影响回调较多</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 明日关注 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📌</span> 明日关注重点</div>
+  <ul class="focus-list">
+    <li><strong>🚀 长鑫科技7月27日（周一）科创板上市</strong>——发行市值5792亿，合理市值2.5-3万亿。抽血预期落地，存储芯片板块关注度高。</li>
+    <li><strong>💳 宁德时代回购+半年报</strong>——200-400亿回购注销方案+周五晚半年报发布，锂电板块有望受催化。</li>
+    <li><strong>🌟 美伊局势</strong>——特朗普暂停空袭伊朗，伊朗暂停对等打击并愿继续谈判。若持续缓和，科技股有望反攻。</li>
+    <li><strong>🕐 放心嗨被查</strong>——量化推手落马，市场情绪或受提振。"熟悉的抓人—熟悉的反转？"</li>
+    <li><strong>💹 半导体设备涨价链</strong>——设备交期延长50-100%+英伟达/高通涨价+三星9500亿美元大单，半导体设备方向持续受益。</li>
+    <li><strong>📣 国产算力五大天王</strong>——超节点产业趋势+Kimi K3论证，盛科通信、海光信息、寒武纪、芯原股份、兆易创新。</li>
+    <li><strong>🔄 PCB设备mSAP扩产</strong>——鹏鼎100亿+红板50亿投资，芯碁微装、大族数控、东威科技回调布局机会。</li>
+  </ul>
+</div>
+
+<!-- 重要新闻 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📰</span> 周末重要新闻</div>
+  <div class="news-section">
+    <strong>地缘：</strong>特朗普下令暂停空袭伊朗 | 伊朗暂停对等打击，愿继续谈判 | 沙特媒体：伊朗未退出谈判<br>
+    <strong>监管：</strong>放心嗨接受审查调查（量化推手被抓）<br>
+    <strong>半导体：</strong>三星SK海力士与美企签9500亿美元大单 | 英伟达全面上调GPU价格 | 高通涨两位数% | 五大设备商交期延长50-100%<br>
+    <strong>回购：</strong>宁德时代拟200-400亿回购注销（A股史上最大）<br>
+    <strong>AI：</strong>DeepSeek融资停摆，梁文锋内部讲话泄露 | 黄仁勋：中国注定产出卓越AI技术 | 马斯克：中国极有可能成为AI领导者<br>
+    <strong>能源：</strong>十五五规划：海风并重、电网适度超前、氢氨醇规模化<br>
+    <strong>PCB：</strong>鹏鼎100亿新建深圳第三园区 | 红板50亿mSAP项目
+  </div>
+</div>
+
+<div class="footer">
+  数据来源：15个飞书交流群每日观点整理 · 仅供个人参考，不构成投资建议<br>
+  生成时间：2026-07-27 07:15
+</div>
+
+</div>
+</body>
+</html>
