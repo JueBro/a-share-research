@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股群聊市场观点汇总 - 2026年7月27日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Microsoft YaHei", "Segoe UI", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.7;
+  padding: 20px;
+}
+.container { max-width: 1100px; margin: 0 auto; }
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.header h1 { font-size: 26px; margin-bottom: 8px; }
+.header .subtitle { font-size: 14px; opacity: 0.8; margin-bottom: 16px; }
+.header-meta { display: flex; gap: 28px; flex-wrap: wrap; }
+.header-meta .meta-item {
+  background: rgba(255,255,255,0.12);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.header-meta .meta-item strong { color: #ffd700; font-size: 18px; }
+
+/* Section */
+.section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #e8ecf1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title .icon { font-size: 22px; }
+
+/* Core viewpoints */
+.viewpoint-card {
+  background: #f8f9fb;
+  border-left: 4px solid #4a6cf7;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+.viewpoint-card .vp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.viewpoint-card .vp-source {
+  font-size: 12px;
+  color: #fff;
+  background: #4a6cf7;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.viewpoint-card .vp-tag {
+  font-size: 12px;
+  color: #666;
+}
+.viewpoint-card .vp-content { font-size: 14px; color: #333; }
+
+/* Sector table */
+.sector-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.sector-table th {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+.sector-table th:first-child { border-radius: 8px 0 0 0; }
+.sector-table th:last-child { border-radius: 0 8px 0 0; }
+.sector-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eef0f3;
+}
+.sector-table tr:hover { background: #f8f9fb; }
+.star { color: #ff9500; letter-spacing: 1px; }
+.rank-badge {
+  display: inline-block;
+  width: 28px; height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+}
+.rank-1 { background: #ff4757; }
+.rank-2 { background: #ff6b6b; }
+.rank-3 { background: #ffa502; }
+.rank-other { background: #a4b0be; }
+
+/* Stock cards */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 16px;
+}
+.stock-card {
+  background: #f8f9fb;
+  border: 1px solid #e8ecf1;
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stock-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.stock-card .stock-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+.stock-card .stock-tags { margin-bottom: 10px; }
+.stock-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-weight: 600;
+}
+.tag-red { background: #ffe0e0; color: #c0392b; }
+.tag-blue { background: #e3f0ff; color: #2980b9; }
+.tag-green { background: #e0f5e0; color: #27ae60; }
+.tag-orange { background: #fff3e0; color: #e67e22; }
+.tag-purple { background: #f3e5f5; color: #8e44ad; }
+.stock-card .stock-logic { font-size: 13px; color: #555; margin-bottom: 8px; }
+.stock-card .stock-source { font-size: 12px; color: #999; }
+
+/* Risk & Signal */
+.dual-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.risk-card, .signal-card {
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+.risk-card { background: #fff5f5; border: 1px solid #ffd5d5; }
+.signal-card { background: #f0fff4; border: 1px solid #c6efce; }
+.risk-card h3 { color: #c0392b; margin-bottom: 12px; font-size: 16px; }
+.signal-card h3 { color: #27ae60; margin-bottom: 12px; font-size: 16px; }
+.risk-card ul, .signal-card ul { list-style: none; }
+.risk-card li, .signal-card li {
+  font-size: 13px;
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.risk-card li::before { content: "⚠"; position: absolute; left: 0; }
+.signal-card li::before { content: "✅"; position: absolute; left: 0; }
+
+/* Focus cards */
+.focus-list { display: grid; gap: 12px; }
+.focus-card {
+  background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%);
+  border: 1px solid #ffe082;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.focus-card .focus-icon { font-size: 18px; flex-shrink: 0; }
+
+/* Market data bar */
+.market-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.market-stat {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.market-stat .stat-label { font-size: 12px; color: #888; margin-bottom: 6px; }
+.market-stat .stat-value { font-size: 22px; font-weight: 700; }
+.stat-red { color: #e74c3c; }
+.stat-green { color: #27ae60; }
+.stat-blue { color: #2980b9; }
+
+/* Disclaimer */
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .dual-col { grid-template-columns: 1fr; }
+  .market-bar { grid-template-columns: 1fr 1fr; }
+  .stock-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>📊 A股飞书群聊市场观点汇总</h1>
+  <div class="subtitle">2026年7月27日（周一）| 长鑫科技上市日 · 国产存储新纪元</div>
+  <div class="header-meta">
+    <div class="meta-item">📅 日期：<strong>2026-07-27</strong></div>
+    <div class="meta-item">💬 监控群数：<strong>15</strong></div>
+    <div class="meta-item">📨 消息总数：<strong>403</strong></div>
+    <div class="meta-item">🕐 生成时间：<strong>23:00</strong></div>
+  </div>
+</div>
+
+<!-- Market Data Bar -->
+<div class="market-bar">
+  <div class="market-stat">
+    <div class="stat-label">长鑫科技市值</div>
+    <div class="stat-value stat-red">3.3万亿</div>
+  </div>
+  <div class="market-stat">
+    <div class="stat-label">私募仓位</div>
+    <div class="stat-value stat-green">＜70%</div>
+  </div>
+  <div class="market-stat">
+    <div class="stat-label">金价</div>
+    <div class="stat-value stat-red">4100美元+</div>
+  </div>
+  <div class="market-stat">
+    <div class="stat-label">费城半导体</div>
+    <div class="stat-value stat-green">-4.25%</div>
+  </div>
+</div>
+
+<!-- Section 1: Core Viewpoints -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔥</span> 大盘走势与核心观点</div>
+
+  <div class="viewpoint-card">
+    <div class="vp-header">
+      <span class="vp-source">核心逻辑社</span>
+      <span class="vp-tag">市场研判 · 14:59</span>
+    </div>
+    <div class="vp-content">
+      内外利空逐步出清（美伊缓和、长鑫吸血结束、加息预期放缓），利好源源不断，但市场仍滞涨承压，已失去自我修复能力。尾盘汪汪队从呵护沪深300转为拉升中证500（科技占比高），效果立竿见影。<strong>中长期底部区域确定，指数ETF是确定性选择</strong>。银行四连阳后，明天科技有望炸裂。
+    </div>
+  </div>
+
+  <div class="viewpoint-card" style="border-left-color: #e74c3c;">
+    <div class="vp-header">
+      <span class="vp-source" style="background:#e74c3c;">信息早知道</span>
+      <span class="vp-tag">中信策略 · 12:13</span>
+    </div>
+    <div class="vp-content">
+      中信证券策略：二次原油冲击不改8月行情修复趋势。<strong>私募仓位跌破70%，为"9.24行情"以来新低</strong>，情绪指标已达冰点，股价已充分反映负面叙事。市场趋于风格平衡，关注机构减仓较多的有色、红利、创新药，以及业绩超预期但杀估值的锂电、能化。AI需新超预期产业变化打破存量博弈。
+    </div>
+  </div>
+
+  <div class="viewpoint-card" style="border-left-color: #9b59b6;">
+    <div class="vp-header">
+      <span class="vp-source" style="background:#9b59b6;">核心逻辑社</span>
+      <span class="vp-tag">个人观点 · 11:57</span>
+    </div>
+    <div class="vp-content">
+      中长期底部确定，但短期反转时点无法预判。未反转前利空被放大、利好被弱化，存量博弈内卷加剧。国产算力反复巨震，能否坚守到市场反转还不好说。<strong>今天消费反弹本质是聪明资金做仓位对冲避险</strong>。建议轻仓国产+指数ETF，做指数ETF更省心。
+    </div>
+  </div>
+
+  <div class="viewpoint-card" style="border-left-color: #f39c12;">
+    <div class="vp-header">
+      <span class="vp-source" style="background:#f39c12;">潘凤</span>
+      <span class="vp-tag">操作分享 · 09:44</span>
+    </div>
+    <div class="vp-content">
+      长鑫科技2.5万亿附近是非常安全的估值，开盘低吸后浮盈20-30%。<strong>长鑫科技是所有科技的标杆，其他科技普反是卖点</strong>。今天长鑫是交易性机会，其余科技没有买入必要。医药近期有韧性，电力做投机。
+    </div>
+  </div>
+
+  <div class="viewpoint-card" style="border-left-color: #1abc9c;">
+    <div class="vp-header">
+      <span class="vp-source" style="background:#1abc9c;">彭域</span>
+      <span class="vp-tag">盘面观察 · 14:46</span>
+    </div>
+    <div class="vp-content">
+      尾盘核心PCB几个（景旺、沪电、国际）回流明显，很多图都是圆弧底。今天的易中天（易中天=新易盛/中际旭创/天孚通信）都没有新低，算情绪普修日。明天还需看长鑫反馈和易中天走势。<strong>吃大波动的差价，等待右侧确认慢慢聚焦</strong>。
+    </div>
+  </div>
+
+  <div class="viewpoint-card" style="border-left-color: #e67e22;">
+    <div class="vp-header">
+      <span class="vp-source" style="background:#e67e22;">洛飞小群</span>
+      <span class="vp-tag">晚间讨论 · 21:50</span>
+    </div>
+    <div class="vp-content">
+      谷歌等现金流转负，意味AI资本开支增速可能放缓，大票炒未来几年市盈率要降缓。大哥给出谨慎观点：<strong>别太主观，别预期太高，看图做</strong>。拉长时间旭创新高是有的，但磨的过程可能很磨人。期待小票先带队，暖场酝酿出题材大周期。阿斯麦-7%，中国若能光刻基本没其他国家的事。
+    </div>
+  </div>
+</div>
+
+<!-- Section 2: Sector Heat Ranking -->
+<div class="section">
+  <div class="section-title"><span class="icon">📈</span> 板块热度排行</div>
+  <table class="sector-table">
+    <thead>
+      <tr>
+        <th style="width:50px;">排名</th>
+        <th>板块名称</th>
+        <th style="width:110px;">热度</th>
+        <th>核心逻辑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank-badge rank-1">1</span></td>
+        <td><strong>存储/DRAM</strong></td>
+        <td><span class="star">★★★★★</span></td>
+        <td>长鑫科技科创板上市，市值3.3万亿创记录。野村目标价116元（市值7.76万亿），中信预计2026-28年营收CAGR 63%。AI推动存储从周期走向超级成长，供需缺口延续至2028年</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-2">2</span></td>
+        <td><strong>AI算力/超节点</strong></td>
+        <td><span class="star">★★★★★</span></td>
+        <td>大摩定调超节点成国产算力主线。4张昇腾950=1张英伟达B系列。华为/海光/壁仞/摩尔线程/沐曦全面推出超节点方案，浪潮信息/华勤技术/曙光数创为核心标的</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-3">3</span></td>
+        <td><strong>半导体材料</strong></td>
+        <td><span class="star">★★★★</span></td>
+        <td>长鑫上市标志国内存储进入资本驱动扩产新阶段，上游材料需求持续放量。雅克科技为长鑫最核心前驱体供应商，有望量价齐升</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">4</span></td>
+        <td><strong>PCB/mSAP</strong></td>
+        <td><span class="star">★★★★</span></td>
+        <td>景旺电子AI客户订单26Q1已超25年全年，mSAP产线扩至5条。福斯特感光干膜高端化，价格从5-7元/㎡涨至30-40元/㎡，毛利率50%+。尾盘PCB核心标的圆弧底回流</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">5</span></td>
+        <td><strong>半导体测试设备</strong></td>
+        <td><span class="star">★★★★</span></td>
+        <td>Blackwell/Rubin测试时长是Hopper的4-7倍，测试成本占比从1.9%升至3.3%。长川科技/华峰测控/强一股份/深科达受益于两存扩产+封装复杂度上升</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">6</span></td>
+        <td><strong>铜金板块</strong></td>
+        <td><span class="star">★★★</span></td>
+        <td>中信证券强call：铜价冲击14000美元，金价站上4100美元。铜矿金矿股估值从9-10x修复至10-11x仍处洼地。低库存+海外矿山扰动+宏观转向预期共振</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">7</span></td>
+        <td><strong>脑机接口</strong></td>
+        <td><span class="star">★★★</span></td>
+        <td>视网膜芯片获准在欧上市，帮助GA患者恢复部分视力。创新医疗涨停，三博脑科、趣睡科技（联合强脑科技）、成都华微（上游专用芯片）受关注</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">8</span></td>
+        <td><strong>电解液VC添加剂</strong></td>
+        <td><span class="star">★★★</span></td>
+        <td>VC均价20万元/吨，近月涨幅超40%，时隔4年再破20万。下游排队等货严重供不应求，预计涨至25万+。孚日股份8月新产能落地，华盛锂电、海科新源受益</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">9</span></td>
+        <td><strong>MLCC/被动元件</strong></td>
+        <td><span class="star">★★★</span></td>
+        <td>风华高科MLCC涨停，国瓷材料MLCC+氧化锆涨价。成熟制程芯片从涨价演变为缺货，功率板块业绩进入爆发临界点，类似2021年供需错配</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">10</span></td>
+        <td><strong>成熟制程芯片</strong></td>
+        <td><span class="star">★★★</span></td>
+        <td>华源证券强call富满微&明微电子：AI需求挤占传统产能，全球成熟制程供需平衡被打破，缺货现象频发。26Q3有望创历史新高，21年弹性复现</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">11</span></td>
+        <td><strong>机器人</strong></td>
+        <td><span class="star">★★</span></td>
+        <td>比亚迪机器人8月初郑州迪空间首次亮相。家庭/工业/4S店三大场景，公司具备制造+智能化+营销+应用场景完整生态。泰晶科技关注机器人晶振增量</td>
+      </tr>
+      <tr>
+        <td><span class="rank-badge rank-other">12</span></td>
+        <td><strong>液冷</strong></td>
+        <td><span class="star">★★</span></td>
+        <td>LG电子获英伟达600kW级CDU液冷认证。超节点单柜功率500kW+，液冷为必配。同星科技（LG客户）、曙光数创（液冷市占连续四年第一）受益</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 3: Key Stocks -->
+<div class="section">
+  <div class="section-title"><span class="icon">🎯</span> 重点个股推荐与分析</div>
+  <div class="stock-grid">
+
+    <div class="stock-card">
+      <div class="stock-name">长鑫科技</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-red">存储/DRAM</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-orange">今日上市</span>
+      </div>
+      <div class="stock-logic">国产DRAM龙头，全球第四、国内第一的IDM企业。野村目标价116元（市值7.76万亿），预计2026-28年营收/净利CAGR分别63%/74%。全球DRAM供需缺口延续至2028年，AI推动存储超级成长。上市首日市值3.3万亿，潘凤在2.5万亿附近低吸，浮盈20-30%</div>
+      <div class="stock-source">来源：信息早知道、傅里叶的猫、潘凤、核心逻辑社</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">雅克科技</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-purple">半导体材料</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">稀缺平台型半导体材料龙头，旗下UP Chemical掌握高端前驱体核心技术，系长鑫科技最核心前驱体供应商。随长鑫产能扩张与HBM产线建设，有望量价齐升，业绩与估值双击。洛飞小群评价"今天强"</div>
+      <div class="stock-source">来源：信息早知道（西部军工）、洛飞小群</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">景旺电子</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-orange">PCB/mSAP</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">AI客户订单26Q1已超25年全年，Rubin系列有望在中板/switch tray获取可观份额。mSAP产线3条→年底5条→27年再增10条。总投资近150亿，下半年AI类客户全面起量，27年至少翻倍。彭域评价"今天强度还可以"</div>
+      <div class="stock-source">来源：信息早知道（中泰电子）、彭域</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">福斯特</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-orange">PCB/感光干膜</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">mSAP工艺推动感光干膜高端化，高端干膜30-40元/㎡（普通仅5-7元），毛利率50%+。产能全球第一，已进入深南电路、景旺电子供应链。市场空间明年翻倍增长。大幅回调带来抄底机会</div>
+      <div class="stock-source">来源：信息早知道</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">浪潮信息</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-blue">AI算力/超节点</span>
+        <span class="stock-tag tag-orange">短中线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">超节点整机龙头，国内AI服务器出货量第一，Atlas超节点核心OEM。大摩定调超节点为国产算力主线，4张昇腾950=1张英伟达B系列，性价比凸显</div>
+      <div class="stock-source">来源：信息早知道（大摩/申万）</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">长川科技</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-purple">半导体测试</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">数字测试机龙头，存储测试机放量。Blackwell/Rubin测试时长是Hopper的4-7倍，测试成本占比从1.9%升至3.3%。两存扩产边际加速，高端测试机+探针卡需求提速</div>
+      <div class="stock-source">来源：信息早知道（HYDZ HL）</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">富满微 & 明微电子</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-red">成熟制程</span>
+        <span class="stock-tag tag-orange">短中线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">华源证券强call：成熟制程芯片从涨价演变为缺货，AI挤占传统产能。富满微季度业绩从-1.2亿→2100万→8000-9000万，26Q3有望创历史新高。21年黄金组合弹性复现</div>
+      <div class="stock-source">来源：信息早知道（华源前瞻）</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">洛阳钼业</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-green">铜矿</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">中信证券强call铜金板块：铜价冲击14000美元，低库存+海外矿山扰动。铜矿股估值从冰点9-10x修复至10-11x仍处洼地。量增带来三季度环比增长，四季度及明年超额增长预期</div>
+      <div class="stock-source">来源：信息早知道（中信金属）</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">比亚迪</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-purple">机器人/新能源车</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">8月初郑州迪空间机器人首次亮相。家庭（每家3台）/工业/4S店三大场景。公司具备制造+AI+营销+最大应用场景完整生态。短期看26/27年业绩400亿/600亿，目标价1.2万亿市值</div>
+      <div class="stock-source">来源：信息早知道（中信汽车）</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">宁德时代</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-green">锂电</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">拟回购200-400亿元A股股份，回购价格上限573元/股。上半年净利同比增长41.98%，拟10股派14.11元。大额回购彰显信心</div>
+      <div class="stock-source">来源：信息早知道</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">孚日股份</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-orange">VC添加剂</span>
+        <span class="stock-tag tag-orange">短中线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">VC出厂价升至20万+，下游排队等货严重供不应求，预计涨至25万+。8月新产能落地每月新增600-700吨，但缺口依旧很大，三季度业绩巨大增量</div>
+      <div class="stock-source">来源：信息早知道、黑火信息差</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-name">中岩大地</div>
+      <div class="stock-tags">
+        <span class="stock-tag tag-orange">PCB精密钻针</span>
+        <span class="stock-tag tag-blue">中长线</span>
+        <span class="stock-tag tag-red">看多</span>
+      </div>
+      <div class="stock-logic">子公司鑫寰宇2028年底全面达产12亿只/年PCB精密钻针，对标龙头鼎泰高科11.3亿只。最小钻径0.03mm优于鼎泰（0.05mm）。客户拓展至胜宏科技、生益电子等。鼎泰市值1700亿 vs 中岩35亿，预期差巨大</div>
+      <div class="stock-source">来源：信息早知道</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Section 4: Risk & Signal -->
+<div class="section">
+  <div class="section-title"><span class="icon">⚖️</span> 市场情绪与风险提示</div>
+  <div class="dual-col">
+    <div class="risk-card">
+      <h3>⚠️ 主要风险</h3>
+      <ul>
+        <li><strong>科技股拥挤度过高</strong>：最拥挤交易从工业周期股变为科技股，高油价+高利率压制估值</li>
+        <li><strong>谷歌现金流转负</strong>：AI资本开支增速可能放缓，大票炒未来市盈率或降缓，核心资产看图做</li>
+        <li><strong>美伊冲突不确定性</strong>：中东局势虽缓和但难预测，油价持续上行风险高于第一轮</li>
+        <li><strong>美联储加息预期</strong>：7月维持利率概率65.3%，但仍有34.7%概率加息25bp</li>
+        <li><strong>美股半导体暴跌</strong>：费城半导体-4.25%，存储/光通信跌幅居前，阿斯麦-7%</li>
+        <li><strong>长鑫吸血效应</strong>：上市首日成交破千亿，对市场流动性形成虹吸</li>
+        <li><strong>市场失去自我修复能力</strong>：外围涨大A滞涨，存量博弈内卷加剧，需汪汪队持续呵护</li>
+      </ul>
+    </div>
+    <div class="signal-card">
+      <h3>✅ 积极信号</h3>
+      <ul>
+        <li><strong>私募仓位新低</strong>：跌破70%为9.24以来最低，仓位回补将推动指数反弹</li>
+        <li><strong>汪汪队尾盘发力</strong>：从呵护沪深300转向拉升中证500，科技占比高效果立竿见影</li>
+        <li><strong>长鑫科技上市成功</strong>：国产存储进入新纪元，3.3万亿市值极具里程碑意义</li>
+        <li><strong>美伊局势缓和</strong>：暂停打击+霍尔木兹海峡会谈，油价大跌6%</li>
+        <li><strong>央行持续投放</strong>：7月29-31日每日6000亿逆回购，8月3日3000亿</li>
+        <li><strong>宁德时代大额回购</strong>：200-400亿回购+上半年净利+41.98%，提振市场信心</li>
+        <li><strong>DRAM超级成长周期</strong>：供需缺口延续至2028年，国产替代空间巨大</li>
+        <li><strong>超节点突破</strong>：4张昇腾950=1张英伟达B系列，国产算力性价比凸显</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Section 5: Tomorrow Focus -->
+<div class="section">
+  <div class="section-title"><span class="icon">💡</span> 明日关注要点</div>
+  <div class="focus-list">
+    <div class="focus-card">
+      <span class="focus-icon">1️⃣</span>
+      <div><strong>长鑫科技次日走势</strong>：上市首日市值3.3万亿，次日能否企稳是科技板块风向标。机构网下30%无锁仓份额首日可卖，70%锁定6个月。关注是否还有公募限制买入的传言影响</div>
+    </div>
+    <div class="focus-card">
+      <span class="focus-icon">2️⃣</span>
+      <div><strong>美联储7月议息（7月29日）</strong>：维持利率概率65.3%，加息25bp概率34.7%。结果将影响全球风险偏好</div>
+    </div>
+    <div class="focus-card">
+      <span class="focus-icon">3️⃣</span>
+      <div><strong>科技板块轮动</strong>：银行四连阳后，核心逻辑社预判明天轮到科技炸裂。关注尾盘汪汪队拉升中证500的延续性</div>
+    </div>
+    <div class="focus-card">
+      <span class="focus-icon">4️⃣</span>
+      <div><strong>寒武纪中报</strong>：核心逻辑社预判业绩炸裂（惯例提前发=业绩好），关注国产算力半年报行情</div>
+    </div>
+    <div class="focus-card">
+      <span class="focus-icon">5️⃣</span>
+      <div><strong>美股财报密集周</strong>：苹果、微软、亚马逊、Meta等巨头本周公布业绩，北美AI链资本开支预期上修</div>
+    </div>
+    <div class="focus-card">
+      <span class="focus-icon">6️⃣</span>
+      <div><strong>PCB圆弧底确认</strong>：景旺/沪电/国际尾盘回流，易中天未创新低，关注右侧确认信号</div>
+    </div>
+    <div class="focus-card">
+      <span class="focus-icon">7️⃣</span>
+      <div><strong>油价&金价走势</strong>：原油大跌6%，黄金4100美元+。关注铜金板块估值修复弹性</div>
+    </div>
+  </div>
+</div>
+
+<!-- Disclaimer -->
+<div class="disclaimer">
+  📋 本报告基于15个飞书交流群的公开讨论整理，仅汇总群友个人观点，不构成任何投资建议。<br>
+  投资有风险，入市需谨慎。仅供个人参考，请勿作为交易依据。<br>
+  生成时间：2026-07-27 23:00 | 自动化任务 ID: automation-1783859976506
+</div>
+
+</div>
+</body>
+</html>
