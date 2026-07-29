@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股群聊观点汇总 - 2026年7月25日（周六）</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.7;
+  padding: 16px;
+}
+.container { max-width: 960px; margin: 0 auto; }
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.header h1 { font-size: 24px; margin-bottom: 8px; }
+.header .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13px;
+  color: #a0aec0;
+  margin-top: 10px;
+}
+.header .meta span { display: inline-flex; align-items: center; gap: 4px; }
+.header .badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+.header .weekend-badge {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+}
+
+/* Section */
+.section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title .icon { font-size: 22px; }
+
+/* Market Data */
+.market-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.data-card {
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  border-left: 3px solid #4299e1;
+}
+.data-card .label { font-size: 12px; color: #718096; margin-bottom: 4px; }
+.data-card .value { font-size: 18px; font-weight: 700; color: #2d3748; }
+
+/* Viewpoint */
+.viewpoint {
+  background: #f7fafc;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-left: 3px solid #4299e1;
+}
+.viewpoint .source {
+  display: inline-block;
+  background: #ebf4ff;
+  color: #3182ce;
+  font-size: 12px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.viewpoint .content { font-size: 14px; color: #2d3748; }
+
+/* Sector Table */
+.sector-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+.sector-table th {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+.sector-table th:first-child { border-radius: 8px 0 0 0; }
+.sector-table th:last-child { border-radius: 0 8px 0 0; }
+.sector-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 13px;
+  vertical-align: top;
+}
+.sector-table tr:nth-child(even) td { background: #f7fafc; }
+.sector-table tr:hover td { background: #ebf4ff; }
+.rank {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.rank.gold { background: linear-gradient(135deg, #f6ad55, #ed8936); }
+.rank.silver { background: linear-gradient(135deg, #cbd5e0, #a0aec0); }
+.rank.bronze { background: linear-gradient(135deg, #d69e6f, #b7791f); }
+
+/* Hotness Stars */
+.hotness {
+  display: inline-flex;
+  gap: 2px;
+}
+.star { color: #ecc94b; font-size: 14px; }
+.star.empty { color: #e2e8f0; }
+
+/* Hotness Bar */
+.hotness-bar {
+  display: inline-block;
+  width: 80px;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.hotness-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f6ad55, #ed8936);
+}
+
+/* Stock Cards */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+}
+.stock-card {
+  background: #f7fafc;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  transition: box-shadow 0.2s;
+}
+.stock-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.stock-card .stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.stock-card .stock-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+.stock-card .stock-code {
+  font-size: 12px;
+  color: #718096;
+  margin-top: 2px;
+}
+.stock-card .tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tag.long { background: #fef3c7; color: #92400e; }
+.tag.short { background: #dbeafe; color: #1e40af; }
+.tag.medium { background: #d1fae5; color: #065f46; }
+.tag.red { background: #fee2e2; color: #991b1b; }
+.tag.green { background: #d1fae5; color: #065f46; }
+.stock-card .stock-body {
+  font-size: 13px;
+  color: #4a5568;
+  margin-bottom: 8px;
+}
+.stock-card .stock-source {
+  font-size: 12px;
+  color: #a0aec0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.stock-card .stock-risk {
+  font-size: 12px;
+  color: #c53030;
+  margin-top: 6px;
+  padding: 8px;
+  background: #fff5f5;
+  border-radius: 6px;
+  border-left: 2px solid #fc8181;
+}
+
+/* Emotion Split */
+.emotion-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.emotion-card {
+  border-radius: 12px;
+  padding: 18px;
+}
+.emotion-card.risk {
+  background: linear-gradient(135deg, #fff5f5, #fed7d7);
+  border: 1px solid #feb2b2;
+}
+.emotion-card.positive {
+  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+  border: 1px solid #9ae6b4;
+}
+.emotion-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.emotion-card.risk h3 { color: #c53030; }
+.emotion-card.positive h3 { color: #276749; }
+.emotion-card ul { list-style: none; padding: 0; }
+.emotion-card li {
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+  color: #2d3748;
+}
+.emotion-card li:last-child { border-bottom: none; }
+.emotion-card li::before {
+  content: "▸ ";
+  font-weight: 700;
+}
+.emotion-card.risk li::before { color: #fc8181; }
+.emotion-card.positive li::before { color: #68d391; }
+
+/* Focus List */
+.focus-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.focus-item {
+  background: linear-gradient(135deg, #fefce8, #fef3c7);
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.focus-item .focus-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.focus-item .focus-content {
+  font-size: 14px;
+  color: #78350f;
+}
+.focus-item .focus-content strong { color: #92400e; }
+
+/* Disclaimer */
+.disclaimer {
+  text-align: center;
+  font-size: 12px;
+  color: #a0aec0;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+/* Weekend Notice */
+.weekend-notice {
+  background: linear-gradient(135deg, #ebf4ff, #bee3f8);
+  border: 1px solid #90cdf4;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.weekend-notice .notice-icon { font-size: 24px; }
+.weekend-notice .notice-text { font-size: 14px; color: #2c5282; }
+
+@media (max-width: 640px) {
+  .emotion-split { grid-template-columns: 1fr; }
+  .header h1 { font-size: 20px; }
+  .section { padding: 16px; }
+  .sector-table { font-size: 12px; }
+  .sector-table th, .sector-table td { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>A股飞书群聊市场观点汇总</h1>
+  <div class="meta">
+    <span class="badge">2026-07-25（周六）</span>
+    <span class="badge weekend-badge">非交易日 · 周末简报</span>
+    <span>📊 监控群数：15</span>
+    <span>💬 活跃群数：3</span>
+    <span>📝 消息总数：15</span>
+    <span>🕐 生成时间：2026-07-26 00:05</span>
+  </div>
+</div>
+
+<!-- Weekend Notice -->
+<div class="weekend-notice">
+  <span class="notice-icon">📅</span>
+  <span class="notice-text">今日为周六非交易日，群聊消息较少。本简报重点整理周末市场讨论、IPO资讯及科技产业前沿分析，为下周交易做准备。</span>
+</div>
+
+<!-- 大盘走势与核心观点 -->
+<div class="section">
+  <div class="section-title"><span class="icon">📈</span> 周末核心资讯与观点</div>
+
+  <div class="market-data">
+    <div class="data-card">
+      <div class="label">活跃群聊</div>
+      <div class="value">3 / 15</div>
+    </div>
+    <div class="data-card">
+      <div class="label">消息总数</div>
+      <div class="value">15 条</div>
+    </div>
+    <div class="data-card">
+      <div class="label">有价文字消息</div>
+      <div class="value">3 条</div>
+    </div>
+    <div class="data-card">
+      <div class="label">下周交易日</div>
+      <div class="value">7月28日（周一）</div>
+    </div>
+  </div>
+
+  <div class="viewpoint">
+    <span class="source">信息早知道</span>
+    <div class="content">
+      <strong>长鑫存储Pre-IPO动态：</strong>据Hyperinsight监测，Hyperliquid上CXMT（长鑫存储，上市主体长鑫科技）Pre-IPO合约价格触及6美元，24小时跌超5.7%，对应人民币股价40.62元。按发行后总股本668.81亿股折算，链上隐含市值约4000亿美元（约2.7万亿人民币）。散户网申中签后每签500股申购成本4330元，上市首日预估500股市值20310元，单签利润约1.6万元。
+    </div>
+  </div>
+
+  <div class="viewpoint">
+    <span class="source">傅里叶的猫</span>
+    <div class="content">
+      <strong>AMD vs NVIDIA CUDA深度分析：</strong>semianalysis发布最新报告《Can AMD break the CUDA Moat?》。核心观点：①AMD在硅片技术（2nm、SoIC-X、Active LSI、HBM4容量）持续跑赢NVIDIA，说明NV在硬件上可能留有后手；②Helios平台TCO/功耗竞争力大幅提升，Anthropic/OpenAI/Microsoft都已下场；③AMD软件在单节点/agent工具链进步显著，但主战场已切换，仍落后CUDA生态约一年；④未来看好AMD，同时需补齐内部GPU集群。梁文锋观点：CUDA护城河仍在但正快速被削弱，未来不再是国产AI芯片最难跨越的障碍。
+    </div>
+  </div>
+
+  <div class="viewpoint">
+    <span class="source">鑫多多</span>
+    <div class="content">
+      <strong>策略信号：</strong>周末发布多条内容，核心标签"活着红-干字当头"，分享视频及多张图片（图片内容未能提取），整体偏向积极做多策略。具体标的和逻辑需结合图片内容判断。
+    </div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔥</span> 板块热度排行</div>
+  <table class="sector-table">
+    <thead>
+      <tr>
+        <th style="width:40px">#</th>
+        <th>板块名称</th>
+        <th style="width:140px">热度</th>
+        <th>核心逻辑</th>
+        <th style="width:90px">来源</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank gold">1</span></td>
+        <td><strong>存储芯片</strong></td>
+        <td>
+          <span class="hotness">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+          </span>
+          <span class="hotness-bar"><span class="hotness-fill" style="width:80%"></span></span>
+        </td>
+        <td>长鑫存储Pre-IPO合约活跃交易，隐含市值2.7万亿，IPO定价备受关注。作为国内存储芯片绝对龙头，其上市将对整个板块产生标杆效应和估值锚定作用</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank silver">2</span></td>
+        <td><strong>AI芯片</strong></td>
+        <td>
+          <span class="hotness">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+          </span>
+          <span class="hotness-bar"><span class="hotness-fill" style="width:80%"></span></span>
+        </td>
+        <td>semianalysis重磅报告分析AMD与NVIDIA竞争格局：AMD硬件持续领先但软件生态落后约一年，CUDA护城河正在被削弱。国产AI芯片替代逻辑强化</td>
+        <td>傅里叶的猫</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股推荐 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🎯</span> 重点个股与分析</div>
+  <div class="stock-grid">
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">长鑫存储（长鑫科技）</div>
+          <div class="stock-code">未上市 · Pre-IPO</div>
+        </div>
+        <span class="tag medium">中长线</span>
+      </div>
+      <div class="stock-body">
+        Pre-IPO合约价格6美元（40.62元/股），隐含市值约2.7万亿。发行后总股本668.81亿股，散户每签500股成本4330元，首日预估市值20310元，单签利润约1.6万元。国内存储芯片绝对龙头，IPO备受关注。
+      </div>
+      <div class="stock-risk">
+        ⚠️ 24h跌5.7%，市场对估值存在分歧；2.7万亿体量巨大，上市后流动性压力需关注
+      </div>
+      <div class="stock-source">📌 来源：信息早知道</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">AMD</div>
+          <div class="stock-code">AMD（美股）</div>
+        </div>
+        <span class="tag long">中长线</span>
+      </div>
+      <div class="stock-body">
+        semianalysis报告看好：硅片技术（2nm/SoIC-X/HBM4）持续跑赢NVIDIA；Helios TCO/功耗竞争力大幅提升，Anthropic/OpenAI/Microsoft已下场。软件生态落后CUDA约一年但持续进步。
+      </div>
+      <div class="stock-risk">
+        ⚠️ 软件生态仍落后CUDA约一年；硬件优势持续性存在不确定性
+      </div>
+      <div class="stock-source">📌 来源：傅里叶的猫</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">NVIDIA</div>
+          <div class="stock-code">NVDA（美股）</div>
+        </div>
+        <span class="tag long">中长线</span>
+      </div>
+      <div class="stock-body">
+        CUDA护城河仍在但正快速被削弱。梁文锋观点：CUDA未来不再是国产AI芯片最难跨越的障碍。NV硬件策略可能留有后手，面临AMD竞争压力。整体AI芯片竞争格局加剧。
+      </div>
+      <div class="stock-source">📌 来源：傅里叶的猫</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 市场情绪与风险提示 -->
+<div class="section">
+  <div class="section-title"><span class="icon">⚖️</span> 市场情绪与风险提示</div>
+  <div class="emotion-split">
+    <div class="emotion-card risk">
+      <h3>⚠️ 主要风险</h3>
+      <ul>
+        <li>长鑫存储Pre-IPO合约24h跌5.7%，市场对2.7万亿估值存在分歧</li>
+        <li>AMD软件生态落后CUDA约一年，短期难以完全替代</li>
+        <li>AI芯片竞争加剧，NVIDIA面临硬件和生态双重挑战</li>
+        <li>周末消息面偏淡，12个群无有效消息，信息密度不足</li>
+        <li>长鑫存储IPO体量巨大，可能对市场流动性产生虹吸效应</li>
+      </ul>
+    </div>
+    <div class="emotion-card positive">
+      <h3>✅ 积极信号</h3>
+      <ul>
+        <li>长鑫存储IPO单签利润约1.6万元，打新收益可观</li>
+        <li>AMD硬件持续超越NVIDIA，AI芯片竞争推动行业进步</li>
+        <li>Anthropic/OpenAI/Microsoft大客户已下场AMD生态</li>
+        <li>CUDA护城河被削弱，国产AI芯片替代逻辑强化</li>
+        <li>鑫多多周末保持"干字当头"积极态度，做多情绪延续</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 明日关注要点 -->
+<div class="section">
+  <div class="section-title"><span class="icon">🔔</span> 下周关注要点</div>
+  <div class="focus-list">
+    <div class="focus-item">
+      <span class="focus-icon">🔴</span>
+      <div class="focus-content">
+        <strong>长鑫存储IPO进展：</strong>持续跟踪Pre-IPO合约价格走势和市场估值分歧，关注IPO申购时间和定价区间。2.7万亿体量IPO对市场流动性的影响需重点评估。
+      </div>
+    </div>
+    <div class="focus-item">
+      <span class="focus-icon">🟡</span>
+      <div class="focus-content">
+        <strong>AI芯片板块动向：</strong>AMD Advancing AI 2026大会后续发酵，关注A股映射标的（算力、国产AI芯片、先进封装等）。CUDA生态被削弱的逻辑利好国产GPU/ASIC厂商。
+      </div>
+    </div>
+    <div class="focus-item">
+      <span class="focus-icon">🟡</span>
+      <div class="focus-content">
+        <strong>存储芯片产业链：</strong>长鑫存储IPO标杆效应下，关注存储设计（兆易创新等）、存储封装测试、HBM相关产业链标的。
+      </div>
+    </div>
+    <div class="focus-item">
+      <span class="focus-icon">🟢</span>
+      <div class="focus-content">
+        <strong>周一开盘情绪：</strong>周末消息面偏淡，关注周一开盘后各群讨论热度和方向选择。鑫多多"干字当头"态度是否代表普遍做多共识。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Disclaimer -->
+<div class="disclaimer">
+  本报告由AI自动汇总飞书群聊内容生成，仅供个人参考，不构成投资建议。投资有风险，入市需谨慎。
+</div>
+
+</div>
+</body>
+</html>
