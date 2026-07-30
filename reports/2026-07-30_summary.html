@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞书群聊市场观点汇总报告 - 2026年7月30日</title>
+<style>
+  :root {
+    --bg-primary: #f5f7fa;
+    --bg-card: #ffffff;
+    --bg-highlight: #fff8e1;
+    --bg-risk: #ffebee;
+    --bg-positive: #e8f5e9;
+    --text-primary: #1a1a2e;
+    --text-secondary: #5a5a7a;
+    --text-muted: #8888aa;
+    --border-color: #e0e4ec;
+    --red-up: #d32f2f;
+    --green-down: #388e3c;
+    --accent-blue: #1976d2;
+    --accent-purple: #7b1fa2;
+    --accent-orange: #f57c00;
+    --star-gold: #ffb300;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .header h1 { font-size: 26px; font-weight: 700; margin-bottom: 12px; }
+  .header-meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; opacity: 0.9; }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+  .section {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title .icon { font-size: 24px; }
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .tag-red { background: #ffebee; color: var(--red-up); }
+  .tag-green { background: #e8f5e9; color: var(--green-down); }
+  .tag-blue { background: #e3f2fd; color: var(--accent-blue); }
+  .tag-purple { background: #f3e5f5; color: var(--accent-purple); }
+  .tag-orange { background: #fff3e0; color: var(--accent-orange); }
+  .view-box {
+    background: var(--bg-highlight);
+    border-left: 4px solid var(--accent-orange);
+    padding: 16px 20px;
+    border-radius: 0 12px 12px 0;
+    margin: 12px 0;
+  }
+  .view-box .source { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+  .view-box .source::before { content: "📍 "; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+  .risk-card {
+    background: var(--bg-risk);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .risk-card h4 { color: var(--red-up); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .positive-card {
+    background: var(--bg-positive);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .positive-card h4 { color: var(--green-down); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .stock-card {
+    background: #fafbfc;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .stock-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .stock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .stock-name { font-size: 17px; font-weight: 700; color: var(--text-primary); }
+  .stock-code { font-size: 13px; color: var(--text-muted); margin-left: 8px; }
+  .stock-logic { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .stock-footer { margin-top: 10px; font-size: 12px; color: var(--text-muted); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th {
+    background: #f0f2f5;
+    padding: 12px 14px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--border-color);
+  }
+  td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+  }
+  tr:hover { background: #f8f9fb; }
+  .stars { color: var(--star-gold); font-size: 16px; letter-spacing: 2px; }
+  .highlight-box {
+    background: var(--bg-highlight);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .highlight-box .bullet { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .highlight-box .content { font-size: 14px; color: var(--text-secondary); }
+  .highlight-box .content strong { color: var(--text-primary); }
+  .disclaimer {
+    background: #eceff1;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 20px;
+  }
+  .sentiment-bar {
+    display: flex;
+    height: 28px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 16px 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+  }
+  .sentiment-bull { background: var(--red-up); display: flex; align-items: center; justify-content: center; }
+  .sentiment-bear { background: var(--green-down); display: flex; align-items: center; justify-content: center; }
+  .sentiment-neutral { background: #9e9e9e; display: flex; align-items: center; justify-content: center; }
+  .news-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 14px;
+  }
+  .news-item:last-child { border-bottom: none; }
+  .news-time { font-size: 12px; color: var(--text-muted); margin-right: 8px; }
+  .news-tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #e3f2fd; color: var(--accent-blue); margin-right: 6px; }
+  .red-text { color: var(--red-up); font-weight: 600; }
+  .green-text { color: var(--green-down); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 报告头部 -->
+  <div class="header">
+    <h1>📊 飞书群聊市场观点汇总报告</h1>
+    <div class="header-meta">
+      <span>📅 2026年7月30日（周四）</span>
+      <span>📡 监控群数：15个</span>
+      <span>💬 消息总数：499条</span>
+      <span>⏰ 生成时间：23:00</span>
+      <span>📈 交易日</span>
+    </div>
+  </div>
+
+  <!-- 大盘走势与核心观点 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">📈</span>大盘走势与核心观点</div>
+
+    <div class="sentiment-bar">
+      <div class="sentiment-bear" style="width:55%">看空/谨慎 55%</div>
+      <div class="sentiment-neutral" style="width:30%">中性/观望 30%</div>
+      <div class="sentiment-bull" style="width:15%">看多 15%</div>
+    </div>
+
+    <div class="view-box">
+      <strong>市场综述：</strong>今日A股科技股延续恐慌性大跌，光模块、存储、AI芯片集体补跌。外围方面，美联储7月议息会议维持利率不变但出现3张反对票，市场担忧9月后加息；微软Azure超预期但下调CapEx指引，Meta大跌9.5%。韩国KOSPI先跌后涨振幅超10%。汪汪队持续呵护但效果有限，市场情绪极度悲观。
+      <div class="source">综合各群观点</div>
+    </div>
+
+    <div class="view-box">
+      <strong>核心逻辑社：</strong>AI浪潮远未结束，算力需求端并未出现任何拐点。AI≠新能源——新能源崩是储能消纳难题导致需求萎缩，而AI需求仍在爆发。国产算力具备独立逻辑，但能否摆脱外围扰动不好说。当下深陷悲观情绪循环，所有逻辑失效，全靠队里呵护。两种路径探明底部：1）队里持续买入直到全球算力出清+情绪回暖；2）若持续买入仍下行，则需924级别重磅利好。
+      <div class="source">核心逻辑社</div>
+    </div>
+
+    <div class="view-box">
+      <strong>潘凤：</strong>熊市最重要就一个字——等。很多老师没有熊市经验。昨天试错任何一笔都是错的。这地方科技已经滚刀肉了，包括看好的端测、光全部都在补跌。不要听外面人怎么吹，也没必要过度悲观，但要明白现在的市场是很看重逻辑的。大部分人买红利对冲，那就必须买回同等的股票。
+      <div class="source">潘凤</div>
+    </div>
+
+    <div class="view-box">
+      <strong>小锦鲤：</strong>今天比较关键，看修复力度如何，如果不及预期就处理掉休息等下个节点。五洲、万邦已走，保证安全性是第一。没做科技已经跑赢99%，别不分情况每天都想大赚。后面还是看抱团，等他们横盘消化下，大概周二。这种环境少犯错误就可以了。
+      <div class="source">小锦鲤</div>
+    </div>
+
+    <div class="view-box">
+      <strong>洛飞小群：</strong>冲高跑路，大部队空仓了。旭创、新易盛对子底没守住，真惨。这行情没法玩了，多等等吧。持仓的冲高跑路，空仓的明天就别开机了，都能拥有愉快的周末。明天缅A期指交割日。黄金后面走出右侧喊我，等着加仓呢。
+      <div class="source">洛飞小群</div>
+    </div>
+
+    <div class="view-box">
+      <strong>傅里叶的猫：</strong>科技板块是一个只能追高而不能抄底的板块，因为科技股讲的是叙事。在叙事流畅时可以透支未来一两年预期，但一旦叙事反转，预期全部扭转，甚至连眼下业绩指引都会被下修。表观估值在叙事不利时往往不可靠。这一轮核心票领跌（中际、新易盛），不知道是不是AI叙事发生了根本性变化。
+      <div class="source">傅里叶的猫</div>
+    </div>
+
+    <div class="view-box">
+      <strong>猫十三群友：</strong>这个月马上腰斩，-45个点了。华丰科技、翱捷科技、紫光股份、浪潮信息就是在走麦捷科技和宏达电子的老路。就算反弹也回不去前高，跌50%可能反弹就20-30。不缩量跌法，来一个套一个。牛市熬鹰麻袋装钱，熊市熬鹰裤衩赔完。
+      <div class="source">猫十三群友讨论</div>
+    </div>
+
+    <div class="view-box">
+      <strong>彭域：</strong>风华、德明利小红开修复。接单长鑫-3.3，畜生龙板了。跟昨天体感没有大差别，这里依旧看不到右侧。做好T完事。
+      <div class="source">彭域</div>
+    </div>
+  </div>
+
+  <!-- 重要资讯 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">📰</span>今日重要资讯</div>
+    <div class="news-item">
+      <span class="news-time">08:53</span><span class="news-tag">宏观</span>
+      <strong>美联储7月议息会议：</strong>维持基准利率3.50%-3.75%不变，连续第5次按兵不动。但出现3张反对票（9:3），公开加息阵营正式出现。沃什坚持2%通胀目标不变，市场认为若通胀数据继续高企，9月后非常可能加息。
+    </div>
+    <div class="news-item">
+      <span class="news-time">08:54</span><span class="news-tag">产业</span>
+      <strong>MLCC涨价：</strong>三星电机通知自8月1日起MLCC产品出货价格统一上调30%；太阳诱电自9月1日起涨价，直言即使客户接受涨价也无法承诺按时交货。
+    </div>
+    <div class="news-item">
+      <span class="news-time">08:54</span><span class="news-tag">AI</span>
+      <strong>月之暗面Kimi完成F轮融资：</strong>融资金额超35亿美元，投后估值350亿美元。因超目标金额3倍多，本轮融资提前关闭，原定8月开始的G轮已提前开始，投前估值升至500亿美元。
+    </div>
+    <div class="news-item">
+      <span class="news-time">08:54</span><span class="news-tag">政策</span>
+      <strong>HNB国标征求意见：</strong>7月28日国家烟草专卖局发布《加热卷烟》强制性国家标准征求意见稿，反馈截止9月26日。中国年销传统卷烟约2万亿支，转向加热卷烟后再造薄片单支用量为传统5-8倍。
+    </div>
+    <div class="news-item">
+      <span class="news-time">09:14</span><span class="news-tag">美股</span>
+      <strong>微软FY26Q4财报：</strong>营收900亿美元同比+18%，Azure收入增速43%超预期，Copilot付费席位破3000万。但CapEx指引从1900亿下调至1750亿（口径调整），FY27Q1 Capex超500亿。
+    </div>
+    <div class="news-item">
+      <span class="news-time">09:14</span><span class="news-tag">美股</span>
+      <strong>Meta财报后大跌9.5%：</strong>Q2营收608亿美元同比+28%，但运营支出小幅上调，资本开支上调幅度低于预期，广告展示量环比下滑。管理层拒绝给2027年框架。
+    </div>
+    <div class="news-item">
+      <span class="news-time">21:05</span><span class="news-tag">政策</span>
+      <strong>欧盟加码AI基建：</strong>计划投资114亿美元建设7座人工智能超级工厂，公共融资将吸引额外228亿美元私人投资。纳指期货大涨500点。
+    </div>
+    <div class="news-item">
+      <span class="news-time">14:00</span><span class="news-tag">产业</span>
+      <strong>小米机器人发布会：</strong>雷军展示小米机器人在工厂折叠收纳盒、协同拍摄并比出"胜利"手势的视频，体现视觉感知、双手协同和自主决策进展。
+    </div>
+    <div class="news-item">
+      <span class="news-time">14:16</span><span class="news-tag">业绩</span>
+      <strong>中际旭创业绩传闻：</strong>盘后出业绩，预期78亿，30%增速。
+    </div>
+    <div class="news-item">
+      <span class="news-time">17:08</span><span class="news-tag">资金</span>
+      <strong>期指数据：</strong>中信今日累计加空455，净空70415。主要玩家今日累计减空148，净空单总数145400。三市成交23587亿，较上个交易日增加467亿，主力净流出789.93亿。
+    </div>
+  </div>
+
+  <!-- 板块热度排行 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🔥</span>板块热度排行</div>
+    <table>
+      <thead>
+        <tr>
+          <th style="width:60px">排名</th>
+          <th style="width:140px">板块名称</th>
+          <th style="width:100px">热度</th>
+          <th>核心逻辑</th>
+          <th style="width:120px">来源</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-red">1</span></td>
+          <td><strong>AI/算力</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>科技股恐慌性大跌，光模块、存储、AI芯片集体补跌。核心逻辑社强调AI≠新能源，需求端未现拐点，国产算力具备独立逻辑。汪汪队持续呵护但效果有限。</td>
+          <td>核心逻辑社/潘凤/猫十三</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-red">2</span></td>
+          <td><strong>光模块</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>中际旭创业绩预期78亿（30%增速），40-80亿回购。但板块仍处补跌阶段，午后汪汪队拉升中际、长鑫护盘。洛飞小群认为"对子底"未守住。</td>
+          <td>信息早知道/洛飞小群</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-orange">3</span></td>
+          <td><strong>MLCC/电子元件</strong></td>
+          <td><span class="stars">★★★★☆</span></td>
+          <td>三星电机8月1日起涨价30%，太阳诱电9月1日起涨价，直言无法承诺按时交货。国瓷材料作为三星第一大粉体供应商直接受益，订单排至2027年。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-orange">4</span></td>
+          <td><strong>软件/企业AI</strong></td>
+          <td><span class="stars">★★★★☆</span></td>
+          <td>微软Azure增速43%超预期，Copilot席位破3000万。普联软件实控人变更为明略科技（腾讯持股27%），企业级AI标志性事件。基本面软件估值仅约20X。</td>
+          <td>信息早知道/洛飞小群</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-orange">5</span></td>
+          <td><strong>存储/半导体</strong></td>
+          <td><span class="stars">★★★★☆</span></td>
+          <td>长鑫科技MSCI纳入8月10日生效。存储大军午后企稳，德明利涨停。联讯仪器存储FT测试机国产替代0到1。兆易创新董事长提议回购10-20亿。</td>
+          <td>核心逻辑社/彭域</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">6</span></td>
+          <td><strong>算力租赁</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>美股Nebius暴力反弹30%，B卡租赁与token分成模式受关注。大模型厂商和云厂开支强劲，供需严重错配，商业模式向token分成探索。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">7</span></td>
+          <td><strong>HNB/新型烟草</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>《加热卷烟》强制性国家标准征求意见稿发布，再造薄片单支用量为传统5-8倍，香精香料达10倍，卷烟纸价值量提升2倍以上。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">8</span></td>
+          <td><strong>机器人</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>雷军展示小米机器人视频，7月30日晚发布会召开。比亚迪机器人8月初亮相，目标1.2万亿市值。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">9</span></td>
+          <td><strong>固态电池</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>宁德时代：全固态电池2027年有望小批量生产。天华新能前瞻布局固态电池材料，高镍三元正极+硫化锂研发。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-blue">10</span></td>
+          <td><strong>消费/美护</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>消费板块从无基之弹到有基反转，26Q2持仓消费配置比例创近十年新低。部分消费股（洗发水、尊界）对冲科技股下跌。</td>
+          <td>核心逻辑社/信息早知道</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 重点个股推荐与分析 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🎯</span>重点个股推荐与分析</div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">中际旭创</span><span class="stock-code">300308</span> <span class="tag tag-red">光模块龙头</span> <span class="tag tag-purple">业绩预期</span></div>
+      </div>
+      <div class="stock-logic">盘后业绩预期78亿（30%增速），40-80亿回购计划，1.6T ASP超预期。港股已破发，午后被汪汪队拉升护盘。光模块补跌中但基本面扎实。</div>
+      <div class="stock-footer">来源：信息早知道/核心逻辑社/潘凤 |  sentiment：看多</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">国瓷材料</span><span class="stock-code">300285</span> <span class="tag tag-red">MLCC粉体龙头</span> <span class="tag tag-orange">涨价受益</span></div>
+      </div>
+      <div class="stock-logic">MLCC粉体龙头，三星第一大客户（占30-40%营收）。高端粉体满产满销，订单排至2027年。AI-MLCC高端产能年扩30-50%，份额有望提升至50-60%。5000吨高端产能逐步释放，AI服务器粉体单价超10万/吨，毛利率45-50%。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">普联软件</span><span class="stock-code">300996</span> <span class="tag tag-purple">企业级AI</span> <span class="tag tag-blue">实控人变更</span></div>
+      </div>
+      <div class="stock-logic">实控人变更为明略科技（腾讯持股27%），全球Agentic AI第一股。深耕石油石化/建筑地产等国央企二十余年，核心产品覆盖业财融合+集团财务+集团司库+信创ERP。企业级AI标志性事件，Agent时代腾讯系首次谋求A股上市公司控股权。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多 | 风险提示：股权转让推进不及预期</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">联讯仪器</span><span class="stock-code">--</span> <span class="tag tag-red">光通信测试</span> <span class="tag tag-orange">半导体设备</span></div>
+      </div>
+      <div class="stock-logic">光通信测试全球领先，光芯片KGD设备份额超50%，1.6T示波器高速增长，2.4T年内推出。半导体存储FT测试机国产替代0到1，18G高速FT测试机在存储大厂全部完成验证，2026年批量订单、2027年放量。第一阶段目标市值3000亿，目标4000亿。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多 | 风险提示：客户拓展进度不及预期</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">寒武纪</span><span class="stock-code">688256</span> <span class="tag tag-red">AI芯片龙头</span> <span class="tag tag-blue">股权激励</span></div>
+      </div>
+      <div class="stock-logic">500万股股权激励，2026-2028累计1000亿营收考核。国产AI芯片龙头，受益于国产算力自主可控逻辑。但业绩兑现压力大，估值高。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多 | 风险提示：业绩兑现压力大</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">天华新能</span><span class="stock-code">300390</span> <span class="tag tag-green">固态电池</span> <span class="tag tag-blue">宁德时代关联</span></div>
+      </div>
+      <div class="stock-logic">宁德时代通过战略入股公司第二大股东，具备深厚产业合作基础。前瞻布局固态电池前沿材料，子公司宜锂科技开发适配半固态、全固态体系的高镍三元正极材料，建成中试产线并规划5200吨量产产能，同时推进高纯硫化锂研发。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">斯迪克</span><span class="stock-code">300806</span> <span class="tag tag-orange">MLCC离型膜</span> <span class="tag tag-blue">技术突破</span></div>
+      </div>
+      <div class="stock-logic">MLCC专用PET离型膜重大技术突破，覆盖普通、中端、高端全系列。面向&lt;1um介质厚度的超高端产品，为国内唯一实现技术突破并通过两家头部MLCC制造商验证的产品。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">垒知集团</span><span class="stock-code">002398</span> <span class="tag tag-purple">微软Agent</span> <span class="tag tag-blue">AI设计</span></div>
+      </div>
+      <div class="stock-logic">微软OpenAI Agent代理，全资子集团垒知科技自研建筑设计AIGC平台。代理微软OpenAI完整Agent，形成AI流程机器人+办公智能助手等智能体解决方案。</div>
+      <div class="stock-footer">来源：信息早知道 | sentiment：看多</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">德明利</span><span class="stock-code">001309</span> <span class="tag tag-red">存储芯片</span> <span class="tag tag-orange">涨停</span></div>
+      </div>
+      <div class="stock-logic">存储芯片，午后涨停。彭域做T操作，认为有业绩支撑。洛飞小群午后关注但认为V失效、没强度。</div>
+      <div class="stock-footer">来源：洛飞小群/彭域 | sentiment：看多 | 风险提示：波动大，追高有风险</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div><span class="stock-name">蓝色光标</span><span class="stock-code">300058</span> <span class="tag tag-purple">微软映射</span> <span class="tag tag-green">低位</span></div>
+      </div>
+      <div class="stock-logic">微软映射，板块挺强、位置低，洛飞小群小仓位试错。映射微软Azure超预期+Agent概念。</div>
+      <div class="stock-footer">来源：洛飞小群 | sentiment：中性 | 风险提示：纯概念映射，基本面一般</div>
+    </div>
+  </div>
+
+  <!-- 市场情绪与风险提示 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">⚖️</span>市场情绪与风险提示</div>
+    <div class="two-col">
+      <div class="risk-card">
+        <h4>⚠️ 主要风险</h4>
+        <ul style="padding-left:18px;font-size:14px;color:#5a5a7a;line-height:2;">
+          <li>美联储9月后可能加息，利率曲线大幅变陡</li>
+          <li>科技股叙事可能发生根本性变化，核心票领跌</li>
+          <li>韩国杠杆出清尚未完成，强平风险仍在</li>
+          <li>Meta/微软CapEx指引下调，AI资本开支增速放缓担忧</li>
+          <li>市场情绪化杀跌，追涨杀跌资金成为最大空头</li>
+          <li>两融余额较上个交易日减少256.43亿</li>
+          <li>主力净流出789.93亿</li>
+          <li>明天期指交割日，波动或加大</li>
+        </ul>
+      </div>
+      <div class="positive-card">
+        <h4>✅ 积极信号</h4>
+        <ul style="padding-left:18px;font-size:14px;color:#5a5a7a;line-height:2;">
+          <li>韩国KOSPI从跌2%反弹至涨2%，SK海力士跌幅收窄至0.79%</li>
+          <li>欧盟计划投资114亿美元建设7座AI超级工厂</li>
+          <li>微软Azure增速43%超预期，下半年继续加速</li>
+          <li>OpenAI CFO透露7月单月ARR已超整个Q2</li>
+          <li>摩根大通：韩国杠杆ETF平仓已基本完成</li>
+          <li>美国6月PCE意外转负，核心通胀降温</li>
+          <li>汪汪队持续呵护，从托市转向举市</li>
+          <li>MLCC龙头涨价30%，电子元件景气度回升</li>
+          <li>多家公司发布回购计划（兆易创新、虹软科技等）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 明日关注要点 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">💡</span>明日关注要点</div>
+    <div class="highlight-box">
+      <span class="bullet">1️⃣</span>
+      <div class="content"><strong>期指交割日波动：</strong>明天是A股期指交割日，历史经验显示波动可能加大。洛飞小群建议"空仓的明天就别开机了"。</div>
+    </div>
+    <div class="highlight-box">
+      <span class="bullet">2️⃣</span>
+      <div class="content"><strong>中际旭创业绩验证：</strong>传闻盘后业绩78亿（30%增速），若超预期有望带动光模块板块修复，若不及预期则可能继续承压。</div>
+    </div>
+    <div class="highlight-box">
+      <span class="bullet">3️⃣</span>
+      <div class="content"><strong>美股反弹持续性：</strong>欧盟114亿美元AI基建计划推动纳指期货大涨500点，关注今晚美股收盘及明早亚洲市场反应。</div>
+    </div>
+    <div class="highlight-box">
+      <span class="bullet">4️⃣</span>
+      <div class="content"><strong>汪汪队呵护力度：</strong>核心逻辑社指出"外围上涨时，必须炸裂"，关注明天汪汪队是否从托市转向主动拉升。</div>
+    </div>
+    <div class="highlight-box">
+      <span class="bullet">5️⃣</span>
+      <div class="content"><strong>抱团股修复：</strong>小锦鲤关注五洲、万邦等抱团股横盘消化后的转折点，大概周二左右。立新能否止跌决定情绪修复节奏。</div>
+    </div>
+    <div class="highlight-box">
+      <span class="bullet">6️⃣</span>
+      <div class="content"><strong>MLCC涨价落地：</strong>三星电机8月1日起正式涨价30%，关注国瓷材料、鸿远电子、斯迪克等相关标的反应。</div>
+    </div>
+    <div class="highlight-box">
+      <span class="bullet">7️⃣</span>
+      <div class="content"><strong>小米机器人发布会：</strong>7月30日晚小米澎湃系列技术发布会，关注机器人产业链（金杨股份、方正电机、京城股份）催化。</div>
+    </div>
+  </div>
+
+  <!-- 免责声明 -->
+  <div class="disclaimer">
+    ⚠️ 免责声明：本报告仅基于飞书群聊消息整理，仅供个人参考，不构成投资建议。股市有风险，投资需谨慎。<br>
+    报告生成时间：2026-07-30 23:00 | 数据来源：15个飞书交流群聊消息
+  </div>
+
+</div>
+</body>
+</html>
