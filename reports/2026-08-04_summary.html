@@ -3,159 +3,465 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A股飞书群聊观点汇总报告 - 2026年8月4日</title>
+<title>飞书群聊市场观点汇总报告 - 2026-08-04</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #2c3e50; line-height: 1.7; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-  .header { background: linear-gradient(135deg, #1a237e, #283593); color: #fff; border-radius: 16px; padding: 30px 40px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(26,35,126,0.15); }
-  .header h1 { font-size: 26px; margin-bottom: 8px; }
-  .header .meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; opacity: 0.9; }
-  .header .meta span { display: inline-flex; align-items: center; gap: 4px; }
-  .section { background: #fff; border-radius: 14px; padding: 28px 32px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-  .section h2 { font-size: 20px; color: #1a237e; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e8eaf6; display: flex; align-items: center; gap: 8px; }
-  .tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-  .tag-orange { background: #fff3e0; color: #e65100; }
-  .tag-blue { background: #e3f2fd; color: #1565c0; }
-  .tag-teal { background: #e0f2f1; color: #00695c; }
-  .briefing-box { background: #fff8e1; border-radius: 12px; padding: 24px; border-left: 4px solid #ff9800; margin-bottom: 16px; }
-  .briefing-box h3 { color: #e65100; margin-bottom: 12px; font-size: 16px; }
-  .briefing-box p { margin-bottom: 10px; font-size: 14px; color: #455a64; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin: 20px 0; }
-  .stat-card { background: #f8f9ff; border-radius: 10px; padding: 18px; text-align: center; border: 1px solid #e8eaf6; }
-  .stat-card .num { font-size: 28px; font-weight: 700; color: #1a237e; }
-  .stat-card .desc { font-size: 12px; color: #78909c; margin-top: 4px; }
-  .context-list { list-style: none; }
-  .context-list li { padding: 10px 0; border-bottom: 1px dashed #e0e0e0; font-size: 14px; color: #455a64; display: flex; align-items: flex-start; gap: 10px; }
-  .context-list li:last-child { border-bottom: none; }
-  .context-list .icon { font-size: 18px; flex-shrink: 0; }
-  .message-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-  .message-table th { background: #e8eaf6; color: #1a237e; padding: 10px 14px; text-align: left; font-size: 13px; font-weight: 600; }
-  .message-table td { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 13px; color: #546e7a; }
-  .footer-note { text-align: center; font-size: 12px; color: #90a4ae; margin-top: 20px; padding: 16px; }
-  .highlight { background: #fffde7; padding: 2px 6px; border-radius: 4px; }
-  @media (max-width: 768px) {
-    .container { padding: 12px; }
-    .header { padding: 20px; }
-    .header h1 { font-size: 20px; }
-    .section { padding: 16px; }
-  }
+:root {
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --red: #dc2626;
+  --green: #16a34a;
+  --blue: #2563eb;
+  --yellow: #f59e0b;
+  --purple: #7c3aed;
+  --teal: #0d9488;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.header h1 { margin: 0 0 12px 0; font-size: 28px; }
+.header .meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; opacity: 0.95; }
+.header .meta span { display: flex; align-items: center; gap: 6px; }
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid var(--border);
+}
+.card h2 { margin: 0 0 16px 0; font-size: 20px; color: #111827; display: flex; align-items: center; gap: 10px; }
+.card h3 { margin: 20px 0 12px 0; font-size: 16px; color: #374151; }
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+}
+.tag-red { background: #fee2e2; color: #991b1b; }
+.tag-green { background: #dcfce7; color: #166534; }
+.tag-blue { background: #dbeafe; color: #1e40af; }
+.tag-yellow { background: #fef3c7; color: #92400e; }
+.tag-purple { background: #ede9fe; color: #5b21b6; }
+.tag-gray { background: #f3f4f6; color: #4b5563; }
+.highlight-box {
+  background: #fffbeb;
+  border-left: 4px solid var(--yellow);
+  padding: 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.market-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin: 16px 0;
+}
+.data-item {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.data-item .label { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+.data-item .value { font-size: 22px; font-weight: 700; }
+.up { color: var(--red); }
+.down { color: var(--green); }
+.source { color: var(--text-muted); font-size: 12px; }
+.source::before { content: "📍"; margin-right: 4px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 12px;
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+th { background: #f8fafc; font-weight: 600; color: #374151; }
+tr:hover { background: #f9fafb; }
+.stars { color: #f59e0b; letter-spacing: 2px; }
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.stock-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+.stock-card .title { font-weight: 700; font-size: 16px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.stock-card .logic { font-size: 13px; color: #4b5563; margin: 8px 0; }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.risk-col { border-right: 1px solid var(--border); padding-right: 16px; }
+.bull-col { padding-left: 16px; }
+@media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
+  .risk-col { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 16px; }
+  .bull-col { padding-left: 0; padding-top: 16px; }
+  .market-data { grid-template-columns: repeat(2, 1fr); }
+}
+ul.compact { margin: 8px 0; padding-left: 18px; }
+ul.compact li { margin-bottom: 8px; }
+.watch-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.watch-item {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 14px;
+}
+.watch-item strong { color: #92400e; }
+.footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 24px;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 6px; }
+.badge-core { background: #fee2e2; color: #991b1b; }
+.badge-leader { background: #fef3c7; color: #92400e; }
+.badge-hot { background: #dbeafe; color: #1e40af; }
+.badge-short { background: #e0e7ff; color: #3730a3; }
 </style>
 </head>
 <body>
 <div class="container">
-
-<!-- 报告头部 -->
-<div class="header">
-  <h1>📊 A股飞书群聊市场观点汇总报告</h1>
-  <div class="meta">
-    <span>📅 2026年8月4日（周二）</span>
-    <span>👥 监控群数：15个 | 活跃群：1个</span>
-    <span>💬 消息总数：4条</span>
-    <span>🕐 生成时间：2026-08-04 06:49</span>
-  </div>
-</div>
-
-<!-- 简报说明 -->
-<div class="section">
-  <h2>📋 今日简报</h2>
-
-  <div class="briefing-box">
-    <h3>⚠️ 今日群聊消息极少，无法形成有效观点汇总</h3>
-    <p>截至报告生成时间（06:49），15个监控群中仅 <strong>鑫多多</strong> 群有 4 条消息，且均为凌晨 00:05-00:09 的机器人推送图片（内容为"活着红-干字当头"），无可供分析的有效文本观点。</p>
-    <p>本报告为 <strong>非交易日/消息空窗期简报</strong>，未提取到个股或板块结构化数据。个股逻辑数据库今日无新增记录，累计数据保持不变。</p>
-  </div>
-
-  <div class="stats-grid">
-    <div class="stat-card">
-      <div class="num">1</div>
-      <div class="desc">活跃群数</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">4</div>
-      <div class="desc">总消息数</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">0</div>
-      <div class="desc">有效文本观点</div>
-    </div>
-    <div class="stat-card">
-      <div class="num">0</div>
-      <div class="desc">新增个股/板块</div>
+  <div class="header">
+    <h1>📊 飞书群聊市场观点汇总报告</h1>
+    <div class="meta">
+      <span>📅 2026年8月4日（周二）</span>
+      <span>👥 监控群数：15个</span>
+      <span>💬 今日消息：610条（11个群活跃）</span>
+      <span>⏰ 生成时间：2026-08-04 23:00</span>
     </div>
   </div>
 
-  <h3>📥 原始消息记录</h3>
-  <table class="message-table">
-    <tr>
-      <th>时间</th>
-      <th>来源群</th>
-      <th>发送者</th>
-      <th>内容摘要</th>
-    </tr>
-    <tr>
-      <td>00:05</td>
-      <td>鑫多多</td>
-      <td>自定义机器人</td>
-      <td>活着红-干字当头 [图片]</td>
-    </tr>
-    <tr>
-      <td>00:05</td>
-      <td>鑫多多</td>
-      <td>自定义机器人</td>
-      <td>活着红-干字当头 [图片]</td>
-    </tr>
-    <tr>
-      <td>00:05</td>
-      <td>鑫多多</td>
-      <td>自定义机器人</td>
-      <td>活着红-干字当头 [图片]</td>
-    </tr>
-    <tr>
-      <td>00:09</td>
-      <td>鑫多多</td>
-      <td>自定义机器人</td>
-      <td>活着红-干字当头 [图片]</td>
-    </tr>
-  </table>
-</div>
+  <div class="card">
+    <h2>📈 大盘走势与核心观点</h2>
+    <div class="market-data">
+      <div class="data-item">
+        <div class="label">三市成交额</div>
+        <div class="value">2.23万亿</div>
+      </div>
+      <div class="data-item">
+        <div class="label">较昨日</div>
+        <div class="value up">+2174亿</div>
+      </div>
+      <div class="data-item">
+        <div class="label">主力净流入</div>
+        <div class="value up">+585.49亿</div>
+      </div>
+      <div class="data-item">
+        <div class="label">两融余额</div>
+        <div class="value">2.60万亿</div>
+      </div>
+    </div>
+    <p>今日A股在外围科技大涨带动下高开高走，双创指数呈现"推土机式单边上行"，算力、光模块、AI应用成为反弹主力。两市成交额重回2.2万亿以上，主力资金大幅净流入，市场情绪较前几日明显修复。不过尾盘出现量化砸盘，沪深300等宽基仍受呵护。</p>
 
-<!-- 市场背景与关注要点 -->
-<div class="section">
-  <h2>🔍 近期市场背景回顾</h2>
-  <p style="margin-bottom:16px;font-size:14px;color:#546e7a;">由于今日无新增有效观点，以下梳理前几日群聊持续关注方向，供参考：</p>
-  <ul class="context-list">
-    <li><span class="icon">💻</span><div><strong>AI算力与应用：</strong>7月31日群聊集中讨论美股科技股史诗级反攻、微软/Azure/存储产业链暴涨，以及A股AI应用（昆仑万维、传智教育）和国产算力反转预期。核心逻辑社看8-9月新一轮上涨，潘凤则极度谨慎仅一成仓试错。</div></li>
-    <li><span class="icon">🔋</span><div><strong>存储/半导体产业链：</strong>存储芯片涨价（电子布、MLCC涨价30%）、长鑫科技上市、苹果推进长鑫DRAM验证等事件持续受关注，信息早知道梳理了存储-设备-模拟-海外-国算全图谱。</div></li>
-    <li><span class="icon">🤖</span><div><strong>机器人/具身智能：</strong>宇树科技8月10日申购、比亚迪机器人8月亮相、小米机器人进展等事件，机器人IPO浪潮与产业落地为持续关注主题。</div></li>
-    <li><span class="icon">⚠️</span><div><strong>情绪与仓位：</strong>市场情绪分化明显，核心逻辑社强调"信心问题"超越行业逻辑；潘凤维持高度谨慎；洛飞转向AI应用寻找新周期；震哥看反弹20-30%。</div></li>
-  </ul>
-</div>
+    <h3>各群核心观点</h3>
+    <ul class="compact">
+      <li><strong>核心逻辑社</strong>：算力见底信号再现，拐点尚待确认。AI产业链已实现盈利闭环，新叙事被财报坐实：Token调用量上升→企业付费转化→云厂收入利润双增→继续上修CapEx。当前最佳组合为指数+算力租赁/应用+光模块/国产算力。</li>
+      <li><strong>潘凤</strong>：整体偏谨慎，认为中际旭创等平台做T三天未涨，科技反弹仍受制于信心不足。短线定钉子买入芯原股份一成，强调国产算力若起来需聚焦能出业绩的方向，对海外链地缘风险保持警惕。</li>
+      <li><strong>信息早知道</strong>：密集转发机构研报，算力租赁、光通信、CPU/GPU/服务器/IDC被集体看好；同时提示中欧瑞博对科技硬件"泡沫破灭"的看空观点。</li>
+      <li><strong>洛飞小群</strong>：操作风华高科减仓，认为旭创带动但情绪资金不接力，市场整体没合力，全是量化交易。</li>
+      <li><strong>小锦鲤</strong>：抱团医药和独立标为主，科技反抽取关，认为跟随外围超跌反弹持续性有限，保住果实等下次大分歧。</li>
+      <li><strong>傅里叶的猫</strong>：美股TMT收盘总结，Palantir盘后大涨11%，全年指引大幅上调；云计算ROI叙事确立，Hyperscaler与半导体可同步受资金青睐。</li>
+    </ul>
 
-<!-- 明日关注要点 -->
-<div class="section">
-  <h2>📌 今日/明日关注要点</h2>
-  <ul class="context-list">
-    <li><span class="icon">💡</span><div>关注今日A股开盘后AI算力、存储、机器人等前期热点是否延续反弹。</div></li>
-    <li><span class="icon">💡</span><div>留意群聊中对成交量、主力资金流向及汪汪队动向的讨论。</div></li>
-    <li><span class="icon">💡</span><div>关注是否有新的政策/产业催化（如ZZJ会议后续、十五五算力网投资、半导体涨价等）。</div></li>
-  </ul>
-</div>
+    <div class="highlight-box">
+      <strong>操作建议：</strong>核心逻辑社建议"别满仓、别上杠杆"，国产链优先顺序为算力租赁>算力芯片>封测+代工>设备>存储芯片；海外链为光模块龙头>光配件>PCB。潘凤则强调短线试仓为主，等待确认反转信号。
+    </div>
+  </div>
 
-<!-- 市场情绪与风险提示 -->
-<div class="section">
-  <h2>⚖️ 市场情绪与风险提示</h2>
-  <p style="font-size:14px;color:#546e7a;margin-bottom:12px;">基于最近一次有效数据（2026-07-31）的延续判断：</p>
-  <ul class="context-list">
-    <li><span class="icon" style="color:#2e7d32;">🟢</span><div><strong>积极信号：</strong>美股科技股大幅反弹、外资/机构对算力长期逻辑仍乐观、国内政策端持续提及资本市场改革与算力投资。</div></li>
-    <li><span class="icon" style="color:#c62828;">🔴</span><div><strong>主要风险：</strong>大A信心不足、高开低走惯性、部分群主维持低仓位、海外利率与地缘政治不确定性。</div></li>
-  </ul>
-</div>
+  <div class="card">
+    <h2>🔥 板块热度排行</h2>
+    <table>
+      <thead>
+        <tr><th>排名</th><th>板块名称</th><th>热度</th><th>核心逻辑</th><th>主要来源</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>算力租赁/云计算</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>美股微软、谷歌、亚马逊云业务增速超预期；国内算力租赁被BIS错杀，Q2业绩兑现，国产模型Token需求指数级增长。</td>
+          <td>信息早知道、核心逻辑社、杰哥进阶</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>光模块/光通信</strong></td>
+          <td><span class="stars">★★★★★</span></td>
+          <td>白天大涨，晚间传出美国拟限制中国光模块进口；机构普遍认为短期情绪冲击，中长期中国厂商份额优势难替代，利好上游磷化铟/铌酸锂国产替代。</td>
+          <td>信息早知道、核心逻辑社、傅里叶的猫、震哥-胡汉三</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>AI应用</strong></td>
+          <td><span class="stars">★★★★☆</span></td>
+          <td>大模型调用价格下行、开源模型能力追赶，B端Agent与C端数字人/虚拟主播商业化窗口打开。</td>
+          <td>信息早知道、核心逻辑社</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><strong>国产算力/半导体</strong></td>
+          <td><span class="stars">★★★★☆</span></td>
+          <td>芯原股份被潘凤作为科技方向"钉子"买入；猫十三持仓浪潮、华丰、锐捷网络、盛科；核心逻辑社期待寒武纪转强带动正循环。</td>
+          <td>潘凤、猫十三、核心逻辑社</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><strong>半导体设备</strong></td>
+          <td><span class="stars">★★★★☆</span></td>
+          <td>8月1日日本先进封装设备出口管制生效，国产替代加速，测试机、涂胶显影、清洗、切磨抛等环节替代空间合计约380亿元。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><strong>成熟制程芯片</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>华源强call富满微、明微电子：AI需求挤占传统产能，成熟制程从涨价演绎为缺货，业绩爆发临界点已至。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><strong>CXO/医药</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>药明康德业绩超预期涨停并突破去年高点，下半年政策和业绩有预期支撑；小锦鲤先手落袋医药。</td>
+          <td>信息早知道、小锦鲤</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><strong>机器人/丝杠</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>宇树科技8月10日申购在即，英伟达机器人团队在中国三地招聘；丝杠成为高负载关节标配。</td>
+          <td>信息早知道</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><strong>存储/HBF</strong></td>
+          <td><span class="stars">★★★☆☆</span></td>
+          <td>SK海力士与闪迪发布首个HBF标准，美股存储大涨；但存储叙事多空分歧加大。</td>
+          <td>信息早知道、傅里叶的猫</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td><strong>苹果AI硬件</strong></td>
+          <td><span class="stars">★★☆☆☆</span></td>
+          <td>iOS27 Siri AI重磅落地，2027年桌面AI机器人量产预期，关注声学、结构件供应商。</td>
+          <td>信息早知道</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="footer-note">
-  数据来源：15个飞书交流群每日观点整理 · 仅供个人参考，不构成投资建议 · 本报告因当日无有效群聊观点而生成简报
-</div>
+  <div class="card">
+    <h2>💡 重点个股推荐与分析</h2>
+    <div class="stock-grid">
+      <div class="stock-card">
+        <div class="title">中际旭创 <span class="tag tag-red">光模块龙头</span></div>
+        <div class="logic">海外光模块龙头，北美订单中泰国/马来西亚出货占比90-95%，受FCC传闻情绪冲击但长期份额优势稳固。中信通信首推。</div>
+        <div class="source">来源：信息早知道、核心逻辑社、洛飞小群</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">新易盛 <span class="tag tag-red">光模块</span></div>
+        <div class="logic">北美营收占比70%+，泰国工厂出货占比接近100%，已提前布局海外产能缓冲地缘风险。</div>
+        <div class="source">来源：信息早知道、核心逻辑社</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">天孚通信 <span class="tag tag-red">光引擎</span></div>
+        <div class="logic">光模块核心器件供应商，1.6T升级+NPO放量带来增量。</div>
+        <div class="source">来源：信息早知道、核心逻辑社</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">源杰科技 <span class="tag tag-purple">光芯片</span></div>
+        <div class="logic">国产光芯片龙头，高速EML/CW激光器突破，磷化铟上游材料国产化核心标的。</div>
+        <div class="source">来源：信息早知道、傅里叶的猫</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">利通电子 <span class="tag tag-blue">算力租赁</span></div>
+        <div class="logic">杭州D模型算力核心供应商之一，Q2业绩预告利润爆发，机构多次底部强call。</div>
+        <div class="source">来源：信息早知道、核心逻辑社</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">协创数据 <span class="tag tag-blue">算力租赁</span></div>
+        <div class="logic">杭州A云合作方，算力租赁+云计算双轮驱动，业绩进入兑现期。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">宏景科技 <span class="tag tag-blue">算力租赁</span></div>
+        <div class="logic">北京Z模型+杭州A云双映射，8000P+算力规模，算力租赁"新云厂"代表。</div>
+        <div class="source">来源：信息早知道、核心逻辑社</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">行云科技 <span class="tag tag-blue">算力租赁</span></div>
+        <div class="logic">北京K模型核心合作方，猫十三群友提及股价创新高，算力+应用属性。</div>
+        <div class="source">来源：信息早知道、猫十三</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">寒武纪 <span class="tag tag-purple">国产AI芯片</span></div>
+        <div class="logic">核心逻辑社期待其转强带动国产算力正循环；500万股股权激励+2026-2028累计1000亿营收考核。</div>
+        <div class="source">来源：核心逻辑社</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">芯原股份 <span class="tag tag-purple">ASIC</span></div>
+        <div class="logic">潘凤今日买入一成作为科技方向"钉子"，逻辑为国内ASIC唯一上市标的，华为/寒武纪/海光等GPU市值合计4万亿而ASIC市值仅其2%。</div>
+        <div class="source">来源：潘凤</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">浪潮信息 <span class="tag tag-green">液冷服务器</span></div>
+        <div class="logic">国内互联网云厂商算力底座核心供货商，液冷服务器大涨，券商预测27/28年120亿/157亿利润，对应PE仅8/6倍。</div>
+        <div class="source">来源：信息早知道、猫十三</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">富满微 & 明微电子 <span class="tag tag-yellow">成熟制程芯片</span></div>
+        <div class="logic">华源强call：成熟制程从涨价演绎为缺货，业绩爆发临界点已至，复现2021年黄金组合。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">药明康德 <span class="tag tag-green">CXO龙头</span></div>
+        <div class="logic">业绩超预期涨停并突破去年高点，下半年政策和业绩有预期支撑，带动昭衍新药、凯莱英、泰格医药等。</div>
+        <div class="source">来源：信息早知道、小锦鲤</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">蓝色光标 <span class="tag tag-blue">AI应用</span></div>
+        <div class="logic">"蓝标智播"虚拟人直播间应用于天猫、京东等平台，AI应用300418、300058今日强势。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">当虹科技 <span class="tag tag-blue">AI应用</span></div>
+        <div class="logic">机器人遥操+智能网联汽车+工业卫星+传媒文化四线并进，2025年经营现金流转正，预计2026年首次盈利。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">长川科技 <span class="tag tag-yellow">半导体设备</span></div>
+        <div class="logic">日本先进封装设备出口管制生效，测试机替代空间约108亿元，国产替代核心标的。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">芯源微 <span class="tag tag-yellow">半导体设备</span></div>
+        <div class="logic">涂胶显影设备替代空间最大（约124亿元），日系厂商市占率高达95%，国产替代弹性最大。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">北方华创 <span class="tag tag-yellow">半导体设备</span></div>
+        <div class="logic">国产半导体设备平台龙头，覆盖刻蚀、薄膜、清洗等多环节，受益于去日化替代。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">云南锗业 <span class="tag tag-purple">光芯片材料</span></div>
+        <div class="logic">AXTI两天涨63%映射，锗/磷化铟材料受益于高速光模块需求爆发。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">跃岭股份 <span class="tag tag-purple">光芯片+铜箔</span></div>
+        <div class="logic">参股中科光芯10%，布局磷化铟IDM全产业链；同时有全球最大电解铜箔企业龙电华鑫资产重组预期。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">博硕科技 <span class="tag tag-gray">NV设备</span></div>
+        <div class="logic">直接对接英伟达供应L6-L10自动化组装/检测设备，若拿到30%份额有望27年贡献14亿利润。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">森远股份 <span class="tag tag-blue">中科院算力</span></div>
+        <div class="logic">中科院系控股股东中科信控全额定增，未来大概率注入济南/兰州智算中心及北龙超算等资产。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">优刻得 <span class="tag tag-blue">云计算</span></div>
+        <div class="logic">中立第三方云计算平台，上线Kimi K3模型，定增建设乌兰察布AIDC，海外拓展太空算力。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">国光电器 <span class="tag tag-gray">苹果AI硬件</span></div>
+        <div class="logic">苹果核心声学供应商，直接受益Siri AI及新款智能音箱迭代。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+      <div class="stock-card">
+        <div class="title">北特科技 <span class="tag tag-gray">机器人丝杠</span></div>
+        <div class="logic">机器人丝杠高负载关节标配，单机价值约1.8万元，大小丝杠份额+成本产能弹性大。</div>
+        <div class="source">来源：信息早知道</div>
+      </div>
+    </div>
+  </div>
 
+  <div class="card">
+    <h2>⚖️ 市场情绪与风险提示</h2>
+    <div class="two-col">
+      <div class="risk-col">
+        <h3>🔴 主要风险</h3>
+        <ul class="compact">
+          <li><strong>地缘政策风险</strong>：美国拟限制中国产数据中心光模块进口，虽机构普遍认为短期情绪冲击，但若升级可能影响新产品利润。<span class="source">来源：信息早知道、核心逻辑社、傅里叶的猫</span></li>
+          <li><strong>海外链波动</strong>：核心逻辑社晚间表示"不追海外链"，强调芯片/算力/AI半球化，中长期只有国产算力/国产AI。<span class="source">来源：核心逻辑社</span></li>
+          <li><strong>量化扰动</strong>：尾盘量化持续砸盘，洛飞、小锦鲤等均提到市场没合力、情绪资金不接力。<span class="source">来源：洛飞小群、小锦鲤</span></li>
+          <li><strong>空头持仓高位</strong>：中信及主要玩家合计净空单超过22万手，股指期货抛压仍大。<span class="source">来源：信息早知道</span></li>
+          <li><strong>科技硬件估值争议</strong>：中欧瑞博认为科技硬件是泡沫破灭而非牛市调整，公募二季度科技配置达76%历史高位。<span class="source">来源：信息早知道</span></li>
+        </ul>
+      </div>
+      <div class="bull-col">
+        <h3>🟢 积极信号</h3>
+        <ul class="compact">
+          <li><strong>美股科技盈利闭环确立</strong>：微软、谷歌、亚马逊云业务增速超预期，AI投资回报率被验证，CapEx继续上修。<span class="source">来源：核心逻辑社、信息早知道</span></li>
+          <li><strong>AI产业链叙事升级</strong>：从"买GPU压现金流"到"Token调用→云收入利润双增→再买算力"的正循环。<span class="source">来源：核心逻辑社</span></li>
+          <li><strong>国产算力政策/事件催化</strong>：全国首单Token算力工厂科创债落地、中科院算力资产证券化、日本设备出口管制倒逼国产替代。<span class="source">来源：信息早知道</span></li>
+          <li><strong>市场流动性改善</strong>：今日主力净流入585亿，终结此前连续流出，成交放量至2.2万亿以上。<span class="source">来源：信息早知道</span></li>
+          <li><strong>外围风险缓和</strong>：霍尔木兹海峡有望重新开放，WTI原油跌4%，地缘风险降温。<span class="source">来源：核心逻辑社、信息早知道</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 明日关注要点</h2>
+    <div class="watch-list">
+      <div class="watch-item"><strong>1. AMD财报</strong><br>今晚AMD披露业绩，对应算力芯片，可能刺激封测板块情绪。</div>
+      <div class="watch-item"><strong>2. 光模块 FCC消息</strong><br>关注美国光模块限制传闻的后续口径，以及A股光模块/上游材料开盘反应。</div>
+      <div class="watch-item"><strong>3. 国产算力是否转强</strong><br>核心逻辑社强调寒武纪转强是算力反弹形成正循环的关键。</div>
+      <div class="watch-item"><strong>4. 算力租赁持续性</strong><br>协创、宏景、利通、行云等是否延续强势，决定市场是否认可"穿越"逻辑。</div>
+      <div class="watch-item"><strong>5. 量化与队里呵护</strong><br>尾盘量化砸盘与队里承接的博弈，将影响短线节奏。</div>
+      <div class="watch-item"><strong>6. 医药抱团分歧</strong><br>小锦鲤提示医药新高后分歧加大，观察是否拖累独立抱团情绪。</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📌 本报告由AI基于飞书群聊消息自动整理生成，仅供个人参考，不构成投资建议。股市有风险，投资需谨慎。</p>
+    <p>数据截至 2026-08-04 23:00 | 监控群：15个 | 当日消息：610条</p>
+  </div>
 </div>
 </body>
 </html>
