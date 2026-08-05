@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>A股群聊市场观点汇总 - 2026-08-05</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 20px;
+}
+.container { max-width: 1280px; margin: 0 auto; }
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.header h1 { font-size: 32px; margin-bottom: 8px; font-weight: 700; }
+.header .subtitle { font-size: 16px; opacity: 0.9; margin-bottom: 20px; }
+.header .meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.meta-item {
+  background: rgba(255,255,255,0.12);
+  padding: 12px 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+.meta-item .label { font-size: 12px; opacity: 0.85; }
+.meta-item .value { font-size: 22px; font-weight: 700; margin-top: 4px; }
+
+/* Section */
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.section h2 {
+  font-size: 22px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section h2 .icon { font-size: 24px; }
+
+/* 大盘走势 */
+.market-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #0284c7;
+}
+.stat-card .label { color: #6b7280; font-size: 13px; }
+.stat-card .value { font-size: 24px; font-weight: 700; color: #0284c7; margin-top: 4px; }
+.stat-card.up .value { color: #dc2626; }    /* 涨用红色 */
+.stat-card.down .value { color: #16a34a; }  /* 跌用绿色 */
+.stat-card.neutral .value { color: #1e3a8a; }
+
+.view-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+.view-card {
+  background: #fafbfc;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 4px solid #6b7280;
+}
+.view-card.positive { border-left-color: #dc2626; background: #fef2f2; }
+.view-card.negative { border-left-color: #16a34a; background: #f0fdf4; }
+.view-card .group-tag {
+  display: inline-block;
+  background: #1e3a8a;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.view-card .content { font-size: 14px; line-height: 1.7; }
+
+/* 板块热度表格 */
+.sector-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.sector-table th {
+  background: #f3f4f6;
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+.sector-table td {
+  padding: 14px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+  vertical-align: top;
+}
+.sector-table tr:hover { background: #f9fafb; }
+.sector-table .rank {
+  background: #1e3a8a;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.sector-table .rank.top { background: linear-gradient(135deg, #dc2626, #f59e0b); }
+.sector-name { font-weight: 600; color: #1e3a8a; margin-bottom: 4px; }
+.sector-stars { color: #f59e0b; font-size: 14px; margin-bottom: 4px; }
+.sector-logic { color: #4b5563; font-size: 13px; line-height: 1.6; }
+
+/* 个股卡片 */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+.stock-card {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+}
+.stock-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.stock-name { font-size: 17px; font-weight: 700; color: #1e3a8a; }
+.stock-code { font-size: 12px; color: #6b7280; margin-top: 2px; }
+.stock-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.tag.bull { background: #fee2e2; color: #dc2626; }
+.tag.bear { background: #dcfce7; color: #16a34a; }
+.tag.neutral { background: #f3f4f6; color: #4b5563; }
+.stock-logic { color: #4b5563; font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+.stock-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+}
+.stock-meta .group {
+  background: #1e3a8a;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.stock-meta .target { color: #dc2626; font-weight: 600; }
+
+/* 市场情绪 */
+.sentiment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.sentiment-card {
+  border-radius: 12px;
+  padding: 22px;
+}
+.sentiment-card.risks {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 1px solid #fecaca;
+}
+.sentiment-card.positive {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid #bbf7d0;
+}
+.sentiment-card h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sentiment-card.risks h3 { color: #b91c1c; }
+.sentiment-card.positive h3 { color: #15803d; }
+.sentiment-card ul { list-style: none; padding: 0; }
+.sentiment-card li {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.sentiment-card li:last-child { border-bottom: none; }
+.sentiment-card.risks li::before { content: "⚠️"; }
+.sentiment-card.positive li::before { content: "✨"; }
+
+/* 明日关注 */
+.attention-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.attention-item {
+  background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
+  border-left: 4px solid #f59e0b;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.attention-item .icon { font-size: 18px; }
+.attention-item strong { color: #b45309; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 24px 0;
+  margin-top: 24px;
+}
+.footer .disclaimer {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #b45309;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 报告头部 -->
+<div class="header">
+  <h1>📊 A股群聊市场观点汇总</h1>
+  <div class="subtitle">2026年8月5日（星期三）</div>
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="label">监控群数</div>
+      <div class="value">15</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">活跃群数</div>
+      <div class="value">11</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">消息总数</div>
+      <div class="value">622</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">生成时间</div>
+      <div class="value" style="font-size: 16px;">23:00</div>
+    </div>
+  </div>
+</div>
+
+<!-- 大盘走势 -->
+<div class="section">
+  <h2><span class="icon">📈</span>大盘走势与核心观点</h2>
+
+  <div class="market-stats">
+    <div class="stat-card up">
+      <div class="label">三市成交</div>
+      <div class="value">2.68万亿</div>
+      <div style="font-size:11px;color:#dc2626;margin-top:4px;">较上日+4514亿</div>
+    </div>
+    <div class="stat-card up">
+      <div class="label">主力净流入</div>
+      <div class="value">+504.7亿</div>
+    </div>
+    <div class="stat-card up">
+      <div class="label">两融余额</div>
+      <div class="value">2.62万亿</div>
+      <div style="font-size:11px;color:#dc2626;margin-top:4px;">较上日+126.94亿</div>
+    </div>
+    <div class="stat-card neutral">
+      <div class="label">7月新开户</div>
+      <div class="value">265.54万</div>
+      <div style="font-size:11px;color:#4b5563;margin-top:4px;">环比-7%</div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:8px;color:#374151;font-size:16px;">核心观点</h3>
+  <div class="view-points">
+    <div class="view-card positive">
+      <span class="group-tag">核心逻辑社</span>
+      <div class="content">"国产算力主升浪正式开启！"芯片半球化、算力半球化、AI半球化三大逻辑共振。短期看算芯+设备+交换机强于算力租赁（算力租赁更接近美股映射）。盘后SW部对美FCC反制落地，行业逻辑没破但估值上限被压。</div>
+    </div>
+    <div class="view-card positive">
+      <span class="group-tag">潘凤</span>
+      <div class="content">"科技主升的时候全部赚钱"。中期底部已基本确认，8月4日开启炸裂模式。买入芯原股份作为"钉子"，开市时减三分之一做T，尾盘继续看多。认为应优先看好国产算力+指数，其次物理AI（机器人）+算力金属。</div>
+    </div>
+    <div class="view-card positive">
+      <span class="group-tag">信息早知道</span>
+      <div class="content">MLCC板块涨7%+，风华高科涨停；ANET盘后业绩大超预期+大幅上调指引；商务部对美FCC反制（暂停CCC认证+启动进口办公设备国安调查+管制无人机+制裁合规公司）四记重拳回应。稀土王牌是关键筹码，懂王会TACO。</div>
+    </div>
+    <div class="view-card positive">
+      <span class="group-tag">洛飞小群</span>
+      <div class="content">"今天指数真硬"。MLCC板块涨7个点但风华没人要，国产今天很强（紫光回封）。关注风华、宏景、易点、170等核心。亨通冲板。明天回踩完后继续向上。</div>
+    </div>
+    <div class="view-card positive">
+      <span class="group-tag">猫十三</span>
+      <div class="content">"目前市场上科技分为两个逻辑：超跌逻辑（存储、MLCC单月暴跌60%+）+ 新高逻辑（国产算力、算力租赁）"。"目前看，锐捷网络是最强的，浪潮和华丰都需要整理筹码。熬过去，加油。"</div>
+    </div>
+    <div class="view-card positive">
+      <span class="group-tag">傅里叶的猫</span>
+      <div class="content">TMTB早报：AMD因近期指引不及买方高预期跌9%，SpaceX资本开支激增+锁定期解禁跌11%。Musk提振NVDA+1.5%/META+2%；SHOP+22%/ANET+11%/BKNG+9%均因业绩大涨。HP/华硕/宏碁开始少量使用长鑫存储，Apple抢购DRAM。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <h2><span class="icon">🔥</span>板块热度排行</h2>
+  <table class="sector-table">
+    <thead>
+      <tr>
+        <th style="width:50px;">排名</th>
+        <th>板块</th>
+        <th style="width:120px;">热度</th>
+        <th>核心逻辑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank top">1</span></td>
+        <td>
+          <div class="sector-name">MLCC（片式多层陶瓷电容）</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">板块涨7%+</span></td>
+        <td class="sector-logic">太阳诱电Q2业绩超预期+全年指引大幅上调50%验证AI服务器高容MLCC进入量价共振阶段。AI服务器MLCC大容量化和单机用量增长均超预期，订单销售比1.72。风华高科涨停/三环/利和兴20cm。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank top">2</span></td>
+        <td>
+          <div class="sector-name">氧化锆（涨价周期）</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">涨价10-40%</span></td>
+        <td class="sector-logic">国瓷材料7.27起氧化锆粉体全线涨价10%-40%，下游固态电池+MLCC+CPO+牙科+耐火建材同步放量。原料锆矿供给紧张+下游需求持续扩张。龙佰集团控股东方锆业全产业链布局。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank top">3</span></td>
+        <td>
+          <div class="sector-name">国产算力</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">主升浪开启</span></td>
+        <td class="sector-logic">核心逻辑社正式宣布主升浪，半球化逻辑。9月阿华全连接大会+韬定律芯片发布+8月中报预期驱动。算芯+设备+交换机强于算力租赁。来源：核心逻辑社/潘凤/信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank top">4</span></td>
+        <td>
+          <div class="sector-name">交换机/AI网络</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">ANET+11%</span></td>
+        <td class="sector-logic">ANET Q2业绩大超预期+FY26收入指引上调至126亿(+40%)远超预期116亿。Etherlink AI Fabric客户从4-5个增至超100个。紫光股份回封涨停，锐捷网络/共进股份/星网锐捷/菲菱科斯等。来源：信息早知道/猫十三</td>
+      </tr>
+      <tr>
+        <td><span class="rank top">5</span></td>
+        <td>
+          <div class="sector-name">FDE（前线部署工程师）/AI应用</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">Palantir+26%</span></td>
+        <td class="sector-logic">Palantir暴涨26%引爆FDE赛道。腾讯系（泛微/普联）、阿里系（软通/博彦/新开普）、字节系（彩讯/致远/英方）。FDE是既懂AI技术又懂行业痛点、能深入客户现场的关键力量。传智教育7连板。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank top">6</span></td>
+        <td>
+          <div class="sector-name">磷化铟/铟/算力金属</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">铟价+200%</span></td>
+        <td class="sector-logic">铟价年内暴涨超200%，AI光模块需求（500-700吨）vs 7N高纯铟年产能（300吨）缺口翻倍。云南锗业涨停，AXT暴涨。株冶140吨产能国内独一档，光智Q2毛利率47%→7月55%。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank top">7</span></td>
+        <td>
+          <div class="sector-name">稀土（战略资源）</div>
+          <div class="sector-stars">⭐⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">反制王牌</span></td>
+        <td class="sector-logic">商务部反制背景下稀土战略价值凸显。稀土是光模块（光隔离器/光放大器/陶瓷基板）关键原材料。中国稀土/北方稀土/盛和资源/广晟有色重稀土（镝、铽、钇）核心材料。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank">8</span></td>
+        <td>
+          <div class="sector-name">光模块</div>
+          <div class="sector-stars">⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">反制预期修复</span></td>
+        <td class="sector-logic">FCC拟禁止中国新型光模块进口短期冲击，但商务部反制背景下预期反转。花旗/野村：国内头部光模块厂早已布局海外高端产能（泰国/台湾），国内企业受冲击有限。盘前港股旭创-15%，盘后反制发布后修复。来源：信息早知道/傅里叶的猫</td>
+      </tr>
+      <tr>
+        <td><span class="rank">9</span></td>
+        <td>
+          <div class="sector-name">机器人/物理AI</div>
+          <div class="sector-stars">⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">宇树8.10申购</span></td>
+        <td class="sector-logic">宇树科技8.10申购+特斯拉Optimus Gen3 Q4小批量交付+比亚迪机器人8月初发布。TPU防护外壳单机ASP过万元，百万台对应100亿空间。三主线：物理AI（索字辈）+工业大模型（控字辈）+机器人（绿字辈）。来源：信息早知道/核心逻辑社</td>
+      </tr>
+      <tr>
+        <td><span class="rank">10</span></td>
+        <td>
+          <div class="sector-name">半导体设备</div>
+          <div class="sector-stars">⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">存储+设备联动</span></td>
+        <td class="sector-logic">存储纯纯错杀但估值不便宜，资金猛干半导体设备。创王（精测）、长测（长川）、刻蚀微字辈（中微/北方华创）、键合拓字辈（拓荆）。日本8.1先进封装设备出口管制生效。来源：核心逻辑社/彭域</td>
+      </tr>
+      <tr>
+        <td><span class="rank">11</span></td>
+        <td>
+          <div class="sector-name">信创打印机</div>
+          <div class="sector-stars">⭐⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">商务部反制</span></td>
+        <td class="sector-logic">商务部公告2026年第33号：对相关进口打印复印办公设备发起对外贸易国家安全立案调查。外国系统软件（含驱动软件和嵌入式软件）是重点。信创打印机迎重大利好。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank">12</span></td>
+        <td>
+          <div class="sector-name">无人驾驶</div>
+          <div class="sector-stars">⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">一字板</span></td>
+        <td class="sector-logic">万集科技早盘加强涨停+浙江世宝+索菱股份一字板。L3强标2027.7.1实施+工信部座谈要求加强激进式创新设计风险隐患甄别。惯性导航是L3+智驾刚需零部件。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank">13</span></td>
+        <td>
+          <div class="sector-name">创新药/CXO</div>
+          <div class="sector-stars">⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">药继续走强</span></td>
+        <td class="sector-logic">7月新开户265.54万户(-7%)，但融资余额26152亿(+126.94亿)。7月外资调研173家次调研400只次个股+科技产业链占据榜单主要位置。桂林三金CDMO/CMO受关注。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank">14</span></td>
+        <td>
+          <div class="sector-name">消费（立秋奶茶/PE+CDMO）</div>
+          <div class="sector-stars">⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">立秋催化</span></td>
+        <td class="sector-logic">8.7日立秋将至，'秋天的第一杯奶茶'全网热搜预定。SHEIN 8月中赴港IPO估值1500亿美元，对应四川双马投资收益240亿远超其150亿市值。来源：信息早知道</td>
+      </tr>
+      <tr>
+        <td><span class="rank">15</span></td>
+        <td>
+          <div class="sector-name">黄金/选矿剂</div>
+          <div class="sector-stars">⭐⭐⭐</div>
+        </td>
+        <td><span class="tag bull">美伊缓和</span></td>
+        <td class="sector-logic">美伊继续缓和+油价下跌+地缘降温。环保浸金药剂下游渗透率从2023年8.02%快速提升至2025年14.45%。2028年全球贵金属选矿药剂市场规模611.5亿。森合高科净利率32.5%。来源：信息早知道</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股推荐 -->
+<div class="section">
+  <h2><span class="icon">💎</span>重点个股推荐与分析</h2>
+
+  <h3 style="font-size:16px;color:#374151;margin:8px 0 12px;">🔥 国产算力/算芯（核心主线）</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">寒武纪</div>
+          <div class="stock-code">688256</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">国产算力主升浪核心标的。周五晚上算芯龙头发中报+9月阿华全连接大会+韬定律芯片发布+半球化逻辑。</div>
+      <div class="stock-meta">
+        <span class="group">核心逻辑社/潘凤</span>
+        <span>国产算力</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">芯原股份</div>
+          <div class="stock-code">688521</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">国产算力核心标的，潘凤买入作为'钉子'，与寒武纪形成正循环。开盘减三分之一做T，尾盘判断中期底部。</div>
+      <div class="stock-meta">
+        <span class="group">潘凤</span>
+        <span>国产算力</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">紫光股份</div>
+          <div class="stock-code">000938</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">国产交换机龙头+超节点受益+AI网络高景气。8.5紫光回封涨停。ANET业绩催化+国产替代双轮驱动。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>交换机</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">锐捷网络</div>
+          <div class="stock-code">301165</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">国产交换机龙头，ANET业绩催化+AI网络高景气。猫十三群友评价：目前看锐捷网络是最强的。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道/猫十三</span>
+        <span>交换机</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:16px;color:#374151;margin:20px 0 12px;">⭐ MLCC/氧化锆涨价主线</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">风华高科</div>
+          <div class="stock-code">000636</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">AI算力高容MLCC产品研发取得突破，26H1量产的4款产品通过客户认证。MLCC科技反弹先锋，8.5涨停。周期+成长双重属性。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>MLCC</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">国瓷材料</div>
+          <div class="stock-code">300285</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">26H1收入25.13亿(+16.6%)净利3.63亿(+9.4%)，单Q2利润2.20亿(+12.5%)自22Q1再破2亿。MLCC粉体出货+20%，7月起1万吨常规粉近满产。7.27起氧化锆粉体全线涨价10-40%。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道/潘凤</span>
+        <span>MLCC/氧化锆</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">龙佰集团</div>
+          <div class="stock-code">002601</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">控股东方锆业打造国内完整锆材全产业链，氧化锆产能覆盖工业+固态电池+MLCC高端品类，绑定CPO。涨价+需求共振。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>氧化锆</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:16px;color:#374151;margin:20px 0 12px;">🚀 FDE/AI应用（高弹性主线）</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">传智教育</div>
+          <div class="stock-code">003032</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">7连板黑马程序员课程明确包含私有环境本地部署大模型（FDE核心能力）。注意：8.4晚公告提示AI人才职业培训业务盈利能力不确定风险。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>FDE</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">普联软件</div>
+          <div class="stock-code">300996</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">腾讯系入主（明略科技，腾讯持股27%），全市场最早挖掘。中国FDE第一股，企业级AI标志性事件。小锦鲤：这轮正向核心是普联债。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>FDE</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">中软国际</div>
+          <div class="stock-code">00354.HK</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">7.20与月之暗面签署Token分成+联合创新合作协议，共建FDE创新实验室。中国FDE第一股，Token分成模式绑定大模型放量红利。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>FDE/Agentic AI</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">软通动力</div>
+          <div class="stock-code">301236</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">FDE容量中军，PLTR带动企业主权AI大规模集中需求爆发。具备全行业快速交付+全栈技术+大量FDE。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>FDE</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:16px;color:#374151;margin:20px 0 12px;">💎 磷化铟/铟/稀土/光模块</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">云南锗业</div>
+          <div class="stock-code">002428</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">AXT暴涨引爆磷化铟赛道，云南锗业涨停，磷化铟目前约15万片/年，扩至45万片需2年左右。7N高纯铟+磷化铟中试阶段。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>磷化铟/铟</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">株冶集团</div>
+          <div class="stock-code">600961</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">强烈看好磷化铟上游原材料老龙估值修复。半年狂赚近20亿，全年35亿预期，仅250亿市值。140吨年产能国内独一档。铟价暴涨200%+。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>磷化铟/铟</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">中际旭创</div>
+          <div class="stock-code">300308</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">全球光模块龙头，800G/1.6T光模块大量使用稀土永磁和旋光片。盘后商务部反制发布后，预计明天光军团带领海外链反弹。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道/核心逻辑社</span>
+        <span>光模块</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">中国稀土</div>
+          <div class="stock-code">000831</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">中重稀土龙头，掌控全国大量中重稀土(镝、铽、钇等)资源。高纯稀土是光模块隔离器(TGG晶体)和光放大器的核心材料。商务部反制背景下稀土战略价值凸显。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>稀土/光模块</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:16px;color:#374151;margin:20px 0 12px;">🤖 机器人/物理AI</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">比亚迪</div>
+          <div class="stock-code">002594</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">比亚迪机器人8月初发布，百万量潜在空间，预期差超级大！目标1.2万亿市值。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span class="target">目标1.2万亿市值</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">模塑科技</div>
+          <div class="stock-code">000700</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">特斯拉战略级合作伙伴，Robotaxi保险杠独供。TPU防护部件深度绑定T机器人供应链。北美产能+顶尖模具技术。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>机器人/TPU</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">美瑞新材</div>
+          <div class="stock-code">300848</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">国内最纯TPU材料厂，19万吨产能，可提供定制化改性TPU，深度受益机器人TPU外壳和结构件需求爆发。TPU应用范围和价值量远超PEEK。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>TPU/机器人</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">恒为科技</div>
+          <div class="stock-code">603496</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">绑定华为384卡超节点，昇腾核心协同。ExSwitch智算交换机+纳秒级OCS光交换机，光电混合架构可将算力网络综合性价比提升2.5倍。2026年智算相关收入有望突破8.2亿元。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>华为超节点/光交换</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:16px;color:#374151;margin:20px 0 12px;">📋 主题催化（信创/PE+CDMO/无人驾驶）</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">四川双马</div>
+          <div class="stock-code">000935</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">中长线</span>
+        </div>
+      </div>
+      <div class="stock-logic">通过母公司+和谐成长间接持股SHEIN。SHEIN 8月中赴港IPO估值1500亿美元(保守)，双马对应投资收益240亿远超150亿市值。同时持股深圳健元(司美格鲁肽CDMO)。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>PE+CDMO</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">中国长城</div>
+          <div class="stock-code">000066</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">商务部对相关进口打印复印办公设备发起对外贸易国家安全立案调查，外国系统软件(包括驱动软件和嵌入式软件)是调查重点。信创打印机迎重大利好。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>信创打印机</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">香飘飘</div>
+          <div class="stock-code">603711</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">杯装奶茶第一股，连续13年市占率超60%。8.7日立秋将至，'秋天的第一杯奶茶'再掀全网热潮。26Q1冲泡类产品收入5.65亿(+85.31%)，公司预计上半年净利润近7年首次中报盈利。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>奶茶/消费</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">飞利信</div>
+          <div class="stock-code">300287</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">短线</span>
+        </div>
+      </div>
+      <div class="stock-logic">Palantir暴涨26%引爆FDE赛道，A股唯一官方认证中国版Palantir。手握涉密甲级+军工二级双重顶级保密资质，自研核心AI平台利智方，搭载知识图谱、GraphRAG、可信计算。</div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>AI政务/中国版Palantir</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 市场情绪与风险提示 -->
+<div class="section">
+  <h2><span class="icon">⚖️</span>市场情绪与风险提示</h2>
+  <div class="sentiment-grid">
+    <div class="sentiment-card risks">
+      <h3>⚠️ 主要风险</h3>
+      <ul>
+        <li>中信今日累计加空1970，净空单总数79795；中证500加空1538，沪深300加宽237，上证50加空506——大机构对冲盘仍较重</li>
+        <li>FCC拟禁止中国新型光模块进口，海外大厂（Coherent/Lumentum）短期受益，对中际旭创/新易盛等出口企业估值构成压制</li>
+        <li>传智教育已7连板+公司公告提示AI人才职业培训业务盈利能力不确定风险，分歧加大</li>
+        <li>AMD因近期指引不及买方高预期盘后跌7%-9%，海外科技股估值已充分反映2027年预期</li>
+        <li>联创光电公司及实控人伍锐涉嫌未按规定披露非经营性资金往来等违法行为被证监会立案</li>
+        <li>紫光股份筹码问题仍在，浪潮信息、华丰需要整理筹码（猫十三语）</li>
+        <li>铟价已暴涨200%+，云南锗业已涨80%+，短期获利盘压力</li>
+        <li>7月新开户265.54万户环比-7%，增量资金进场意愿减弱</li>
+      </ul>
+    </div>
+    <div class="sentiment-card positive">
+      <h3>✨ 积极信号</h3>
+      <ul>
+        <li>三市成交2.68万亿(+4514亿)，主力净流入504.7亿，两融余额26152.21亿(+126.94亿)——资金面积极</li>
+        <li>商务部对美FCC、土安全部系列涉华措施实施反制：制裁合规公司+启动进口办公设备国安调查+暂停委托在美机构CCC认证+管制无人机——四记重拳</li>
+        <li>MLCC板块涨7%+，风华高科涨停/三环/利和兴20cm；太阳诱电Q2业绩超预期+全年指引大幅上调50%验证AI服务器高容MLCC进入量价共振</li>
+        <li>ANET盘后涨11%，Q2业绩大超预期+FY26收入指引上调至126亿(+40%)远超预期116亿，Etherlink AI Fabric客户从4-5个增至超100个</li>
+        <li>国瓷材料26H1净利+9.4%，单Q2利润2.20亿(+12.5%)自22Q1再破2亿，MLCC粉体+氧化锆双重放量</li>
+        <li>核心逻辑社：'国产算力主升浪正式开启'，8-9月反攻行情全面打响</li>
+        <li>Palantir暴涨26%引爆FDE赛道，国内腾讯/阿里/字节三系全面布局</li>
+        <li>美伊继续缓和+油价继续下跌+地缘降温，海外不确定性下降</li>
+        <li>英伟达盘后涨4.6%，市值36万亿，估值映射催化算力芯片、国产半导体</li>
+        <li>商务部+大队里双重呵护，'队里托下限，AI行业逻辑攻上限'</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 明日关注要点 -->
+<div class="section" style="background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid #fde68a;">
+  <h2 style="color: #b45309; border-bottom-color: #fde68a;"><span class="icon">🎯</span>明日关注要点（2026-08-06 周四）</h2>
+  <div class="attention-list">
+    <div class="attention-item">
+      <span class="icon">🔥</span>
+      <div><strong>商务部反制后续发酵：</strong>8月5日盘后SW部对美FCC+土安全部反制+启动进口办公设备国安调查+暂停委托在美机构CCC认证+管制无人机四记重拳，明日市场情绪反应是关键观察点。核心逻辑社：'明天光军团带领海外链反弹，国产算力继续全面主升炸裂'</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">📊</span>
+      <div><strong>周五晚上算芯龙头发中报：</strong>核心逻辑社提示'算芯、设备、交换机这些要比租赁更有性价比'，算芯龙头中报业绩验证是关键催化</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">💎</span>
+      <div><strong>MLCC板块持续性：</strong>风华高科涨停+三环/利和兴20cm能否延续？太阳诱电全年指引大幅上调50%背景下，国内MLCC厂商业绩兑现</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">⚡</span>
+      <div><strong>氧化锆涨价延续：</strong>国瓷材料7.27起涨价10-40%后，龙佰集团/东方锆业/三祥新材/国瓷材料产业链能否接续上涨</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">🚀</span>
+      <div><strong>光模块反制概念：</strong>花旗/野村分析认为对国内头部光模块厂影响有限，FCC禁令+商务部反制背景下中际旭创/新易盛等修复机会</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">🤖</span>
+      <div><strong>机器人IPO进展：</strong>宇树科技8.10申购进入倒计时（5天），特斯拉Optimus Gen3 Q4小批量交付+比亚迪机器人8月初发布催化</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">🌍</span>
+      <div><strong>地缘+海外科技：</strong>美伊继续缓和+英伟达盘后涨4.6%市值36万亿+AMD短期回调+SpaceX资本开支，海外科技股对A股映射</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">📌</span>
+      <div><strong>FDE+Palantir概念持续性：</strong>传智教育7连板后分歧+中软国际/软通动力/普联软件等承接力度，字节生态+腾讯系+阿里系方向</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">🆕</span>
+      <div><strong>8.7日立秋奶茶催化：</strong>香飘飘+恒鑫生活+立秋'秋天的第一杯奶茶'全网热搜预定+《生态环境法典》8.15实施</div>
+    </div>
+    <div class="attention-item">
+      <span class="icon">📈</span>
+      <div><strong>9月阿华全连接大会+韬定律芯片发布预期：</strong>核心逻辑社指出'准备躺到9月份，躺倒4000点上方再说'</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div>📊 报告生成于 2026-08-05 23:00 | 数据来源：15个A股投研交流群（已过滤图片/闲聊）</div>
+  <div class="disclaimer">
+    ⚠️ 本报告基于飞书群聊内容整理，仅记录各群观点和讨论，不构成任何投资建议。<br>
+    各群观点不代表客观事实，投资有风险，决策需谨慎。
+  </div>
+</div>
+
+</div>
+</body>
+</html>
