@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>A股群聊市场观点汇总 - 2026-08-07</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f5f7fa;
+  color: #1f2937;
+  line-height: 1.6;
+  padding: 20px;
+}
+.container { max-width: 1280px; margin: 0 auto; }
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.header h1 { font-size: 32px; margin-bottom: 8px; font-weight: 700; }
+.header .subtitle { font-size: 16px; opacity: 0.9; margin-bottom: 20px; }
+.header .meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.meta-item {
+  background: rgba(255,255,255,0.12);
+  padding: 12px 16px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+}
+.meta-item .label { font-size: 12px; opacity: 0.85; }
+.meta-item .value { font-size: 22px; font-weight: 700; margin-top: 4px; }
+
+/* Low activity banner */
+.low-activity-banner {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #92400e;
+}
+
+/* Section */
+.section {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.section h2 {
+  font-size: 22px;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section h2 .icon { font-size: 24px; }
+
+/* 大盘走势 */
+.market-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #0284c7;
+}
+.stat-card .label { color: #6b7280; font-size: 13px; }
+.stat-card .value { font-size: 24px; font-weight: 700; color: #0284c7; margin-top: 4px; }
+.stat-card.na .value { color: #9ca3af; font-size: 16px; }
+
+.view-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+.view-card {
+  background: #fafbfc;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 4px solid #6b7280;
+}
+.view-card.positive { border-left-color: #dc2626; background: #fef2f2; }
+.view-card.negative { border-left-color: #16a34a; background: #f0fdf4; }
+.view-card .group-tag {
+  display: inline-block;
+  background: #1e3a8a;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.view-card .content { font-size: 14px; line-height: 1.7; }
+
+/* 板块热度表格 */
+.sector-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.sector-table th {
+  background: #f3f4f6;
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+.sector-table td {
+  padding: 14px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+  vertical-align: top;
+}
+.sector-table tr:hover { background: #f9fafb; }
+.sector-name { font-weight: 600; color: #1e3a8a; margin-bottom: 4px; }
+.sector-stars { color: #f59e0b; font-size: 14px; margin-bottom: 4px; }
+.sector-logic { color: #4b5563; font-size: 13px; line-height: 1.6; }
+
+/* 个股卡片 */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+.stock-card {
+  background: #fafbfc;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+}
+.stock-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.stock-name { font-size: 17px; font-weight: 700; color: #1e3a8a; }
+.stock-code { font-size: 12px; color: #6b7280; margin-top: 2px; }
+.stock-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.tag.bull { background: #fee2e2; color: #dc2626; }
+.tag.bear { background: #dcfce7; color: #16a34a; }
+.tag.neutral { background: #f3f4f6; color: #4b5563; }
+.stock-logic { color: #4b5563; font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
+.stock-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+  padding-top: 8px;
+  border-top: 1px solid #f3f4f6;
+}
+.stock-meta .group {
+  background: #1e3a8a;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.stock-meta .target { color: #dc2626; font-weight: 600; }
+
+/* 市场情绪 */
+.sentiment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.sentiment-card {
+  border-radius: 12px;
+  padding: 22px;
+}
+.sentiment-card.risks {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 1px solid #fecaca;
+}
+.sentiment-card.positive {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid #bbf7d0;
+}
+.sentiment-card h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sentiment-card.risks h3 { color: #b91c1c; }
+.sentiment-card.positive h3 { color: #15803d; }
+.sentiment-card ul { list-style: none; padding: 0; }
+.sentiment-card li {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.sentiment-card li:last-child { border-bottom: none; }
+.sentiment-card.risks li::before { content: "⚠️"; }
+.sentiment-card.positive li::before { content: "✨"; }
+
+/* 明日关注 */
+.attention-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
+.attention-item {
+  background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
+  border-left: 4px solid #f59e0b;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.attention-item .icon { font-size: 18px; }
+.attention-item strong { color: #b45309; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 24px 0;
+  margin-top: 24px;
+}
+.footer .disclaimer {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: #b45309;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- 报告头部 -->
+<div class="header">
+  <h1>📊 A股群聊市场观点汇总</h1>
+  <div class="subtitle">2026年8月7日（星期五 · 交易日）</div>
+  <div class="meta-grid">
+    <div class="meta-item">
+      <div class="label">监控群数</div>
+      <div class="value">15</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">活跃群数</div>
+      <div class="value">2</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">消息总数</div>
+      <div class="value">4</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">生成时间</div>
+      <div class="value" style="font-size: 16px;">23:00</div>
+    </div>
+  </div>
+</div>
+
+<!-- 低活跃提示 -->
+<div class="low-activity-banner">
+  ⚠️ 今日群聊活跃度极低，仅2个群共4条消息（均为凌晨00:25-00:30发布的自定义机器人推送），其余13个群当日无消息。以下为有限信息的精要整理。建议关注下周一盘前信息更新。
+</div>
+
+<!-- 大盘走势与核心观点 -->
+<div class="section">
+  <h2><span class="icon">📈</span> 大盘走势与核心观点</h2>
+
+  <div class="market-stats">
+    <div class="stat-card na">
+      <div class="label">今日群聊无大盘讨论</div>
+      <div class="value">N/A</div>
+    </div>
+    <div class="stat-card na">
+      <div class="label">成交/资金数据</div>
+      <div class="value">N/A</div>
+    </div>
+    <div class="stat-card na">
+      <div class="label">群聊观点数量</div>
+      <div class="value">2</div>
+    </div>
+    <div class="stat-card na">
+      <div class="label">覆盖板块</div>
+      <div class="value">2</div>
+    </div>
+  </div>
+
+  <div class="view-points">
+    <div class="view-card positive">
+      <div class="group-tag">信息早知道 · 天风计算机</div>
+      <div class="content">
+        <strong>AI安全板块持续推荐：</strong>网信办8月6日对Palo Alto Networks启动网络安全审查，国产替代逻辑再强化。同时Meta成为继Anthropic、OpenAI之后第三家披露AI代理失控的头部厂商。调研反馈能源、金融、运营商等行业AI安全需求大幅提升，客单价显著增长，订单超预期。下半年至明年有望进入爆发期。
+      </div>
+    </div>
+    <div class="view-card positive">
+      <div class="group-tag">信息早知道</div>
+      <div class="content">
+        <strong>厄尔尼诺主题：</strong>美股橡胶板块大涨，提示"150年最强厄尔尼诺"事件。关注农业种植、橡胶等相关标的。金健米业、海南橡胶等被提及。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <h2><span class="icon">🔥</span> 板块热度排行</h2>
+  <table class="sector-table">
+    <thead>
+      <tr>
+        <th style="width:10%">排名</th>
+        <th style="width:18%">板块名称</th>
+        <th style="width:12%">热度</th>
+        <th style="width:25%">核心逻辑</th>
+        <th style="width:18%">来源群</th>
+        <th style="width:17%">提及个股</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span style="background:#dc2626;color:white;width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">1</span></td>
+        <td>
+          <div class="sector-name">AI安全 / 网络安全</div>
+        </td>
+        <td><div class="sector-stars">⭐⭐⭐⭐⭐</div></td>
+        <td>
+          <div class="sector-logic">
+            1) 网信办对Palo Alto启动网络安全审查，国产替代加速；<br>
+            2) Meta AI失控事件引发全球AI安全关注升级；<br>
+            3) 行业调研：AI安全需求订单超预期，客单价大增，下半年至明年爆发期
+          </div>
+        </td>
+        <td>信息早知道</td>
+        <td>深信服、绿盟科技、网宿科技、安恒信息、启明星辰、亚信安全、奇安信、天融信</td>
+      </tr>
+      <tr>
+        <td><span style="background:#1e3a8a;color:white;width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">2</span></td>
+        <td>
+          <div class="sector-name">农业种植 / 橡胶</div>
+        </td>
+        <td><div class="sector-stars">⭐⭐⭐</div></td>
+        <td>
+          <div class="sector-logic">
+            1) 美股橡胶板块大涨；<br>
+            2) "150年最强厄尔尼诺"事件，极端天气利好农业/橡胶
+          </div>
+        </td>
+        <td>信息早知道</td>
+        <td>金健米业、海南橡胶、新赛股份、秋乐种业、国投丰乐、红棉股份</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股推荐与分析 -->
+<div class="section">
+  <h2><span class="icon">🎯</span> 重点个股推荐与分析</h2>
+
+  <div style="margin-bottom:16px;font-size:14px;color:#6b7280;">今日仅「信息早知道」群推送个股，按板块分类展示：</div>
+
+  <h3 style="font-size:16px;color:#1e3a8a;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e5e7eb;">🔒 AI安全板块（天风计算机 缪欣君/刘鉴团队）</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">深信服</div>
+          <div class="stock-code">300454.SZ</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">企业侧</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        AI安全企业侧核心标的。网信办审查Palo Alto直接利好国产替代，AI驱动攻击指数级增长推升企业安全需求。下半年订单有望超预期。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>天风计算机研报</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">绿盟科技</div>
+          <div class="stock-code">300369.SZ</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">企业侧</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        AI安全企业侧标的。受益于国产替代大趋势，AI安全需求提升带来新增量。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>天风计算机研报</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">奇安信</div>
+          <div class="stock-code">688561.SH</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">政务侧</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        政务侧AI安全龙头。国家安全审查背景下政务安全需求确定性高，AI安全订单可验证。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>天风计算机研报</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">安恒信息</div>
+          <div class="stock-code">688023.SH</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">行业侧</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        行业侧AI安全标的。能源、金融、运营商等行业安全需求大且预算充足，AI安全产品迭代加速。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>天风计算机研报</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">启明星辰</div>
+          <div class="stock-code">002439.SZ</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">行业侧</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        行业侧安全标的。传统网安龙头，AI安全布局加速，受益于国产替代+需求爆发双轮驱动。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>天风计算机研报</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">天融信</div>
+          <div class="stock-code">002212.SZ</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">AI安全</span>
+          <span class="tag">政务侧</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        政务侧安全标的。国家安全审查利好政务安全赛道，受益确定性高。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>天风计算机研报</span>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:16px;color:#1e3a8a;margin:24px 0 12px 0;padding-bottom:8px;border-bottom:1px solid #e5e7eb;">🌾 厄尔尼诺 / 农业板块</h3>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">海南橡胶</div>
+          <div class="stock-code">601118.SH</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">橡胶</span>
+          <span class="tag">厄尔尼诺</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        美股橡胶板块大涨传导。150年最强厄尔尼诺事件影响天然橡胶供给，橡胶价格有望持续上行。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>短线主题</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">金健米业</div>
+          <div class="stock-code">600127.SH</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">粮食</span>
+          <span class="tag">厄尔尼诺</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        厄尔尼诺极端天气影响全球粮食产量。粮食安全主题升温，农业种植板块受益。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>短线主题</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">新赛股份</div>
+          <div class="stock-code">600540.SH</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">农业</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        厄尔尼诺主题关联农业标的，极端天气推升农产品价格预期。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>短线主题</span>
+      </div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">秋乐种业</div>
+          <div class="stock-code">831087.BJ</div>
+        </div>
+        <div class="stock-tags">
+          <span class="tag bull">看多</span>
+          <span class="tag">种业</span>
+        </div>
+      </div>
+      <div class="stock-logic">
+        厄尔尼诺主题种业标的，极端气候下种业需求提升预期。
+      </div>
+      <div class="stock-meta">
+        <span class="group">信息早知道</span>
+        <span>短线主题</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 市场情绪与风险提示 -->
+<div class="section">
+  <h2><span class="icon">⚖️</span> 市场情绪与风险提示</h2>
+  <div class="sentiment-grid">
+
+    <!-- 主要风险 -->
+    <div class="sentiment-card risks">
+      <h3>主要风险</h3>
+      <ul>
+        <li><div><strong>群聊活跃度骤降：</strong>15个群仅2个有消息，大量核心群（潘凤、唐史主任、核心逻辑社等13群）今日零消息，信息断层严重，需谨慎判断市场共识。</div></li>
+        <li><div><strong>单一信源风险：</strong>今日所有内容均来自「信息早知道」自定义机器人推送，无群成员讨论验证，观点代表性有限。</div></li>
+        <li><div><strong>天风研报跟风风险：</strong>AI安全板块推票来自卖方研报，需警惕"推荐即出货"的短期博弈风险。</div></li>
+        <li><div><strong>消息时效性：</strong>所有消息均发布于凌晨00:25-00:30，盘前最新动态未知。</div></li>
+      </ul>
+    </div>
+
+    <!-- 积极信号 -->
+    <div class="sentiment-card positive">
+      <h3>积极信号</h3>
+      <ul>
+        <li><div><strong>AI安全政策催化明确：</strong>网信办对Palo Alto启动审查是实质性国产替代信号，叠加Meta AI失控事件，全球AI安全关注度持续升温。</div></li>
+        <li><div><strong>行业调研验证需求：</strong>天风调研显示多个行业AI安全需求订单超预期，客单价大幅提升，基本面有支撑。</div></li>
+        <li><div><strong>厄尔尼诺主题：</strong>极端气候事件是潜在交易主题，美股橡胶大涨提供外部映射。</div></li>
+        <li><div><strong>周五窗口：</strong>今日为周五，部分资金可能选择观望，群聊活跃度低不必然反映市场悲观。</div></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- 明日关注要点 -->
+<div class="section">
+  <h2><span class="icon">📌</span> 下周一（8/10）关注要点</h2>
+  <div class="attention-list">
+    <div class="attention-item">
+      <div class="icon">🔒</div>
+      <div><strong>AI安全板块持续性：</strong>关注网信办对Palo Alto审查后续动态，以及周五AI安全板块是否有资金布局。警惕周末消息面变化。</div>
+    </div>
+    <div class="attention-item">
+      <div class="icon">🌾</div>
+      <div><strong>厄尔尼诺/农业主题：</strong>跟踪国际橡胶价格走势和厄尔尼诺强度最新预报。农业种植板块周末是否发酵。</div>
+    </div>
+    <div class="attention-item">
+      <div class="icon">📊</div>
+      <div><strong>群聊活跃度恢复：</strong>关注周末各群讨论恢复情况，特别是核心逻辑社、潘凤、震哥等重点群的观点输出。如持续低活跃需警惕市场风险偏好变化。</div>
+    </div>
+    <div class="attention-item">
+      <div class="icon">🗓️</div>
+      <div><strong>下周一重要事件：</strong>关注周末政策面消息（中美关系、产业政策等），以及8/10盘前资讯更新。</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="disclaimer">
+    ⚠️ 免责声明：本报告仅供个人参考，不构成任何投资建议。报告内容基于飞书群聊消息的自动化汇总分析，数据来源有限且可能存在偏差。投资有风险，入市需谨慎。
+  </div>
+  <div style="margin-top:16px;">
+    监控群数：15 | 数据来源：飞书群聊 | 自动生成于 2026年8月7日 23:00 CST
+  </div>
+</div>
+
+</div>
+</body>
+</html>
