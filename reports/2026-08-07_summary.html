@@ -2,344 +2,155 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>A股群聊市场观点汇总 - 2026-08-07</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股飞书群聊观点汇总 - 2026年8月7日</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  background: #f5f7fa;
-  color: #1f2937;
-  line-height: 1.6;
-  padding: 20px;
-}
-.container { max-width: 1280px; margin: 0 auto; }
-
-/* Header */
-.header {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
-  color: white;
-  padding: 32px;
-  border-radius: 16px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-.header h1 { font-size: 32px; margin-bottom: 8px; font-weight: 700; }
-.header .subtitle { font-size: 16px; opacity: 0.9; margin-bottom: 20px; }
-.header .meta-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: 16px;
-}
-.meta-item {
-  background: rgba(255,255,255,0.12);
-  padding: 12px 16px;
-  border-radius: 10px;
-  backdrop-filter: blur(8px);
-}
-.meta-item .label { font-size: 12px; opacity: 0.85; }
-.meta-item .value { font-size: 22px; font-weight: 700; margin-top: 4px; }
-
-/* Low activity banner */
-.low-activity-banner {
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-  border-radius: 12px;
-  padding: 16px 24px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 14px;
-  color: #92400e;
-}
-
-/* Section */
-.section {
-  background: white;
-  border-radius: 16px;
-  padding: 28px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-.section h2 {
-  font-size: 22px;
-  color: #1e3a8a;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid #e5e7eb;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section h2 .icon { font-size: 24px; }
-
-/* 大盘走势 */
-.market-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
-}
-.stat-card {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  padding: 20px;
-  border-radius: 12px;
-  border-left: 4px solid #0284c7;
-}
-.stat-card .label { color: #6b7280; font-size: 13px; }
-.stat-card .value { font-size: 24px; font-weight: 700; color: #0284c7; margin-top: 4px; }
-.stat-card.na .value { color: #9ca3af; font-size: 16px; }
-
-.view-points {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 20px;
-}
-.view-card {
-  background: #fafbfc;
-  padding: 18px;
-  border-radius: 12px;
-  border-left: 4px solid #6b7280;
-}
-.view-card.positive { border-left-color: #dc2626; background: #fef2f2; }
-.view-card.negative { border-left-color: #16a34a; background: #f0fdf4; }
-.view-card .group-tag {
-  display: inline-block;
-  background: #1e3a8a;
-  color: white;
-  padding: 2px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
-.view-card .content { font-size: 14px; line-height: 1.7; }
-
-/* 板块热度表格 */
-.sector-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
-}
-.sector-table th {
-  background: #f3f4f6;
-  padding: 12px 8px;
-  text-align: left;
-  font-size: 13px;
-  color: #4b5563;
-  font-weight: 600;
-  border-bottom: 2px solid #e5e7eb;
-}
-.sector-table td {
-  padding: 14px 8px;
-  border-bottom: 1px solid #f3f4f6;
-  font-size: 14px;
-  vertical-align: top;
-}
-.sector-table tr:hover { background: #f9fafb; }
-.sector-name { font-weight: 600; color: #1e3a8a; margin-bottom: 4px; }
-.sector-stars { color: #f59e0b; font-size: 14px; margin-bottom: 4px; }
-.sector-logic { color: #4b5563; font-size: 13px; line-height: 1.6; }
-
-/* 个股卡片 */
-.stock-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 12px;
-}
-.stock-card {
-  background: #fafbfc;
-  border-radius: 12px;
-  padding: 18px;
-  border: 1px solid #e5e7eb;
-  transition: all 0.2s;
-}
-.stock-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transform: translateY(-1px);
-}
-.stock-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 8px;
-}
-.stock-name { font-size: 17px; font-weight: 700; color: #1e3a8a; }
-.stock-code { font-size: 12px; color: #6b7280; margin-top: 2px; }
-.stock-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag {
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: 500;
-}
-.tag.bull { background: #fee2e2; color: #dc2626; }
-.tag.bear { background: #dcfce7; color: #16a34a; }
-.tag.neutral { background: #f3f4f6; color: #4b5563; }
-.stock-logic { color: #4b5563; font-size: 13px; line-height: 1.6; margin-bottom: 8px; }
-.stock-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  color: #6b7280;
-  padding-top: 8px;
-  border-top: 1px solid #f3f4f6;
-}
-.stock-meta .group {
-  background: #1e3a8a;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 11px;
-}
-.stock-meta .target { color: #dc2626; font-weight: 600; }
-
-/* 市场情绪 */
-.sentiment-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-.sentiment-card {
-  border-radius: 12px;
-  padding: 22px;
-}
-.sentiment-card.risks {
-  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
-  border: 1px solid #fecaca;
-}
-.sentiment-card.positive {
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-  border: 1px solid #bbf7d0;
-}
-.sentiment-card h3 {
-  font-size: 16px;
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.sentiment-card.risks h3 { color: #b91c1c; }
-.sentiment-card.positive h3 { color: #15803d; }
-.sentiment-card ul { list-style: none; padding: 0; }
-.sentiment-card li {
-  padding: 8px 0;
-  font-size: 14px;
-  border-bottom: 1px dashed rgba(0,0,0,0.08);
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-.sentiment-card li:last-child { border-bottom: none; }
-.sentiment-card.risks li::before { content: "⚠️"; }
-.sentiment-card.positive li::before { content: "✨"; }
-
-/* 明日关注 */
-.attention-list { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; }
-.attention-item {
-  background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 100%);
-  border-left: 4px solid #f59e0b;
-  padding: 14px 18px;
-  border-radius: 8px;
-  font-size: 14px;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-.attention-item .icon { font-size: 18px; }
-.attention-item strong { color: #b45309; }
-
-/* Footer */
-.footer {
-  text-align: center;
-  color: #6b7280;
-  font-size: 12px;
-  padding: 24px 0;
-  margin-top: 24px;
-}
-.footer .disclaimer {
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-  border-radius: 8px;
-  padding: 12px;
-  margin-top: 12px;
-  font-size: 13px;
-  color: #b45309;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1a1a2e; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+  .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 30px; border-radius: 16px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(102,126,234,0.3); }
+  .header h1 { font-size: 28px; margin-bottom: 8px; }
+  .header .meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; opacity: 0.9; }
+  .header .meta span { background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 20px; }
+  .section { background: #fff; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .section h2 { font-size: 20px; color: #2d3436; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e9ecef; display: flex; align-items: center; gap: 8px; }
+  .section h2 .icon { font-size: 24px; }
+  .market-overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
+  .market-card { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); padding: 16px; border-radius: 10px; text-align: center; }
+  .market-card .label { font-size: 13px; color: #555; margin-bottom: 4px; }
+  .market-card .value { font-size: 22px; font-weight: 700; color: #2d3436; }
+  .market-card .change { font-size: 14px; margin-top: 4px; }
+  .red { color: #e74c3c; }
+  .green { color: #27ae60; }
+  .view-item { background: #f8f9fa; border-left: 4px solid #667eea; padding: 14px 18px; margin-bottom: 12px; border-radius: 0 8px 8px 0; }
+  .view-item .group { display: inline-block; background: #667eea; color: #fff; font-size: 12px; padding: 2px 10px; border-radius: 12px; margin-bottom: 6px; }
+  .view-item .content { font-size: 14px; color: #2d3436; }
+  .view-item .tag { display: inline-block; background: #e3f2fd; color: #1976d2; font-size: 12px; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+  th { background: #2d3436; color: #fff; padding: 10px 12px; text-align: left; font-size: 13px; }
+  td { padding: 10px 12px; border-bottom: 1px solid #e9ecef; font-size: 13px; }
+  tr:hover td { background: #f8f9fa; }
+  .stars { color: #fdcb6e; letter-spacing: 2px; }
+  .stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .stock-card { background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 16px; transition: transform 0.2s, box-shadow 0.2s; }
+  .stock-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .stock-card .name { font-size: 17px; font-weight: 700; color: #2d3436; margin-bottom: 4px; }
+  .stock-card .tags { margin-bottom: 8px; }
+  .stock-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+  .tag-bull { background: #ffeaa7; color: #b7791f; }
+  .tag-sector { background: #dfe6e9; color: #636e72; }
+  .tag-short { background: #fab1a0; color: #c0392b; }
+  .tag-long { background: #55efc4; color: #00b894; }
+  .stock-card .logic { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 8px; }
+  .stock-card .source { font-size: 12px; color: #999; }
+  .emotion-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .emotion-box { padding: 20px; border-radius: 10px; }
+  .emotion-risk { background: #fff5f5; border: 1px solid #fed7d7; }
+  .emotion-positive { background: #f0fff4; border: 1px solid #c6f6d5; }
+  .emotion-box h3 { font-size: 16px; margin-bottom: 12px; }
+  .emotion-box ul { list-style: none; padding: 0; }
+  .emotion-box li { font-size: 13px; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .emotion-box li:last-child { border-bottom: none; }
+  .emotion-risk h3 { color: #c53030; }
+  .emotion-positive h3 { color: #276749; }
+  .focus-list { background: #fffbeb; border: 1px solid #fbd38d; border-radius: 10px; padding: 20px; }
+  .focus-list h3 { color: #d69e2e; font-size: 16px; margin-bottom: 12px; }
+  .focus-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .focus-item .num { background: #f6ad55; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .focus-item .text { font-size: 14px; color: #744210; }
+  .footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+  .group-badge { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 3px; background: #e8eaf6; color: #3f51b5; margin-left: 6px; }
+  .highlight-box { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 10px; }
+  .highlight-box .title { font-weight: 700; color: #2e7d32; margin-bottom: 4px; }
+  .highlight-box .desc { font-size: 13px; color: #555; }
 </style>
 </head>
 <body>
 <div class="container">
 
-<!-- 报告头部 -->
+<!-- Header -->
 <div class="header">
-  <h1>📊 A股群聊市场观点汇总</h1>
-  <div class="subtitle">2026年8月7日（星期五 · 交易日）</div>
-  <div class="meta-grid">
-    <div class="meta-item">
-      <div class="label">监控群数</div>
-      <div class="value">15</div>
-    </div>
-    <div class="meta-item">
-      <div class="label">活跃群数</div>
-      <div class="value">2</div>
-    </div>
-    <div class="meta-item">
-      <div class="label">消息总数</div>
-      <div class="value">4</div>
-    </div>
-    <div class="meta-item">
-      <div class="label">生成时间</div>
-      <div class="value" style="font-size: 16px;">23:00</div>
-    </div>
+  <h1>📊 A股飞书群聊观点汇总报告</h1>
+  <div class="meta">
+    <span>📅 2026年8月7日（周五）</span>
+    <span>💬 监控15群 · 335条消息</span>
+    <span>🏢 活跃11群</span>
+    <span>⏰ 生成于 23:00</span>
   </div>
-</div>
-
-<!-- 低活跃提示 -->
-<div class="low-activity-banner">
-  ⚠️ 今日群聊活跃度极低，仅2个群共4条消息（均为凌晨00:25-00:30发布的自定义机器人推送），其余13个群当日无消息。以下为有限信息的精要整理。建议关注下周一盘前信息更新。
 </div>
 
 <!-- 大盘走势与核心观点 -->
 <div class="section">
   <h2><span class="icon">📈</span> 大盘走势与核心观点</h2>
 
-  <div class="market-stats">
-    <div class="stat-card na">
-      <div class="label">今日群聊无大盘讨论</div>
-      <div class="value">N/A</div>
+  <div class="market-overview">
+    <div class="market-card">
+      <div class="label">市场格局</div>
+      <div class="value" style="font-size:16px;">双创领涨</div>
+      <div class="change red">科技+医药双主线</div>
     </div>
-    <div class="stat-card na">
-      <div class="label">成交/资金数据</div>
-      <div class="value">N/A</div>
+    <div class="market-card">
+      <div class="label">美股映射</div>
+      <div class="value" style="font-size:16px;">软件暴涨</div>
+      <div class="change red">NET+17% TEAM+32% TWLO+16%</div>
     </div>
-    <div class="stat-card na">
-      <div class="label">群聊观点数量</div>
-      <div class="value">2</div>
+    <div class="market-card">
+      <div class="label">非农数据</div>
+      <div class="value" style="font-size:16px;">-2.3万</div>
+      <div class="change green">预期+8万 · 加息预期降温</div>
     </div>
-    <div class="stat-card na">
-      <div class="label">覆盖板块</div>
-      <div class="value">2</div>
+    <div class="market-card">
+      <div class="label">纳指期货</div>
+      <div class="value red">+1.25%</div>
+      <div class="change red">非农公布后齐升</div>
     </div>
   </div>
 
-  <div class="view-points">
-    <div class="view-card positive">
-      <div class="group-tag">信息早知道 · 天风计算机</div>
-      <div class="content">
-        <strong>AI安全板块持续推荐：</strong>网信办8月6日对Palo Alto Networks启动网络安全审查，国产替代逻辑再强化。同时Meta成为继Anthropic、OpenAI之后第三家披露AI代理失控的头部厂商。调研反馈能源、金融、运营商等行业AI安全需求大幅提升，客单价显著增长，订单超预期。下半年至明年有望进入爆发期。
-      </div>
+  <div class="view-item">
+    <span class="group">核心逻辑社</span>
+    <span class="tag">看多</span>
+    <div class="content" style="margin-top:6px;">
+      <strong>国产算力主升浪持续，坚守AI主线。</strong>美伊局势扰动弱化（伊朗与阿曼达成霍尔木兹海峡临时协议），11月中期选举前美股大概率稳定。非农数据明显为懂王中期选举铺路，加息预期降温，纳指顺势拉升。AI在地缘层面谁都不敢不发展——懂王公开表态"AI可能比石油还重要，谁赢得AI谁就赢得一切"。继续躺好国产算力（算芯、代工、设备、封测、交换机、算力租赁），海外链（英伟达AI基站、PCB产业链），算力金属（磷化铟龙头），AI应用（端侧芯片、AI应用龙头）。
     </div>
-    <div class="view-card positive">
-      <div class="group-tag">信息早知道</div>
-      <div class="content">
-        <strong>厄尔尼诺主题：</strong>美股橡胶板块大涨，提示"150年最强厄尔尼诺"事件。关注农业种植、橡胶等相关标的。金健米业、海南橡胶等被提及。
-      </div>
+  </div>
+
+  <div class="view-item">
+    <span class="group">核心逻辑社</span>
+    <span class="tag">看多</span>
+    <div class="content" style="margin-top:6px;">
+      <strong>字节跳动训练5万亿参数模型，国产算力需求再获验证。</strong>字节正讨论训练参数超5万亿的模型，超过阿里Qwen 3.8-Max（2.4万亿）和月之暗面K3（2.8万亿），为国内已知最大规模。新模型由Seed Foundation项亮主导。DeepSeek同步宣布上调API定价。核心受益：寒武纪（字节AI芯片）、润泽科技（字节IDC）、锐捷网络（字节交换机50-60%份额）、协创数据、利通电子、芯原股份（字节ASIC芯片）。
+    </div>
+  </div>
+
+  <div class="view-item">
+    <span class="group">洛飞小群</span>
+    <span class="tag">谨慎偏多</span>
+    <div class="content" style="margin-top:6px;">
+      <strong>大盘接近反弹第一目标，周一冲高是极限。</strong>指数回调预期叠加科技分歧，下周不做科技，情绪票会强于趋势票。科技分歧就真分歧了，药分歧会回流——分歧大胆干。今日市场主线是超跌轮动修复，风华先修的横盘，没涨的兆易、PCB、光模块补涨。旭创尾盘怕周末幺蛾子。哈药今天定龙，锚定百花给强度。纳斯达克关注能否新高。
+    </div>
+  </div>
+
+  <div class="view-item">
+    <span class="group">潘凤</span>
+    <span class="tag">看多</span>
+    <div class="content" style="margin-top:6px;">
+      <strong>海外链下跌反而凸显国产链韧性。</strong>ASIC每一到两年回本，大厂未来不会用谷歌模式烧钱买卡。自研芯片直接走垂直应用是聪明方式。FCC出不出来国产都要发展。芯原股份水下加仓0.5成，兆易创新半路一成。趋势要慢慢恢复热度，超跌连板是当前阶段。九月份还要见面，反制差不多了。
+    </div>
+  </div>
+
+  <div class="view-item">
+    <span class="group">小锦鲤</span>
+    <span class="tag">偏多</span>
+    <div class="content" style="margin-top:6px;">
+      <strong>医药科技双线操作，两手抓永不踏空。</strong>万邦医药（医药核心）十几个点收获，普联债（科技）古债双收。医药已走成一个月主线，低位药轮动不好把握节奏，聚焦万邦+龙神。科技从上周就看普联，五洲做了半个月陪度过股灾。普联今天为调空间只有债的套利机会，周一正古就正常了。
+    </div>
+  </div>
+
+  <div class="view-item">
+    <span class="group">傅里叶的猫</span>
+    <span class="tag">中性</span>
+    <div class="content" style="margin-top:6px;">
+      <strong>美股软件板块集体爆发，GCP将AI算力金融化。</strong>Cloudflare（NET+17%）营收增速36%创2021Q4以来最大beat，RPO加速至38%，超50%流量已是非人类流量。Atlassian（TEAM+32%）云业务连续三个季度加速。Google放弃前沿模型竞争，转向卖TPU系统+GCP平台化，SemiAnalysis预计2027年GCP增速进入三位数。字节训练约10万亿参数模型，阿里Qwen引入收入分成机制。
     </div>
   </div>
 </div>
@@ -347,335 +158,320 @@ body {
 <!-- 板块热度排行 -->
 <div class="section">
   <h2><span class="icon">🔥</span> 板块热度排行</h2>
-  <table class="sector-table">
+  <table>
     <thead>
-      <tr>
-        <th style="width:10%">排名</th>
-        <th style="width:18%">板块名称</th>
-        <th style="width:12%">热度</th>
-        <th style="width:25%">核心逻辑</th>
-        <th style="width:18%">来源群</th>
-        <th style="width:17%">提及个股</th>
-      </tr>
+      <tr><th style="width:40px;">排名</th><th>板块名称</th><th style="width:100px;">热度</th><th>核心逻辑</th><th style="width:100px;">来源群</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td><span style="background:#dc2626;color:white;width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">1</span></td>
-        <td>
-          <div class="sector-name">AI安全 / 网络安全</div>
-        </td>
-        <td><div class="sector-stars">⭐⭐⭐⭐⭐</div></td>
-        <td>
-          <div class="sector-logic">
-            1) 网信办对Palo Alto启动网络安全审查，国产替代加速；<br>
-            2) Meta AI失控事件引发全球AI安全关注升级；<br>
-            3) 行业调研：AI安全需求订单超预期，客单价大增，下半年至明年爆发期
-          </div>
-        </td>
+        <td>1</td><td><strong>液冷/Rubin散热</strong></td>
+        <td class="stars">★★★★★</td>
+        <td>英伟达Rubin重塑散热需求，单柜液冷增量4.53~6.53万美元（32~46.5万人民币），从单柜8-9万飙升至16万美元。浪潮信息液冷订单80亿全行业第一。强瑞技术中央分水器、锦富技术B300液冷板、美利信诺基亚AI-RAN液冷等多只标的</td>
         <td>信息早知道</td>
-        <td>深信服、绿盟科技、网宿科技、安恒信息、启明星辰、亚信安全、奇安信、天融信</td>
       </tr>
       <tr>
-        <td><span style="background:#1e3a8a;color:white;width:36px;height:36px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;">2</span></td>
-        <td>
-          <div class="sector-name">农业种植 / 橡胶</div>
-        </td>
-        <td><div class="sector-stars">⭐⭐⭐</div></td>
-        <td>
-          <div class="sector-logic">
-            1) 美股橡胶板块大涨；<br>
-            2) "150年最强厄尔尼诺"事件，极端天气利好农业/橡胶
-          </div>
-        </td>
+        <td>2</td><td><strong>CDN/边缘计算</strong></td>
+        <td class="stars">★★★★★</td>
+        <td>美股CDN双寡头盘后暴涨：NET+16.1%、AKAM+12.4%。Cloudflare Q2营收$6.96亿(+36%)，Agentic Internet叙事获市场认可，超50%流量已非人类。Akamai签6亿美元AI合同。A股CDN三杰迎重估窗口：网宿科技(确定性)、南兴股份(性价比)、二六三(弹性)</td>
         <td>信息早知道</td>
-        <td>金健米业、海南橡胶、新赛股份、秋乐种业、国投丰乐、红棉股份</td>
+      </tr>
+      <tr>
+        <td>3</td><td><strong>国产算力</strong></td>
+        <td class="stars">★★★★★</td>
+        <td>核心逻辑社宣告"国产算力主升浪开启"。字节训练5万亿参数模型，DeepSeek上调API定价。全链条布局：算芯(财报博弈)、代工(下周披露)、设备、封测、交换机、算力租赁。芯原股份(潘凤加仓)、寒武纪、锐捷网络、润泽科技</td>
+        <td>核心逻辑社/潘凤</td>
+      </tr>
+      <tr>
+        <td>4</td><td><strong>AI4S (AI for Science)</strong></td>
+        <td class="stars">★★★★</td>
+        <td>AI for Science成为AI应用新主线，深入材料/生命科学/化学/物理领域。政治局会议强调"人工智能+"。OpenAI Astra催化。金域医学(30PB医检数据)、迪安诊断(多模态模型)、苏博特(AI+材料)、东软集团(AI4S赛事第二名)、莱伯泰科(ICP-MS半导体检测)</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td>5</td><td><strong>创新药/医药</strong></td>
+        <td class="stars">★★★★</td>
+        <td>多只创新药ETF涨超5%，CXO概念穿越牛熊。药明康德、恒瑞医药持续走强。万邦医药(小锦鲤医药核心)十几个点收获。维琪科技(多肽原料垄断涨价)。昂利康、舒泰神、一品红、神州细胞、东富龙</td>
+        <td>信息早知道/小锦鲤</td>
+      </tr>
+      <tr>
+        <td>6</td><td><strong>半导体材料/光刻胶</strong></td>
+        <td class="stars">★★★★</td>
+        <td>日本JSR正式向全球客户下发涨价通知，光刻胶涨价15%，10月执行。高端光刻胶九成以上被日系垄断，地缘摩擦倒逼国产替代。锦华新材(电子级羟胺国产替代龙头，已通过长存/长鑫/中芯认证)。国风新材、八亿时空、南大光电、彤程新材、上海新阳、容大感光</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td>7</td><td><strong>PCB/钻针/CCL</strong></td>
+        <td class="stars">★★★★</td>
+        <td>高盛大幅上调AI PCB预测：2028年全球市场达840亿美元，CCL达480亿美元。Vera Rubin量产拉动长针放量，钻针量价齐升。M10材料树脂是M9到M10最大增量环节(康达新材)。关注：鼎泰高科、中钨高新、民爆光电、新锐股份</td>
+        <td>信息早知道/核心逻辑社</td>
+      </tr>
+      <tr>
+        <td>8</td><td><strong>算力金属/铟</strong></td>
+        <td class="stars">★★★★</td>
+        <td>光模块一跌，金属铟全面炸裂。以前炒自主可控，现在炒反制——算力金属必须炸裂。铟价年内暴涨200%+。ST京蓝转型铟金属/ITO靶材，8月下旬摘帽拟更名铟靶新材</td>
+        <td>核心逻辑社</td>
+      </tr>
+      <tr>
+        <td>9</td><td><strong>AI安全</strong></td>
+        <td class="stars">★★★</td>
+        <td>网信办对Palo Alto启动网络安全审查，国产替代逻辑再强化。Meta成为第三家披露AI代理失控事件的大厂。天风调研反馈AI安全需求提升，订单超预期。深信服、绿盟科技、网宿科技、安恒信息、启明星辰、亚信安全、奇安信、天融信</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td>10</td><td><strong>机器人</strong></td>
+        <td class="stars">★★★</td>
+        <td>宇树科技申购在即。比亚迪计划在人形机器人赛道击败特斯拉(天奇股份)。超达装备农业机器人量产出货(目标200台)。首开股份、巨轮智能、长盛轴承、美湖股份、中大力德、绿的谐波、奥比中光</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td>11</td><td><strong>储能</strong></td>
+        <td class="stars">★★★</td>
+        <td>马斯克宣布Megapack3正式量产，德州新工厂年产能50GWh。特斯拉储能业务是继电动车后第二增长曲线。新朋股份为Megapack柜体结构件一级供应商</td>
+        <td>信息早知道</td>
+      </tr>
+      <tr>
+        <td>12</td><td><strong>铜箔/电子材料</strong></td>
+        <td class="stars">★★★</td>
+        <td>中一科技发布涨价函，加工费上调5000元/吨，订单饱和产能紧张。中报大超预期，27年预计9亿净利。锂电电解液VC涨价至23万/吨(同比+400%)。天赐材料、多氟多、永太科技</td>
+        <td>信息早知道</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<!-- 重点个股推荐与分析 -->
+<!-- 重点个股 -->
 <div class="section">
-  <h2><span class="icon">🎯</span> 重点个股推荐与分析</h2>
-
-  <div style="margin-bottom:16px;font-size:14px;color:#6b7280;">今日仅「信息早知道」群推送个股，按板块分类展示：</div>
-
-  <h3 style="font-size:16px;color:#1e3a8a;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e5e7eb;">🔒 AI安全板块（天风计算机 缪欣君/刘鉴团队）</h3>
+  <h2><span class="icon">💎</span> 重点个股推荐与分析</h2>
   <div class="stock-grid">
+
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">深信服</div>
-          <div class="stock-code">300454.SZ</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">企业侧</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        AI安全企业侧核心标的。网信办审查Palo Alto直接利好国产替代，AI驱动攻击指数级增长推升企业安全需求。下半年订单有望超预期。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>天风计算机研报</span>
-      </div>
+      <div class="name">浪潮信息 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">液冷</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">液冷订单80亿，全行业排名第一！英伟达Rubin单柜液冷增量4.53~6.53万美元（32~46.5万人民币），液冷价值量翻倍增量。建议重视：浪潮信息、工业富联、英维克。</div>
+      <div class="source">来源：信息早知道 · 10:52</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">绿盟科技</div>
-          <div class="stock-code">300369.SZ</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">企业侧</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        AI安全企业侧标的。受益于国产替代大趋势，AI安全需求提升带来新增量。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>天风计算机研报</span>
-      </div>
+      <div class="name">网宿科技 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">CDN</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">国内独立CDN绝对龙头，全球2800+边缘节点覆盖70+国。2月率先涨价35-40%，CDN及边缘计算收入占比62%，Akamai退出后承接高端客户迁移。Cloudflare业绩超预期+Agentic Internet叙事，涨价周期最直接受益。</div>
+      <div class="source">来源：信息早知道 · 10:33/11:08</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">奇安信</div>
-          <div class="stock-code">688561.SH</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">政务侧</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        政务侧AI安全龙头。国家安全审查背景下政务安全需求确定性高，AI安全订单可验证。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>天风计算机研报</span>
-      </div>
+      <div class="name">芯原股份 <span class="group-badge">潘凤</span></div>
+      <div class="tags"><span class="tag tag-sector">国产算力</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">字节ASIC芯片核心标的。潘凤水下继续加仓0.5成。海外链下跌反而凸显国产链韧性，ASIC每一到两年可回本，大厂未来降低成本走自研芯片垂直应用。核心逻辑社全景图覆盖算力ASIC方向。</div>
+      <div class="source">来源：潘凤 · 09:30 / 核心逻辑社</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">安恒信息</div>
-          <div class="stock-code">688023.SH</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">行业侧</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        行业侧AI安全标的。能源、金融、运营商等行业安全需求大且预算充足，AI安全产品迭代加速。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>天风计算机研报</span>
-      </div>
+      <div class="name">强瑞技术 (301128) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">液冷</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">Rubin服务器中央分水器产品需求量较大，单位价值量较高。订单数量正逐步较快放大。同步交付波纹管模组产品，积极筹备产能扩张。配合客户参与下一代Rubin1ta服务器研发。</div>
+      <div class="source">来源：信息早知道 · 10:25</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">启明星辰</div>
-          <div class="stock-code">002439.SZ</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">行业侧</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        行业侧安全标的。传统网安龙头，AI安全布局加速，受益于国产替代+需求爆发双轮驱动。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>天风计算机研报</span>
-      </div>
+      <div class="name">锦华新材 (920015) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">半导体材料</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">国内唯一量产电子级羟胺企业，打破巴斯夫垄断。已通过长江存储(批量供货)、长鑫存储、中芯国际、华虹认证。产能从500吨扩至2万吨，受益存储扩产+半导体材料国产替代。JSR光刻胶涨价15%催化国产替代。</div>
+      <div class="source">来源：信息早知道 · 08:55/13:05</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">天融信</div>
-          <div class="stock-code">002212.SZ</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">AI安全</span>
-          <span class="tag">政务侧</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        政务侧安全标的。国家安全审查利好政务安全赛道，受益确定性高。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>天风计算机研报</span>
-      </div>
-    </div>
-  </div>
-
-  <h3 style="font-size:16px;color:#1e3a8a;margin:24px 0 12px 0;padding-bottom:8px;border-bottom:1px solid #e5e7eb;">🌾 厄尔尼诺 / 农业板块</h3>
-  <div class="stock-grid">
-    <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">海南橡胶</div>
-          <div class="stock-code">601118.SH</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">橡胶</span>
-          <span class="tag">厄尔尼诺</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        美股橡胶板块大涨传导。150年最强厄尔尼诺事件影响天然橡胶供给，橡胶价格有望持续上行。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>短线主题</span>
-      </div>
+      <div class="name">华锐精密 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">钨/刀具</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">美国禁止出口钨废料+章源钨业上调长单报价，钨价上行确认。公司打通废钨完整再生闭环(收购信丰华锐+衡东华锐，5000吨APT冶炼产能)。刀具行业出清+进口替代加速，成本壁垒+业绩弹性。风险：业务落地不及预期、需求疲软。</div>
+      <div class="source">来源：信息早知道 · 09:16</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">金健米业</div>
-          <div class="stock-code">600127.SH</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">粮食</span>
-          <span class="tag">厄尔尼诺</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        厄尔尼诺极端天气影响全球粮食产量。粮食安全主题升温，农业种植板块受益。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>短线主题</span>
-      </div>
+      <div class="name">金域医学 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">AI4S</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">国内稀缺医检数据资产平台。积累超30PB多模态全病种数据，38款数据产品在6地数据交易所挂牌。"域见医言"大模型调用量突破3000万次，AI智能体超100个。26H1归母净利润1.7-2.2亿扭亏。医疗是AI4S重要落地场景。</div>
+      <div class="source">来源：信息早知道 · 13:01</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">新赛股份</div>
-          <div class="stock-code">600540.SH</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">农业</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        厄尔尼诺主题关联农业标的，极端天气推升农产品价格预期。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>短线主题</span>
-      </div>
+      <div class="name">莱伯泰科 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">AI4S/半导体</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">国内唯一通过国际半导体产业协会双认证的国产质谱仪。ICP-5000对标安捷伦8800，已进入中芯国际、H等先进制程产线。半导体晶圆制造质谱仪市场约20亿+，利润空间4-5亿/年。玻璃基板放量后业绩弹性大。AI4S+科研智能化双重映射。</div>
+      <div class="source">来源：信息早知道 · 13:32/14:49</div>
     </div>
 
     <div class="stock-card">
-      <div class="stock-header">
-        <div>
-          <div class="stock-name">秋乐种业</div>
-          <div class="stock-code">831087.BJ</div>
-        </div>
-        <div class="stock-tags">
-          <span class="tag bull">看多</span>
-          <span class="tag">种业</span>
-        </div>
-      </div>
-      <div class="stock-logic">
-        厄尔尼诺主题种业标的，极端气候下种业需求提升预期。
-      </div>
-      <div class="stock-meta">
-        <span class="group">信息早知道</span>
-        <span>短线主题</span>
-      </div>
+      <div class="name">中一科技 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">铜箔</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">发布涨价函，加工费上调5000元/吨，订单饱和产能紧张。中报大超预期，Q3单位盈利将大幅提升。铜箔加工费上涨趋势确立，行业高景气。27年预计9亿净利，作业绩兑现能力极强。</div>
+      <div class="source">来源：信息早知道 · 13:10</div>
     </div>
+
+    <div class="stock-card">
+      <div class="name">东方材料 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">新材料</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">CNTp材料即将放量。无负极锂电池CNTp-3D集流体(锂电/固态电池用)即将落地首条产线。产品性能超日本昭和电工VGCF-H。一期产值9.2亿，二期30亿，三期60亿。保密级材料转民用1到10拐点。</div>
+      <div class="source">来源：信息早知道 · 13:49</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">旗滨集团 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">玻璃基板</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">浮法玻璃临近供需拐点，华南华东率先提价。年化利润约10亿。光伏玻璃触底回暖，年化业绩7-8亿。UTG+玻璃基板扩产，带来超100亿市值空间。年化业绩17-18亿，给10倍估值对应170-180亿市值。</div>
+      <div class="source">来源：信息早知道 · 10:32</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">新朋股份 (002328) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">储能</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">特斯拉Megapack大型储能系统柜体及结构件一级供应商。Megapack3正式量产，德州工厂年产能50GWh。公司专注钣金精密制造，具备较高客户认证壁垒。与捷普合作布局海外储能箱体产能。</div>
+      <div class="source">来源：信息早知道 · 10:13</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">超达装备 (301186) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">算力/机器人</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">大幅增加回购额度至5000万-1亿元。与江苏未来网络集团合作切入国家算力网基建。成立南京超达芯星科技(注册1亿)。农业机器人量产出货(目标200台)，战略投资天创机器人(D轮超亿)。</div>
+      <div class="source">来源：信息早知道 · 10:17</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">康达新材 (002669) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">PCB材料</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">M10材料最大增量环节——树脂。主营胶粘剂与特种树脂，PTFE粘接胶已批量供货PCB/CCL。子公司大连齐化特种树脂已应用于覆铜板。在建8万吨电子级环氧树脂项目。含氟碳氢树脂方案电性能较M9提升10%-15%。</div>
+      <div class="source">来源：信息早知道 · 13:24</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">维琪科技 (920176) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">创新药原料</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">国际多肽原料第一股。Erasin0003国内首个自主知识产权创新新原料。咖啡酰六肽-9国内第一款被国际品牌采用的核心功效成分。国内多肽原料市占率6.6%第一，23款备案新原料。供货宝洁、联合利华、资生堂。26H1净利+16.92%。</div>
+      <div class="source">来源：信息早知道 · 14:08</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">奥特维 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">AOI设备</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">AAOI光模块AOI检测设备批量复购供应商。AAOI获1.6T首个量产订单(超2亿美元)，产能从9万只/月跃升至50万只/月。半导体设备新签订单2025年同比+107%，光模块设备正从0到1爆发，第二增长曲线。</div>
+      <div class="source">来源：信息早知道 · 14:23</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">欢瑞世纪 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">AI视频</span><span class="tag tag-short">短中线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">火山引擎Seedance 2.5 API上线，AI视频迈向"电影级长叙事"。公司拥有成熟影视IP+制作能力+AIGC生产线，与阶跃星辰共建"麟跃"AI联合实验室。Seedance 2.5突破长叙事、人物一致性、真人质感，直接打开短剧商业化场景。</div>
+      <div class="source">来源：信息早知道 · 14:12</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">兆易创新 <span class="group-badge">潘凤</span></div>
+      <div class="tags"><span class="tag tag-sector">半导体</span><span class="tag tag-short">短中线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">潘凤半路一成。超跌轮动修复主线中，风华先修的横盘，没涨的兆易、PCB、光模块补涨。洛飞也提到兆易作为补涨方向。</div>
+      <div class="source">来源：潘凤 · 10:23 / 洛飞小群</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">奕斯伟材料 (688783) <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">硅片</span><span class="tag tag-long">中长线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">向武汉奕材增资65亿元，全速推进12英寸硅片基地建设。规划月产50万片，10月启动设备搬入，2027年上半年投产。西安+武汉全部达产后月产能突破180万片，有望跻身全球前列。</div>
+      <div class="source">来源：信息早知道 · 13:10</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">ST京蓝 <span class="group-badge">信息早知道</span></div>
+      <div class="tags"><span class="tag tag-sector">铟金属</span><span class="tag tag-short">短中线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">8.16处罚期满满足摘帽硬性时间，8月下旬中报后提交申请，拟更名"铟靶新材"。转型铟金属/ITO靶材，契合半导体光伏上游。半年报扭亏净资产转正。历史债务清理完毕。风险：摘帽审批不确定、新业务未盈利、股权质押隐患。</div>
+      <div class="source">来源：信息早知道 · 12:46</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="name">万邦医药 <span class="group-badge">小锦鲤</span></div>
+      <div class="tags"><span class="tag tag-sector">创新药</span><span class="tag tag-short">短中线</span><span class="tag tag-bull">看多</span></div>
+      <div class="logic">小锦鲤医药核心持仓，十几个点收获。医药已走成一个月主线。低位药轮动不好把握节奏，聚焦万邦+龙神。古债双收策略：普联债(科技)+万邦(医药)两手抓。</div>
+      <div class="source">来源：小锦鲤 · 14:44/15:49</div>
+    </div>
+
   </div>
 </div>
 
 <!-- 市场情绪与风险提示 -->
 <div class="section">
   <h2><span class="icon">⚖️</span> 市场情绪与风险提示</h2>
-  <div class="sentiment-grid">
-
-    <!-- 主要风险 -->
-    <div class="sentiment-card risks">
-      <h3>主要风险</h3>
+  <div class="emotion-container">
+    <div class="emotion-box emotion-risk">
+      <h3>⚠️ 主要风险</h3>
       <ul>
-        <li><div><strong>群聊活跃度骤降：</strong>15个群仅2个有消息，大量核心群（潘凤、唐史主任、核心逻辑社等13群）今日零消息，信息断层严重，需谨慎判断市场共识。</div></li>
-        <li><div><strong>单一信源风险：</strong>今日所有内容均来自「信息早知道」自定义机器人推送，无群成员讨论验证，观点代表性有限。</div></li>
-        <li><div><strong>天风研报跟风风险：</strong>AI安全板块推票来自卖方研报，需警惕"推荐即出货"的短期博弈风险。</div></li>
-        <li><div><strong>消息时效性：</strong>所有消息均发布于凌晨00:25-00:30，盘前最新动态未知。</div></li>
+        <li>🔴 <strong>指数接近反弹第一目标</strong>（洛飞）：周一冲高是极限，叠加指数回调预期，科技下周可能真分歧</li>
+        <li>🔴 <strong>海外链持续调整</strong>：光模块/旭创尾盘走弱，怕周末幺蛾子，CPO"跟区一样"（彭域）</li>
+        <li>🔴 <strong>超跌轮动修复末期</strong>：风华先修横盘、兆易/PCB/光补涨，轮动接近尾声需警惕</li>
+        <li>🔴 <strong>非农大幅不及预期</strong>：7月减少2.3万人(预期+8万)，经济衰退隐忧仍在</li>
+        <li>🔴 <strong>美伊局势不确定性</strong>：霍尔木兹海峡临时协议待最终确认，华盛顿态度是关键</li>
+        <li>🔴 <strong>算芯财报博弈风险</strong>（核心逻辑社）：今晚算芯龙头披露财报，可博弈但不能重仓</li>
+        <li>🔴 <strong>FCC管制持续</strong>：正式令统一管控所有含逻辑硬件通信整机，无人机/路由器冲击最高</li>
+        <li>🔴 <strong>低位药轮动难把握</strong>（小锦鲤）：节奏不好抓，聚焦核心标的</li>
       </ul>
     </div>
-
-    <!-- 积极信号 -->
-    <div class="sentiment-card positive">
-      <h3>积极信号</h3>
+    <div class="emotion-box emotion-positive">
+      <h3>✅ 积极信号</h3>
       <ul>
-        <li><div><strong>AI安全政策催化明确：</strong>网信办对Palo Alto启动审查是实质性国产替代信号，叠加Meta AI失控事件，全球AI安全关注度持续升温。</div></li>
-        <li><div><strong>行业调研验证需求：</strong>天风调研显示多个行业AI安全需求订单超预期，客单价大幅提升，基本面有支撑。</div></li>
-        <li><div><strong>厄尔尼诺主题：</strong>极端气候事件是潜在交易主题，美股橡胶大涨提供外部映射。</div></li>
-        <li><div><strong>周五窗口：</strong>今日为周五，部分资金可能选择观望，群聊活跃度低不必然反映市场悲观。</div></li>
+        <li>🟢 <strong>非农降温纳指拉升</strong>：加息预期降温，纳指期货涨1.25%，下周继续利好</li>
+        <li>🟢 <strong>国产算力主升浪</strong>（核心逻辑社）：字节5万亿参数模型+DeepSeek涨价+懂王表态AI比石油重要</li>
+        <li>🟢 <strong>美股软件集体爆发</strong>：NET+17%/TEAM+32%/TWLO+16%，A股CDN三杰迎重估</li>
+        <li>🟢 <strong>Rubin液冷价值量翻倍</strong>：单柜从8-9万飙升至16万美元，多只标的受益</li>
+        <li>🟢 <strong>创新药ETF涨超5%</strong>：药明康德/恒瑞医药持续走强，CXO穿越牛熊</li>
+        <li>🟢 <strong>AI4S成为新主线</strong>：政治局强调"人工智能+"，OpenAI Astra催化</li>
+        <li>🟢 <strong>海外链跌凸显国产韧性</strong>（潘凤）：国产链韧性强，反制逻辑强化</li>
+        <li>🟢 <strong>美伊局势缓和</strong>：伊朗与阿曼达成霍尔木兹海峡临时协议，11月前大概率稳定</li>
       </ul>
     </div>
-
   </div>
 </div>
 
 <!-- 明日关注要点 -->
 <div class="section">
-  <h2><span class="icon">📌</span> 下周一（8/10）关注要点</h2>
-  <div class="attention-list">
-    <div class="attention-item">
-      <div class="icon">🔒</div>
-      <div><strong>AI安全板块持续性：</strong>关注网信办对Palo Alto审查后续动态，以及周五AI安全板块是否有资金布局。警惕周末消息面变化。</div>
+  <h2><span class="icon">🎯</span> 下周关注要点</h2>
+  <div class="focus-list">
+    <h3>📌 重点跟踪事项</h3>
+    <div class="focus-item">
+      <div class="num">1</div>
+      <div class="text"><strong>算芯龙头财报披露</strong>（核心逻辑社）：今晚盘后披露，可博弈但不能重仓。仓位重的出部分换代工，下周二代工披露财报。算芯业绩炸裂都能涨，miss代工也不一定跌。</div>
     </div>
-    <div class="attention-item">
-      <div class="icon">🌾</div>
-      <div><strong>厄尔尼诺/农业主题：</strong>跟踪国际橡胶价格走势和厄尔尼诺强度最新预报。农业种植板块周末是否发酵。</div>
+    <div class="focus-item">
+      <div class="num">2</div>
+      <div class="text"><strong>指数反弹第一目标到位</strong>（洛飞）：周一一个冲高是最极限，下周情绪票强于趋势票。科技分歧、药分歧——分歧大胆干，药分歧会回流。下周不做科技，双主线（科技+医药）。</div>
     </div>
-    <div class="attention-item">
-      <div class="icon">📊</div>
-      <div><strong>群聊活跃度恢复：</strong>关注周末各群讨论恢复情况，特别是核心逻辑社、潘凤、震哥等重点群的观点输出。如持续低活跃需警惕市场风险偏好变化。</div>
+    <div class="focus-item">
+      <div class="num">3</div>
+      <div class="text"><strong>CDN三杰重估窗口</strong>：美股NET+AKAM暴涨映射，A股网宿科技(龙头)、南兴股份(性价比)、二六三(弹性)。Cloudflare Agentic Internet叙事+涨价周期三重共振。</div>
     </div>
-    <div class="attention-item">
-      <div class="icon">🗓️</div>
-      <div><strong>下周一重要事件：</strong>关注周末政策面消息（中美关系、产业政策等），以及8/10盘前资讯更新。</div>
+    <div class="focus-item">
+      <div class="num">4</div>
+      <div class="text"><strong>液冷/Rubin散热持续发酵</strong>：英伟达Rubin单柜液冷增量4.53~6.53万美元。浪潮信息80亿订单第一。强瑞技术中央分水器、锦富技术B300液冷板、美利信诺基亚AI-RAN液冷。</div>
+    </div>
+    <div class="focus-item">
+      <div class="num">5</div>
+      <div class="text"><strong>AI4S新主线加速</strong>：OpenAI Astra催化，金域医学(医检数据)、莱伯泰科(半导体质谱仪)、苏博特(AI+材料)、东软集团(AI4S平台)等。预期差极大。</div>
+    </div>
+    <div class="focus-item">
+      <div class="num">6</div>
+      <div class="text"><strong>光刻胶涨价传导</strong>：JSR涨价15%十月执行，国产替代窗口。锦华新材(电子级羟胺)、南大光电、彤程新材、上扬新阳、容大感光。</div>
+    </div>
+    <div class="focus-item">
+      <div class="num">7</div>
+      <div class="text"><strong>金属铟反制逻辑</strong>（核心逻辑社）：光模块一跌铟全面炸裂。以前炒自主可控，现在炒反制。ST京蓝8月下旬中报后申请摘帽更名铟靶新材。</div>
+    </div>
+    <div class="focus-item">
+      <div class="num">8</div>
+      <div class="text"><strong>纳斯达克走势</strong>（洛飞）：关注这波是否真要新高。非农降温+加息预期降温利好，但经济衰退隐忧仍在。</div>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-  <div class="disclaimer">
-    ⚠️ 免责声明：本报告仅供个人参考，不构成任何投资建议。报告内容基于飞书群聊消息的自动化汇总分析，数据来源有限且可能存在偏差。投资有风险，入市需谨慎。
-  </div>
-  <div style="margin-top:16px;">
-    监控群数：15 | 数据来源：飞书群聊 | 自动生成于 2026年8月7日 23:00 CST
-  </div>
+  <p>📊 本报告由飞书群聊消息自动汇总生成 · 监控15群/335条消息</p>
+  <p>📋 仅供个人参考，不构成投资建议 · 据此操作风险自担</p>
+  <p>🔗 公网地址：https://juebro.github.io/a-share-research/</p>
 </div>
 
 </div>
