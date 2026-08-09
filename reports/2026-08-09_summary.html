@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股群聊观点汇总 - 2026年8月9日（周日）</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  line-height: 1.7;
+  padding: 16px;
+}
+.container { max-width: 960px; margin: 0 auto; }
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.header h1 { font-size: 24px; margin-bottom: 8px; }
+.header .meta { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: #a0aec0; margin-top: 10px; }
+.header .meta span { display: inline-flex; align-items: center; gap: 4px; }
+.header .badge { display: inline-block; background: rgba(255,255,255,0.15); padding: 3px 12px; border-radius: 20px; font-size: 12px; margin-right: 8px; }
+.header .weekend-badge { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+.section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title .icon { font-size: 22px; }
+.market-data { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.data-card { background: #f7fafc; border-radius: 10px; padding: 14px 16px; border-left: 3px solid #4299e1; }
+.data-card .label { font-size: 12px; color: #718096; margin-bottom: 4px; }
+.data-card .value { font-size: 18px; font-weight: 700; color: #2d3748; }
+.viewpoint { background: #f7fafc; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; border-left: 3px solid #4299e1; }
+.viewpoint .source { display: inline-block; background: #ebf4ff; color: #3182ce; font-size: 12px; padding: 2px 10px; border-radius: 12px; margin-bottom: 6px; font-weight: 600; }
+.viewpoint .content { font-size: 14px; color: #2d3748; }
+.sector-table { width: 100%; border-collapse: collapse; margin-bottom: 8px; }
+.sector-table th { background: #1a1a2e; color: #fff; padding: 10px 14px; text-align: left; font-size: 13px; font-weight: 600; }
+.sector-table th:first-child { border-radius: 8px 0 0 0; }
+.sector-table th:last-child { border-radius: 0 8px 0 0; }
+.sector-table td { padding: 12px 14px; border-bottom: 1px solid #e2e8f0; font-size: 13px; vertical-align: top; }
+.sector-table tr:nth-child(even) td { background: #f7fafc; }
+.sector-table tr:hover td { background: #ebf4ff; }
+.rank { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: #1a1a2e; color: #fff; font-size: 13px; font-weight: 700; }
+.rank.gold { background: linear-gradient(135deg, #f6ad55, #ed8936); }
+.rank.silver { background: linear-gradient(135deg, #cbd5e0, #a0aec0); }
+.rank.bronze { background: linear-gradient(135deg, #d69e6f, #b7791f); }
+.hotness { display: inline-flex; gap: 2px; }
+.star { color: #ecc94b; font-size: 14px; }
+.star.empty { color: #e2e8f0; }
+.stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.stock-card { background: #f7fafc; border-radius: 12px; padding: 18px; border: 1px solid #e2e8f0; transition: box-shadow 0.2s; }
+.stock-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.stock-card .stock-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.stock-card .stock-name { font-size: 17px; font-weight: 700; color: #1a1a2e; }
+.stock-card .stock-code { font-size: 12px; color: #718096; margin-top: 2px; }
+.stock-card .tag { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.tag.long { background: #fef3c7; color: #92400e; }
+.tag.short { background: #dbeafe; color: #1e40af; }
+.tag.medium { background: #d1fae5; color: #065f46; }
+.tag.red { background: #fee2e2; color: #991b1b; }
+.tag.green { background: #d1fae5; color: #065f46; }
+.tag.gray { background: #e2e8f0; color: #4a5568; }
+.stock-card .stock-body { font-size: 13px; color: #4a5568; margin-bottom: 8px; }
+.stock-card .stock-source { font-size: 12px; color: #718096; border-top: 1px dashed #cbd5e0; padding-top: 8px; margin-top: 8px; }
+.emotion-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.emotion-box { padding: 20px; border-radius: 10px; }
+.emotion-risk { background: #fff5f5; border: 1px solid #fed7d7; }
+.emotion-positive { background: #f0fff4; border: 1px solid #c6f6d5; }
+.emotion-box h3 { font-size: 16px; margin-bottom: 12px; }
+.emotion-box ul { list-style: none; padding: 0; }
+.emotion-box li { font-size: 13px; padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+.emotion-box li:last-child { border-bottom: none; }
+.emotion-risk h3 { color: #c53030; }
+.emotion-positive h3 { color: #276749; }
+.focus-list { background: #fffbeb; border: 1px solid #fbd38d; border-radius: 10px; padding: 20px; }
+.focus-list h3 { color: #d69e2e; font-size: 16px; margin-bottom: 12px; }
+.focus-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.focus-item .num { background: #f6ad55; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+.focus-item .text { font-size: 14px; color: #744210; }
+.footer { text-align: center; padding: 20px; font-size: 12px; color: #999; }
+.summary-card { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; color: #78350f; font-size: 13px; }
+.summary-card strong { color: #1a1a2e; }
+.report-group { font-size: 12px; background: #ede9fe; color: #5b21b6; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- Header -->
+<div class="header">
+  <h1>🗓️ A股飞书群聊观点汇总报告</h1>
+  <div class="meta">
+    <span class="badge weekend-badge">非交易日</span>
+    <span>📅 2026年8月9日（周日）</span>
+    <span>💬 监控15群 · 18条消息（仅4群活跃）</span>
+    <span>📚 周末延伸：8/8另补充13条</span>
+    <span>⏰ 生成于 23:00</span>
+  </div>
+</div>
+
+<!-- 周末摘要 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">📝</span>周末速读</h2>
+  <div class="summary-card">
+    <strong>核心特征：</strong>周日各群基本处于静默状态，全天18条消息中绝大多数为机器人推送的<strong>外围研报/市场资料</strong>（大摩英伟达NVL72出货、JPM-伟测、美银-Tower/硅光），群成员实时讨论仅2-3条（猫十三/震哥-胡汉三），<strong>无新增主线</strong>。
+  </div>
+  <div class="summary-card" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); color: #1e3a8a;">
+    <strong>周五回顾（8/7）：</strong>国产算力主升浪·创新药爆发·AI PCB价值量上修·美股软件映射CDN三杰·铟靶反制共5条主线，335条消息，情绪偏多。
+  </div>
+  <div class="summary-card" style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); color: #065f46;">
+    <strong>下周一开盘（8/10）：</strong>周末无新增重大利空，需关注海外映射（NVL72/PCB/创新药）与国内政策面（商务部反制后续）的资金接力节奏。
+  </div>
+</div>
+
+<!-- 大盘走势与核心观点 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">📈</span>大盘走势与核心观点</h2>
+  <div class="market-data">
+    <div class="data-card" style="border-left-color: #f6ad55;">
+      <div class="label">市场状态</div>
+      <div class="value" style="font-size:16px; color:#92400e;">非交易日</div>
+    </div>
+    <div class="data-card" style="border-left-color: #4299e1;">
+      <div class="label">周日活跃群</div>
+      <div class="value">4/15</div>
+    </div>
+    <div class="data-card" style="border-left-color: #48bb78;">
+      <div class="label">机器人推送占比</div>
+      <div class="value" style="font-size:20px;">~85%</div>
+    </div>
+    <div class="data-card" style="border-left-color: #9f7aea;">
+      <div class="label">下周关键节点</div>
+      <div class="value" style="font-size:14px;">8/10-8/15</div>
+    </div>
+  </div>
+
+  <div class="viewpoint">
+    <span class="source">傅里叶的猫 · 17:27</span>
+    <span class="report-group">大摩研报</span>
+    <div class="content" style="margin-top:8px;">
+      📊 <strong>大摩英伟达NVL72出货量跟踪：</strong>GB200/GB300 NVL72机架7月产出约<strong>8.0K台</strong>，环比持平。<strong>2026全年预测8-8.5万台</strong>，同比增长超100%（去年约2.9万台）——NVL72爬坡完全没有降速。<br>
+      7月份额：<strong>鸿海 3.6K台（+9%）</strong>第一、广达 2.2-2.25K台（-4%）、纬创 1.1-1.2K台（-6%）。注：大摩把纬创L10计算托盘算入，实际终端交付略低于账面。
+    </div>
+  </div>
+
+  <div class="viewpoint">
+    <span class="source">傅里叶的猫 · 17:53</span>
+    <span class="report-group">JPM研报</span>
+    <div class="content" style="margin-top:8px;">
+      📑 <strong>JPM-伟测研报推送</strong>（PDF已上传群内）。伟测（国产第三方芯片测试代工）持续获JPM卖方覆盖，符合<strong>"国产测试产能紧缺"</strong>主线逻辑，对应上周五<strong>长川科技/华峰测控</strong>等设备链的卖方覆盖扩散。
+    </div>
+  </div>
+
+  <div class="viewpoint">
+    <span class="source">傅里叶的猫 · 8/8 23:58</span>
+    <span class="report-group">美银研报</span>
+    <div class="content" style="margin-top:8px;">
+      🔬 <strong>美银-Tower研报（硅光）</strong>："虽然是Tower的分析，但里面<strong>硅光产业的数据还是挺多的</strong>"。对应上周五<strong>光模块/铜缆</strong>主线的延续，国内映射：中际旭创/新易盛/天孚通信。
+    </div>
+  </div>
+
+  <div class="viewpoint" style="border-left-color: #ed8936;">
+    <span class="source">猫十三 · 19:06</span>
+    <div class="content" style="margin-top:8px;">
+      💬 <strong>群友提问：</strong>"<strong>套利</strong>"——延续上周五网宿大涨后的交易策略讨论（参考8/8猫十三"想问下猫老师，<strong>网宿的逻辑，是套利，还是波段？</strong>"），下周网宿/CDN三杰（南兴/二六三）的接力节奏是关键。
+    </div>
+  </div>
+
+  <div class="viewpoint" style="border-left-color: #a0aec0;">
+    <span class="source">震哥-胡汉三 · 19:40</span>
+    <div class="content" style="margin-top:8px;">
+      🤖 群友分享与<strong>豆包</strong>的对话内容（涉及石油主题，<strong>无具体股票讨论</strong>）。
+    </div>
+  </div>
+
+  <div class="viewpoint" style="border-left-color: #cbd5e0;">
+    <span class="source">鑫多多 · 全天</span>
+    <div class="content" style="margin-top:8px;">
+      📢 全部6条均为<strong>公众号文章分发机器人</strong>推送（《买在最低、卖在最高》《说说公众号和打赏》等），<strong>无市场观点</strong>，仅社群运营内容。
+    </div>
+  </div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">🔥</span>板块热度排行</h2>
+  <p style="font-size:13px; color:#718096; margin-bottom:12px;">⚠️ 本日为非交易日，热度仅反映<strong>周末外围研报覆盖</strong>，实际下周资金接力仍需观察8/10开盘。</p>
+  <table class="sector-table">
+    <thead>
+      <tr><th>排名</th><th>板块名称</th><th>热度</th><th>核心逻辑</th><th>来源</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="rank gold">1</span></td>
+        <td><strong>海外算力链（NVL72/CPO）</strong></td>
+        <td><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span></td>
+        <td>大摩7月NVL72产出~8K台/全年8-8.5万台（+100%），鸿海第一。周五美股软件→A股CDN三杰持续映射，下周一资金关注度仍高。</td>
+        <td>傅里叶的猫</td>
+      </tr>
+      <tr>
+        <td><span class="rank silver">2</span></td>
+        <td><strong>半导体国产替代/硅光</strong></td>
+        <td><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span></td>
+        <td>JPM-伟测研报推送（国产测试产能）+ 美银Tower研报（硅光产业数据）。下周关注：长川/华峰/中际旭创/新易盛。</td>
+        <td>傅里叶的猫</td>
+      </tr>
+      <tr>
+        <td><span class="rank bronze">3</span></td>
+        <td><strong>CDN/AI+应用</strong></td>
+        <td><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span></td>
+        <td>承接8/7美股软件暴涨（NET+17%/TEAM+32%/TWLO+16%）→ 周五网宿/南兴/二六三高歌。周日猫十三群友追问"网宿是套利还是波段"，分歧点出现。</td>
+        <td>猫十三</td>
+      </tr>
+      <tr>
+        <td><span class="rank">4</span></td>
+        <td><strong>公众号/社群运营</strong></td>
+        <td><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span><span class="star empty">★</span></td>
+        <td>鑫多多推送6条均关于公众号文章/打赏拉新，非市场内容。属于运营信号，反映公众号流量生态。</td>
+        <td>鑫多多</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 重点个股推荐与分析 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">⭐</span>重点个股关注（外围研报映射）</h2>
+  <p style="font-size:13px; color:#718096; margin-bottom:12px;">本日的"个股"主要是<strong>海外研报覆盖标的</strong>，无新增国内群主观点。</p>
+  <div class="stock-grid">
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">英伟达 NVL72链</div>
+          <div class="stock-code">海外映射：鸿海/广达/纬创/工业富联</div>
+        </div>
+        <span class="tag medium">中长线</span>
+      </div>
+      <div class="stock-body">
+        大摩7月NVL72产出8K台（环比持平），全年指引8-8.5万台（同比+100%），爬坡未减速。国内映射：<strong>工业富联</strong>（鸿海同链）+ AI PCB四杰（鹏鼎/沪电/胜宏/生益）。<strong>延续周五"国产PCB价值量"主线</strong>。
+      </div>
+      <div class="stock-source">来源：大摩研报 · 傅里叶的猫推送</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">伟测（半导体测试）</div>
+          <div class="stock-code">JPM卖方首次覆盖</div>
+        </div>
+        <span class="tag long">中长线</span>
+      </div>
+      <div class="stock-body">
+        JPM研报标题即为"伟测"，国产独立第三方测试产能紧缺主线下持续获卖方关注。映射测试设备链：<strong>长川科技/华峰测控/精测电子</strong>。
+      </div>
+      <div class="stock-source">来源：JPM研报 · 傅里叶的猫推送 17:53</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">Tower 半导体（硅光）</div>
+          <div class="stock-code">美银研报覆盖</div>
+        </div>
+        <span class="tag medium">中长线</span>
+      </div>
+      <div class="stock-body">
+        美银Tower研报内硅光产业数据充实，对应国内市场<strong>中际旭创/新易盛/天孚通信/罗博特科</strong>，延续周五光模块主线。
+      </div>
+      <div class="stock-source">来源：美银-Tower研报 · 傅里叶的猫推送 8/8 23:58</div>
+    </div>
+
+    <div class="stock-card">
+      <div class="stock-header">
+        <div>
+          <div class="stock-name">网宿科技（CDN三杰）</div>
+          <div class="stock-code">分歧点出现</div>
+        </div>
+        <span class="tag short">短线</span>
+      </div>
+      <div class="stock-body">
+        群友追问<strong>"网宿是套利还是波段"</strong>，反映周五涨停后资金对CDN三杰持筹心态已开始分化：套利客倾向于兑现，波段客看好AI应用映射持续。<strong>下周接力节奏关键</strong>。
+      </div>
+      <div class="stock-source">来源：猫十三群友讨论</div>
+    </div>
+  </div>
+</div>
+
+<!-- 市场情绪与风险提示 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">⚖️</span>周末情绪与下周风险</h2>
+  <div class="emotion-container">
+    <div class="emotion-box emotion-positive">
+      <h3>🟢 积极信号</h3>
+      <ul>
+        <li><strong>海外算力需求超预期</strong>：大摩上调2026 NVL72出货至8-8.5万台，+100% YoY，鸿海7月环比+9%，行业无降速迹象</li>
+        <li><strong>卖方覆盖扩散</strong>：JPM-伟测、美银-Tower密集推送，海外投行对国产测试+硅光链开始系统性覆盖</li>
+        <li><strong>周末无新增利空</strong>：海外无重大政策风险事件，国内政策面（商务部反制）已被市场消化</li>
+        <li><strong>下周一开盘节点</strong>：8/10承接8/7情绪，看资金能否在算力/创新药/PCB三主线间形成主线接力</li>
+      </ul>
+    </div>
+    <div class="emotion-box emotion-risk">
+      <h3>🔴 风险提示</h3>
+      <ul>
+        <li><strong>网宿/CDN三杰分歧</strong>：群友追问"套利还是波段"，短期资金已现分化，追高风险加大</li>
+        <li><strong>周末消息真空</strong>：周日无群成员深度讨论，<strong>情绪指标失真</strong>，下周开盘易出现"消息真空补涨/补跌"</li>
+        <li><strong>海外映射依赖</strong>：本周主线（PCB/CDN/液冷）高度依赖美股软件/算力股映射，若美股本周回调将直接压制A股情绪</li>
+        <li><strong>持续性存疑</strong>：周五335条消息属于<strong>脉冲量</strong>，非增量趋势，历史上周一往往出现"高开低走"或"震荡消化"</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 下周一关注要点 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">🎯</span>下周一（8/10）开盘关注要点</h2>
+  <div class="focus-list">
+    <h3>⏰ 早盘开盘半小时</h3>
+    <div class="focus-item"><span class="num">1</span><span class="text"><strong>海外算力链开盘表现</strong>：NVL72消息传导至A股工业富联+PCB四杰+液冷（英维克/曙光数创）的接力</span></div>
+    <div class="focus-item"><span class="num">2</span><span class="text"><strong>网宿CDN三杰分歧落地</strong>：看群友套利兑现 vs 波段客持仓，市场定胜负</span></div>
+
+    <h3 style="margin-top:20px;">📊 全天观察</h3>
+    <div class="focus-item"><span class="num">3</span><span class="text"><strong>JPM-伟测/美银-Tower的卖方跟进</strong>：国内券商周一是否出对应深度报告（对应长川/华峰/中际旭创）</span></div>
+    <div class="focus-item"><span class="num">4</span><span class="text"><strong>周五主线能否延续</strong>：5条主线（国产算力/创新药/AI PCB/CDN/铟靶）资金选择主线还是轮动</span></div>
+    <div class="focus-item"><span class="num">5</span><span class="text"><strong>成交额与两融</strong>：周五两市2.6-2.7万亿级别能否维持，是节奏延续的关键</span></div>
+
+    <h3 style="margin-top:20px;">📰 政策/新闻面</h3>
+    <div class="focus-item"><span class="num">6</span><span class="text">8/15前<strong>7月社融、M2、CPI/PPI</strong>等重磅宏观数据密集公布窗口</span></div>
+    <div class="focus-item"><span class="num">7</span><span class="text">商务部反制后续<strong>"暂停委托在美机构CCC认证"</strong>对无人机/消费电子链的实际影响</span></div>
+  </div>
+</div>
+
+<!-- 上周复盘备注 -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">🔁</span>附：周五（8/7）核心主线回顾</h2>
+  <p style="font-size:13px; color:#4a5568; margin-bottom:8px;">本日报告消息较少，特此附8/7全天5条主线（来源：8/7汇总报告）作为下周一的延续参照：</p>
+  <ul style="font-size:13px; color:#2d3748; padding-left:24px; line-height:1.9;">
+    <li><strong>主线1·国产算力主升浪开启</strong>（核心逻辑社正式宣告）</li>
+    <li><strong>主线2·创新药ETF涨超5%</strong>，万邦医药/药明康德/恒瑞走强（小锦鲤·核心）</li>
+    <li><strong>主线3·AI PCB价值量上修</strong>，高盛上调2028年840亿美元，钻针量价齐升</li>
+    <li><strong>主线4·美股软件映射CDN三杰</strong>（NET/TEAM/TWLO暴涨→网宿/南兴/二六三）</li>
+    <li><strong>主线5·金属铟反制</strong>（光模块跌铟，ST京蓝8月下旬摘帽更名铟靶新材）</li>
+  </ul>
+  <p style="font-size:12px; color:#718096; margin-top:10px;">📅 完整8/7报告：<a href="reports/2026-08-07_summary.html">reports/2026-08-07_summary.html</a></p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>数据来源：用户15个飞书交流群 · 自动汇总生成</p>
+  <p style="margin-top:6px;">⚠️ <strong>仅供个人参考，不构成投资建议</strong> · 投资有风险，决策需谨慎</p>
+  <p style="margin-top:6px;">数据库累计：356只个股 · 95个板块（截至2026-08-07）</p>
+  <p style="margin-top:6px;">公网部署：<a href="https://juebro.github.io/a-share-research/" style="color:#4299e1;">https://juebro.github.io/a-share-research/</a></p>
+</div>
+
+</div>
+</body>
+</html>
