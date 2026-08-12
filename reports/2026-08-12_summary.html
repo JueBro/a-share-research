@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股群聊市场观点汇总 2026-08-12</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f5f6f8; color: #2c3e50; line-height: 1.7;
+    padding: 20px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff; padding: 32px 40px; border-radius: 16px; margin-bottom: 24px;
+  }
+  .header h1 { font-size: 26px; margin-bottom: 8px; }
+  .header .subtitle { font-size: 14px; opacity: 0.75; }
+  .header .meta-row {
+    display: flex; gap: 32px; margin-top: 16px; font-size: 13px; opacity: 0.85;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06); border-left: 4px solid #0f3460;
+  }
+  .card h2 { font-size: 20px; color: #0f3460; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .card h3 { font-size: 16px; color: #2c3e50; margin: 16px 0 8px; }
+
+  .market-data-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px; margin-bottom: 20px;
+  }
+  .market-item {
+    background: #f8f9fb; border-radius: 10px; padding: 14px 16px; text-align: center;
+    border: 1px solid #e8eaed;
+  }
+  .market-item .label { font-size: 12px; color: #888; margin-bottom: 4px; }
+  .market-item .value { font-size: 18px; font-weight: 700; }
+  .up { color: #e74c3c; } .down { color: #27ae60; }
+
+  .source-tag {
+    display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px;
+    background: #eef2ff; color: #4a6cf7; margin-right: 4px; font-weight: 500;
+  }
+
+  .opinion-block {
+    background: #fafbfc; border-radius: 10px; padding: 16px 20px; margin: 10px 0;
+    border-left: 3px solid #4a6cf7;
+  }
+  .opinion-block .from { font-size: 12px; color: #999; margin-top: 6px; }
+
+  .sector-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  .sector-table th {
+    background: #f0f2f5; text-align: left; padding: 10px 14px; font-size: 13px;
+    color: #666; font-weight: 600;
+  }
+  .sector-table td { padding: 12px 14px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+  .sector-table tr:hover { background: #fafbfc; }
+  .stars { color: #f39c12; font-size: 14px; letter-spacing: 1px; }
+
+  .stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .stock-card {
+    background: #fff; border-radius: 10px; padding: 20px; border: 1px solid #e8eaed;
+    transition: box-shadow 0.2s;
+  }
+  .stock-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .stock-card .stock-name { font-size: 18px; font-weight: 700; color: #0f3460; }
+  .stock-card .stock-code { font-size: 12px; color: #999; margin-left: 6px; }
+  .stock-card .tags { margin: 8px 0; }
+  .stock-card .tags span {
+    font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-right: 4px;
+    background: #f0f2f5; color: #555;
+  }
+  .stock-card .tags .bull { background: #ffebee; color: #c62828; }
+  .stock-card .tags .short { background: #fff3e0; color: #ef6c00; }
+  .stock-card p { font-size: 13px; color: #555; margin: 6px 0; }
+  .stock-card .risk { color: #c0392b; font-size: 12px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .risk-col { background: #fff5f5; border-left-color: #e74c3c; }
+  .pos-col { background: #f0fff4; border-left-color: #27ae60; }
+  .two-col .card { border-left-width: 4px; }
+
+  .focus-list { list-style: none; }
+  .focus-list li {
+    background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px;
+    padding: 14px 18px; margin-bottom: 10px; font-size: 14px;
+  }
+  .focus-list li::before { content: "⭐ "; }
+
+  .footer {
+    text-align: center; font-size: 12px; color: #999; padding: 20px 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    .two-col { grid-template-columns: 1fr; }
+    .header { padding: 24px; }
+    .card { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>📈 A股群聊市场观点汇总报告</h1>
+    <div class="subtitle">2026年8月12日（周二） · 15个飞书交流群监控</div>
+    <div class="meta-row">
+      <span>📊 消息总数：<strong>314条</strong></span>
+      <span>💬 活跃群数：<strong>9 / 15</strong></span>
+      <span>⏰ 生成时间：<strong>2026-08-12 23:00</strong></span>
+      <span>🔥 核心方向：<strong>国产算力 / 半导体 / 创新药</strong></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>💡 大盘走势与核心观点</h2>
+    <div class="market-data-grid">
+      <div class="market-item"><div class="label">今日情绪</div><div class="value up">震荡偏暖</div></div>
+      <div class="market-item"><div class="label">量能判断</div><div class="value down">仍显不足</div></div>
+      <div class="market-item"><div class="label">核心逻辑社目标</div><div class="value up">沪指 4200</div></div>
+      <div class="market-item"><div class="label">外盘映射</div><div class="value up">美股算力强劲</div></div>
+    </div>
+
+    <div class="opinion-block">
+      <strong>国产算力主线明确，指数仍需放量逼空</strong>
+      <p>核心逻辑社继续旗帜鲜明看多AI算力，认为AI是第四次工业革命，基础是大算力。当前配置节奏集中在国产算力（设备零部件、封测、交换机、算力金属、存储芯片、代工、算芯、算租赁），机器人概念和创新药仅做短线。指数ETF未动，等待沪指4200附近再考虑减仓。</p>
+      <div class="from">来源：核心逻辑社</div>
+    </div>
+
+    <div class="opinion-block">
+      <strong>双创看反弹，但受银行抽血与美股情绪扰动</strong>
+      <p>洛飞小群认为指数盘整后继续向上，日内止跌拐点看领涨板块核心或低吸588170（科创芯片ETF）。盘中观察到拉银行则科技回落，尾盘科技股图形走好，关键看今晚美股表现。科技股受阿斯麦涨价、韩国扩产等消息正面影响。</p>
+      <div class="from">来源：洛飞小群</div>
+    </div>
+
+    <div class="opinion-block">
+      <strong>投机风格主导，防守与仓位优先</strong>
+      <p>潘凤直言当前风格已完全变成投机，大资金难以下手，地产等无逻辑板块也被炒起。操作上以防守和仓位管理为主，对纯投机保持谨慎，科技持仓（芯原股份、澳华内镜等）多做T。</p>
+      <div class="from">来源：潘凤</div>
+    </div>
+
+    <div class="opinion-block">
+      <strong>医药主升、AI反弹；创新药/CXO连续滞涨可减仓</strong>
+      <p>鑫多多判断创新药是主升、AI是反弹，医药板块调研热度已超越半导体。核心逻辑社则认为CXO连续三天震荡滞涨，有关注的可以稍微减一下。</p>
+      <div class="from">来源：鑫多多 / 核心逻辑社</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔥 板块热度排行</h2>
+    <table class="sector-table">
+      <tr><th>排名</th><th>板块名称</th><th>热度</th><th>核心逻辑</th><th>主要提及群</th></tr>
+      <tr>
+        <td>1</td>
+        <td><strong>国产算力 / AI算力</strong></td>
+        <td><span class="stars">★★★★★</span></td>
+        <td>腾讯Q2资本支出527.8亿元（大幅超预期的321亿），Q3大幅增加算力采购；美股CoreWeave、Lumentum业绩超预期；AI是第四次工业革命，算力需求无历史参照。</td>
+        <td><span class="source-tag">核心逻辑社</span><span class="source-tag">洛飞小群</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>半导体设备 / 零部件 / 存储</strong></td>
+        <td><span class="stars">★★★★★</span></td>
+        <td>应用材料业绩对应半导体设备；国内缺零部件弹性更好（富字辈、正字辈、江字辈）；全球存储芯片见底，韩股反弹4%；国产算力+存储双轮驱动。</td>
+        <td><span class="source-tag">核心逻辑社</span><span class="source-tag">彭域</span><span class="source-tag">洛飞小群</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>创新药 / CXO / 医药</strong></td>
+        <td><span class="stars">★★★★☆</span></td>
+        <td>医药板块调研热度超越半导体；创新药被定位为主升；万邦医药、哈药、百花医药等反复活跃；澳华内镜受医疗器械关注。CXO连续滞涨，短线注意减仓。</td>
+        <td><span class="source-tag">鑫多多</span><span class="source-tag">小锦鲤</span><span class="source-tag">潘凤</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>光通信 / 光模块上游</strong></td>
+        <td><span class="stars">★★★★☆</span></td>
+        <td>光模块上游（磷化铟、光芯片、光器件）持续走强；铟资源优势具备反制筹码；Lumentum业绩指引大幅超预期；限制传闻被多家海外机构泼冷水。</td>
+        <td><span class="source-tag">核心逻辑社</span><span class="source-tag">彭域</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>PCB / 交换机</strong></td>
+        <td><span class="stars">★★★☆☆</span></td>
+        <td>PCB午后加强，胜宏科技、景旺电子等周五强度调两天后修复；东山精密铺趋势躺平；鹏鼎控股半年报产品结构优化。</td>
+        <td><span class="source-tag">彭域</span><span class="source-tag">洛飞小群</span><span class="source-tag">傅里叶的猫</span></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>低价投机 / 地产 / 鸿博股份等</strong></td>
+        <td><span class="stars">★★★☆☆</span></td>
+        <td>市场风格偏向无序投机，鸿博股份、巨轮智能等买不到，地产板块被投机资金拉起。潘凤认为逻辑太差出不了手，洛飞提示低价股猛炒可能是投机高潮信号。</td>
+        <td><span class="source-tag">潘凤</span><span class="source-tag">洛飞小群</span><span class="source-tag">彭域</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>📌 重点个股推荐与分析</h2>
+    <div class="stock-grid">
+
+      <div class="stock-card">
+        <div class="stock-name">芯原股份 <span class="stock-code">688521</span></div>
+        <div class="tags"><span class="bull">看多</span><span>半导体/IP</span><span>股权激励</span></div>
+        <p><strong>逻辑：</strong>公司披露上市后第四次限制性股票激励计划，授予均价112.56元；潘凤盘中继续加仓并做T，核心逻辑社、彭域均作为科创核心标的关注。</p>
+        <p><strong>来源：</strong>傅里叶的猫 / 潘凤 / 彭域</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">长鑫科技 <span class="stock-code">未上市</span></div>
+        <div class="tags"><span class="bull">看多</span><span>存储</span><span>联动韩股</span></div>
+        <p><strong>逻辑：</strong>存储板块见底、韩股反弹背景下，长鑫作为国产DRAM核心资产受关注；洛飞后悔未买长鑫，潘凤亦表示错过该机会。</p>
+        <p><strong>来源：</strong>洛飞小群 / 潘凤 / 核心逻辑社</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">中微公司 <span class="stock-code">688012</span></div>
+        <div class="tags"><span class="bull">看多</span><span>半导体设备</span><span>科创核心</span></div>
+        <p><strong>逻辑：</strong>彭域判断科创最强方向仍是设备，中微公司、科创ETF为首选；美国应用材料业绩将披露，半导体设备板块处于业绩兑现窗口。</p>
+        <p><strong>来源：</strong>彭域 / 核心逻辑社</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">盛美上海 <span class="stock-code">688082</span></div>
+        <div class="tags"><span class="bull">看多</span><span>半导体设备</span><span>趋势加仓</span></div>
+        <p><strong>逻辑：</strong>洛飞小群今日加仓盛美上海，看好设备方向趋势性机会。</p>
+        <p><strong>来源：</strong>洛飞小群</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">万邦医药 <span class="stock-code">301520</span></div>
+        <div class="tags"><span class="short">短线</span><span>创新药</span></div>
+        <p><strong>逻辑：</strong>小锦鲤重点跟踪标的，今日未给出分歧加仓机会；盘中若有跳水计划再加，明日或还有一次回踩；围绕医药分歧回流节奏操作。</p>
+        <p><strong>来源：</strong>小锦鲤</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">普联科技 <span class="stock-code">未提供</span></div>
+        <div class="tags"><span class="short">短线</span><span>软件/应用</span></div>
+        <p><strong>逻辑：</strong>应用端有利好，小锦鲤低吃普联债与正股（-5附近），盘中分批取关转债，正股有先手的自行找位置减。</p>
+        <p><strong>来源：</strong>小锦鲤</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">紫光股份 <span class="stock-code">000938</span></div>
+        <div class="tags"><span class="bull">看多</span><span>交换机/算力</span></div>
+        <p><strong>逻辑：</strong>震哥-胡汉三群内观点认为紫光跌到36附近可以买入，预计近一两天会有拉升。</p>
+        <p><strong>来源：</strong>震哥-胡汉三</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">澳华内镜 <span class="stock-code">688212</span></div>
+        <div class="tags"><span class="bull">看多</span><span>医疗器械</span></div>
+        <p><strong>逻辑：</strong>潘凤今日半路买入一成澳华内镜，作为医药/医疗器械方向的试探性布局。</p>
+        <p><strong>来源：</strong>潘凤</p>
+      </div>
+
+      <div class="stock-card">
+        <div class="stock-name">鹏鼎控股 <span class="stock-code">002938</span></div>
+        <div class="tags"><span class="bull">看多</span><span>PCB</span></div>
+        <p><strong>逻辑：</strong>傅里叶的猫分享半年报业绩交流会：上半年营收172.17亿元（+5.14%），归母净利润12.84亿元（+4.11%），毛利率同比提升5.08个百分点，产品结构优化显著。</p>
+        <p><strong>来源：</strong>傅里叶的猫</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card risk-col">
+      <h2>⚠️ 主要风险</h2>
+      <ul>
+        <li><strong>量能不足：</strong>核心逻辑社指出仍需要3-5根阳线逼空才能放量，否则难以吸引场外资金。</li>
+        <li><strong>投机高潮信号：</strong>洛飞、潘凤均观察到低价股和无逻辑板块（地产）被爆炒，可能预示投机情绪高潮，需警惕退潮。</li>
+        <li><strong>美股冲高回落：</strong>洛飞担心美股盘前顶得太高，若开盘不能承接可能拖累明日A股科技映射。</li>
+        <li><strong>风格快速轮动：</strong>医药、科技、投机题材轮动快，追涨难度大，做错方向亏损明显。</li>
+        <li><strong>CXO滞涨：</strong>核心逻辑社认为CXO连续震荡滞涨，短线持仓建议适当减仓。</li>
+      </ul>
+    </div>
+    <div class="card pos-col">
+      <h2>🚀 积极信号</h2>
+      <ul>
+        <li><strong>腾讯大幅加码算力：</strong>Q2 capex 527.8亿元远超预期，Q3继续加大算力采购，验证国内AI资本开支高景气。</li>
+        <li><strong>美股算力业绩亮眼：</strong>CoreWeave营收超预期、运营利润率改善；Lumentum指引大幅超预期；英特尔融资规模上调。</li>
+        <li><strong>存储周期见底：</strong>韩股存储反弹4%，全球存储芯片有望开启新一轮主升。</li>
+        <li><strong>美伊冲突降温预期：</strong>弹药库存与中期选举约束下，地缘扰动边际减弱。</li>
+        <li><strong>科技股图形修复：</strong>洛飞观察到多只科技股图形已走好，若美股强势明日有望集体启动。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>⭐ 明日关注要点</h2>
+    <ul class="focus-list">
+      <li><strong>美股今晚表现：</strong>纳指、算力硬件股能否延续强势，直接影响明日A股科技映射情绪。</li>
+      <li><strong>应用材料业绩：</strong>盘后披露，对应A股半导体设备板块业绩兑现预期。</li>
+      <li><strong>医药分歧延续：</strong>今日创新药/CXO分歧一天，观察明日是否延续分歧后回流。</li>
+      <li><strong>量能变化：</strong>能否出现中大阳线逼空，是吸引增量资金的关键。</li>
+      <li><strong>低价投机退潮风险：</strong>若低价股/地产等板块集体走弱，注意资金是否回流科技主线。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>📌 本报告由飞书群聊观点自动整理生成，仅供个人参考，不构成投资建议。</p>
+    <p>数据来源：15个飞书交流群聊天记录 | 生成时间：2026-08-12 23:00</p>
+  </div>
+
+</div>
+</body>
+</html>
