@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总 - 2026年8月13日</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #5a5a6e;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --border: #e2e8f0;
+            --red: #dc2626;
+            --green: #16a34a;
+            --orange: #ea580c;
+            --yellow: #fbbf24;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(30,58,95,0.2);
+        }
+        .header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .header-meta { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14px; opacity: 0.9; }
+        .header-meta span { display: flex; align-items: center; gap: 6px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+        .card-title {
+            font-size: 18px; font-weight: 700; margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+            padding-bottom: 12px; border-bottom: 2px solid var(--accent-light);
+        }
+        .tag {
+            display: inline-block; padding: 2px 10px; border-radius: 12px;
+            font-size: 12px; font-weight: 600; margin-right: 6px;
+        }
+        .tag-red { background: #fee2e2; color: var(--red); }
+        .tag-green { background: #dcfce7; color: var(--green); }
+        .tag-blue { background: var(--accent-light); color: var(--accent); }
+        .tag-orange { background: #ffedd5; color: var(--orange); }
+        .tag-purple { background: #f3e8ff; color: #7c3aed; }
+        .tag-group {
+            display: inline-block; padding: 2px 8px; border-radius: 6px;
+            font-size: 11px; background: #f1f5f9; color: #64748b;
+            border: 1px solid #e2e8f0;
+        }
+        .insight-box {
+            background: #f8fafc; border-left: 4px solid var(--accent);
+            padding: 16px; border-radius: 0 8px 8px 0; margin-bottom: 12px;
+        }
+        .insight-box h4 { font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; }
+        .insight-box p { font-size: 15px; line-height: 1.7; }
+        .insight-box .source { font-size: 12px; color: #94a3b8; margin-top: 8px; text-align: right; }
+        .stock-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .stock-card {
+            background: #fafbfc; border: 1px solid var(--border);
+            border-radius: 10px; padding: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stock-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .stock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .stock-name { font-size: 16px; font-weight: 700; }
+        .stock-code { font-size: 12px; color: #94a3b8; }
+        .stock-logic { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+        .stock-meta { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+        .sector-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .sector-table th {
+            background: #f1f5f9; padding: 10px 12px; text-align: left;
+            font-weight: 600; color: #475569; border-bottom: 2px solid var(--border);
+        }
+        .sector-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .sector-table tr:hover { background: #f8fafc; }
+        .stars { color: var(--orange); letter-spacing: 2px; }
+        .mood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .mood-card { padding: 16px; border-radius: 10px; }
+        .mood-risk { background: #fef2f2; border: 1px solid #fecaca; }
+        .mood-bull { background: #f0fdf4; border: 1px solid #bbf7d0; }
+        .mood-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+        .mood-card ul { list-style: none; }
+        .mood-card li { font-size: 13px; padding: 6px 0; border-bottom: 1px dashed #e2e8f0; }
+        .mood-card li:last-child { border-bottom: none; }
+        .highlight-box {
+            background: linear-gradient(135deg, #fef9c3 0%, #fde047 100%);
+            border: 1px solid #facc15; border-radius: 10px; padding: 16px;
+            margin-bottom: 12px;
+        }
+        .highlight-box h4 { font-size: 14px; color: #854d0e; margin-bottom: 6px; }
+        .highlight-box p { font-size: 14px; color: #713f12; }
+        .footer {
+            text-align: center; font-size: 12px; color: #94a3b8;
+            margin-top: 32px; padding: 20px; border-top: 1px solid var(--border);
+        }
+        .data-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+        .data-pill {
+            background: #f1f5f9; padding: 8px 16px; border-radius: 20px;
+            font-size: 13px; display: flex; align-items: center; gap: 6px;
+        }
+        .data-pill strong { color: var(--accent); }
+        .news-item { padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+        .news-item:last-child { border-bottom: none; }
+        .news-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+        .news-desc { font-size: 13px; color: var(--text-secondary); }
+        .news-source { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+        .up { color: var(--red); font-weight: 600; }
+        .down { color: var(--green); font-weight: 600; }
+        @media (max-width: 768px) {
+            .mood-grid { grid-template-columns: 1fr; }
+            .stock-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📈 飞书群聊市场观点汇总报告</h1>
+            <div class="header-meta">
+                <span>📅 2026年8月13日（周四）</span>
+                <span>📊 监控群数：15个</span>
+                <span>💬 消息总数：353条</span>
+                <span>🕐 生成时间：23:00</span>
+                <span>🔴 红涨绿跌</span>
+            </div>
+        </div>
+
+        <!-- Key Data Overview -->
+        <div class="card">
+            <div class="card-title">📊 今日市场核心数据</div>
+            <div class="data-row">
+                <div class="data-pill">活跃群 <strong>10个</strong></div>
+                <div class="data-pill">最活跃群 <strong>猫十三 (65条)</strong></div>
+                <div class="data-pill">中芯国际Q2 <strong>营收30亿美元+36%</strong></div>
+                <div class="data-pill">华虹Q2 <strong>净利+386%创新高</strong></div>
+                <div class="data-pill">美股纳指 <strong>+200点</strong></div>
+                <div class="data-pill">费城半导体 <strong>重返技术牛市</strong></div>
+            </div>
+        </div>
+
+        <!-- Market Overview -->
+        <div class="card">
+            <div class="card-title">🎯 大盘走势与核心观点</div>
+
+            <div class="insight-box">
+                <h4>💡 核心逻辑社 · 早盘国产算力全面冲板，尾盘跳水转防守</h4>
+                <p>早盘"棒股炸裂4%，坐等大A开盘"，算力租赁全面冲板，交换机"全面炸裂"，双创明显转强。午盘放话"8月目标收复4000，9月目标冲击新高""只要AI的逻辑不变或持续加强，<strong>4200下方战略看多</strong>"，强调"不要把趋势股当连板票做，不涨停不停涨才是王道"。但<strong>尾盘大幅跳水</strong>，直言"再次显现自由落体式螺旋下行征兆，形势不容乐观，多头主力全线败退，外边已经没有坚决看多的声音，明天背水一战"。晚间仍看好美股算力，但"逻辑仅在美股兑现，真不知道高兴还是……"。</p>
+                <div class="source">来源：核心逻辑社 | 重点：国产算力主线、交换机、4200战略看多、尾盘跳水</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 核心逻辑社 · 国产算力高景气闭环 + 芯王业绩超预期</h4>
+                <p>转述观点：寒王（寒武纪）是算力芯片供应商、芯王（中芯国际）做芯片代工、联想做下游服务器整装、腾讯做最下游消费，"<strong>整个国产环节从上到下都在超预期，国产算力高景气已实现闭环</strong>"。晚间"国产算力总龙头芯王业绩大超预期，明天能否带队反包？"。算力租赁建议"稍微减一些，涨得比较多，这是我们最早关注的方向"，其余方向"继续躺好"。</p>
+                <div class="source">来源：核心逻辑社 | 重点：寒武纪/中芯/联想/腾讯闭环、算力租赁减仓</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 小锦鲤 · 医药主线，万邦"双25"大肉</h4>
+                <p>早上提示"医药明后天就有阴线了，有阴线才有弹性"，万邦开盘下杀时-5低吸做T，全天反复踢仓，喊出"<strong>万邦 龙神双25</strong>""做我的标的你们能不卖飞是我的失职，龙头哪有不卖飞的"。称"别人股灾我们双25，明天继续捡米"。尾盘-8左右打"欣天科技"底仓。反复强调"我的重点在医药，其他支线只是轻仓做做，分清主次"。</p>
+                <div class="source">来源：小锦鲤 | 重点：万邦医药、龙神、欣天科技、医药主线</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 洛飞小群 · 结账为主，指数未过前高回落</h4>
+                <p>全天"结账为主，没其他想法"。早盘"感觉下午指数还要向上"，但"上证没过去前高，回落，休息了"；午后判断"指数不过3968，没准又要回踩"。盘面"药和阳光电源轮流带指数"，"科技向下，阳光宁德向上"，尾盘买点阳光电源。旭创、天孚走强但"旭创要绿"，担忧"都在跑科技，怕美股回落"。</p>
+                <div class="source">来源：洛飞小群 | 重点：3968压力位、阳光电源、旭创/天孚、结账为主</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 潘凤 · 减科技转医药投机，量化时代难做</h4>
+                <p>早上继续加芯原股份后红盘T出，午盘"把科技仓位降下来，总体降到2成"——"<strong>医药和投机明显比科技强多了</strong>，仓位要腾出来准备新的出击"。判断"科技可能要调整到月底了，但我觉得科技没结束，只是时间不够、幅度够了"。吐槽"可轮动的板块多了又是利好量化""量化参与了投机以后，低吸都不怎么赚钱""真的是买了许愿"。中际旭创"要到8000亿才合理有吸引力"。</p>
+                <div class="source">来源：潘凤 | 重点：减科技、芯原T出、医药投机、量化时代、旭创估值</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 彭域 · CPO/PCB/设备全线高开，去弱留强</h4>
+                <p>早盘"CPO PCB 设备全线高开，开得相当不错，指数也直接突破了，甚至算力都修了"。操作上加单鸿博、清中微、减源杰。尾盘判断"标准去弱留强日""迷你紫光不用排，服务器还蛮强的，像昨天PCB的加强版本，连浪潮曙光这些都向上了"。晚间提示"清源姐，快进到不卖是gay了"。</p>
+                <div class="source">来源：彭域 | 重点：CPO/PCB/设备高开、鸿博、中微、源杰、服务器</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 震哥-胡汉三 · 指数回踩3900更好，紫光36附近好买点</h4>
+                <p>翔龙十八涨复盘："前几天的紫光36附近是个好的买点，那天一个朋友看我买了回踩的托伦斯，问我还有没有这样的票，正好看到紫光。"对后市判断"<strong>指数回踩一下3900更好</strong>"。群友"半个月30%+可以了"，龙王"跟着388跑了，等着跟随吸回来"。</p>
+                <div class="source">来源：震哥-胡汉三 | 重点：紫光股份、指数3900回踩、跟随策略</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 傅里叶的猫 · 中芯/华虹Q2业绩大超预期，Q3指引向上</h4>
+                <p>中泰电子纪要：<strong>中芯国际</strong>Q2营收30亿美元（yoy+36.1%，qoq+20%），毛利率25.3%大超指引（20-22%），ASP 991美元/片；Q3毛利率指引26-28%持续向上。归母净利4.8亿美元yoy+262%。<strong>华虹</strong>Q2营收7.2亿美元创新高，归母净利0.39亿美元yoy+385.9%。美股TMTB收盘总结：纳指+0.75%、费城半导体+2.5%，NBIS +34%、CRWV +19%，英伟达5000亿美元GPU担保债券资金池推动Neocloud叙事转多。</p>
+                <div class="source">来源：傅里叶的猫 | 重点：中芯国际、华虹、美股Neocloud、英伟达资金池</div>
+            </div>
+
+            <div class="insight-box">
+                <h4>💡 猫十三 · 群友情绪转冷，"又是一轮牛市过去了"</h4>
+                <p>群内出现争论与段子，悲观情绪升温。群友争执"现在的猫老师是不是换人了"，国产线"浪潮 紫光 锐捷不都在，强的离谱"，但投机线"买啥啥跌"。有人发长段子调侃尾盘跳水："14点38分群里没了往日的喧嚣，大家都看清了现实开始谋生路……<strong>又是一轮牛市过去了，下次牛市再会</strong>。"传媒题材活跃：儒意影视收购万达电影、北京文化赌"龙餐馆"电影票房。</p>
+                <div class="source">来源：猫十三 | 重点：情绪转冷、浪潮/紫光/锐捷、儒意影视、北京文化</div>
+            </div>
+        </div>
+
+        <!-- Sector Heatmap -->
+        <div class="card">
+            <div class="card-title">🔥 板块热度排行</div>
+            <table class="sector-table">
+                <tr>
+                    <th>排名</th>
+                    <th>板块名称</th>
+                    <th>热度</th>
+                    <th>核心逻辑</th>
+                    <th>主要来源</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><strong>国产算力/交换机</strong></td>
+                    <td><span class="stars">★★★★★</span></td>
+                    <td>核心逻辑社第一主线。交换机"紫字辈、锐字辈、盛字辈、星字辈"筹码干净+业绩炸裂，锐捷历史新高、紫光涨停、浪潮曙光走强。寒武纪/中芯国际/联想/腾讯全环节超预期，国产算力高景气闭环。芯王业绩大超预期，看明天能否带队反包。</td>
+                    <td><span class="tag-group">核心逻辑社</span> <span class="tag-group">彭域</span> <span class="tag-group">猫十三</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>半导体代工/设备</strong></td>
+                    <td><span class="stars">★★★★★</span></td>
+                    <td>中芯国际Q2营收30亿美元+36%、毛利率25.3%大超指引，Q3指引26-28%持续向上；华虹Q2营收7.2亿美元创新高、净利+386%。伯恩斯坦上调2027/2028中国晶圆制造设备市场预测（63亿/240亿美元）。国产D机量产、芯代放量，代工/设备/算力全面受益。</td>
+                    <td><span class="tag-group">傅里叶的猫</span> <span class="tag-group">核心逻辑社</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>创新药/医药</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>小锦鲤主线，万邦医药、龙神"双25"，医药"明后天有阴线才有弹性"。潘凤"医药真有点高潮了""医药和投机比科技强多了"。欣天科技-8打底仓。量化对冲科技持仓，医药轮动承接资金。注意高潮后分歧风险。</td>
+                    <td><span class="tag-group">小锦鲤</span> <span class="tag-group">潘凤</span> <span class="tag-group">鑫多多</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>CPO/光模块/PCB</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>彭域"CPO PCB 设备全线高开"。旭创、天孚、中际旭创活跃，源杰科技走强。PCB像"昨天加强版"，浪潮曙光向上。但潘凤认为旭创"8000亿才合理有吸引力"，洛飞担忧"都在跑科技怕美股回落"，尾盘旭创走绿。</td>
+                    <td><span class="tag-group">彭域</span> <span class="tag-group">洛飞</span> <span class="tag-group">潘凤</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>算力租赁</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>核心逻辑社"算力租赁全面冲板，牛逼炸裂"，但提示"可以稍微减一些，涨得比较多，这是我们最早关注的方向"。美股Neocloud（NBIS+34%、CRWV+19%）受英伟达5000亿美元GPU担保债券资金池推动，算力租赁"先建后签"融资成本降至7-8%。</td>
+                    <td><span class="tag-group">核心逻辑社</span> <span class="tag-group">傅里叶的猫</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>电力设备/光伏</strong></td>
+                    <td><span class="stars">★★★☆☆</span></td>
+                    <td>洛飞"药和阳光电源轮流带指数"，"科技向下，阳光宁德向上"，尾盘买点阳光电源，宁德图也还行。潘凤"科技 医药 现在轮到电，不然又要被恶心到"。板块轮动承接方向。</td>
+                    <td><span class="tag-group">洛飞</span> <span class="tag-group">潘凤</span></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>电影传媒/题材</strong></td>
+                    <td><span class="stars">★★☆☆☆</span></td>
+                    <td>猫十三群友关注儒意影视（收购万达电影）、北京文化（赌"龙餐馆"电影票房，11号上映）。属情绪投机方向，群友担忧"北京文化炸了儒意就麻烦"。周末发酵逻辑，注意题材兑现风险。</td>
+                    <td><span class="tag-group">猫十三</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Stock Recommendations -->
+        <div class="card">
+            <div class="card-title">🎯 重点个股推荐与分析</div>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">万邦医药</span>
+                        <span class="stock-code">300653</span>
+                    </div>
+                    <div class="stock-logic">小锦鲤医药主线核心，今日"双25"大肉。-5低吸做T、反复踢仓，称"龙头哪有不卖飞的，懂得早上买够就行了"。医药明后天有阴线才有弹性，注意低吸分两次（早盘急跌+下午回踩）。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">创新药</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">小锦鲤</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">龙神</span>
+                        <span class="stock-code"></span>
+                    </div>
+                    <div class="stock-logic">小锦鲤医药短线另一核心，与万邦并称"双25"。-5加仓、0附近踢出，马前提示。医药短线活跃标的，跟随万邦节奏，保留底仓滚动。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">创新药</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">小锦鲤</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">欣天科技</span>
+                        <span class="stock-code">300615</span>
+                    </div>
+                    <div class="stock-logic">小锦鲤尾盘-8左右打底仓。医药/科技轮动标的，属轻仓支线配置，注意节奏。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">题材/支线</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">小锦鲤</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">中芯国际</span>
+                        <span class="stock-code">688981</span>
+                    </div>
+                    <div class="stock-logic">国产算力"总龙头芯王"，Q2业绩大超预期（营收30亿美元+36%、毛利率25.3%大超指引、净利+262%），Q3指引26-28%持续向上。核心逻辑社"明天能否带队反包"。国产代工+算力闭环核心资产。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-red">半导体代工</span>
+                        <span class="tag tag-blue">中长线</span>
+                        <span class="tag-group">核心逻辑社</span> <span class="tag-group">傅里叶的猫</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">华虹公司</span>
+                        <span class="stock-code">688347</span>
+                    </div>
+                    <div class="stock-logic">Q2营收7.2亿美元创新高，归母净利0.39亿美元yoy+385.9%，毛利率16.5%超指引上限，Q3指引16-18%持续向上。国产代工放量受益标的。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-red">半导体代工</span>
+                        <span class="tag tag-blue">中长线</span>
+                        <span class="tag-group">傅里叶的猫</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">紫光股份</span>
+                        <span class="stock-code">000938</span>
+                    </div>
+                    <div class="stock-logic">震哥"紫光36附近是好的买点"，交换机龙头"紫色的光也涨停了"。国产服务器/交换机核心，浪潮、曙光联动向上。猫十三群"锐捷、紫光强的离谱"。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-red">国产算力/交换机</span>
+                        <span class="tag tag-blue">中长线</span>
+                        <span class="tag-group">震哥</span> <span class="tag-group">核心逻辑社</span> <span class="tag-group">猫十三</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">锐捷网络</span>
+                        <span class="stock-code">301165</span>
+                    </div>
+                    <div class="stock-logic">核心逻辑社"锐字辈"交换机龙头，历史新高。猫十三群"锐捷太狠了"。交换机筹码干净+业绩炸裂，过去没怎么炒过。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-red">交换机</span>
+                        <span class="tag tag-blue">中长线</span>
+                        <span class="tag-group">核心逻辑社</span> <span class="tag-group">猫十三</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">浪潮信息</span>
+                        <span class="stock-code">000977</span>
+                    </div>
+                    <div class="stock-logic">国产服务器整装核心，彭域"连浪潮曙光这些都向上了"，猫十三"浪潮 紫光 锐捷不都在"。服务器板块一周没动今日轮动，像PCB加强版。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-red">服务器/国产算力</span>
+                        <span class="tag tag-blue">中长线</span>
+                        <span class="tag-group">彭域</span> <span class="tag-group">猫十三</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">芯原股份</span>
+                        <span class="stock-code">688521</span>
+                    </div>
+                    <div class="stock-logic">潘凤继续加仓后红盘T出，总体仓位从2.5成降到2成。国产IP龙头、AI芯片设计核心资产，但潘凤判断科技可能调整到月底，先腾仓转医药/投机。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">国产算力/半导体IP</span>
+                        <span class="tag tag-purple">短中线</span>
+                        <span class="tag-group">潘凤</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">阳光电源</span>
+                        <span class="stock-code">300274</span>
+                    </div>
+                    <div class="stock-logic">洛飞"药和阳光电源轮流带指数"，尾盘买点阳光电源（收+3附近）。电力设备轮动承接，宁德图也还行。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-green">电力设备</span>
+                        <span class="tag tag-blue">短线</span>
+                        <span class="tag-group">洛飞</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">中际旭创</span>
+                        <span class="stock-code">300308</span>
+                    </div>
+                    <div class="stock-logic">潘凤认为"中际旭创要到8000亿才合理和有吸引力"。洛飞"旭创拉回来了"但"旭创要绿"，担忧美股回落、都在跑科技。光模块龙头，估值分歧较大。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">光模块</span>
+                        <span class="tag tag-purple">中长线</span>
+                        <span class="tag-group">潘凤</span> <span class="tag-group">洛飞</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">天孚通信</span>
+                        <span class="stock-code">300394</span>
+                    </div>
+                    <div class="stock-logic">洛飞"旭创拉回来了，天孚突突"，但"天孚这个偏离，指数不过3968没准又要回踩"。光器件核心，注意偏离度。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">光通信</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">洛飞</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">源杰科技</span>
+                        <span class="stock-code">688498</span>
+                    </div>
+                    <div class="stock-logic">彭域早盘"源姐今天蛮屌的"减单5，尾盘"清源姐"。光芯片/光器件，CPO板块活跃但去弱留强日被减仓。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-blue">光芯片</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">彭域</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">鸿博股份</span>
+                        <span class="stock-code">002229</span>
+                    </div>
+                    <div class="stock-logic">彭域早盘"加单鸿博"。算力/投机标的，量能驱动，注意去弱留强节奏。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-orange">算力/投机</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">彭域</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">儒意影视</span>
+                        <span class="stock-code"></span>
+                    </div>
+                    <div class="stock-logic">猫十三群友关注：儒意影视收购万达电影（即原万达电影），下周一"儒意涨停"预期。传媒/电影题材，属情绪投机，周末发酵逻辑，注意北京文化联动风险。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-orange">传媒/电影</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">猫十三</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">北京文化</span>
+                        <span class="stock-code">000802</span>
+                    </div>
+                    <div class="stock-logic">猫十三群友：赌"龙餐馆"电影票房（11号上映），若北京文化炸了儒意也麻烦。电影周期题材，纯情绪驱动，风险极高。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-orange">传媒/电影</span>
+                        <span class="tag tag-purple">短线</span>
+                        <span class="tag-group">猫十三</span>
+                    </div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">寒武纪</span>
+                        <span class="stock-code">688256</span>
+                    </div>
+                    <div class="stock-logic">核心逻辑社"寒王是算力芯片供应商"，国产算力闭环上游芯片环节超预期。AI算力芯片核心资产。</div>
+                    <div class="stock-meta">
+                        <span class="tag tag-red">算力芯片</span>
+                        <span class="tag tag-blue">中长线</span>
+                        <span class="tag-group">核心逻辑社</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Sentiment & Risk -->
+        <div class="card">
+            <div class="card-title">⚖️ 市场情绪与风险提示</div>
+            <div class="mood-grid">
+                <div class="mood-card mood-risk">
+                    <h4>🔻 主要风险</h4>
+                    <ul>
+                        <li>🟥 <strong>尾盘跳水</strong>：核心逻辑社"自由落体式螺旋下行，多头全线败退，明天背水一战"</li>
+                        <li>🟥 <strong>科技高位分歧</strong>：潘凤"科技要调整到月底"，洛飞"都在跑科技怕美股回落"</li>
+                        <li>🟥 <strong>医药高潮风险</strong>：潘凤"医药真有点高潮了"，高潮后易分歧</li>
+                        <li>🟥 <strong>量化压制</strong>：潘凤"量化参与投机后低吸都不赚钱""买了许愿"</li>
+                        <li>🟥 <strong>情绪转冷</strong>：猫十三群"又是一轮牛市过去了"段子刷屏</li>
+                    </ul>
+                </div>
+                <div class="mood-card mood-bull">
+                    <h4>🔺 积极信号</h4>
+                    <ul>
+                        <li>🟩 <strong>美股算力炸裂</strong>：纳指+200点、费城半导体重返技术性牛市、韩国股市重回技术牛市</li>
+                        <li>🟩 <strong>国产算力闭环</strong>：寒武纪/中芯/联想/腾讯全环节超预期，芯王业绩大超预期</li>
+                        <li>🟩 <strong>半导体代工爆发</strong>：中芯/华虹Q2大超预期、Q3指引向上，伯恩斯坦上调晶圆设备预测</li>
+                        <li>🟩 <strong>战略看多</strong>：核心逻辑社"4200下方战略看多""8月收复4000，9月冲击新高"</li>
+                        <li>🟩 <strong>板块轮动健康</strong>：药、电（阳光/宁德）、服务器多点开花，非单一科技</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tomorrow Focus -->
+        <div class="card">
+            <div class="card-title">📌 明日关注要点</div>
+            <div class="highlight-box">
+                <h4>① 芯王能否带队反包</h4>
+                <p>中芯国际Q2业绩大超预期、Q3指引向上，核心逻辑社"明天能否带队反包"。国产算力/代工/设备能否止跌回升的关键观察点。</p>
+            </div>
+            <div class="highlight-box">
+                <h4>② 指数关键位：3968压力 / 3900支撑</h4>
+                <p>洛飞看3968不过可能回踩，震哥看"回踩3900更好"。尾盘跳水后，明日多空在3900-3968区间争夺，关注能否止跌收红。</p>
+            </div>
+            <div class="highlight-box">
+                <h4>③ 医药分歧节奏</h4>
+                <p>小锦鲤"医药明后天有阴线才有弹性"，万邦/龙神高潮后注意分歧低吸机会（早盘急跌+下午回踩两次）。潘凤提示"医药有点高潮"。</p>
+            </div>
+            <div class="highlight-box">
+                <h4>④ 美股今晚表现</h4>
+                <p>美股AI科技股普涨、费城半导体重返技术牛市，若延续强势，明日A股国产算力有望修复；若回落，注意科技继续调整。</p>
+            </div>
+            <div class="highlight-box">
+                <h4>⑤ 传媒题材周末发酵</h4>
+                <p>猫十三群儒意影视/北京文化"龙餐馆"电影题材，看周末票房发酵，但属纯情绪投机，注意兑现风险。</p>
+            </div>
+        </div>
+
+        <!-- News -->
+        <div class="card">
+            <div class="card-title">📰 今日重要资讯</div>
+            <div class="news-item">
+                <div class="news-title">中芯国际、华虹Q2业绩大超预期</div>
+                <div class="news-desc">中芯Q2营收30亿美元+36%、毛利率25.3%超指引、净利+262%；华虹Q2营收7.2亿美元创新高、净利+386%。Q3指引均持续向上，涨价持续落地。</div>
+                <div class="news-source">来源：傅里叶的猫（中泰电子纪要）</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">美股AI科技股普涨，费城半导体重返技术牛市</div>
+                <div class="news-desc">纳指+200点，费城半导体指数涨逾1%重返技术性牛市，韩国股市重回技术性牛市。NBIS+34%、CRWV+19%，英伟达5000亿美元GPU担保债券资金池推动Neocloud转多。</div>
+                <div class="news-source">来源：核心逻辑社、傅里叶的猫</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">伯恩斯坦上调中国晶圆制造设备市场预测</div>
+                <div class="news-desc">2027/2028年预测分别上调63亿/240亿美元，同比增速或达68%/93%，市场规模将达730亿/1010亿美元。国产D机量产、芯代放量支撑。</div>
+                <div class="news-source">来源：核心逻辑社</div>
+            </div>
+            <div class="news-item">
+                <div class="news-title">国产算力高景气闭环</div>
+                <div class="news-desc">寒武纪（算力芯片）、中芯国际（代工）、联想（服务器整装）、腾讯（下游消费）从上到下均超预期，国产算力高景气实现闭环。</div>
+                <div class="news-source">来源：核心逻辑社</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            ⚠️ 本报告由AI自动整理生成，数据来源为15个飞书交流群每日公开讨论内容。<br>
+            观点均标注来源群名，个股推荐区分群主/群友个人观点，仅供参考。<br>
+            <strong>仅供个人参考，不构成投资建议。市场有风险，投资需谨慎。</strong>
+        </div>
+    </div>
+</body>
+</html>
