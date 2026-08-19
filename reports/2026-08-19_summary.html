@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞书群聊市场观点汇总报告 - 2026年08月19日 星期三</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    color: #2c3e50;
+    line-height: 1.7;
+    padding: 24px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.header {
+    background: linear-gradient(135deg, #b71c1c 0%, #c62828 100%);
+    color: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(183,28,28,0.25);
+    margin-bottom: 24px;
+}
+.header h1 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
+.header .meta { display: flex; flex-wrap: wrap; gap: 20px; opacity: 0.95; font-size: 14px; }
+.header .meta span { background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 20px; }
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.card h2 {
+    font-size: 18px;
+    color: #b71c1c;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffebee;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.card h3 { font-size: 15px; color: #37474f; margin: 14px 0 8px; }
+.highlight {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+.highlight-crash {
+    background: #ffebee;
+    border-left: 4px solid #c62828;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+.tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 6px;
+}
+.tag-red { background: #ffebee; color: #c62828; }
+.tag-green { background: #e8f5e9; color: #2e7d32; }
+.tag-blue { background: #e3f2fd; color: #1565c0; }
+.tag-purple { background: #f3e5f5; color: #7b1fa2; }
+.tag-orange { background: #fff3e0; color: #ef6c00; }
+.up { color: #c62828; font-weight: 700; }
+.down { color: #2e7d32; font-weight: 700; }
+.neutral { color: #546e7a; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+th, td { padding: 12px 10px; text-align: left; border-bottom: 1px solid #eceff1; }
+th { background: #f8f9fa; color: #455a64; font-weight: 600; }
+tr:hover { background: #fafafa; }
+.rank { font-weight: 700; color: #b71c1c; font-size: 16px; }
+.stars { color: #ff9800; letter-spacing: 2px; }
+.group-badge {
+    display: inline-block;
+    background: #ffebee;
+    color: #c62828;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+.stock-card {
+    background: #fafbfc;
+    border: 1px solid #ffebee;
+    border-radius: 12px;
+    padding: 18px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.stock-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+.stock-card .name { font-size: 16px; font-weight: 700; color: #b71c1c; margin-bottom: 6px; }
+.stock-card .code { font-size: 12px; color: #78909c; margin-left: 8px; }
+.stock-card .logic { font-size: 13px; color: #455a64; margin: 10px 0; }
+.stock-card .source { font-size: 12px; color: #90a4ae; }
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.risk-col { border-left: 4px solid #ef5350; padding-left: 16px; }
+.positive-col { border-left: 4px solid #66bb6a; padding-left: 16px; }
+.focus-list { list-style: none; }
+.focus-list li {
+    background: #fffde7;
+    border: 1px solid #fff59d;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.focus-list li::before { content: "🔥 "; }
+.footer {
+    text-align: center;
+    color: #90a4ae;
+    font-size: 12px;
+    margin-top: 30px;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .two-col { grid-template-columns: 1fr; }
+    .stock-grid { grid-template-columns: 1fr; }
+    .header .meta { flex-direction: column; gap: 8px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📉 飞书群聊市场观点汇总报告</h1>
+        <div class="meta">
+            <span>📅 2026年08月19日 星期三</span>
+            <span>📊 监控群：15个（活跃11个）</span>
+            <span>💬 消息总数：428条</span>
+            <span>⏰ 生成时间：2026-08-19 23:12</span>
+            <span style="background:#ffebee;color:#c62828;">⚠️ 急跌日：科创50约-4%，三市成交2.53万亿</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>💡 大盘走势与核心观点</h2>
+        <div class="highlight-crash">
+            <strong>核心判断：</strong>今日为典型"美债外溢+科技踩踏"急跌日。美股隔夜存储/光通信/AI云崩盘（闪迪/SK海力士/希捷跌超9%）+ 美30年国债收益率一度升至2007年来最高水平，A股科创50全天承压约-4%，国家队下午明显护盘买ETF但难阻尾盘跳水。三市成交2.53万亿（较前日+1103亿），主力净流出1939.64亿；中信及主要玩家合计加空7710手，多空力量失衡。
+        </div>
+        <p><strong>成交与资金：</strong>三市成交25302亿元，较上个交易日增加1103亿元，主力净流出1939.64亿。中信今日累计加空3130手（净空68633），主要玩家累计加空4580手（净空119202），股指期货净空单创近期新高。</p>
+        <p><strong>情绪特征：</strong>恐慌派与冷静派并存。潘凤、彭域选择大幅减仓甚至清仓科技股转防御；核心逻辑社强调"允许利润回吐但别全吐光"，暂避锋芒、待美伊明朗；洛飞认为"明后天修复但意义不大，月底前垃圾时间"；小锦鲤则在医药分歧中获取收益。整体情绪急转谨慎，多家群主承认科技过度承压，杠杆盘被动平仓放大跌幅。</p>
+        <h3>各群核心观点</h3>
+
+        <p><span class="group-badge">核心逻辑社</span><span class="down">减仓避险 / 暂避锋芒</span>：维持"指数慢牛、AI逻辑未变"判断，但核心风险转为美伊冲突。大概率先升级再谈，"今天减仓先求稳，明日局势明朗再果断加"。承认国产算力所有环节同涨同跌，无差别下跌。仍然不动指数持仓。</p>
+
+        <p><span class="group-badge">潘凤</span><span class="down">大幅减仓转短线</span>：上午-5加芯原0.5成、卖雅克，午盘总仓位降至0.5成，明确"科技后面归为轮动板块、后面只能短线去做"。预计科技还要调整十几个点，今天不会V型反转。系统diss三个方向：商业航天（无商业落地）、机器人（春晚洗脑式炒作）、AI4S（高校骗经费）。晚间认为美国回购国债=小型QE，"最利好"，但同时强调科技股整体太弱。</p>
+
+        <p><span class="group-badge">洛飞小群</span><span class="down">震荡期观望</span>：船完成底部翻倍后已无强度。指数3903有抵抗但300-4000箱体震荡。判断"明后天修复但意义不大，震荡期绞肉机，最好等这波调整完出新东西再玩"。月底之前基本垃圾时间，"没有太多下跌空间但组织强势进攻概率也不大"。明日若低开可能是好事，高开必砸。</p>
+
+        <p><span class="group-badge">小锦鲤</span><span class="up">医药分歧中获益</span>：万邦医药开盘砸深水后-+6踢出-+4接回-+10清活仓全套操作；龙神同样高抛低吸，尾盘声称"今天古灾不过整体收获，节日礼物"。明日将发"8.19 不慌！"视频，暗示对后市乐观。</p>
+
+        <p><span class="group-badge">彭域</span><span class="down">清仓防守</span>：盘中清中石-7、清飞测-2.7、清拓荆-3、清yyg、设备etf-6，留下长鑫+一点yyg，判断"指数压力太大等待指数清晰"。尾盘建议"买点左侧先看看""大的等右侧，不建议抄底玩太多"。</p>
+
+        <p><span class="group-badge">信息早知道</span><span class="neutral">信息密集推送</span>：21条全市场新闻 + 多份机构深度研报。重要催化包括：①国务院9月20日起施行公积金新规支持装修/物业费提取；②8/21财政部发布会详解积极财政；③英伟达黄敏珊访LG机器人中心；④2026OOCP：800VDC+先进封装+光通信；⑤H200小批量入华；⑥Moderna+默沙东mRNA黑色素瘤III期阳性（盘前+100%）；⑦AI功率半导体缺货台厂酝酿第三波涨价10-15%。</p>
+
+        <p><span class="group-badge">震哥-胡汉三</span><span class="neutral">观察技术派</span>："30年美债收益率持续涨对成长型科技压制会增大，尤其外资流出压力"。3884/3900支撑位附近低吸长鑫科技，15分钟级别底部形态扎实，尾盘"小撸怡情"。质疑"指数日线233线强压力形成标准日线顶分型"。</p>
+
+        <p><span class="group-badge">傅里叶的猫</span><span class="neutral">海外视角</span>：完整复盘美股盘前早报。关键信息：①SK海力士宣布286亿美元回购（2025-27年FCF 50%+），股票回购后将注销；②ADI Q3营收40.2亿+指引43亿强劲；③Nebius发45亿美元可转债拖累CoreWeave(-4%)、Oracle(-3%)；④长江存储完成上市辅导逼近IPO；⑤Reddit在ChatGPT引用份额从3.8%骤降至0.5%；⑥中国市场开始小批量放行H200（字节+腾讯各1万块）。</p>
+
+        <p><span class="group-badge">陈果（国海）</span><span class="up">不必恐慌</span>："今天整体急跌不会持续，大A后续依然充满机会"。海外利率恐慌为慢变量，资产荒+中特稳支撑估值，特朗普和财长有动力控美债利率，关注美国AI资本开支节奏与中国非AI部分投资机会。</p>
+
+        <p><span class="group-badge">杰哥进阶/唐史主任/局座/猫十三</span><span class="neutral">—</span>：基本无文字观点。</p>
+
+    </div>
+
+    <div class="card">
+        <h2>🔥 板块热度排行</h2>
+        <table>
+            <thead>
+                <tr><th>排名</th><th>板块名称</th><th>热度</th><th>核心逻辑</th><th>来源群</th></tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td><span class="rank">#1</span></td>
+                    <td><strong>mRNA/肿瘤治疗性疫苗</strong></td>
+                    <td><span class="stars">★★★★★</span></td>
+                    <td>Moderna+默沙东个体化新抗原mRNA肿瘤疫苗Intismeran(mRNA-4157) III期临床阳性（黑色素瘤辅助治疗无复发生存期+无远处转移生存期双终点），Moderna盘前暴涨106%。直接利好：键凯科技(LNP-PEG原料直供Moderna)、诺唯赞(T7/加帽酶等GMP级转录酶+海外mRNA收入同比+300%)、近岸蛋白、沃森生物、康希诺、药明生物、药明康德等。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">黑火信息差</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#2</span></td>
+                    <td><strong>半导体存储/DRAM/全产业链</strong></td>
+                    <td><span class="stars">★★★★★</span></td>
+                    <td>SK海力士宣布回购40万亿韩元（约286亿美元）股份并注销+2025-27年股东回报提升至FCF 50%+；兆易创新H1净利68.57亿+1091.5%；普冉股份H1净利8.27亿+1929.65%（SHM并表贡献23.46亿）。长江存储IPO辅导验收完成。山西证券覆盖兆易目标价400元。海外链上Northland上调Ciena至跑赢大市目标500美元；Evercore上调戴尔目标550美元（存储被低估）。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">傅里叶的猫</span><span class="group-badge">震哥-胡汉三</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#3</span></td>
+                    <td><strong>半导体设备/零部件/封测</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>芯源微基本面重大更新：今年明年订单大幅上修，高端Track在长存过最后一道量产验证、小批量落地，紧接着送长鑫、年底出浸没式机台。芯原股份盘中-5加仓。彭域尾盘加单设备ETF-7.5/低吸长鑫。洛飞观察士兰微/杨杰大单流入。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">潘凤</span><span class="group-badge">彭域</span><span class="group-badge">洛飞小群</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#4</span></td>
+                    <td><strong>创新药/CXO/医药</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>小锦鲤万邦医药、龙神双25操作得心应手（分歧日做出收获）。亨迪药业涨停，继续关注特一药业低位流感机会。Moderna mRNA肿瘤疫苗III期催化多家CXO与上游酶原料企业（详见第1条）。</td>
+                    <td><span class="group-badge">小锦鲤</span><span class="group-badge">信息早知道</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#5</span></td>
+                    <td><strong>国产算力/AI算力/服务器</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>H200小批量入华：字节跳动+腾讯各获约1万颗H200处理器（金融时报报道），受益国内服务器龙头：浪潮信息、华勤技术。亚康股份子公司签8.68亿元算力服务采购合同；亿田智能10亿算力订单涨停。潘凤反思"国产算力自主性高但反弹时不抗跌"。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">潘凤</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#6</span></td>
+                    <td><strong>商业航天/蓝箭航天朱雀三号</strong></td>
+                    <td><span class="stars">★★★★☆</span></td>
+                    <td>蓝箭航天朱雀三号供应链梳理：参股（张江高科、金风科技）、蜂窝整流罩（民士达）、推力室内壁（斯瑞新材）、3D打印（铂力特）、尾段（超捷股份、神剑股份）、箭体锻件（派克新材）、传感器（高华科技）、连接器（航天电器）、碳纤维（光威复材）。潘凤系统diss商业航天"客户主要是学校研究所，无法解决生活场景问题"。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">潘凤</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#7</span></td>
+                    <td><strong>功率半导体/AI电力链</strong></td>
+                    <td><span class="stars">★★★☆☆</span></td>
+                    <td>信息早知道：AI用电量增加致功率半导体缺货严重，台厂酝酿第三波价格调整最快10月起针对非合约产品涨价10-15%。洛飞小群：老师们注意功率半导体，挺强；斯达半导明天断可能后天反包；士兰微/扬杰科技大单流入被指数带下，板块位置低。蔚蓝锂芯BBU卡位全球第四，2026H1 BBU份额7.3%。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">洛飞小群</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#8</span></td>
+                    <td><strong>内需消费/畜牧/饲料</strong></td>
+                    <td><span class="stars">★★★☆☆</span></td>
+                    <td>①高层会议要求全力完成全年目标+直面内需不足，机构看好消费板块估值修复前置窗口：弹性消费商超（三江购物、永辉超市、杭州解百）+ 内需龙头（小商品城、中国中免）。②泔水喂猪入法：散养户低成本养殖模式被堵死，饲料刚性需求向规模化集中：金新农、唐人神、海大集团。③奶价拐点已至，散奶价格Q2以来持续上涨：优然牧业、现代牧业、伊利股份、蒙牛乳业。</td>
+                    <td><span class="group-badge">信息早知道</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#9</span></td>
+                    <td><strong>光模块上游/锡膏/光器件</strong></td>
+                    <td><span class="stars">★★★☆☆</span></td>
+                    <td>唯特偶CPO量产提速拉动光模块锡膏量价齐升：T7单克价格是T5的近10倍，光模块领域锡膏价值量较传统产品数十倍乃至百倍增量，对标鼎泰高科千亿市值。兆易创新H1净利+1091%支撑。光模块设备产业链分析（光芯片/电芯片/无源光学器件/激光器/探测器/光引擎）。Lumentum需求超供给30%（前文延续）。</td>
+                    <td><span class="group-badge">信息早知道</span><span class="group-badge">傅里叶的猫</span></td>
+                </tr>
+
+                <tr>
+                    <td><span class="rank">#10</span></td>
+                    <td><strong>煤炭/农牧(+)</strong></td>
+                    <td><span class="stars">★★☆☆☆</span></td>
+                    <td>甘肃能化拉板（最低价煤炭+化肥+双吃厄尔尼诺，收购金昌化工生产尿素氨肥）。煤炭板块异动拉升：宝泰隆/大有能源涨停，关注陕西黑猫/云煤能源/金能科技。AI+科技股整体走弱，煤炭作为低估高股息防御方向受短线资金青睐。</td>
+                    <td><span class="group-badge">信息早知道</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>🎯 重点个股推荐与分析</h2>
+        <div class="stock-grid">
+
+            <div class="stock-card">
+                <div class="name">键凯科技<span class="code">688356</span><span class="tag tag-red">mRNA</span><span class="tag tag-orange">LNP-PEG原料</span></div>
+                <div class="logic">LNP递送系统核心PEG原料供应商，直接供货Moderna。Moderna+默沙东mRNA黑色素瘤肿瘤疫苗III期阳性盘前暴涨100%+，业绩弹性巨大。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">短线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">诺唯赞<span class="code">688105</span><span class="tag tag-red">mRNA原料</span><span class="tag tag-purple">酶试剂龙头</span></div>
+                <div class="logic">国内mRNA核心原料酶头部厂商，T7聚合酶、加帽酶等全套GMP级转录酶完成海外备案，海外mRNA收入同比+300%。IVD/科研试剂基本盘+ mRNA高弹性新兴增量，预期差大。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">中线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">兆易创新<span class="code">603986</span><span class="tag tag-red">存储</span><span class="tag tag-orange">MCU+NOR Flash</span><span class="tag tag-green">+1091%</span></div>
+                <div class="logic">2026H1营业收入115.66亿元+178.6%，归母净利润68.57亿元+1091.5%。第四大股东葛卫东加仓至1644.67万股(2.34%)。山西证券覆盖目标价400元。SK海力士回购注销+美股存储深度调整后中长期底部支撑。</div>
+                <div class="source">来源：信息早知道/傅里叶的猫/震哥-胡汉三 | 风格：<span class="tag tag-blue">中长线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">长鑫科技<span class="code">存储</span><span class="tag tag-red">国产DRAM</span><span class="tag tag-orange">长江存储兄弟</span></div>
+                <div class="logic">长江存储IPO辅导验收完成（辅导券商中信证券+中信建投），逼近下一个中国芯片大IPO。彭域尾盘加仓长鑫科技（约等于两倍做多科创），震哥-胡汉三尾盘小撸怡情，15分钟级别底部形态扎实。</div>
+                <div class="source">来源：潘凤/彭域/震哥-胡汉三 | 风格：<span class="tag tag-blue">中线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">芯源微<span class="code">688037</span><span class="tag tag-red">半导体设备</span><span class="tag tag-orange">涂胶显影龙头</span></div>
+                <div class="logic">公司今年明年订单大幅上修；高端Track在长江存储过最后一道量产验证并将小批量落地，紧接着送长鑫，年底还要出浸没式机台。基本面对接长存产业链兑现窗口。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">中长线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">浪潮信息<span class="code">000977</span><span class="tag tag-red">服务器</span><span class="tag tag-blue">AI算力</span></div>
+                <div class="logic">H200小批量入华：字节跳动+腾讯各获约1万颗H200处理器（金融时报8/18报道）。国内服务器龙头有望直接受益。</div>
+                <div class="source">来源：信息早知道（国海计算机） | 风格：<span class="tag tag-blue">短线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">华勤技术<span class="code">603296</span><span class="tag tag-red">服务器</span><span class="tag tag-blue">H200算力链</span></div>
+                <div class="logic">同H200逻辑，国内服务器二供；H200获准入华显著提升国内AI服务器供应需求。</div>
+                <div class="source">来源：信息早知道（国海计算机） | 风格：<span class="tag tag-blue">短线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">万邦医药<span class="code">301520</span><span class="tag tag-green">创新药</span><span class="tag tag-orange">小锦鲤实操</span><span class="tag tag-blue">分歧日操作</span></div>
+                <div class="logic">小锦鲤全套操作：-5买-+6踢-+4接-+10清活仓，"今天古灾不过我们的还非常逆势"。明日8.19小锦鲤将发"不慌"视频。</div>
+                <div class="source">来源：小锦鲤 | 风格：<span class="tag tag-blue">短线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">蔚蓝锂芯<span class="code">002245</span><span class="tag tag-green">锂电池</span><span class="tag tag-purple">BBU</span><span class="tag tag-orange">中信买入</span></div>
+                <div class="logic">26Q2归母净利3.15亿+64.68%环比+60.98%；锂电池单颗利润环比+0.3元。全极耳电芯量产交付，BBU卡位全球第四(份额7.3%)。预计2026-2028年归母净利14.32/23.52/33.79亿，PE 23x/14x/10x，维持"买入"。</div>
+                <div class="source">来源：信息早知道（中信证券） | 风格：<span class="tag tag-blue">中长线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">唯特偶<span class="code">301319</span><span class="tag tag-blue">光模块锡膏</span><span class="tag tag-orange">CPO量产</span></div>
+                <div class="logic">英伟达Spectrum-X交换机CPO正式量产。T7单克价格=10倍T5；光模块锡膏价值量较传统锡膏数十倍乃至百倍增量。对标鼎泰高科千亿市值。光模块领域认证壁垒1-2年起步，国内企业机会大。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">中线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">埃科光电<span class="code">688720</span><span class="tag tag-purple">机器视觉</span><span class="tag tag-orange">中信机械覆盖</span><span class="tag tag-green">+108%</span></div>
+                <div class="logic">中信机械深度覆盖：2026H1营收3.78亿+82.33%，归母净利6916万+91.92%，扣非+107.9%。新型显示+143.66%为主要增长，电子制造+60.03%（AI算力PCB检测）、新能源+79.85%（锂电储能）。</div>
+                <div class="source">来源：信息早知道（中信机械） | 风格：<span class="tag tag-blue">中长线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">三江购物/永辉超市<span class="code"></span><span class="tag tag-orange">内需消费</span><span class="tag tag-purple">弹性商超</span></div>
+                <div class="logic">高层会议明确"全力完成全年经济社会发展目标任务+直面内需不足"，机构判断促消费增量政策将快速落地。弹性修复消费商超：关注三江购物、永辉超市、杭州解百；促进内需龙头关注小商品城、中国中免。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">短线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">金新农<span class="code">002548</span><span class="tag tag-orange">饲料</span><span class="tag tag-red">泔水喂猪入法</span></div>
+                <div class="logic">泔水喂猪正式入法！养殖场（含散养户）剩菜剩饭直接喂猪违法。规模化饲料企业逻辑强化：饲料加工收入占比67%的金新农，唐人神（饲料+养殖全产业链）+海大集团（饲料行业龙头）。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">短线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">京东方A<span class="code">000725</span><span class="tag tag-blue">22层玻璃芯基板</span><span class="tag tag-red">AI芯片封装</span></div>
+                <div class="logic">日本新光电气开发22层玻璃芯基板（正反各11层铜布线），瞄准大型AI芯片和高性能服务器封装，加速英伟达/AMD/算力厂商导入预期。关注京东方、沃格光电、彩虹股份、力诺药包。</div>
+                <div class="source">来源：信息早知道（TrendForce） | 风格：<span class="tag tag-blue">中线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">海大集团<span class="code">002311</span><span class="tag tag-green">饲料龙头</span><span class="tag tag-orange">猪料+水产料</span></div>
+                <div class="logic">饲料行业龙头，猪料+水产料全品类。泔水喂猪入法+规模化养殖替代潮双重利好，散养户退出直接承接市场份额。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">中线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">航天电器<span class="code">002025</span><span class="tag tag-blue">朱雀三号</span><span class="tag tag-red">连接器</span></div>
+                <div class="logic">蓝箭航天朱雀三号供应链连接器环节。商业航天供应链梳理中的明确卡位标的（与张江高科/铂力特/光威复材/派克新材/民士达等并列）。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">中长线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">光威复材<span class="code">300699</span><span class="tag tag-blue">朱雀三号</span><span class="tag tag-red">碳纤维</span></div>
+                <div class="logic">蓝箭航天朱雀三号供应链碳纤维环节。国产军用碳纤维龙头延伸至商业航天领域，市场容量加速扩大。</div>
+                <div class="source">来源：信息早知道 | 风格：<span class="tag tag-blue">中长线</span></div>
+            </div>
+
+            <div class="stock-card">
+                <div class="name">宇树科技<span class="code"></span><span class="tag tag-orange">人形机器人</span><span class="tag tag-purple">科创板上市</span><span class="tag tag-red">PE 219倍</span></div>
+                <div class="logic">8月19日科创板上市，发行价150.80元/股，对应市值约609.93亿元，2025财年发行后市盈率219倍，首发募集资金61亿元。核心逻辑社和潘凤均提示机器人板块利好兑现风险。</div>
+                <div class="source">来源：信息早知道/潘凤/核心逻辑社 | 风格：<span class="tag tag-blue">短线风险</span></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⚖️ 市场情绪与风险提示</h2>
+        <div class="two-col">
+            <div class="risk-col">
+                <h3>⚠️ 主要风险</h3>
+                <ul>
+<li>美30年期国债收益率一度升至2007年来最高（5.19%），美股科技盘后承压（闪迪/SK海力士/希捷跌超9%），AI债融资成本上升+Meta/谷歌/微软/亚马逊或下调资本开支，估值与盈利双杀风险。</li>
+<li>美伊冲突可能长期化：核心逻辑社认为"美伊长期化→高油价→高通胀→加息预期升温→股市跌"四步链条。阿联酋已暂停与伊朗一切贸易；特朗普暂停特使与伊朗接触。</li>
+<li>宇树科技科创板上市后市值609.93亿/PE 219倍，机器人板块"利好兑现即利空"，潘凤核心diss三大方向之一。</li>
+<li>A股估值脆弱：核心逻辑社"现在大A一点利空都不能有，稍有风吹草动就噶给你看"，陈果(国海)也承认"今天整体急跌反映脆弱性"。</li>
+<li>中信及主要玩家今日合计加空7710手（净空单总数超11.9万手），股指期货空头情绪创近期新高。</li>
+<li>潘凤预测科技还要调整十几个点，本次分歧非V型反转，"今天不会V型反转"。</li>
+<li>蓝箭光电（300839）罕见戴帽停牌核查；一鸣食品16天11板亦提示或停牌核查；监管对异动股打压明显。</li>
+                </ul>
+            </div>
+            <div class="positive-col">
+                <h3>✅ 积极信号</h3>
+                <ul>
+<li>陈果(国海)：今天急跌不会持续，"资产荒+中特稳"支撑估值；特朗普和财长有动力控美债利率，关注美国AI资本开支节奏和中国非AI部分投资机会。</li>
+<li>SK海力士回购40万亿韩元（约286亿美元）并注销，2025-27年股东回报提升至FCF 50%+，存储底部支撑强化。</li>
+<li>H200小批量入华：字节+腾讯各1万颗H200，受益浪潮信息/华勤技术等国产服务器龙头。</li>
+<li>Moderna+默沙东mRNA黑色素瘤肿瘤疫苗III期临床取得阳性结果，盘前暴涨100%+，CXO与原料链条增量市场。</li>
+<li>长江存储IPO辅导验收完成，逼近下一个国产芯片大IPO，长鑫科技/兆易创新等存储链催化。</li>
+<li>兆易创新H1净利+1091.5%、普冉股份H1净利+1929.65%，国产存储景气持续验证。</li>
+<li>美财政部宣布扩大长期名义国债回购规模（较长期限流动性支持回购操作单次最高规模至少提高一倍至少40亿美元），"懂王打开工具箱救美债"。</li>
+<li>青黄不接期国家队买ETF护盘：洛飞"国家队在买etf了"，陈果亦认可"估值合理"。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📌 明日关注要点</h2>
+        <ul class="focus-list">
+<li>美30年期国债收益率/美股科技股盘前表现，决定A股明日开盘强弱；陈果提示"低开未必是坏事，高开必砸"（洛飞判断）。</li>
+<li>美伊冲突是否升级：特朗普已暂停特使与伊朗接触，懂王是否会"为选情护航"加大干预强度？</li>
+<li>宇树科技上市次日表现：科创板是否破发？机器人板块（智己/越剑/共进等）是否进入利好兑现后的杀跌？</li>
+<li>创新药分歧延续还是修复：万邦医药、龙神能否继续走强；亨迪/特一低位流感机会扩散。</li>
+<li>mRNA肿瘤疫苗催化：键凯科技、诺唯赞、近岸蛋白、药明康德、药明生物等盘中是否表现出持续性。</li>
+<li>H200入华受益链：浪潮信息、华勤技术、亚康股份、亿田智能（已涨停）的算力订单主线是否扩散。</li>
+<li>半导体设备分化：芯源微订单上修+长存验证推进，拓荆/中微/华虹能否止跌。</li>
+<li>功率半导体低位补涨：洛飞提示"斯达断-反包"机会，士兰微、杨杰科技大单流入是否能延续。</li>
+<li>国家统计局/财政部周四有数据窗口：8/21财政部副部长廖岷"积极财政政策"专题发布会，重点观察消费/基建增量政策表述。</li>
+<li>美财政部9月9日起扩大长期国债回购规模（至少40亿美元/次）实际落地节奏，对长端利率压制效果。</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <p>本报告基于飞书群聊公开讨论整理，仅供个人参考，不构成投资建议。市场有风险，投资需谨慎。</p>
+        <p>📊 今日重点：美债危机外溢+宇树上市兑现+科技集体踩踏；明日看美伊/美股+政策窗口（财政部发布会）。</p>
+        <p>个股逻辑数据库已更新，搜索页面已刷新，公网地址：https://juebro.github.io/a-share-research/</p>
+    </div>
+</div>
+</body>
+</html>
