@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总 - 2026-08-24</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --red: #dc2626;
+            --green: #16a34a;
+            --blue: #2563eb;
+            --yellow: #f59e0b;
+            --purple: #7c3aed;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .header h1 { margin: 0 0 12px 0; font-size: 28px; }
+        .header .meta { display: flex; flex-wrap: wrap; gap: 20px; opacity: 0.95; font-size: 14px; }
+        .header .meta span { display: flex; align-items: center; gap: 6px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .card h2 { margin: 0 0 16px 0; font-size: 20px; color: #1e3a5f; display: flex; align-items: center; gap: 8px; }
+        .card h3 { margin: 20px 0 10px 0; font-size: 16px; color: #374151; }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+        .tag-up { background: #fee2e2; color: var(--red); }
+        .tag-down { background: #dcfce7; color: var(--green); }
+        .tag-neutral { background: #f3f4f6; color: var(--text-secondary); }
+        .tag-sector { background: #dbeafe; color: var(--blue); }
+        .tag-group { background: #f3e8ff; color: var(--purple); }
+        .opinion-list { list-style: none; padding: 0; margin: 0; }
+        .opinion-list li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 12px;
+        }
+        .opinion-list li:last-child { border-bottom: none; }
+        .opinion-list .source { min-width: 100px; font-weight: 600; color: var(--purple); }
+        .opinion-list .content { flex: 1; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f8fafc; font-weight: 600; color: #475569; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        .stock-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 16px;
+            border: 1px solid var(--border);
+        }
+        .stock-card .name { font-size: 17px; font-weight: 700; margin-bottom: 6px; color: #111827; }
+        .stock-card .logic { font-size: 13px; color: #4b5563; margin-top: 8px; line-height: 1.5; }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+            .stock-grid { grid-template-columns: 1fr; }
+            .opinion-list li { flex-direction: column; gap: 4px; }
+        }
+        .risk-card { background: #fef2f2; border-left: 4px solid var(--red); padding: 16px; border-radius: 8px; }
+        .bull-card { background: #f0fdf4; border-left: 4px solid var(--green); padding: 16px; border-radius: 8px; }
+        .watch-card { background: #fffbeb; border-left: 4px solid var(--yellow); padding: 16px; border-radius: 8px; margin-bottom: 12px; }
+        .watch-list { list-style: none; padding: 0; margin: 0; }
+        .watch-list li { padding: 8px 0; border-bottom: 1px dashed #fcd34d; }
+        .watch-list li:last-child { border-bottom: none; }
+        .footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 4px; }
+        .data-row { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
+        .data-pill {
+            background: #f1f5f9;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .data-pill strong { color: var(--blue); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 飞书群聊市场观点汇总报告</h1>
+            <div class="meta">
+                <span>📅 日期：2026-08-24（周一 / 交易日）</span>
+                <span>💬 监控群：15个</span>
+                <span>📨 消息总数：357条</span>
+                <span>🕐 生成时间：2026-08-24 23:00</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📈 大盘走势与核心观点</h2>
+            <div class="data-row">
+                <div class="data-pill">两市成交：<strong>20214亿</strong>（较上日+1291亿）</div>
+                <div class="data-pill">主力流向：<strong>净流出799.33亿</strong></div>
+                <div class="data-pill">两融余额：<strong>26603.7亿</strong>（较上日-59.86亿）</div>
+                <div class="data-pill">期指净空单：<strong>中信75476 / 主要玩家119052</strong></div>
+            </div>
+            <ul class="opinion-list">
+                <li>
+                    <span class="source">核心逻辑社</span>
+                    <div class="content">
+                        美国对伊朗“经济孤立”措施即将公布，伊朗反击目标若指向霍尔木兹海峡长期封锁，将冲击全球经济与股市。推演两种情景：冲突激烈→市场大跌→特朗普TACO反转；或升级后伊朗军事反击→市场进一步大跌。当前核心博弈点不是打不打地面战争，而是海峡是否长期封锁。建议等美伊局势缓和后再抄底。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">信息早知道</span>
+                    <div class="content">
+                        消息面偏结构性：长存控股科创板IPO受理（拟融资330亿）、FCC修订逆变器条款（离网豁免+45X抵免通道）、阿里800亿港元配股全部投向AI基础设施、英伟达AI服务器因内存涨价超15%、DeepSeek发布多模态视觉理解模型。市场数据层面，1-7月证券交易印花税同比+99.2%。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">洛飞小群</span>
+                    <div class="content">
+                        鸡肋行情，资金都是套利。指数图形明天还得向下，20日线能否稳住有待观察。黄金走强，科技股盘中追高风险大，尾盘再说。下午黄金与期货同步拉升，但美债原油走低，黄金短期有冲顶背离迹象。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">潘凤</span>
+                    <div class="content">
+                        科技跌到这个位置，前几天卖还能叫逃顶。AI很难找到盈利支撑点，目前AI替代的多是实习生级别工作。对英伟达涨价15%的解读偏空：表面利好，实为内存成本过高导致利润率不够，若下游不接受涨价，回本期延长，大厂会反向压价硬件供应商，光模块→PCB→液冷→电源全线承压。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">彭域</span>
+                    <div class="content">
+                        指数看不到太好的开仓点，走成什么样都不意外。半导体/光模块方向迷你溶解，不做排序。盘中清仓新易盛、减仓拓荆，强调“谁格局谁儿子”，建议休息等待易中天止跌。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">震哥-胡汉三</span>
+                    <div class="content">
+                        早盘贵金属走强（盛达资源、湖南白银），科技分歧。光模块中际、新易盛走弱对天孚、东山等有拖累，但光库、衡东光、天通逆势。下午低吸科技较爽，联特、源杰缩量探底回升，下跌无量，短线关注天孚、源杰、联特、博杰，趋势看东山。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">小锦鲤</span>
+                    <div class="content">
+                        日内交易活跃：天山反核再吃10%+，万邦、近岸均给到低吸机会。强调“低频聚焦而不是盲目追”，月底更需聚焦。今日天山又是24大长腿，情绪端在小群内表现强势。
+                    </div>
+                </li>
+                <li>
+                    <span class="source">傅里叶的猫</span>
+                    <div class="content">
+                        海外TMT研报密集：野村看阿里配股摊薄可控，AI资本开支回收期不到三年；高盛看好中国半导体自给加速，2030年资本开支看820亿美元；BNP认为AI网络转向光模块scale-up，CPO已量产；SemiAnalysis认为CUDA护城河仍在但快速侵蚀，Agentic推理是系统问题而非芯片问题。
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🔥 板块热度排行</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>板块名称</th>
+                        <th>热度</th>
+                        <th>核心逻辑</th>
+                        <th>主要来源</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><span class="tag tag-sector">光模块 / CPO</span></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>中际旭创半年报超预期但股价走弱，新易盛、天孚被拖累；源杰、联特、光库、衡东光逆势；英伟达CPO量产与NPO推进是长期催化。</td>
+                        <td>震哥、彭域、傅里叶的猫、信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><span class="tag tag-sector">AI算力 / PCB / 先进封装</span></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>PTFE用于Rubin Ultra交换板方案落地，深南/沪电/生益受益；陶瓷混压HDI散热、氮化铝陶瓷基板、ABF载板景气上行；英伟达涨价与内存成本仍是压制。</td>
+                        <td>傅里叶的猫、信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><span class="tag tag-sector">半导体设备 / 材料</span></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>耐科装备半年报大超预期，封装设备订单高增；硅晶圆三年来首次涨价，有研硅/立昂微/沪硅产业受益；长存IPO受理催化国产存储链。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><span class="tag tag-sector">储能 / 逆变器 / 锂电</span></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>FCC修订条款豁免离网、明确45X抵免路径，阳光电源、海博思创、英威腾等受益；8月国内储能招标同比+57%，锂电旺季涨价预期升温。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><span class="tag tag-sector">黄金 / 贵金属</span></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>美伊局势升级、霍尔木兹海峡封锁风险推升避险需求；黄金盘中走强，盛达资源、湖南白银、和邦生物（金矿探矿权）受关注。</td>
+                        <td>潘凤、震哥、洛飞小群</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><span class="tag tag-sector">券商 / 金融科技</span></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>抖音搜索行情露出券商导流入口，社交平台高意向流量成券商获客新战场；华林证券绑定字节系，华泰证券与抖音行情卡片合作。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><span class="tag tag-sector">液冷 / AI基础设施</span></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>阿里800亿港元全投AI基础设施，液冷方向受益；英维克Q2业绩环比大幅提升，CDU等液冷产品已获谷歌、英伟达、英特尔认可。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><span class="tag tag-sector">电力 / 变压器</span></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>北美数据中心变压器紧缺，交付周期拉长至3-4年；英伟达战略入股电力开发商Cloverleaf，三变科技为美国数据中心供应商。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><span class="tag tag-sector">农业 / 商品</span></td>
+                        <td><span class="stars">★★☆☆☆</span></td>
+                        <td>厄尔尼诺推升农产品价格，棉花新高、橡胶/白糖新高途中；海南橡胶、新赛股份、中粮糖业被点名。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><span class="tag tag-sector">出版 / 教育</span></td>
+                        <td><span class="stars">★★☆☆☆</span></td>
+                        <td>韦东奕主编教辅上线即爆卖，龙门书局为中国科传旗下品牌，短期事件驱动。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>💡 重点个股推荐与分析</h2>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="name">耐科装备 <span class="tag tag-up">看翻倍</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">半导体设备</span></div>
+                    <div class="logic">半年报大超预期，Q2营收1.2e环比+72.5%，归母净利润3500万环比+144%。在手订单7-8e，芯片封装设备订单周度环比+50%。全年1.5e打底有望冲击2e，明年3.5e打底，15倍不到的半导体设备，看翻倍空间。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">国瓷材料 <span class="tag tag-up">看千亿市值</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">去日化 / 电子材料</span></div>
+                    <div class="logic">稀土管控趋严，日本材料行业受限制，国产替代势不可挡。MLCC粉体、氧化锆、氮化铝生产均需添加稀土氧化物，客户从日本厂商转向国瓷。预计27年各项业务合计利润看1000亿+市值。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">电连技术 <span class="tag tag-up">看500亿→千亿</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">AI互连 / NPO</span></div>
+                    <div class="logic">苏州厂配合中际研发NPO业务，FAU 10月小批量，明年100条产线；Socket 27年下半年配合中际大批量生产。子公司爱默斯为pogo pin龙头，产能今年扩大4倍。主业+光电互连产品估值从消费电子转向高增长AI。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">英维克 <span class="tag tag-up">Q2环比大增</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">液冷</span></div>
+                    <div class="logic">Q2营收18.41亿环比+56.67%，归母净利润1.76亿环比+1934%。飞龙股份已开始向英维克发货液冷泵，推测Q3液冷业绩初步兑现。CDU等产品已获谷歌、英伟达、英特尔认可。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">三变科技 <span class="tag tag-up">北美变压器</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">电力设备</span></div>
+                    <div class="logic">北美数据中心变压器供给紧缺，海外交付周期拉长至3-4年。公司已在美国设立全资子公司，为马斯克xAI超级计算机中心及美国数据中心SINO POWER DYNAMICS供应商，Q3或为业绩加速拐点。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">中胤时尚 <span class="tag tag-up">EDA第四股</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">EDA / 芯片验证</span></div>
+                    <div class="logic">拟收购英诺达33.65%股权，完成后持股40.03%。英诺达是Cadence Palladium全球独家授权第三方服务商，拥有硬件验证云平台+自研EDA软件+IC设计服务，有望成A股第四家EDA上市公司。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">和邦生物 <span class="tag tag-up">金矿+锂矿</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">贵金属 / 锂矿</span></div>
+                    <div class="logic">金价高位运行，公司手握海内外金矿+锂矿探矿权。澳洲Jundee South探矿面积1373km²，国内四川缅萨洼金矿100%探矿权，尼日利亚22个锂矿探矿权，具备化工向资源股估值切换预期。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">英科医疗 <span class="tag tag-up">业绩超预期</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">医疗器械</span></div>
+                    <div class="logic">26H1营收69.09亿同比+40.61%，扣非归母净利润10.61亿同比+165%。毛利率37.82%，净利率13.09%，成本优势显著。近期行业或迎提价，持续推荐。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">东方中科 <span class="tag tag-up">小米玄戒+光刻机</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">半导体测试</span></div>
+                    <div class="logic">为小米玄戒（北京玄戒技术）提供综合测试服务；同时为光刻机光源公司科益虹源供货，是华为海思综合测试解决方案供应商，兼具小米+光刻机+华为催化。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">源杰科技 / 联特科技 <span class="tag tag-up">低吸科技</span></div>
+                    <div><span class="tag tag-group">震哥-胡汉三</span> <span class="tag tag-sector">光芯片 / 光模块</span></div>
+                    <div class="logic">早盘科技分歧给出低吸窗口，源杰、联特缩量探底回升，下跌无量，被中际/新易盛被动带偏。短线关注天孚、源杰、联特、博杰，趋势看东山。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">阳光电源 <span class="tag tag-up">FCC豁免受益</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">逆变器 / 储能</span></div>
+                    <div class="logic">FCC修订条款细化逆变器定义、豁免离网项目、明确45X税收抵免路径，美国市场政策能见度提升，此前超跌板块具备估值修复基础。重点推荐阳光电源、海博思创、德业股份、正泰电源等。</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">中国科传 <span class="tag tag-up">事件驱动</span></div>
+                    <div><span class="tag tag-group">信息早知道</span> <span class="tag tag-sector">出版</span></div>
+                    <div class="logic">韦东奕主编教辅上线即爆卖，小学版售出超3万本、单日销售额破百万，出版方龙门书局为中国科传旗下品牌，短期情绪催化。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚖️ 市场情绪与风险提示</h2>
+            <div class="two-col">
+                <div class="risk-card">
+                    <h3>⚠️ 主要风险</h3>
+                    <ul class="watch-list">
+                        <li><strong>美伊局势升级：</strong>霍尔木兹海峡封锁风险若长期化，将冲击全球原油、航运、股市，核心逻辑社视为还没充分反应的突发利空。</li>
+                        <li><strong>科技股情绪脆弱：</strong>英伟达涨价实为内存成本挤压利润，下游若不接受将反向压价，光模块/PCB/液冷/电源全线承压。</li>
+                        <li><strong>期指净空单高位：</strong>中信净空单75476、主要玩家119052，主力净流出近800亿，杠杆资金减少。</li>
+                        <li><strong>指数技术性走弱：</strong>洛飞、彭域等多群认为指数图形偏弱，短线看不到太好开仓点，月末宜收缩仓位。</li>
+                        <li><strong>IPO收紧传闻：</strong>监管传达IPO收紧态度，仅细分行业前3可上，未来产业需革命性技术背书。</li>
+                    </ul>
+                </div>
+                <div class="bull-card">
+                    <h3>📈 积极信号</h3>
+                    <ul class="watch-list">
+                        <li><strong>成交维持两万亿：</strong>今日成交2.02万亿，较上日放量，流动性环境仍较好。</li>
+                        <li><strong>政策面明确：</strong>国常会强调新一代通信网建设适度超前；FCC逆变器条款修订提升美国市场盈利能见度。</li>
+                        <li><strong>国产替代加速：</strong>长存控股科创板IPO受理、半导体材料去日化、硅晶圆涨价均指向国产链景气。</li>
+                        <li><strong>AI资本开支坚定：</strong>阿里800亿港元全投AI，英伟达战略入股电力开发商，算力基建长期需求未改。</li>
+                        <li><strong>部分科技逆势：</strong>光库、衡东光、天通、源杰、联特等在中际/新易盛走弱时表现抗跌。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🔔 明日关注要点</h2>
+            <div class="watch-card">
+                <strong>1. 美伊局势最新进展</strong><br>
+                关注美方对伊制裁具体细节、伊朗反击方式及霍尔木兹海峡通航情况，冲突缓和是抄底前提。
+            </div>
+            <div class="watch-card">
+                <strong>2. 杰克逊霍尔会议与英伟达财报</strong><br>
+                本周Jackson Hole Warsh讲话、英伟达财报将是全球AI与利率预期的关键变量。
+            </div>
+            <div class="watch-card">
+                <strong>3. 科技股止跌修复节奏</strong><br>
+                观察中际旭创、新易盛、天孚通信能否止跌，源杰、联特、光库、东山精密能否延续逆势。
+            </div>
+            <div class="watch-card">
+                <strong>4. 黄金/有色持续性</strong><br>
+                美伊避险与黄金短期冲顶背离并存，关注贵金属板块量能与期货走势。
+            </div>
+            <div class="watch-card">
+                <strong>5. 阿里配售与AI基建链</strong><br>
+                阿里折价配售落地后，资金投向AI基础设施，液冷、光模块、服务器相关订单预期是否兑现。
+            </div>
+        </div>
+
+        <div class="footer">
+            数据来源：用户15个飞书交流群实时监控 | 仅供个人参考，不构成投资建议
+        </div>
+    </div>
+</body>
+</html>
