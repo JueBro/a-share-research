@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-26 飞书群聊市场观点汇总</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1a1a2e;
+    --text-secondary: #6c757d;
+    --border: #e9ecef;
+    --red: #dc3545;
+    --green: #28a745;
+    --blue: #2563eb;
+    --orange: #fd7e14;
+    --purple: #7c3aed;
+    --gold: #d4a017;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .header h1 { font-size: 22px; margin-bottom: 8px; }
+  .header .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 12px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .badge-red { background: #fde8e8; color: var(--red); }
+  .badge-green { background: #e8f5e9; color: var(--green); }
+  .badge-blue { background: #e7f0ff; color: var(--blue); }
+  .badge-orange { background: #fff3cd; color: var(--gold); }
+  .card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid var(--border);
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section { margin-bottom: 8px; }
+  .note {
+    background: #fff8e1;
+    border-left: 4px solid var(--gold);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #5d4037;
+    margin-bottom: 18px;
+  }
+  .quote {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+  }
+  .quote .source {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th { color: var(--text-secondary); font-weight: 600; background: #f8f9fa; }
+  .star { color: var(--orange); }
+  .stock-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .stock-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 16px;
+    border-left: 4px solid var(--blue);
+  }
+  .stock-card .name { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+  .stock-card .logic { font-size: 13px; color: #495057; }
+  .stock-card .source { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .risk-col { border-left: 4px solid var(--green); padding-left: 14px; }
+  .bull-col { border-left: 4px solid var(--red); padding-left: 14px; }
+  .watch-list {
+    list-style: none;
+  }
+  .watch-list li {
+    background: #fff8e1;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-secondary);
+    font-size: 12px;
+  }
+  @media (max-width: 640px) {
+    .two-col { grid-template-columns: 1fr; }
+    .stock-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📊 飞书群聊市场观点汇总</h1>
+    <div>2026年8月26日（周三）</div>
+    <div class="meta">
+      <span>监控群：15个</span>
+      <span>有效消息：14条</span>
+      <span>活跃群：4个</span>
+      <span>生成时间：2026-08-26 06:57</span>
+    </div>
+  </div>
+
+  <div class="note">
+    ⚠️ 今日为交易日上午（截至拉取时点 06:57），15个监控群仅收集到 14 条有效文本消息，市场讨论集中在早盘前。以下内容按现有消息整理，晚间若有新增讨论，可关注次日汇总补充。
+  </div>
+
+  <div class="card">
+    <div class="card-title">🔥 大盘走势与核心观点</div>
+    <div class="quote">
+      俄媒援引消息人士：美伊已就停火协议条款达成共识，其内容包括霍尔木兹海峡的自由航行。美伊缓和预期升温，油价持续大跌，今天该反弹了！
+      <div class="source">来源：核心逻辑社 | 时间：06:56</div>
+    </div>
+    <div class="quote">
+      科技其实也是同理：风华-云南-宝鼎-英维克。市场没量，把科技当成题材，不能做机构大票。
+      <div class="source">来源：洛飞小群 | 时间：00:30</div>
+    </div>
+    <div class="quote">
+      药很难上仓位……我想后面定投哈药出监管的。科技英维克后面给首分也看。
+      <div class="source">来源：洛飞小群 | 时间：00:33</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📈 板块热度排行</div>
+    <table>
+      <thead>
+        <tr><th>排名</th><th>板块</th><th>热度</th><th>核心逻辑</th><th>来源群</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>医药/中药</td>
+          <td><span class="star">★★★☆☆</span></td>
+          <td>群聊将医药炒作分为哈药→百花→神奇→汉森四个阶段，计划监管靴子落地后低吸</td>
+          <td>洛飞小群</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>科技/AI硬件</td>
+          <td><span class="star">★★☆☆☆</span></td>
+          <td>市场缩量只能当题材做，关注风华-云南-宝鼎-英维克链条及首分机会</td>
+          <td>洛飞小群</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>宏观/中东局势</td>
+          <td><span class="star">★★☆☆☆</span></td>
+          <td>美伊停火预期升温，油价大跌，短线利好风险偏好修复</td>
+          <td>核心逻辑社</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>推理芯片/OpenAI自研芯片</td>
+          <td><span class="star">★☆☆☆☆</span></td>
+          <td>OpenAI Jalapeño通用推理芯片2027年放量，CUDA护城河或受冲击</td>
+          <td>傅里叶的猫</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 重点个股推荐与分析</div>
+    <div class="stock-grid">
+      <div class="stock-card">
+        <div class="name">哈药股份 <span class="badge badge-red">龙头</span></div>
+        <div class="logic">医药一阶段龙头，计划等监管靴子落地后定投低吸。</div>
+        <div class="source">来源：洛飞小群</div>
+      </div>
+      <div class="stock-card">
+        <div class="name">百花医药 <span class="badge badge-blue">热门</span></div>
+        <div class="logic">医药二阶段标的，分歧后寻找介入机会。</div>
+        <div class="source">来源：洛飞小群</div>
+      </div>
+      <div class="stock-card">
+        <div class="name">汉森制药 <span class="badge badge-blue">关注</span></div>
+        <div class="logic">医药四阶段标的，等待断板分歧后低吸。</div>
+        <div class="source">来源：洛飞小群</div>
+      </div>
+      <div class="stock-card">
+        <div class="name">英维克 <span class="badge badge-blue">关注</span></div>
+        <div class="logic">科技方向首分关注，液冷/散热，缩量行情按题材对待。</div>
+        <div class="source">来源：洛飞小群</div>
+      </div>
+      <div class="stock-card">
+        <div class="name">豫能控股 <span class="badge badge-orange">短线</span></div>
+        <div class="logic">回顾此前点火上板案例，计划明日开始低吸、定投几天。</div>
+        <div class="source">来源：洛飞小群</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚖️ 市场情绪与风险提示</div>
+    <div class="two-col">
+      <div class="bull-col">
+        <div style="font-weight:700;color:var(--red);margin-bottom:8px;">积极信号</div>
+        <ul>
+          <li>美伊停火预期升温，油价大跌，早盘风险偏好有望修复</li>
+          <li>医药题材维持阶段轮动，资金仍在寻找短线机会</li>
+          <li>OpenAI自研芯片进展或对国产推理链产生映射</li>
+        </ul>
+      </div>
+      <div class="risk-col">
+        <div style="font-weight:700;color:var(--green);margin-bottom:8px;">主要风险</div>
+        <ul>
+          <li>市场缩量，科技只能当题材做，机构大票承压</li>
+          <li>医药监管靴子未完全落地，高位分歧风险较大</li>
+          <li>今日消息量极少，不足以形成强一致预期</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💡 今日关注要点</div>
+    <ul class="watch-list">
+      <li>📌 美伊停火消息能否持续发酵，带动原油、航运、军工等板块情绪修复</li>
+      <li>📌 医药四阶段标的（哈药/百花/神奇/汉森）盘中分歧与承接力度</li>
+      <li>📌 科技链风华-云南-宝鼎-英维克是否出现首分机会，但需警惕缩量</li>
+      <li>📌 市场整体量能变化：无量则仍以题材轮动为主</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    数据来源：15个飞书交流群聊天记录 | 仅供个人参考，不构成投资建议
+  </div>
+</div>
+</body>
+</html>
