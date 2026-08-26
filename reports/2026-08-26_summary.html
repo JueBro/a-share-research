@@ -1,290 +1,480 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026-08-26 飞书群聊市场观点汇总</title>
-<style>
-  :root {
-    --bg: #f5f6f8;
-    --card-bg: #ffffff;
-    --text: #1a1a2e;
-    --text-secondary: #6c757d;
-    --border: #e9ecef;
-    --red: #dc3545;
-    --green: #28a745;
-    --blue: #2563eb;
-    --orange: #fd7e14;
-    --purple: #7c3aed;
-    --gold: #d4a017;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
-  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
-  .header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    border-radius: 16px;
-    padding: 28px 24px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  .header h1 { font-size: 22px; margin-bottom: 8px; }
-  .header .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    font-size: 13px;
-    opacity: 0.85;
-    margin-top: 12px;
-  }
-  .badge {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .badge-red { background: #fde8e8; color: var(--red); }
-  .badge-green { background: #e8f5e9; color: var(--green); }
-  .badge-blue { background: #e7f0ff; color: var(--blue); }
-  .badge-orange { background: #fff3cd; color: var(--gold); }
-  .card {
-    background: var(--card-bg);
-    border-radius: 14px;
-    padding: 22px;
-    margin-bottom: 18px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: 1px solid var(--border);
-  }
-  .card-title {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .section { margin-bottom: 8px; }
-  .note {
-    background: #fff8e1;
-    border-left: 4px solid var(--gold);
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    color: #5d4037;
-    margin-bottom: 18px;
-  }
-  .quote {
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    font-size: 14px;
-  }
-  .quote .source {
-    font-size: 12px;
-    color: var(--text-secondary);
-    margin-top: 8px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-  }
-  th, td {
-    padding: 12px 10px;
-    text-align: left;
-    border-bottom: 1px solid var(--border);
-  }
-  th { color: var(--text-secondary); font-weight: 600; background: #f8f9fa; }
-  .star { color: var(--orange); }
-  .stock-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 14px;
-  }
-  .stock-card {
-    background: #f8f9fa;
-    border-radius: 12px;
-    padding: 16px;
-    border-left: 4px solid var(--blue);
-  }
-  .stock-card .name { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-  .stock-card .logic { font-size: 13px; color: #495057; }
-  .stock-card .source { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .risk-col { border-left: 4px solid var(--green); padding-left: 14px; }
-  .bull-col { border-left: 4px solid var(--red); padding-left: 14px; }
-  .watch-list {
-    list-style: none;
-  }
-  .watch-list li {
-    background: #fff8e1;
-    border-radius: 10px;
-    padding: 12px 16px;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  .footer {
-    text-align: center;
-    padding: 24px;
-    color: var(--text-secondary);
-    font-size: 12px;
-  }
-  @media (max-width: 640px) {
-    .two-col { grid-template-columns: 1fr; }
-    .stock-grid { grid-template-columns: 1fr; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总 | 2026-08-26</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --primary: #1e40af;
+            --primary-light: #dbeafe;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --warning: #d97706;
+            --warning-light: #fef3c7;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 24px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .header h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; }
+        .header .meta { display: flex; flex-wrap: wrap; gap: 20px; opacity: 0.95; font-size: 14px; }
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-primary { background: var(--primary-light); color: var(--primary); }
+        .badge-danger { background: var(--danger-light); color: var(--danger); }
+        .badge-success { background: var(--success-light); color: var(--success); }
+        .badge-warning { background: var(--warning-light); color: var(--warning); }
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-desc { color: var(--text-secondary); font-size: 13px; margin-bottom: 16px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+        .insight-item {
+            border-left: 4px solid var(--primary);
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 12px;
+        }
+        .insight-item .source { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+        .up { color: var(--danger); font-weight: 600; }
+        .down { color: var(--success); font-weight: 600; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f3f4f6; font-weight: 600; color: var(--text-secondary); }
+        tr:last-child td { border-bottom: none; }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+        .stock-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .stock-card .stock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .stock-name { font-size: 16px; font-weight: 700; }
+        .stock-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .tag {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+        .tag-sector { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+        .tag-style { background: #fef3c7; color: #b45309; border-color: #fde68a; }
+        .stock-logic { font-size: 13px; color: var(--text); margin: 10px 0; }
+        .stock-source { font-size: 12px; color: var(--text-secondary); }
+        .risk-card {
+            background: var(--danger-light);
+            border: 1px solid #fecaca;
+            border-radius: 10px;
+            padding: 16px;
+        }
+        .positive-card {
+            background: var(--success-light);
+            border: 1px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 16px;
+        }
+        .risk-card h4, .positive-card h4 { margin: 0 0 10px; font-size: 15px; }
+        .risk-card ul, .positive-card ul { margin: 0; padding-left: 18px; font-size: 13px; }
+        .risk-card li { margin-bottom: 6px; }
+        .positive-card li { margin-bottom: 6px; }
+        .watch-list { display: grid; gap: 12px; }
+        .watch-item {
+            background: var(--warning-light);
+            border: 1px solid #fde68a;
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+        .footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 32px;
+            padding: 16px;
+        }
+        .market-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .data-box {
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 14px;
+            text-align: center;
+        }
+        .data-box .value { font-size: 20px; font-weight: 700; }
+        .data-box .label { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+        .divider { height: 1px; background: var(--border); margin: 16px 0; }
+    </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <h1>📊 飞书群聊市场观点汇总</h1>
-    <div>2026年8月26日（周三）</div>
-    <div class="meta">
-      <span>监控群：15个</span>
-      <span>有效消息：14条</span>
-      <span>活跃群：4个</span>
-      <span>生成时间：2026-08-26 06:57</span>
+    <div class="container">
+        <div class="header">
+            <h1>飞书群聊市场观点汇总</h1>
+            <div class="meta">
+                <span>📅 日期：2026-08-26（周三）</span>
+                <span>👥 监控群数：15</span>
+                <span>💬 消息总数：305</span>
+                <span>⏰ 生成时间：2026-08-26 23:00</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📊 大盘走势与核心观点</div>
+            <div class="market-data">
+                <div class="data-box">
+                    <div class="value">1.82万亿</div>
+                    <div class="label">三市成交额</div>
+                </div>
+                <div class="data-box">
+                    <div class="value down">-223亿</div>
+                    <div class="label">较前日缩量</div>
+                </div>
+                <div class="data-box">
+                    <div class="value up">+119.72亿</div>
+                    <div class="label">主力净流入</div>
+                </div>
+                <div class="data-box">
+                    <div class="value">2.66万亿</div>
+                    <div class="label">两融余额</div>
+                </div>
+            </div>
+            <div class="section-desc">今日市场缩量反弹，沪深主要指数收红；高盛午间收盘显示SCHOMP上涨0.70%、STAR 50上涨2.18%。但场内情绪仍偏谨慎，核心逻辑社直言“这量缩的，都没人玩了”，并指出从光模块走势看，这是近几年来第一次没有资金埋伏英伟达业绩。</div>
+
+            <div class="insight-item">
+                <strong>核心逻辑社：</strong>底部信号出现，适度试错，要信早信。大A慢牛大趋势仍在，前提是旺旺队呵护不能中断、AI主线逻辑不能走坏、美伊局势必须持续缓和。看好国产算力，8月31日半导体设备大会、9月7日华为三折叠发布、9月17日华为全联接大会是重磅催化；同时关注低位军军飞机（歼10）。
+                <div class="source">来源：核心逻辑社</div>
+            </div>
+            <div class="insight-item">
+                <strong>小锦鲤：</strong>整体防守一波，医药大分歧就在这两天，是一个复杂顶；比起吃最后一口，不如开始防守。今天按剧本早上冲高落袋、恐慌接回，尾盘回落是好事，连续分歧后会回流。
+                <div class="source">来源：小锦鲤</div>
+            </div>
+            <div class="insight-item">
+                <strong>洛飞小群：</strong>市场没量，科技（风华-云南-宝鼎-英维克）只能当题材，不能做机构大票；医药阶段论：哈药一阶段、百花二阶段、神奇三阶段、汉森四阶段，计划监管靴子落地后低吸哈药。今晚英伟达财报是全球焦点，历史统计财报后前30分钟见高点随后掉头。
+                <div class="source">来源：洛飞小群</div>
+            </div>
+            <div class="insight-item">
+                <strong>潘凤：</strong>现在用熊市的方法最正确，持股是当下行情最头疼的情况。开仓多不是因为看好行情，只是奔着套利去，仓位小。今日买入剑桥科技、亨通光电、西部矿业各0.5成，开盘卖出长盈通、石头科技。
+                <div class="source">来源：潘凤</div>
+            </div>
+            <div class="insight-item">
+                <strong>猫十三：</strong>最近没做交易，继续坚持国算。浪潮、紫光、宏达、华丰都是周五出业绩，已缩量到极致；星网锐捷缩量洗盘。短线关注共进股份，业绩落地、盘子小、图形不错。
+                <div class="source">来源：猫十三</div>
+            </div>
+            <div class="insight-item">
+                <strong>彭域：</strong>今天不适合重仓，建议今晚英伟达业绩出了明天做右侧。688/300依旧没有有效共振，盘中折腾一天红一两个点。
+                <div class="source">来源：彭域</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🔥 板块热度排行</div>
+            <div class="section-desc">按今日群聊提及频率、逻辑清晰度及资金关注度综合排序</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>板块名称</th>
+                        <th>热度</th>
+                        <th>核心逻辑</th>
+                        <th>主要来源</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>液冷/散热</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>Rubin液冷模组中央分水器精度提升带来格局重塑；华为Mate90主动散热成最大硬件增量</td>
+                        <td>信息早知道、洛飞小群</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>华为链/消费电子/Mate90</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>昇腾910C现货一卡难求、大厂托关系抢货；9月三折叠/Mate90催化密集</td>
+                        <td>信息早知道、核心逻辑社</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>光模块/CPO/NPO</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>英伟达财报前夜分歧大；OpenAI自研芯片催化；华灿光电切入CPO供应链</td>
+                        <td>信息早知道、傅里叶的猫</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>创新药/CXO/医药</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>多家CXO中报超预期、在手订单高增长；但群友普遍认为医药大分歧将至</td>
+                        <td>信息早知道、小锦鲤、洛飞小群</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>半导体设备/存储</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>YMTC目标2027年成全球最大NAND厂商，26-27年需新扩40万片/月</td>
+                        <td>信息早知道、核心逻辑社</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>国产算力/AI算力</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>腾讯坦言算力严重不足拖慢AI发展；猫十三坚守国算等周五业绩</td>
+                        <td>核心逻辑社、猫十三</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>消费电子/折叠屏</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>苹果折叠屏9月9日量产在即；华为Mate90发布在即</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>周期品/工业气体/TMP/染料</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>氩气单日暴涨42.86%；TMP、活性染料再次涨价；缩量市场中的涨价线</td>
+                        <td>信息早知道、潘凤、洛飞小群</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><strong>光纤/通信</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>散纤价格回升，数据中心A1光纤紧缺；工信部未来五年加强电信网络建设</td>
+                        <td>信息早知道、潘凤</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><strong>大金融</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>指数反攻，多家券商业绩大增；银之杰董事长退休+开盘啦协同催化</td>
+                        <td>信息早知道</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🎯 重点个股推荐与分析</div>
+            <div class="section-desc">精选今日群聊中逻辑清晰、有明确催化或业绩支撑的个股，按板块分组</div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">强瑞技术</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">液冷/散热</span>
+                        <span class="tag tag-style">短中线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">中金机械重点推荐。Rubin液冷模组中央分水器精度要求和加工时间大幅提升，下半年高精度液冷模组加工能力供给端短缺，格局有望重塑。强瑞是非标夹治具制造能力龙头，目前送样AVC、富士康等渠道并拿到code进展最快，4月已进入一天500套批量阶段，今年预计3-5亿元收入。按单板5000元、一个机柜36块、27年10万机柜计算，共180亿市场空间；强瑞通过外协可实现每天2000块产能，对应年产值30亿元，远期可达50亿元+。主业5亿利润、150亿市值底，液冷远期50亿收入平台对应10亿利润、300亿市值底。</div>
+                <div class="stock-source">来源：信息早知道</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">飞荣达 / 艾为电子</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">华为链/散热</span>
+                        <span class="tag tag-style">短中线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">华为Mate90系列预计9月23日前后发布，高配Pro/Pro Max/RS将首次标配主动散热微泵液冷。飞荣达是华为散热战略级供应商，提供热管、VC均热板、石墨/石墨烯，并已具备微泵液冷、微型风扇等主动散热方案能力，单机价值量大幅提升。艾为电子自研180Vpp压电微泵液冷驱动芯片是系统核心部件，已在努比亚红魔量产，2026年手机+PC量产，与飞荣达等模组厂配套。</div>
+                <div class="stock-source">来源：信息早知道</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">药明康德 / 药明生物 / 药明合联 / 凯莱英 / 康龙化成</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">创新药/CXO</span>
+                        <span class="tag tag-style">中长线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">天风医药杨松团队认为产业链景气度明显提升，多家CXO中报超预期、在手订单高增长。药明康德全年收入指引从18-22%上调至35-39%；药明生物全年指引上调至15-18%（固定汇率20-23%）；药明合联未完成服务订单+50.4%；凯莱英在手订单+53.77%；康龙化成新签订单同比+30%以上。但小锦鲤、洛飞均提示医药大分歧将至，短线宜落袋防守。</div>
+                <div class="stock-source">来源：信息早知道、小锦鲤、洛飞小群</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">芯源微 / 中芯国际 / 华虹公司</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">半导体设备/代工</span>
+                        <span class="tag tag-style">中长线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">YMTC目标2027年成为全球最大NAND闪存生产商，26-27两年需新扩40万片/月，半导体设备零部件确定性高，芯源微为长存链设备重点推荐。核心逻辑社V+观点认为中芯国际、华虹公司两个代工大概率都见底了，华为9月7日三折叠发布催化代工、封测、设备。</div>
+                <div class="stock-source">来源：信息早知道、核心逻辑社</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">联得装备 / 宜安科技 / 精研科技 / 安洁科技</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">消费电子/折叠屏</span>
+                        <span class="tag tag-style">短线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">苹果首款折叠屏iPhone Fold预计6月25日进入量产，9月9日量产在即。联得装备为UTG贴合设备独供；宜安科技为液态金属铰链独家供应商；精研科技具备MIM核心零部件+组件能力；安洁科技为折叠屏功能件核心供应商。</div>
+                <div class="stock-source">来源：信息早知道</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">华灿光电 / 中际旭创</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">光模块/CPO</span>
+                        <span class="tag tag-style">短线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">华灿光电从LED亏损王切入英伟达CPO供应链，2026上半年营收+65%、归母净利同比大增1017%，京东方入主赋能。中际旭创2027新产品逐步上量，CSP客户的CPO光引擎将是主要核心集成供应商。但英伟达财报前夜市场对业绩分歧大，需警惕财报后波动。</div>
+                <div class="stock-source">来源：信息早知道、傅里叶的猫</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">星辉环材 / 浙江世宝</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">无人驾驶</span>
+                        <span class="tag tag-style">短线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">国内无人驾驶正式立法，特斯拉9月3日发布Cybercab。九识智能通过两层股权结构间接持有星辉环材27.5%股份，估值重构空间大（历史案例：上纬新材被智元收购后1年18倍、天普股份被中昊芯英收购后1年16倍）。浙江世宝已两连板，是A股无人驾驶龙头。</div>
+                <div class="stock-source">来源：信息早知道</div>
+            </div>
+
+            <div class="stock-card">
+                <div class="stock-header">
+                    <span class="stock-name">百川股份 / 郴电国际 / 杭氧股份</span>
+                    <div class="stock-tags">
+                        <span class="tag tag-sector">周期品涨价</span>
+                        <span class="tag tag-style">短线</span>
+                    </div>
+                </div>
+                <div class="stock-logic">TMP行业3-7月全面去库，当前售价1.1万、2日涨1000元/吨，百川股份7万吨产能盈利弹性大。氩气单日暴涨42.86%、一个月翻倍，郴电国际持有唐山中邦50.5%股权，杭氧股份为国内空分设备龙头、液氩市占率第一。</div>
+                <div class="stock-source">来源：信息早知道、黑火信息差</div>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title">⚠️ 市场情绪与风险提示</div>
+                <div class="risk-card">
+                    <h4>主要风险</h4>
+                    <ul>
+                        <li><strong>市场持续缩量：</strong>三市成交仅1.82万亿，较前日再缩量223亿，核心逻辑社直言“都没人玩了”，容错率降低。</li>
+                        <li><strong>英伟达财报高波动：</strong>今晚英伟达财报是全球焦点，历史统计财报后前30分钟见高点随后掉头，平均跌幅可达15%。</li>
+                        <li><strong>医药板块大分歧：</strong>小锦鲤、洛飞等多位群主认为医药大分歧就在这两天，是复杂顶，不宜追高。</li>
+                        <li><strong>美伊局势反复：</strong>核心逻辑社指出，美伊虽趋向缓和但尚未达成协议，冲突再度恶化将令市场再探底。</li>
+                        <li><strong>熊市套利心态：</strong>潘凤明确表示“用熊市的方法做”“持股是最头疼的情况”，市场情绪仍偏防御。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">💡 积极信号</div>
+                <div class="positive-card">
+                    <h4>利好因素</h4>
+                    <ul>
+                        <li><strong>指数收红：</strong>沪深主要指数收红，主力净流入119.72亿，较昨日大幅改善。</li>
+                        <li><strong>国产算力景气：</strong>昇腾910C一卡难求、大厂加价抢货；腾讯承认算力不足，反而印证算力紧缺。</li>
+                        <li><strong>华为/苹果催化密集：</strong>9月华为三折叠、Mate90，苹果折叠屏量产，消费电子链备货启动。</li>
+                        <li><strong>CXO业绩拐点：</strong>多家CXO中报超预期、在手订单高增长，产业链景气度提升。</li>
+                        <li><strong>周期品涨价：</strong>氩气、TMP、染料等涨价线活跃，结构性机会仍在。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🌅 明日关注要点</div>
+            <div class="watch-list">
+                <div class="watch-item">
+                    <strong>1. 英伟达财报与指引：</strong>全球焦点，业绩是否超预期、对Rubin/Blackwell出货指引如何，将决定海外链及光模块短期方向。
+                </div>
+                <div class="watch-item">
+                    <strong>2. 医药分歧延续：</strong>小锦鲤认为若百花延长jg，明天医药还有一个分歧延续，连续分歧后会回流，关注低吸节奏。
+                </div>
+                <div class="watch-item">
+                    <strong>3. 液冷/华为链持续性：</strong>Mate90主动散热、昇腾910C缺货、Rubin分水器三重催化，关注强瑞技术、飞荣达、华丰科技等持续性。
+                </div>
+                <div class="watch-item">
+                    <strong>4. 消费电子/折叠屏：</strong>苹果折叠屏9月9日量产预期、华为Mate90预热，关注联得装备、宜安科技、精研科技、卓翼科技等。
+                </div>
+                <div class="watch-item">
+                    <strong>5. 周期涨价线：</strong>氩气、TMP、染料等涨价逻辑是否扩散，关注郴电国际、杭氧股份、百川股份、浙江龙盛等。
+                </div>
+                <div class="watch-item">
+                    <strong>6. 量能变化：</strong>若市场继续缩量，容错率降低，宜控制仓位；若放量反弹，可跟随主线加仓。
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📰 重要新闻与政策速览</div>
+            <ul style="font-size: 14px; line-height: 1.8; padding-left: 20px;">
+                <li><strong>美伊缓和：</strong>俄媒援引消息人士称美伊已就停火协议条款达成共识，霍尔木兹海峡自由航行；伊朗与阿曼拟建立安全海上通道。</li>
+                <li><strong>英伟达财报前：</strong>市场多空分歧突出，买方预测F2Q/F3Q营收均可能超预期20亿美元，但晶圆供给约束是现实限制。</li>
+                <li><strong>OpenAI自研芯片：</strong>Jalapeno为通用推理芯片，预计2027年开始放量，SA认为CUDA护城河可能正在失效。</li>
+                <li><strong>腾讯算力不足：</strong>汤道生回应“腾讯做AI慢了”，称混元大模型多次重构，但算力严重不足拖慢训练与产品发展。</li>
+                <li><strong>银行业监管：</strong>银行业监督管理法修订草案二审，压实银行业监督管理机构保护消费者职责。</li>
+                <li><strong>核聚变：</strong>中国聚变等9家企业将协同攻关高温超导强场托卡马克磁体研制，目标2030年前完成原型磁体研制。</li>
+                <li><strong>上海国际贸易中心：</strong>扩大铜、铝等重点金属交易规模，加快健全锂、钴、镍等新兴金属期货品种序列。</li>
+                <li><strong>业绩亮点：</strong>中科曙光上半年净利+33.31%；杭电股份上半年净利+938.67%，章建平新进第三大股东；泸州老窖上半年净利-43.37%。</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>免责声明：本报告内容整理自用户监控的15个飞书交流群，仅供个人参考，不构成投资建议。市场有风险，投资需谨慎。</p>
+            <p>生成时间：2026-08-26 23:00 | 数据来源：飞书群聊消息汇总</p>
+        </div>
     </div>
-  </div>
-
-  <div class="note">
-    ⚠️ 今日为交易日上午（截至拉取时点 06:57），15个监控群仅收集到 14 条有效文本消息，市场讨论集中在早盘前。以下内容按现有消息整理，晚间若有新增讨论，可关注次日汇总补充。
-  </div>
-
-  <div class="card">
-    <div class="card-title">🔥 大盘走势与核心观点</div>
-    <div class="quote">
-      俄媒援引消息人士：美伊已就停火协议条款达成共识，其内容包括霍尔木兹海峡的自由航行。美伊缓和预期升温，油价持续大跌，今天该反弹了！
-      <div class="source">来源：核心逻辑社 | 时间：06:56</div>
-    </div>
-    <div class="quote">
-      科技其实也是同理：风华-云南-宝鼎-英维克。市场没量，把科技当成题材，不能做机构大票。
-      <div class="source">来源：洛飞小群 | 时间：00:30</div>
-    </div>
-    <div class="quote">
-      药很难上仓位……我想后面定投哈药出监管的。科技英维克后面给首分也看。
-      <div class="source">来源：洛飞小群 | 时间：00:33</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">📈 板块热度排行</div>
-    <table>
-      <thead>
-        <tr><th>排名</th><th>板块</th><th>热度</th><th>核心逻辑</th><th>来源群</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>医药/中药</td>
-          <td><span class="star">★★★☆☆</span></td>
-          <td>群聊将医药炒作分为哈药→百花→神奇→汉森四个阶段，计划监管靴子落地后低吸</td>
-          <td>洛飞小群</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>科技/AI硬件</td>
-          <td><span class="star">★★☆☆☆</span></td>
-          <td>市场缩量只能当题材做，关注风华-云南-宝鼎-英维克链条及首分机会</td>
-          <td>洛飞小群</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>宏观/中东局势</td>
-          <td><span class="star">★★☆☆☆</span></td>
-          <td>美伊停火预期升温，油价大跌，短线利好风险偏好修复</td>
-          <td>核心逻辑社</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>推理芯片/OpenAI自研芯片</td>
-          <td><span class="star">★☆☆☆☆</span></td>
-          <td>OpenAI Jalapeño通用推理芯片2027年放量，CUDA护城河或受冲击</td>
-          <td>傅里叶的猫</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="card">
-    <div class="card-title">🎯 重点个股推荐与分析</div>
-    <div class="stock-grid">
-      <div class="stock-card">
-        <div class="name">哈药股份 <span class="badge badge-red">龙头</span></div>
-        <div class="logic">医药一阶段龙头，计划等监管靴子落地后定投低吸。</div>
-        <div class="source">来源：洛飞小群</div>
-      </div>
-      <div class="stock-card">
-        <div class="name">百花医药 <span class="badge badge-blue">热门</span></div>
-        <div class="logic">医药二阶段标的，分歧后寻找介入机会。</div>
-        <div class="source">来源：洛飞小群</div>
-      </div>
-      <div class="stock-card">
-        <div class="name">汉森制药 <span class="badge badge-blue">关注</span></div>
-        <div class="logic">医药四阶段标的，等待断板分歧后低吸。</div>
-        <div class="source">来源：洛飞小群</div>
-      </div>
-      <div class="stock-card">
-        <div class="name">英维克 <span class="badge badge-blue">关注</span></div>
-        <div class="logic">科技方向首分关注，液冷/散热，缩量行情按题材对待。</div>
-        <div class="source">来源：洛飞小群</div>
-      </div>
-      <div class="stock-card">
-        <div class="name">豫能控股 <span class="badge badge-orange">短线</span></div>
-        <div class="logic">回顾此前点火上板案例，计划明日开始低吸、定投几天。</div>
-        <div class="source">来源：洛飞小群</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">⚖️ 市场情绪与风险提示</div>
-    <div class="two-col">
-      <div class="bull-col">
-        <div style="font-weight:700;color:var(--red);margin-bottom:8px;">积极信号</div>
-        <ul>
-          <li>美伊停火预期升温，油价大跌，早盘风险偏好有望修复</li>
-          <li>医药题材维持阶段轮动，资金仍在寻找短线机会</li>
-          <li>OpenAI自研芯片进展或对国产推理链产生映射</li>
-        </ul>
-      </div>
-      <div class="risk-col">
-        <div style="font-weight:700;color:var(--green);margin-bottom:8px;">主要风险</div>
-        <ul>
-          <li>市场缩量，科技只能当题材做，机构大票承压</li>
-          <li>医药监管靴子未完全落地，高位分歧风险较大</li>
-          <li>今日消息量极少，不足以形成强一致预期</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-title">💡 今日关注要点</div>
-    <ul class="watch-list">
-      <li>📌 美伊停火消息能否持续发酵，带动原油、航运、军工等板块情绪修复</li>
-      <li>📌 医药四阶段标的（哈药/百花/神奇/汉森）盘中分歧与承接力度</li>
-      <li>📌 科技链风华-云南-宝鼎-英维克是否出现首分机会，但需警惕缩量</li>
-      <li>📌 市场整体量能变化：无量则仍以题材轮动为主</li>
-    </ul>
-  </div>
-
-  <div class="footer">
-    数据来源：15个飞书交流群聊天记录 | 仅供个人参考，不构成投资建议
-  </div>
-</div>
 </body>
 </html>
