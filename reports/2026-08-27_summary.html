@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总报告 - 2026-08-27</title>
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+            --red: #dc2626;
+            --green: #16a34a;
+            --blue: #2563eb;
+            --yellow: #f59e0b;
+            --purple: #7c3aed;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .header h1 { margin: 0 0 12px 0; font-size: 26px; }
+        .header-meta { display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px; opacity: 0.95; }
+        .header-meta span { display: flex; align-items: center; gap: 6px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid var(--border);
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+        .tag-red { background: #fee2e2; color: var(--red); }
+        .tag-green { background: #dcfce7; color: var(--green); }
+        .tag-blue { background: #dbeafe; color: var(--blue); }
+        .tag-yellow { background: #fef3c7; color: #92400e; }
+        .tag-purple { background: #ede9fe; color: var(--purple); }
+        .up { color: var(--red); font-weight: 700; }
+        .down { color: var(--green); font-weight: 700; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); font-size: 13px; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+        .stock-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-left: 4px solid var(--blue);
+        }
+        .stock-card h4 { margin: 0 0 8px 0; font-size: 16px; }
+        .stock-card p { margin: 0; font-size: 14px; color: var(--text-secondary); }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+        .risk-box { background: #fef2f2; border-left-color: var(--red); }
+        .signal-box { background: #f0fdf4; border-left-color: var(--green); }
+        .highlight-box {
+            background: linear-gradient(90deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 4px solid var(--yellow);
+            padding: 14px 18px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+        .group-source { color: var(--text-secondary); font-size: 12px; margin-top: 6px; }
+        .footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .metric {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+        }
+        .metric-value { font-size: 22px; font-weight: 700; color: var(--blue); }
+        .metric-label { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+        .viewpoint-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+        .viewpoint-item:last-child { border-bottom: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📈 飞书群聊市场观点汇总报告</h1>
+        <div class="header-meta">
+            <span>📅 日期：2026-08-27（周四）</span>
+            <span>💬 监控群：15个</span>
+            <span>📊 消息总数：439条</span>
+            <span>⏰ 生成时间：2026-08-28 06:52</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📊 大盘走势与核心数据</div>
+        <div class="metric-grid">
+            <div class="metric"><div class="metric-value">2.14万亿</div><div class="metric-label">三市成交额（+3191亿）</div></div>
+            <div class="metric"><div class="metric-value up">+537.72亿</div><div class="metric-label">主力净流入</div></div>
+            <div class="metric"><div class="metric-value">2.65万亿</div><div class="metric-label">两融余额（-27.92亿）</div></div>
+            <div class="metric"><div class="metric-value">75,946</div><div class="metric-label">中信净空单（+123）</div></div>
+        </div>
+        <p>今日A股在英伟达财报超预期催化下收出大阳线，核心逻辑社等认为底部信号再度出现。三市成交重回2.1万亿以上，主力净流入537亿，市场情绪明显转暖。但盘中量化轮动明显，能源化工农业受美伊冲突驱动，下午石油带领传统能源股拉升时算力有所回落。</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">💡 各群核心观点</div>
+        <div class="viewpoint-item">
+            <span class="tag tag-red">核心逻辑社</span>
+            <strong>强烈看多国产算力，认为大阳线确认底部。</strong> 英伟达2028财年营收增长约70%超预期，真实需求远高于70%但供给决定可交付70%；智谱、Minimax使用国产芯片支撑推理，国产算力迎来硬核催化。前天抄底、昨天加仓、今天全面炸裂，继续躺平。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-blue">信息早知道</span>
+            <strong>密集推送固态电池、液冷、PTFE、光上游等产业催化。</strong> 我国牵头固态电池首项国际标准立项；英伟达Rubin液冷、PTFE覆铜板、磷化铟、工业气体氩气涨价等细分方向全面梳理。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-purple">小锦鲤</span>
+            <strong>控制关注度，落袋医药。</strong> 今日完全取关万邦医药并不再跟踪，天山、近岸做T。提醒涨多了调整正常，月底把风险摆在第一位。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-yellow">潘凤</span>
+            <strong>行情仍不安全，控制仓位试错。</strong> 认为股票不存在逻辑，只看位置、形态和筹码。早盘卖亨通、剑桥，半路0.5成赛微电子、先导智能、肯特股份、上海宜众，补光线传媒。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-green">洛飞小群</span>
+            <strong>科技反弹+情绪投机秋季行情。</strong> 认为科技反弹解套出来的资金会成为情绪行情增量，情绪投机的秋季行情越来越得到共识；继续接哈药。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-blue">震哥-胡汉三</span>
+            <strong>光模块反弹，核心光持有。</strong> 周一以来买光的分歧，今日东山、源杰、蘅东光领涨不打算动；连板容错率高。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-purple">彭域</span>
+            <strong>体感明显转暖，带进攻属性。</strong> 减旭创2.1成，持仓长鑫科技、新易盛、赛微电子；认为今日不像单纯护盘，下午金融有动作。
+        </div>
+        <div class="viewpoint-item">
+            <span class="tag tag-yellow">猫十三</span>
+            <strong>继续等国产算力行情。</strong> 持仓浪潮信息、华丰科技、宏达电子、星网锐捷、共进股份；宏达业绩比预期差一些但位置不高。
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🔥 板块热度排行</div>
+        <table>
+            <thead>
+                <tr><th>排名</th><th>板块名称</th><th>热度</th><th>核心逻辑</th><th>主要来源</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>光模块/CPO/NPO</td><td class="stars">★★★★★</td><td>英伟达FY28营收+70%超预期，A股光模块全线反弹，NPO/LPO/OCS发展约束最小</td><td>信息早知道/核心逻辑社/震哥</td></tr>
+                <tr><td>2</td><td>液冷/散热</td><td class="stars">★★★★★</td><td>Rubin NVL72纯液冷架构，华为将热管理列为AI DC核心，订单指数级提速</td><td>信息早知道</td></tr>
+                <tr><td>3</td><td>PTFE高频覆铜板</td><td class="stars">★★★★★</td><td>Rubin Ultra正交背板或采用PTFE混压，上游萤石同步走强</td><td>信息早知道/潘凤/黑火</td></tr>
+                <tr><td>4</td><td>国产算力/AI芯片</td><td class="stars">★★★★★</td><td>智谱GLM 5.3 Flash由国产万卡集群支撑，推理效率接近英伟达</td><td>猫十三/核心逻辑社</td></tr>
+                <tr><td>5</td><td>磷化铟/光上游</td><td class="stars">★★★★☆</td><td>衬底供需缺口延续至2028年，章建平新进云南锗业</td><td>信息早知道/核心逻辑社</td></tr>
+                <tr><td>6</td><td>固态电池</td><td class="stars">★★★★☆</td><td>我国牵头国际标准立项，消费税免征，进入测试验证+示范应用阶段</td><td>信息早知道</td></tr>
+                <tr><td>7</td><td>工业气体</td><td class="stars">★★★☆☆</td><td>氩气单日暴涨42.86%，涨价潮或向整个工业气体板块扩散</td><td>信息早知道</td></tr>
+                <tr><td>8</td><td>功率半导体</td><td class="stars">★★★☆☆</td><td>成熟制程从涨价过度至缺货，Q3业绩预期爆发</td><td>信息早知道</td></tr>
+                <tr><td>9</td><td>机器人/Physical AI</td><td class="stars">★★★☆☆</td><td>英伟达3D视觉平台发布，Optimus下半年爬产顺利</td><td>信息早知道</td></tr>
+                <tr><td>10</td><td>创新药/医药</td><td class="stars">★★★☆☆</td><td>小锦鲤落袋万邦，板块进入分歧阶段</td><td>小锦鲤/洛飞</td></tr>
+                <tr><td>11</td><td>AI应用/企业Agent</td><td class="stars">★★★☆☆</td><td>Salesforce暴涨13%，垂类软件公司迎AI窗口期</td><td>信息早知道</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🎯 重点个股推荐与分析</div>
+        <div class="stock-card">
+            <h4>中际旭创 <span class="tag tag-blue">光模块/CPO/NPO</span></h4>
+            <p>NPO主力参与方，业内基本会保持持续领先；电连技术为其配套光学器件产能包圆。来源：信息早知道/震哥/猫十三</p>
+        </div>
+        <div class="stock-card">
+            <h4>澄天伟业 <span class="tag tag-blue">液冷</span></h4>
+            <p>深度绑定健策，Rubin液冷代工，6月已获1亿+意向订单，健策要求27年准备20亿元产值产能。来源：信息早知道</p>
+        </div>
+        <div class="stock-card">
+            <h4>云南锗业 <span class="tag tag-purple">磷化铟</span></h4>
+            <p>磷化铟龙头，产能扩3倍，深度绑定华为，章建平Q2新进成为第四大股东。来源：信息早知道/核心逻辑社</p>
+        </div>
+        <div class="stock-card">
+            <h4>浪潮信息 <span class="tag tag-red">国产算力</span></h4>
+            <p>智谱GLM 5.3 Flash由国产万卡算力集群支撑，超节点服务器核心标的。来源：猫十三/信息早知道</p>
+        </div>
+        <div class="stock-card">
+            <h4>当升科技 <span class="tag tag-green">固态电池</span></h4>
+            <p>一线材料厂，已实现半固态材料百吨级月度出货及全固态材料上车验证。来源：信息早知道</p>
+        </div>
+        <div class="stock-card">
+            <h4>金田股份 <span class="tag tag-blue">AI硬件</span></h4>
+            <p>NV链核心，800V Busbar卡位领先，再生铜进入谷歌冷板供应链；合理市值390亿，距现价80%空间。来源：信息早知道</p>
+        </div>
+        <div class="stock-card">
+            <h4>肯特股份 <span class="tag tag-yellow">PTFE</span></h4>
+            <p>PTFE薄膜与高频材料核心供应商，Rubin PTFE七大核心供应商之一。来源：信息早知道/潘凤/黑火信息差</p>
+        </div>
+        <div class="stock-card">
+            <h4>万邦医药 <span class="tag tag-purple">医药</span></h4>
+            <p>小锦鲤今日完全取关并不再跟踪，此前一个月翻倍；提示涨多了调整正常。来源：小锦鲤</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">⚖️ 市场情绪与风险提示</div>
+        <div class="two-col">
+            <div>
+                <h4 style="color: var(--red); margin-top: 0;">⚠️ 主要风险</h4>
+                <div class="stock-card risk-box">
+                    <p>量化主导，轮动极快，板块持续性存疑（核心逻辑社、洛飞）</p>
+                </div>
+                <div class="stock-card risk-box">
+                    <p>月底效应，部分资金选择落袋，医药已出现大分歧（小锦鲤、洛飞）</p>
+                </div>
+                <div class="stock-card risk-box">
+                    <p>美伊冲突反复，能源、化工、农业的驱动都是局势，一旦缓和逻辑会消失（核心逻辑社）</p>
+                </div>
+                <div class="stock-card risk-box">
+                    <p>潘凤认为行情仍不安全，只做0.5成试错，股票不存在逻辑只看筹码</p>
+                </div>
+                <div class="stock-card risk-box">
+                    <p>英伟达毛利率将回落至71-72%，受HBM涨价拖累；部分收入依赖融资扶持客户</p>
+                </div>
+            </div>
+            <div>
+                <h4 style="color: var(--green); margin-top: 0;">📈 积极信号</h4>
+                <div class="stock-card signal-box">
+                    <p>英伟达FY28营收+70%大超预期，盘后大涨5-7%，目标价上调潮</p>
+                </div>
+                <div class="stock-card signal-box">
+                    <p>A股收出大阳线，成交重回2.1万亿，主力净流入537亿</p>
+                </div>
+                <div class="stock-card signal-box">
+                    <p>智谱、Minimax使用国产芯片，国产算力从内需升级为内需+出海双轮驱动</p>
+                </div>
+                <div class="stock-card signal-box">
+                    <p>固态电池、液冷、PTFE、磷化铟等产业催化密集，产业链进入业绩兑现期</p>
+                </div>
+                <div class="stock-card signal-box">
+                    <p>彭域体感明显转暖，认为今日行情带进攻属性，不像单纯护盘</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🌟 明日关注要点</div>
+        <div class="highlight-box">
+            <strong>1. 英伟达股价及光模块映射</strong><br>
+            英伟达盘后大涨后隔日走势将直接影响A股光模块、液冷、AI硬件情绪；关注中际旭创、天孚通信、源杰科技、东山精密等核心标的是否持续。
+        </div>
+        <div class="highlight-box">
+            <strong>2. 国产算力能否走出独立行情</strong><br>
+            智谱、Minimax使用国产芯片催化已发酵，关注浪潮信息、寒武纪、华丰科技、共进股份等是否能摆脱外围脸色。
+        </div>
+        <div class="highlight-box">
+            <strong>3. 新题材持续性：PTFE、固态电池、工业气体</strong><br>
+            PTFE和固态电池今日消息密集，明日分化概率大；工业气体氩气涨价逻辑受供给错配驱动，关注是否能从单品种向板块扩散。
+        </div>
+        <div class="highlight-box">
+            <strong>4. 医药分歧后的修复力度</strong><br>
+            小锦鲤取关万邦医药，洛飞继续接哈药；观察医药阶段论是否能持续，百花、哈药、近岸蛋白等反馈。
+        </div>
+        <div class="highlight-box">
+            <strong>5. 月底最后一个交易日效应</strong><br>
+            8月29日为8月最后一个交易日，注意月底资金面、两融及股指期货交割影响，控制仓位应对波动。
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>📌 本报告基于15个飞书交流群聊天记录整理，观点均标注来源群名，仅供个人参考，不构成投资建议。</p>
+        <p>个股逻辑数据库已更新 | 公网入口：<a href="https://juebro.github.io/a-share-research/" target="_blank">https://juebro.github.io/a-share-research/</a></p>
+    </div>
+</div>
+</body>
+</html>
