@@ -3833,6 +3833,63 @@
       ]
     },
     {
+      "name": "星网锐捷",
+      "code": "",
+      "sectors": "国产算力/AI芯片 | 国产算力/网络设备 | 机器人/工业互联网 | 算力/交换机",
+      "style": "短线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-30",
+      "mention_count": 4,
+      "linked_sectors": [
+        "AI算力/算芯",
+        "交换机/AI网络",
+        "国产算力/AI芯片",
+        "机器人/特斯拉链"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "机器人/工业互联网",
+          "style": "短线",
+          "logic": "机器人+工业互联网，受益机器人量产与工厂智能化。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "主业增速放缓"
+        },
+        {
+          "date": "2026-08-27",
+          "group": "猫十三",
+          "sector": "国产算力/AI芯片",
+          "style": "短线",
+          "logic": "当前持仓标的之一，继续等国产算力行情。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-26",
+          "group": "猫十三",
+          "sector": "国产算力/网络设备",
+          "style": "短中线",
+          "logic": "猫十三认为星网锐捷缩量洗盘，继续关注。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "业绩不及预期"
+        },
+        {
+          "date": "2026-07-29",
+          "group": "震哥-胡汉三、核心逻辑社",
+          "sector": "算力/交换机",
+          "style": "中长线",
+          "logic": "机构3日净买入1.6亿。本轮下跌机构一直在加仓！之前盘口就发现有机构的单子，但股价一直跌，这波洗盘很凶悍。核心逻辑社：算芯核心+交换机绩优股仍持有",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "普联软件",
       "code": "",
       "sectors": "AI应用/MCP | FDE/AI应用 | 企业级AI/Agent | 软件/企业AI",
@@ -5005,6 +5062,51 @@
       ]
     },
     {
+      "name": "天融信",
+      "code": "002212",
+      "sectors": "AI安全 | 金融/网络安全",
+      "style": "短线",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-30",
+      "mention_count": 3,
+      "linked_sectors": [
+        "AI安全",
+        "金融/证券IT"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "金融/网络安全",
+          "style": "短线",
+          "logic": "金融科技+网络安全，市场情绪题材。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "竞争加剧"
+        },
+        {
+          "date": "2026-08-07",
+          "group": "信息早知道",
+          "sector": "AI安全",
+          "style": "中短线",
+          "logic": "政务侧安全标的。国家安全审查利好政务安全赛道，受益确定性高。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-07",
+          "group": "信息早知道",
+          "sector": "AI安全",
+          "style": "中长线",
+          "logic": "AI安全政务侧重点关注标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
       "name": "天通股份",
       "code": "600330",
       "sectors": "光模块/CPO/光上游 | 光模块上游/薄膜铌酸锂",
@@ -5231,45 +5333,45 @@
       ]
     },
     {
-      "name": "星网锐捷",
-      "code": "",
-      "sectors": "国产算力/AI芯片 | 国产算力/网络设备 | 算力/交换机",
+      "name": "新赛股份",
+      "code": "600540",
+      "sectors": "农业 / 棉花 | 农业/棉花 | 农业种植",
       "style": "短线",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-08-27",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-30",
       "mention_count": 3,
       "linked_sectors": [
-        "AI算力/算芯",
-        "交换机/AI网络",
-        "国产算力/AI芯片"
+        "农业种植",
+        "农业 / 商品",
+        "农业/种业"
       ],
       "logs": [
         {
-          "date": "2026-08-27",
-          "group": "猫十三",
-          "sector": "国产算力/AI芯片",
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "农业/棉花",
           "style": "短线",
-          "logic": "当前持仓标的之一，继续等国产算力行情。",
+          "logic": "农业法修订+粮价上涨预期下的农业种植标的。",
           "sentiment": "看多",
           "target": "",
-          "risk": ""
+          "risk": "棉花价格"
         },
         {
-          "date": "2026-08-26",
-          "group": "猫十三",
-          "sector": "国产算力/网络设备",
-          "style": "短中线",
-          "logic": "猫十三认为星网锐捷缩量洗盘，继续关注。",
+          "date": "2026-08-24",
+          "group": "信息早知道",
+          "sector": "农业 / 棉花",
+          "style": "短线",
+          "logic": "棉花新高途中，新赛股份为棉花最大产能标的之一。",
           "sentiment": "看多",
           "target": "",
-          "risk": "业绩不及预期"
+          "risk": "农产品价格波动"
         },
         {
-          "date": "2026-07-29",
-          "group": "震哥-胡汉三、核心逻辑社",
-          "sector": "算力/交换机",
-          "style": "中长线",
-          "logic": "机构3日净买入1.6亿。本轮下跌机构一直在加仓！之前盘口就发现有机构的单子，但股价一直跌，这波洗盘很凶悍。核心逻辑社：算芯核心+交换机绩优股仍持有",
+          "date": "2026-08-07",
+          "group": "信息早知道",
+          "sector": "农业种植",
+          "style": "短线",
+          "logic": "厄尔尼诺主题关联农业标的，极端天气推升农产品价格预期。",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -5589,6 +5691,52 @@
           "sector": "锂电/储能",
           "style": "中长线",
           "logic": "储能系统标的，受益储能赛道排产高增长。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "海看股份",
+      "code": "",
+      "sectors": "AI应用 | AI短剧 | AI短剧/IPTV",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-30",
+      "mention_count": 3,
+      "linked_sectors": [
+        "AI短剧/IPTV",
+        "AI应用",
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI短剧",
+          "style": "短中线",
+          "logic": "AI短剧产业链标的，受益微短剧+AIGC内容生产。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "流量成本上升"
+        },
+        {
+          "date": "2026-07-30",
+          "group": "信息早知道",
+          "sector": "AI应用",
+          "style": "中长线",
+          "logic": "AI短剧《桃花潭记》上星，手握山东IPTV独家播控权。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "短剧行业竞争"
+        },
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "AI短剧/IPTV",
+          "style": "短中线",
+          "logic": "安徽卫视播出国内首部持证AI短剧《桃花潭记》，验证AI短剧合规上星，为各省广电IPTV打开空间。AI漫剧已商业化。手握山东IPTV独家播控权及互联网分发渠道，实现生产、持证、播出、分账闭环。凭借国企背景拥有网络剧制作及播出资质，自研AIGC平台打通'剧本到成片'全链路",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -6005,6 +6153,51 @@
       ]
     },
     {
+      "name": "超达装备",
+      "code": "301186",
+      "sectors": "机器人 | 算力/机器人 | 算力跨界/汽车模具",
+      "style": "短中线",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-08-30",
+      "mention_count": 3,
+      "linked_sectors": [
+        "人形机器人",
+        "机器人"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "算力跨界/汽车模具",
+          "style": "短中线",
+          "logic": "低调成立超达智算（南京）科技有限公司，算力布局浮出水面，存在跨界算力预期差。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "算力业务尚未兑现"
+        },
+        {
+          "date": "2026-08-07",
+          "group": "信息早知道",
+          "sector": "算力/机器人",
+          "style": "中长线",
+          "logic": "大幅增加回购额度至5000万-1亿元。与江苏未来网络集团合作切入国家算力网基建。成立南京超达芯星科技(注册1亿)。农业机器人量产出货(目标200台)，战略投资天创机器人(D轮超亿)。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-07-31",
+          "group": "信息早知道",
+          "sector": "机器人",
+          "style": "中长线",
+          "logic": "大幅增加回购至5000万-1亿元。农业机器人量产出货（今年目标订单200台/交付135台），新疆喀什完成示范推广。战略投资南京天创智能（特种智能运维机器人D轮超亿）。成立南京超达芯星（注册资金1亿）发展新业务。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "机器人业务占比小"
+        }
+      ]
+    },
+    {
       "name": "金山办公",
       "code": "",
       "sectors": "AI应用 | 软件/AI | 软件/企业AI",
@@ -6092,6 +6285,51 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "锦龙股份",
+      "code": "000712",
+      "sectors": "券商 | 证券/打板 | 金融/证券",
+      "style": "短线",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-08-30",
+      "mention_count": 3,
+      "linked_sectors": [
+        "短线投机/接力行情",
+        "金融/证券IT"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "金融/证券",
+          "style": "短线",
+          "logic": "周末舆情：7月证券交易印花税1864亿元同比+99.2%，金融/证券IT题材关注度上升。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "市场成交回落"
+        },
+        {
+          "date": "2026-08-28",
+          "group": "震哥-胡汉三",
+          "sector": "证券/打板",
+          "style": "短线",
+          "logic": "指数+证券板块如没问题，锦龙与湘财择强打板。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "板块情绪"
+        },
+        {
+          "date": "2026-08-05",
+          "group": "信息早知道",
+          "sector": "券商",
+          "style": "短线",
+          "logic": "指数冲击3900 锦龙股份已涨停，关注财富趋势、银之杰、赢时胜、汇金科技、汇金股份、同花顺、指南针、东方财富等。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "券商股短期波动"
         }
       ]
     },
@@ -6275,6 +6513,97 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "顺网科技",
+      "code": "300113",
+      "sectors": "AI应用 | AI游戏/算力 | 游戏/二次元",
+      "style": "短中线",
+      "first_seen": "2026-07-29",
+      "last_seen": "2026-08-30",
+      "mention_count": 3,
+      "linked_sectors": [
+        "游戏/ChinaJoy",
+        "AI应用",
+        "AI游戏"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI游戏/算力",
+          "style": "短中线",
+          "logic": "AI游戏+边缘算力，云游戏场景与AI生成内容结合。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "网吧业务拖累"
+        },
+        {
+          "date": "2026-07-30",
+          "group": "信息早知道",
+          "sector": "AI应用",
+          "style": "短线",
+          "logic": "ChinaJoy全网唯一A股，独家展出韩国成人向互动影游，五五开流量。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "事件驱动，持续性不确定"
+        },
+        {
+          "date": "2026-07-29",
+          "group": "信息早知道",
+          "sector": "游戏/二次元",
+          "style": "短线",
+          "logic": "ChinaJoy全网唯一A股上市公司，N1馆C位。7月31日第23届ChinaJoy上海开幕，39国近900家企业参展，抖音/快手亿级流量直播。联袂Intel集结白玉京、苍墨、Story Taco团队。独家展出韩国成人向互动影游（《阿西美女》《夏日美女》），10位人气主演见面会。五五开（卢本伟）或亲临现场",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "事件驱动炒作，5月开板后波动大"
+        }
+      ]
+    },
+    {
+      "name": "香江控股",
+      "code": "600162",
+      "sectors": "房地产 | 算力租赁 | 算力订单",
+      "style": "短线",
+      "first_seen": "2026-07-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 3,
+      "linked_sectors": [
+        "算力租赁",
+        "房地产"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道/黑火信息差",
+          "sector": "房地产",
+          "style": "短线",
+          "logic": "周末舆情：个人住房贷款最长期限拟由30年延长至40年；房地产题材受关注。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "政策落地及销售数据"
+        },
+        {
+          "date": "2026-08-28",
+          "group": "信息早知道",
+          "sector": "算力订单",
+          "style": "短中线",
+          "logic": "华福计算机解读：9.7亿算力订单落地，向上空间十分巨大；算力景气度旺盛，卖方市场短期不改；集团公司订单预期可支撑五倍十倍空间。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "订单兑现"
+        },
+        {
+          "date": "2026-07-30",
+          "group": "信息早知道",
+          "sector": "算力租赁",
+          "style": "短线",
+          "logic": "北京Z云，算力租赁标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "主业地产拖累"
         }
       ]
     },
@@ -7557,40 +7886,6 @@
       ]
     },
     {
-      "name": "天融信",
-      "code": "002212",
-      "sectors": "AI安全",
-      "style": "中长线",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "mention_count": 2,
-      "linked_sectors": [
-        "AI安全"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-07",
-          "group": "信息早知道",
-          "sector": "AI安全",
-          "style": "中短线",
-          "logic": "政务侧安全标的。国家安全审查利好政务安全赛道，受益确定性高。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-08-07",
-          "group": "信息早知道",
-          "sector": "AI安全",
-          "style": "中长线",
-          "logic": "AI安全政务侧重点关注标的。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
       "name": "天银机电",
       "code": "300342",
       "sectors": "电力/储能 | 雷达/AI",
@@ -8101,41 +8396,6 @@
           "sector": "液冷",
           "style": "短线",
           "logic": "液冷供货戴尔、超微，7月份海关供货单已确认。对标美股超微电脑大涨20%，A股AI服务器产业链受益。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
-      "name": "新赛股份",
-      "code": "600540",
-      "sectors": "农业 / 棉花 | 农业种植",
-      "style": "短线",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-24",
-      "mention_count": 2,
-      "linked_sectors": [
-        "农业种植",
-        "农业 / 商品"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-24",
-          "group": "信息早知道",
-          "sector": "农业 / 棉花",
-          "style": "短线",
-          "logic": "棉花新高途中，新赛股份为棉花最大产能标的之一。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "农产品价格波动"
-        },
-        {
-          "date": "2026-08-07",
-          "group": "信息早知道",
-          "sector": "农业种植",
-          "style": "短线",
-          "logic": "厄尔尼诺主题关联农业标的，极端天气推升农产品价格预期。",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -8731,41 +8991,6 @@
       ]
     },
     {
-      "name": "海看股份",
-      "code": "",
-      "sectors": "AI应用 | AI短剧/IPTV",
-      "style": "中长线",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
-      "mention_count": 2,
-      "linked_sectors": [
-        "AI短剧/IPTV",
-        "AI应用"
-      ],
-      "logs": [
-        {
-          "date": "2026-07-30",
-          "group": "信息早知道",
-          "sector": "AI应用",
-          "style": "中长线",
-          "logic": "AI短剧《桃花潭记》上星，手握山东IPTV独家播控权。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "短剧行业竞争"
-        },
-        {
-          "date": "2026-07-29",
-          "group": "信息早知道",
-          "sector": "AI短剧/IPTV",
-          "style": "短中线",
-          "logic": "安徽卫视播出国内首部持证AI短剧《桃花潭记》，验证AI短剧合规上星，为各省广电IPTV打开空间。AI漫剧已商业化。手握山东IPTV独家播控权及互联网分发渠道，实现生产、持证、播出、分账闭环。凭借国企背景拥有网络剧制作及播出资质，自研AIGC平台打通'剧本到成片'全链路",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
       "name": "润泽科技",
       "code": "",
       "sectors": "IDC/算力 | 国产算力",
@@ -9038,6 +9263,76 @@
           "sentiment": "看多",
           "target": "",
           "risk": "医药板块退潮"
+        }
+      ]
+    },
+    {
+      "name": "秋乐种业",
+      "code": "831087",
+      "sectors": "农业/种业 | 农业种植",
+      "style": "短线",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-30",
+      "mention_count": 2,
+      "linked_sectors": [
+        "农业种植",
+        "农业/种业"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "农业/种业",
+          "style": "短线",
+          "logic": "北交所种业标的，受益种业安全主题。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "流动性"
+        },
+        {
+          "date": "2026-08-07",
+          "group": "信息早知道",
+          "sector": "农业种植",
+          "style": "短线",
+          "logic": "厄尔尼诺主题种业标的，极端气候下种业需求提升预期。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "科翔股份",
+      "code": "300903",
+      "sectors": "AI PCB / 陶瓷混压HDI | 机器人/PCB",
+      "style": "短线",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-08-30",
+      "mention_count": 2,
+      "linked_sectors": [
+        "AI算力 / PCB / 先进封装",
+        "机器人/特斯拉链"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "机器人/PCB",
+          "style": "短线",
+          "logic": "机器人+PCB，机器人硬件配套与AI硬件景气共振。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "毛利率压力"
+        },
+        {
+          "date": "2026-08-24",
+          "group": "信息早知道",
+          "sector": "AI PCB / 陶瓷混压HDI",
+          "style": "短线",
+          "logic": "陶瓷混压HDI直击AI芯片高功耗散热痛点，陶瓷材料较玻璃、ABF散热与稳定性更优，已进入客户验证及样品交付阶段。全流程工艺壁垒高，先发卡位价值突出，后续有望扩产。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "客户验证进度、良率爬坡"
         }
       ]
     },
@@ -9383,41 +9678,6 @@
       ]
     },
     {
-      "name": "超达装备",
-      "code": "301186",
-      "sectors": "机器人 | 算力/机器人",
-      "style": "中长线",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-08-07",
-      "mention_count": 2,
-      "linked_sectors": [
-        "人形机器人",
-        "机器人"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-07",
-          "group": "信息早知道",
-          "sector": "算力/机器人",
-          "style": "中长线",
-          "logic": "大幅增加回购额度至5000万-1亿元。与江苏未来网络集团合作切入国家算力网基建。成立南京超达芯星科技(注册1亿)。农业机器人量产出货(目标200台)，战略投资天创机器人(D轮超亿)。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-07-31",
-          "group": "信息早知道",
-          "sector": "机器人",
-          "style": "中长线",
-          "logic": "大幅增加回购至5000万-1亿元。农业机器人量产出货（今年目标订单200台/交付135台），新疆喀什完成示范推广。战略投资南京天创智能（特种智能运维机器人D轮超亿）。成立南京超达芯星（注册资金1亿）发展新业务。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "机器人业务占比小"
-        }
-      ]
-    },
-    {
       "name": "软通动力",
       "code": "301296",
       "sectors": "FDE/AI应用 | 国产算力",
@@ -9484,6 +9744,41 @@
           "sentiment": "看多",
           "target": "",
           "risk": "氩气涨价持续性不确定"
+        }
+      ]
+    },
+    {
+      "name": "金健米业",
+      "code": "600127",
+      "sectors": "农业/大米 | 农业种植",
+      "style": "短线",
+      "first_seen": "2026-08-07",
+      "last_seen": "2026-08-30",
+      "mention_count": 2,
+      "linked_sectors": [
+        "农业种植",
+        "农业/种业"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "农业/大米",
+          "style": "短线",
+          "logic": "粮食题材弹性标的，粮价上涨催化。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "业绩弹性有限"
+        },
+        {
+          "date": "2026-08-07",
+          "group": "信息早知道",
+          "sector": "农业种植",
+          "style": "短线",
+          "logic": "厄尔尼诺极端天气影响全球粮食产量。粮食安全主题升温，农业种植板块受益。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "短线主题驱动，持续性待观察"
         }
       ]
     },
@@ -9585,40 +9880,6 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
-        }
-      ]
-    },
-    {
-      "name": "锦龙股份",
-      "code": "000712",
-      "sectors": "券商 | 证券/打板",
-      "style": "短线",
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-08-28",
-      "mention_count": 2,
-      "linked_sectors": [
-        "短线投机/接力行情"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-28",
-          "group": "震哥-胡汉三",
-          "sector": "证券/打板",
-          "style": "短线",
-          "logic": "指数+证券板块如没问题，锦龙与湘财择强打板。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "板块情绪"
-        },
-        {
-          "date": "2026-08-05",
-          "group": "信息早知道",
-          "sector": "券商",
-          "style": "短线",
-          "logic": "指数冲击3900 锦龙股份已涨停，关注财富趋势、银之杰、赢时胜、汇金科技、汇金股份、同花顺、指南针、东方财富等。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "券商股短期波动"
         }
       ]
     },
@@ -9797,41 +10058,6 @@
       ]
     },
     {
-      "name": "顺网科技",
-      "code": "300113",
-      "sectors": "AI应用 | 游戏/二次元",
-      "style": "短线",
-      "first_seen": "2026-07-29",
-      "last_seen": "2026-07-30",
-      "mention_count": 2,
-      "linked_sectors": [
-        "游戏/ChinaJoy",
-        "AI应用"
-      ],
-      "logs": [
-        {
-          "date": "2026-07-30",
-          "group": "信息早知道",
-          "sector": "AI应用",
-          "style": "短线",
-          "logic": "ChinaJoy全网唯一A股，独家展出韩国成人向互动影游，五五开流量。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "事件驱动，持续性不确定"
-        },
-        {
-          "date": "2026-07-29",
-          "group": "信息早知道",
-          "sector": "游戏/二次元",
-          "style": "短线",
-          "logic": "ChinaJoy全网唯一A股上市公司，N1馆C位。7月31日第23届ChinaJoy上海开幕，39国近900家企业参展，抖音/快手亿级流量直播。联袂Intel集结白玉京、苍墨、Story Taco团队。独家展出韩国成人向互动影游（《阿西美女》《夏日美女》），10位人气主演见面会。五五开（卢本伟）或亲临现场",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "事件驱动炒作，5月开板后波动大"
-        }
-      ]
-    },
-    {
       "name": "首开股份",
       "code": "",
       "sectors": "机器人 | 机器人/人形机器人/Physical AI",
@@ -9864,40 +10090,6 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
-        }
-      ]
-    },
-    {
-      "name": "香江控股",
-      "code": "600162",
-      "sectors": "算力租赁 | 算力订单",
-      "style": "短中线",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-08-28",
-      "mention_count": 2,
-      "linked_sectors": [
-        "算力租赁"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-28",
-          "group": "信息早知道",
-          "sector": "算力订单",
-          "style": "短中线",
-          "logic": "华福计算机解读：9.7亿算力订单落地，向上空间十分巨大；算力景气度旺盛，卖方市场短期不改；集团公司订单预期可支撑五倍十倍空间。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "订单兑现"
-        },
-        {
-          "date": "2026-07-30",
-          "group": "信息早知道",
-          "sector": "算力租赁",
-          "style": "短线",
-          "logic": "北京Z云，算力租赁标的。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "主业地产拖累"
         }
       ]
     },
@@ -10250,6 +10442,30 @@
       ]
     },
     {
+      "name": "万向德农",
+      "code": "600371",
+      "sectors": "农业/种业",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "农业/种业"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "农业/种业",
+          "style": "短线",
+          "logic": "种业标的，受益粮食安全与粮价上行预期。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "种子销售季节"
+        }
+      ]
+    },
+    {
       "name": "万向钱潮",
       "code": "000559",
       "sectors": "机器人/Physical AI",
@@ -10366,6 +10582,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "三一重工",
+      "code": "600031",
+      "sectors": "工程机械",
+      "style": "中长线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "工程机械"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "工程机械",
+          "style": "中长线",
+          "logic": "Q2收入+24.6%、归母+16.9%；在26H1汇兑损失21亿、Q2汇兑损失13亿情况下仍超预期；海外收入增速21.8%创23H2以来最高半年度增速，毛利率提升至32.5%。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "国内基建投资不及预期"
         }
       ]
     },
@@ -10512,6 +10752,30 @@
       ]
     },
     {
+      "name": "上海三毛",
+      "code": "600689",
+      "sectors": "房地产/纺织",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "房地产"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "房地产/纺织",
+          "style": "短线",
+          "logic": "房地产题材弹性标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "主业平淡"
+        }
+      ]
+    },
+    {
       "name": "上海新阳",
       "code": "",
       "sectors": "半导体材料",
@@ -10580,6 +10844,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": "行业竞争加剧"
+        }
+      ]
+    },
+    {
+      "name": "上海电影",
+      "code": "601595",
+      "sectors": "AI影视/AI长剧",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI影视/AI长剧",
+          "style": "短中线",
+          "logic": "AI长剧重点标的，受益AI影视内容生产工业化与IP衍生空间扩大。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "IP转化不及预期"
         }
       ]
     },
@@ -10792,6 +11080,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "中信出版",
+      "code": "300788",
+      "sectors": "AI国漫/IP",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI国漫/IP",
+          "style": "短中线",
+          "logic": "AI国漫产业链标的，IP出版与内容生态协同。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "出版行业景气度"
         }
       ]
     },
@@ -11034,6 +11346,30 @@
       ]
     },
     {
+      "name": "中安科",
+      "code": "600654",
+      "sectors": "房地产/安防",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "房地产"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "房地产/安防",
+          "style": "短线",
+          "logic": "房地产+安防题材，周末舆情标的之一。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "基本面较弱"
+        }
+      ]
+    },
+    {
       "name": "中山公用",
       "code": "000685",
       "sectors": "国产算力/AI算力",
@@ -11078,6 +11414,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "中文在线",
+      "code": "300364",
+      "sectors": "AI短剧/IP",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI短剧/IP",
+          "style": "短中线",
+          "logic": "AI短剧重点标的，海量文字IP可向AI视频、互动内容衍生。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "IP变现周期长"
         }
       ]
     },
@@ -11794,6 +12154,30 @@
       ]
     },
     {
+      "name": "儒意电影",
+      "code": "未上市",
+      "sectors": "AI影视/AI渠道",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI影视/AI渠道",
+          "style": "短中线",
+          "logic": "被列为AI剧与AI渠道标的，腾讯系内容平台具备IP与渠道优势。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "未在A股上市"
+        }
+      ]
+    },
+    {
       "name": "兆威机电",
       "code": "003021",
       "sectors": "机器人/人形机器人/Physical AI",
@@ -12220,6 +12604,30 @@
       ]
     },
     {
+      "name": "北自科技",
+      "code": "603082",
+      "sectors": "机器人/自动化",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "机器人/特斯拉链"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "机器人/自动化",
+          "style": "短线",
+          "logic": "机器人+智能物流/仓储自动化，受益机器人产业链景气。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "订单波动"
+        }
+      ]
+    },
+    {
       "name": "华依科技",
       "code": "688071",
       "sectors": "无人驾驶+机器人",
@@ -12287,6 +12695,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "华宇软件",
+      "code": "300271",
+      "sectors": "金融/法律科技",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "金融/证券IT"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "金融/法律科技",
+          "style": "短线",
+          "logic": "金融科技+法律AI，市场关注金融IT弹性。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "历史包袱"
         }
       ]
     },
@@ -12456,6 +12888,31 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "华策影视",
+      "code": "300133",
+      "sectors": "AI影视/AI长剧",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI应用",
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI影视/AI长剧",
+          "style": "短中线",
+          "logic": "《后西游记》8月31日定档，首部上星AI长剧采用Seedance 2.0/2.5技术、无真人演员、边审边播；AI影视工业化拐点催化IP重估，华策为AI剧重点标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "AI剧口碑及收视不及预期"
         }
       ]
     },
@@ -12744,6 +13201,31 @@
       ]
     },
     {
+      "name": "博纳影业",
+      "code": "001330",
+      "sectors": "AI影视/AI长剧",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI应用",
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI影视/AI长剧",
+          "style": "短中线",
+          "logic": "AI长剧产业链标的之一，关注AI影视内容制作降本对电影公司的映射。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "电影主业恢复缓慢"
+        }
+      ]
+    },
+    {
       "name": "博闻科技",
       "code": "600883",
       "sectors": "消费/通胀题材",
@@ -12908,6 +13390,31 @@
       ]
     },
     {
+      "name": "吉比特",
+      "code": "603444",
+      "sectors": "AI游戏",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "游戏",
+        "AI游戏"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI游戏",
+          "style": "短中线",
+          "logic": "AI游戏重点标的，关注AI对游戏研发管线与运营效率的提升。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "产品周期波动"
+        }
+      ]
+    },
+    {
       "name": "同星科技",
       "code": "301252",
       "sectors": "液冷",
@@ -13025,6 +13532,30 @@
           "sentiment": "看多",
           "target": "100亿市值",
           "risk": "苹果订单不及预期"
+        }
+      ]
+    },
+    {
+      "name": "哔哩哔哩",
+      "code": "BILI",
+      "sectors": "AI游戏/内容平台",
+      "style": "中长线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI游戏"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI游戏/内容平台",
+          "style": "中长线",
+          "logic": "AI游戏+长视频平台，社区内容与AI生产力工具协同。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "盈利拐点"
         }
       ]
     },
@@ -13874,6 +14405,30 @@
       ]
     },
     {
+      "name": "奥飞娱乐",
+      "code": "002292",
+      "sectors": "AI国漫/IP",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI国漫/IP",
+          "style": "短中线",
+          "logic": "AI国漫重点标的，动画IP储备多，AI视频降本直接利好动画产能扩张。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "玩具主业波动"
+        }
+      ]
+    },
+    {
       "name": "奥飞数据",
       "code": "300738",
       "sectors": "算力租赁",
@@ -13894,6 +14449,52 @@
           "sentiment": "中性",
           "target": "",
           "risk": "节奏把握不当"
+        }
+      ]
+    },
+    {
+      "name": "姚记科技",
+      "code": "002605",
+      "sectors": "AI游戏",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI游戏"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI游戏",
+          "style": "短线",
+          "logic": "AI游戏产业链标的，休闲游戏与AI广告素材结合。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "监管政策"
+        }
+      ]
+    },
+    {
+      "name": "威派格",
+      "code": "603956",
+      "sectors": "钻针/半导体耗材",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "钻针/半导体耗材",
+          "style": "短中线",
+          "logic": "收购安徽提曼科技51.02%股权，钻针产能从100万支/月扩至2026年底500万支/月、2027年底2000万支/月，产能增长20倍弹性巨大。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "客户导入进度"
         }
       ]
     },
@@ -14086,6 +14687,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": "竞争加剧"
+        }
+      ]
+    },
+    {
+      "name": "完美世界",
+      "code": "002624",
+      "sectors": "AI游戏",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI游戏"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI游戏",
+          "style": "短中线",
+          "logic": "AI游戏重点标的，具备自研引擎与IP储备，AI降本潜力较大。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "业绩扭亏进度"
         }
       ]
     },
@@ -15198,6 +15823,30 @@
       ]
     },
     {
+      "name": "恺英网络",
+      "code": "002517",
+      "sectors": "AI游戏",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI游戏"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI游戏",
+          "style": "短中线",
+          "logic": "AI游戏重点标的，AI生成资产有望降低研发成本、加速内容迭代。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "新游上线节奏"
+        }
+      ]
+    },
+    {
       "name": "慧博云通",
       "code": "",
       "sectors": "跨境支付/金融IT",
@@ -15266,6 +15915,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "我爱我家",
+      "code": "000560",
+      "sectors": "房地产/中介",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "房地产"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "房地产/中介",
+          "style": "短线",
+          "logic": "房贷年限延长预期催化地产中介与租赁服务情绪。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "二手房成交数据"
         }
       ]
     },
@@ -15365,6 +16038,30 @@
       ]
     },
     {
+      "name": "掌阅科技",
+      "code": "603533",
+      "sectors": "AI短剧/IP内容",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI短剧/IP内容",
+          "style": "短中线",
+          "logic": "AI短剧重点标的，IP储备丰富，AI视频降本有望加速IP多模态衍生。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "短剧竞争加剧"
+        }
+      ]
+    },
+    {
       "name": "摩尔线程",
       "code": "",
       "sectors": "国产算力/AI芯片",
@@ -15408,6 +16105,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": "收购整合风险"
+        }
+      ]
+    },
+    {
+      "name": "敦煌种业",
+      "code": "600354",
+      "sectors": "农业/种业",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "农业/种业"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "农业/种业",
+          "style": "短线",
+          "logic": "周末舆情：农业法完成修订2027年施行，粮食危机警告下玉米与小麦价格创逾三年新高，种业股受关注。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "农产品价格波动"
         }
       ]
     },
@@ -16918,6 +17639,54 @@
       ]
     },
     {
+      "name": "深圳华强",
+      "code": "000062",
+      "sectors": "金融/电子分销",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "金融/证券IT"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "金融/电子分销",
+          "style": "短线",
+          "logic": "金融科技题材联动标的，电子元器件分销受益AI硬件景气。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "估值波动"
+        }
+      ]
+    },
+    {
+      "name": "深物业A",
+      "code": "000011",
+      "sectors": "房地产",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "房地产"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "房地产",
+          "style": "短线",
+          "logic": "深圳本地地产股，地产政策放松预期受益。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "行业出清"
+        }
+      ]
+    },
+    {
       "name": "深科达",
       "code": "",
       "sectors": "半导体测试设备",
@@ -17604,30 +18373,6 @@
       ]
     },
     {
-      "name": "秋乐种业",
-      "code": "831087",
-      "sectors": "农业种植",
-      "style": "短线",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "mention_count": 1,
-      "linked_sectors": [
-        "农业种植"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-07",
-          "group": "信息早知道",
-          "sector": "农业种植",
-          "style": "短线",
-          "logic": "厄尔尼诺主题种业标的，极端气候下种业需求提升预期。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
       "name": "科创信息",
       "code": "",
       "sectors": "网络安全",
@@ -17720,26 +18465,26 @@
       ]
     },
     {
-      "name": "科翔股份",
-      "code": "300903",
-      "sectors": "AI PCB / 陶瓷混压HDI",
+      "name": "税友股份",
+      "code": "603171",
+      "sectors": "金融/财税IT",
       "style": "短线",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
       "mention_count": 1,
       "linked_sectors": [
-        "AI算力 / PCB / 先进封装"
+        "金融/证券IT"
       ],
       "logs": [
         {
-          "date": "2026-08-24",
+          "date": "2026-08-30",
           "group": "信息早知道",
-          "sector": "AI PCB / 陶瓷混压HDI",
+          "sector": "金融/财税IT",
           "style": "短线",
-          "logic": "陶瓷混压HDI直击AI芯片高功耗散热痛点，陶瓷材料较玻璃、ABF散热与稳定性更优，已进入客户验证及样品交付阶段。全流程工艺壁垒高，先发卡位价值突出，后续有望扩产。",
+          "logic": "受益证券交易印花税高增与财税信息化预期。",
           "sentiment": "看多",
           "target": "",
-          "risk": "客户验证进度、良率爬坡"
+          "risk": "业绩兑现"
         }
       ]
     },
@@ -18628,6 +19373,31 @@
       ]
     },
     {
+      "name": "芒果超媒",
+      "code": "300413",
+      "sectors": "AI影视/AI长剧",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI应用",
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI影视/AI长剧",
+          "style": "短中线",
+          "logic": "《后西游记》定档催化AI长剧产业链；芒果兼具IP储备、内容制作与渠道入口，被列为AI剧与AI渠道重点标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "内容监管及排期变化"
+        }
+      ]
+    },
+    {
       "name": "芯联集成",
       "code": "688469",
       "sectors": "国产算力/AI算力",
@@ -18739,6 +19509,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": "行业提价不及预期、汇率波动"
+        }
+      ]
+    },
+    {
+      "name": "荣信文化",
+      "code": "301231",
+      "sectors": "AI国漫/IP",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI国漫/IP",
+          "style": "短中线",
+          "logic": "AI国漫产业链标的，少儿IP可通过AI动画、互动内容衍生。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "市场规模有限"
         }
       ]
     },
@@ -19475,6 +20269,30 @@
       ]
     },
     {
+      "name": "路华科技",
+      "code": "未上市",
+      "sectors": "机器人/特斯拉链",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "机器人/特斯拉链"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "机器人/特斯拉链",
+          "style": "短线",
+          "logic": "周末舆情：特斯拉Optimus已正式启动生产，机器人产业链受关注。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "未上市/供货不确定"
+        }
+      ]
+    },
+    {
       "name": "迈富时",
       "code": "",
       "sectors": "企业Agent",
@@ -19703,30 +20521,6 @@
           "sentiment": "看多",
           "target": "",
           "risk": "主题炒作"
-        }
-      ]
-    },
-    {
-      "name": "金健米业",
-      "code": "600127",
-      "sectors": "农业种植",
-      "style": "短线",
-      "first_seen": "2026-08-07",
-      "last_seen": "2026-08-07",
-      "mention_count": 1,
-      "linked_sectors": [
-        "农业种植"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-07",
-          "group": "信息早知道",
-          "sector": "农业种植",
-          "style": "短线",
-          "logic": "厄尔尼诺极端天气影响全球粮食产量。粮食安全主题升温，农业种植板块受益。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "短线主题驱动，持续性待观察"
         }
       ]
     },
@@ -20397,6 +21191,54 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "顺景科技",
+      "code": "未上市",
+      "sectors": "机器人/特斯拉链",
+      "style": "短线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "机器人/特斯拉链"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "机器人/特斯拉链",
+          "style": "短线",
+          "logic": "特斯拉Optimus启动生产催化机器人产业链。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "未上市/供货不确定"
+        }
+      ]
+    },
+    {
+      "name": "风语筑",
+      "code": "603466",
+      "sectors": "AI渠道/物理AI",
+      "style": "短中线",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "linked_sectors": [
+        "AI影视/AI长剧"
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "group": "信息早知道",
+          "sector": "AI渠道/物理AI",
+          "style": "短中线",
+          "logic": "AI渠道标的，结合线下沉浸式场景与AI内容入口，被列为物理AI代表。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "项目交付节奏"
         }
       ]
     },
@@ -21624,7 +22466,7 @@
           "role": "热门",
           "logic": "陶瓷混压HDI散热",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 2
         },
         {
           "name": "景旺电子",
@@ -21662,7 +22504,7 @@
           "role": "核心",
           "logic": "机构3日净买入1.6亿，洗盘凶悍",
           "mentions": 1,
-          "stock_mentions": 3
+          "stock_mentions": 4
         },
         {
           "name": "寒武纪",
@@ -22242,7 +23084,7 @@
           "role": "关注",
           "logic": "ANET业绩催化板块。",
           "mentions": 1,
-          "stock_mentions": 3
+          "stock_mentions": 4
         },
         {
           "name": "菲菱科斯",
@@ -23050,7 +23892,7 @@
           "role": "关注",
           "logic": "国产算力持仓标的",
           "mentions": 1,
-          "stock_mentions": 3
+          "stock_mentions": 4
         },
         {
           "name": "宏达电子",
@@ -24121,7 +24963,7 @@
           "role": "热门",
           "logic": "农业机器人量产+战略投资天创",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "越剑智能",
@@ -24517,7 +25359,7 @@
           "role": "关注",
           "logic": "北京Z云",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "润泽科技",
@@ -24587,14 +25429,14 @@
           "role": "热门",
           "logic": "ChinaJoy全网唯一A股",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "海看股份",
           "role": "热门",
           "logic": "AI短剧《桃花潭记》上星",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "当虹科技",
@@ -24608,14 +25450,14 @@
           "role": "热门",
           "logic": "算力3.7万P+AI应用",
           "mentions": 1,
-          "stock_mentions": 0
+          "stock_mentions": 1
         },
         {
           "name": "芒果超媒",
           "role": "关注",
           "logic": "虚拟数字人核心中军",
           "mentions": 1,
-          "stock_mentions": 0
+          "stock_mentions": 1
         },
         {
           "name": "小崧股份",
@@ -24629,7 +25471,7 @@
           "role": "关注",
           "logic": "自研AI数字演员",
           "mentions": 1,
-          "stock_mentions": 0
+          "stock_mentions": 1
         },
         {
           "name": "索宝蛋白",
@@ -25083,6 +25925,107 @@
           "date": "2026-08-07",
           "hotness": 4,
           "logic": "AI for Science成为AI应用新主线，深入材料/生命科学/化学/物理领域。政治局会议强调人工智能+，OpenAI Astra催化。预期差极大，整个市场还没意识到。医疗是AI4S重要落地场景，高质量数据是核心生产资料。半导体痕量金属检测也是AI4S+科研智能化映射。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "AI影视/AI长剧",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "华策影视",
+          "role": "核心",
+          "logic": "AI剧重点标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "芒果超媒",
+          "role": "核心",
+          "logic": "AI剧+AI渠道双受益",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "上海电影",
+          "role": "核心",
+          "logic": "AI剧重点标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "掌阅科技",
+          "role": "热门",
+          "logic": "AI短剧+IP",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "海看股份",
+          "role": "热门",
+          "logic": "AI短剧",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "中文在线",
+          "role": "热门",
+          "logic": "AI短剧+IP",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "奥飞娱乐",
+          "role": "热门",
+          "logic": "AI国漫",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "儒意电影",
+          "role": "关注",
+          "logic": "AI剧+AI渠道（腾讯系）",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "博纳影业",
+          "role": "关注",
+          "logic": "AI影视产业链",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "风语筑",
+          "role": "关注",
+          "logic": "AI渠道/物理AI",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "中信出版",
+          "role": "关注",
+          "logic": "AI国漫+IP",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "荣信文化",
+          "role": "关注",
+          "logic": "AI国漫+IP",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 4,
+          "logic": "《后西游记》8月31日定档上星，成为国内首部采用Seedance 2.0/2.5 AI技术、无真人演员、边审边播的长剧，标志AI影视从概念进入工业化生产。浙商传媒认为IP价值在AI时代有望重估，生产去中心化但头部公司资产与渠道优势强化。",
           "group": "信息早知道"
         }
       ]
@@ -25615,7 +26558,7 @@
           "role": "热门",
           "logic": "农业机器人量产+回购",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "宁波能源",
@@ -28054,7 +28997,7 @@
           "role": "关注",
           "logic": "政务侧安全标的",
           "mentions": 2,
-          "stock_mentions": 2
+          "stock_mentions": 3
         }
       ],
       "logs": [
@@ -28511,6 +29454,65 @@
           "date": "2026-08-17",
           "hotness": 3,
           "logic": "DeepSeek V4 Pro正式版上线并涨价，智谱GLM 5.3发布，阿里开源Qwen3.8-Max，Anthropic Q2营收超115亿美元同比增13倍。中信传媒推荐AI应用方向左侧配置。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "AI游戏",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "恺英网络",
+          "role": "核心",
+          "logic": "AI游戏重点标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "吉比特",
+          "role": "核心",
+          "logic": "AI游戏重点标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "完美世界",
+          "role": "核心",
+          "logic": "AI游戏重点标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "顺网科技",
+          "role": "热门",
+          "logic": "AI游戏+边缘算力",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "姚记科技",
+          "role": "关注",
+          "logic": "AI游戏产业链",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "哔哩哔哩",
+          "role": "关注",
+          "logic": "AI游戏+内容平台",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 3,
+          "logic": "AI多模态模型迭代降低游戏美术、剧情与代码生产门槛，《后西游记》定档同时带动AI游戏标的关注；浙商建议关注具备自研能力与IP储备的头部厂商。",
           "group": "信息早知道"
         }
       ]
@@ -29140,6 +30142,58 @@
       ]
     },
     {
+      "name": "农业/种业",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "敦煌种业",
+          "role": "核心",
+          "logic": "种业龙头，粮价上涨受益",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "万向德农",
+          "role": "核心",
+          "logic": "种业标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "金健米业",
+          "role": "热门",
+          "logic": "粮食题材弹性标的",
+          "mentions": 1,
+          "stock_mentions": 2
+        },
+        {
+          "name": "新赛股份",
+          "role": "热门",
+          "logic": "农业种植",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "秋乐种业",
+          "role": "关注",
+          "logic": "北交所种业标的",
+          "mentions": 1,
+          "stock_mentions": 2
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 3,
+          "logic": "周末舆情：农业法完成修订自2027年1月1日起施行，粮食危机警告不绝于耳，玉米与小麦价格齐创逾三年新高，种业与粮食种植股受关注。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
       "name": "农业种植",
       "first_seen": "2026-08-07",
       "last_seen": "2026-08-07",
@@ -29158,21 +30212,21 @@
           "role": "热门",
           "logic": "粮食安全主题，厄尔尼诺影响粮食产量",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 2
         },
         {
           "name": "新赛股份",
           "role": "短线",
           "logic": "农业种植关联标的",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "秋乐种业",
           "role": "短线",
           "logic": "种业标的，极端气候推升种业需求",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 2
         },
         {
           "name": "国投丰乐",
@@ -29641,6 +30695,22 @@
       ]
     },
     {
+      "name": "大模型/国产算力",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 3,
+          "logic": "浙商计算机大模型商业化周报（第23期）：头部模型公司年化收入扩张至1050亿美元；智谱GLM-5.3-Flash全部由国产芯片承载、端到端性能提升3倍且价格为原价1/10；阿里Qwen3.8-Flash采用MoE架构、1M上下文Prefill吞吐显著提升；OpenAI Jalapeño推理芯片能效领先；Anthropic签署约450亿美元算力租赁协议，阿里拟募资800亿港元投向全栈AI。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
       "name": "大金融",
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-26",
@@ -29803,6 +30873,58 @@
           "hotness": 3,
           "logic": "猫十三持仓北京文化等周末票房博弈；儒意要求少亏即可",
           "group": "猫十三"
+        }
+      ]
+    },
+    {
+      "name": "房地产",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "香江控股",
+          "role": "核心",
+          "logic": "房地产政策放松预期",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "我爱我家",
+          "role": "核心",
+          "logic": "地产中介+租赁",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "深物业A",
+          "role": "热门",
+          "logic": "深圳本地地产股",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "中安科",
+          "role": "关注",
+          "logic": "房地产+安防",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "上海三毛",
+          "role": "关注",
+          "logic": "地产题材弹性",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 3,
+          "logic": "周末舆情：两部门拟将个人住房贷款最长期限由30年延长至40年；房地产政策放松预期升温，短线关注地产链情绪。",
+          "group": "信息早知道/黑火信息差"
         }
       ]
     },
@@ -30041,6 +31163,58 @@
           "date": "2026-08-27",
           "hotness": 3,
           "logic": "英伟达DGX Spark物理AI 3D视觉平台发布，黄仁勋称机器人产业化时刻已经非常接近。Optimus下半年爬产顺利，年底周产能2500台，明年满产周产4000台。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "机器人/特斯拉链",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "星网锐捷",
+          "role": "核心",
+          "logic": "机器人+工业互联网",
+          "mentions": 1,
+          "stock_mentions": 4
+        },
+        {
+          "name": "北自科技",
+          "role": "核心",
+          "logic": "机器人+智能物流",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "科翔股份",
+          "role": "热门",
+          "logic": "机器人+PCB",
+          "mentions": 1,
+          "stock_mentions": 2
+        },
+        {
+          "name": "路华科技",
+          "role": "关注",
+          "logic": "Optimus产业链传闻标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "顺景科技",
+          "role": "关注",
+          "logic": "Optimus产业链传闻标的",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 3,
+          "logic": "周末舆情：行业媒体爆料特斯拉Optimus已正式启动生产，机器人产业链再获催化；叠加9月人形机器人运动会等事件，短线关注机器人概念股。",
           "group": "信息早知道"
         }
       ]
@@ -30544,7 +31718,7 @@
           "role": "打板",
           "logic": "证券板块择强",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "湘财股份",
@@ -30811,6 +31985,58 @@
           "date": "2026-08-21",
           "hotness": 3,
           "logic": "“美债替RMB过路币开路”题材受关注，叠加慧博云通收购金锐软件强化金融IT。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "金融/证券IT",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "锦龙股份",
+          "role": "核心",
+          "logic": "证券+金融科技",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "税友股份",
+          "role": "核心",
+          "logic": "财税IT",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "华宇软件",
+          "role": "热门",
+          "logic": "金融+法律科技",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "天融信",
+          "role": "关注",
+          "logic": "金融科技+网络安全",
+          "mentions": 1,
+          "stock_mentions": 3
+        },
+        {
+          "name": "深圳华强",
+          "role": "关注",
+          "logic": "金融科技+电子分销",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 3,
+          "logic": "周末舆情：7月证券交易印花税1864亿元同比增长99.2%，叠加比特币突破8万美元，金融科技与证券IT题材关注度上升。",
           "group": "信息早知道"
         }
       ]
@@ -31218,6 +32444,28 @@
       ]
     },
     {
+      "name": "MLCC",
+      "first_seen": "2026-07-26",
+      "last_seen": "2026-08-30",
+      "mention_count": 2,
+      "last_hotness": 2,
+      "linked_stocks": [],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 2,
+          "logic": "产业信息显示MLCC原厂在去库、代理商累库，8月价格横盘略向下；当前处于LTA长协阶段，现货价格指导意义有限，需求远期向上但需要耐心。",
+          "group": "信息早知道"
+        },
+        {
+          "date": "2026-07-26",
+          "hotness": 2,
+          "logic": "黑火信息差梳理MLCC核心标的：三环集团、风华高科、国瓷材料、洁美科技。关注最新盈利预测及弹性测算。",
+          "group": "黑火信息差"
+        }
+      ]
+    },
+    {
       "name": "液冷",
       "first_seen": "2026-07-23",
       "last_seen": "2026-07-27",
@@ -31304,7 +32552,7 @@
           "role": "龙头",
           "logic": "山东IPTV独家播控权+AIGC全链路",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         }
       ],
       "logs": [
@@ -31337,22 +32585,6 @@
           "hotness": 2,
           "logic": "美股软件暴涨（NET+17%/TEAM+32%/TWLO+16%）带来的A股CDN三杰重估逻辑延续。网宿科技持续被讨论，但操作层面存在套利vs波段的分歧。",
           "group": "猫十三"
-        }
-      ]
-    },
-    {
-      "name": "MLCC",
-      "first_seen": "2026-07-26",
-      "last_seen": "2026-07-26",
-      "mention_count": 1,
-      "last_hotness": 2,
-      "linked_stocks": [],
-      "logs": [
-        {
-          "date": "2026-07-26",
-          "hotness": 2,
-          "logic": "黑火信息差梳理MLCC核心标的：三环集团、风华高科、国瓷材料、洁美科技。关注最新盈利预测及弹性测算。",
-          "group": "黑火信息差"
         }
       ]
     },
@@ -31478,7 +32710,7 @@
           "role": "核心",
           "logic": "棉花最大产能之一",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "中粮糖业",
@@ -31745,6 +32977,30 @@
       ]
     },
     {
+      "name": "工程机械",
+      "first_seen": "2026-08-30",
+      "last_seen": "2026-08-30",
+      "mention_count": 1,
+      "last_hotness": 2,
+      "linked_stocks": [
+        {
+          "name": "三一重工",
+          "role": "核心",
+          "logic": "Q2业绩超预期，海外高增长",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-08-30",
+          "hotness": 2,
+          "logic": "三一重工交出超预期Q2答卷：收入+24.6%、归母+16.9%，海外收入增速21.8%、毛利率32.5%，即便在汇兑损失拖累下仍显韧性。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
       "name": "核聚变",
       "first_seen": "2026-08-26",
       "last_seen": "2026-08-26",
@@ -31949,7 +33205,7 @@
           "role": "关注",
           "logic": "产品稳健+高股息",
           "mentions": 1,
-          "stock_mentions": 0
+          "stock_mentions": 1
         }
       ],
       "logs": [
@@ -31973,7 +33229,7 @@
           "role": "龙头",
           "logic": "ChinaJoy全网唯一A股+独家展出韩国成人向影游+五五开流量",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         }
       ],
       "logs": [
@@ -32366,7 +33622,7 @@
       ]
     }
   ],
-  "generated_at": "2026-08-28 22:59:46",
-  "total_stocks": 650,
-  "total_sectors": 239
+  "generated_at": "2026-08-30 19:24:45",
+  "total_stocks": 680,
+  "total_sectors": 247
 }
