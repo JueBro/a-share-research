@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>飞书群聊市场观点汇总 2026-08-31（周一）</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+         background: #f5f7fa; color: #1a1a1a; line-height: 1.6; padding: 20px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 { font-size: 24px; color: #1a1a1a; margin-bottom: 8px; text-align: center; padding: 12px; background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%); color: #fff; border-radius: 8px; }
+  h2 { font-size: 18px; color: #1a1a1a; margin: 20px 0 12px; padding-left: 8px; border-left: 4px solid #ef4444; }
+  h3 { font-size: 16px; color: #1a1a1a; margin: 12px 0 8px; }
+  .meta-bar { background: #fff; padding: 12px 16px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); font-size: 13px; color: #555; }
+  .meta-bar span { margin-right: 20px; }
+  .meta-bar strong { color: #1a1a1a; }
+  .section { background: #fff; padding: 16px; border-radius: 8px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { background: #f9fafb; padding: 10px 8px; text-align: left; font-weight: 600; border-bottom: 2px solid #e5e7eb; color: #374151; }
+  td { padding: 10px 8px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+  tr:hover { background: #fafbfc; }
+  .star { color: #f59e0b; font-size: 14px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; margin-right: 4px; }
+  .badge-role-core { background: #dbeafe; color: #1e40af; }
+  .badge-role-hot { background: #fee2e2; color: #b91c1c; }
+  .badge-role-long { background: #dcfce7; color: #166534; }
+  .badge-role-lead { background: #fef3c7; color: #92400e; }
+  .badge-role-watch { background: #e0e7ff; color: #3730a3; }
+  .badge-role-short { background: #fce7f3; color: #9d174d; }
+  .badge-bull { background: #dcfce7; color: #166534; }
+  .badge-bear { background: #fee2e2; color: #b91c1c; }
+  .badge-neutral { background: #f3f4f6; color: #4b5563; }
+  .card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 14px; margin-bottom: 12px; transition: all 0.2s; }
+  .card:hover { border-color: #ef4444; box-shadow: 0 2px 8px rgba(239,68,68,0.1); }
+  .card-title { font-size: 16px; font-weight: 600; color: #ef4444; margin-bottom: 6px; }
+  .card-meta { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+  .card-meta span { margin-right: 12px; }
+  .card-logic { font-size: 14px; color: #374151; line-height: 1.7; margin: 8px 0; }
+  .card-target { font-size: 13px; color: #166534; }
+  .card-risk { font-size: 13px; color: #b91c1c; margin-top: 6px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .col-risk { background: #fef2f2; border-left: 3px solid #ef4444; padding: 12px; border-radius: 4px; }
+  .col-bull { background: #f0fdf4; border-left: 3px solid #10b981; padding: 12px; border-radius: 4px; }
+  .col-risk h4, .col-bull h4 { font-size: 14px; margin-bottom: 8px; }
+  .col-risk h4 { color: #b91c1c; }
+  .col-bull h4 { color: #166534; }
+  .col-risk ul, .col-bull ul { list-style: none; padding-left: 0; }
+  .col-risk li, .col-bull li { padding: 4px 0; font-size: 13px; color: #374151; padding-left: 16px; position: relative; }
+  .col-risk li::before { content: "⚠️"; position: absolute; left: 0; }
+  .col-bull li::before { content: "✅"; position: absolute; left: 0; }
+  .highlight-box { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 16px; border-radius: 8px; border: 1px solid #f59e0b; margin: 16px 0; }
+  .highlight-box h3 { color: #92400e; margin-bottom: 10px; }
+  .highlight-box ol { padding-left: 24px; }
+  .highlight-box li { padding: 6px 0; font-size: 14px; color: #422006; font-weight: 500; }
+  .group-tag { display: inline-block; background: #1f2937; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; vertical-align: middle; }
+  .quote { background: #f3f4f6; padding: 12px 14px; border-left: 3px solid #6b7280; border-radius: 4px; margin: 8px 0; font-style: italic; color: #374151; }
+  .quote-author { font-style: normal; color: #6b7280; font-size: 12px; margin-top: 4px; }
+  .index-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 12px 0; }
+  .index-cell { background: #f9fafb; padding: 12px; border-radius: 6px; text-align: center; }
+  .index-cell .num { font-size: 20px; font-weight: 700; color: #ef4444; }
+  .index-cell .label { font-size: 12px; color: #6b7280; }
+  .index-cell .sub { font-size: 11px; color: #6b7280; margin-top: 4px; }
+  .red-num { color: #ef4444; }
+  .green-num { color: #10b981; }
+  .disclaimer { text-align: center; color: #9ca3af; font-size: 12px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #e5e7eb; }
+  .pill-group { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🚀 飞书群聊市场观点汇总 — 2026-08-31（周一）</h1>
+
+<div class="meta-bar">
+  <span>📅 <strong>报告日期</strong>: 2026-08-31（周一交易日）</span>
+  <span>👥 <strong>覆盖群数</strong>: 15 个飞书群</span>
+  <span>💬 <strong>消息总数</strong>: 414 条</span>
+  <span>🕘 <strong>生成时间</strong>: 2026-08-31 23:00</span>
+  <span>📊 <strong>数据库累计</strong>: 685+ 只个股 / 253+ 个板块</span>
+</div>
+
+<div class="section">
+<h2>📊 一、大盘走势与核心观点</h2>
+
+<h3>关键市场数据（2026-08-31）</h3>
+<div class="index-row">
+  <div class="index-cell">
+    <div class="label">三市成交</div>
+    <div class="num">21,458亿</div>
+    <div class="sub">较上日+278亿 (+1.3%)</div>
+  </div>
+  <div class="index-cell">
+    <div class="label">主力净流出</div>
+    <div class="num green-num">-56.78亿</div>
+    <div class="sub">流出幅度收窄</div>
+  </div>
+  <div class="index-cell">
+    <div class="label">两融余额</div>
+    <div class="num">26,591亿</div>
+    <div class="sub">较上日-60.06亿</div>
+  </div>
+  <div class="index-cell">
+    <div class="label">中信累计减空</div>
+    <div class="num green-num">1782手</div>
+    <div class="sub">净空单74,388</div>
+  </div>
+</div>
+
+<div class="index-row">
+  <div class="index-cell">
+    <div class="label">主要玩家减空</div>
+    <div class="num green-num">4030手</div>
+    <div class="sub">净空单115,647</div>
+  </div>
+  <div class="index-cell">
+    <div class="label">中证500减空</div>
+    <div class="num green-num">887手</div>
+    <div class="sub">净空12,312</div>
+  </div>
+  <div class="index-cell">
+    <div class="label">沪深300加空</div>
+    <div class="num red-num">+440手</div>
+    <div class="sub">净空20,082</div>
+  </div>
+  <div class="index-cell">
+    <div class="label">中证1000减空</div>
+    <div class="num green-num">779手</div>
+    <div class="sub">净空30,461</div>
+  </div>
+</div>
+
+<h3>各群核心观点</h3>
+
+<div class="quote">
+"今天国产算力逆势炸裂，主要得益于棒股、纳指期货联动走强。但核心看点在于，这是6月底科创和国产算力见顶之后，首次脱离光模块牵制，扛住了油价上涨的外部压力，意义重大。大A慢牛逻辑未变、AI高景气逻辑未变。仓位上不宜重仓满仓，也不宜空仓。"
+<div class="quote-author">— 核心逻辑社（22:20晚间总结）</div>
+</div>
+
+<div class="quote">
+"指数后面震荡向上，今年破4258。珍惜这轮牛市最后一个秋季行情。"
+<div class="quote-author">— 洛飞小群 平安喜乐（14:30）</div>
+</div>
+
+<div class="quote">
+"无法聚焦到某一方面，整个盘面还是轮动太快，就保持1.5成，够了。这个月反正赚钱了。"
+<div class="quote-author">— 潘凤（13:55-14:26）</div>
+</div>
+
+<div class="quote">
+"题材这边药彻底死了，农业小承接，热度又被地产抢了。指数不行所有所谓共振板块全是假的。现阶段量化第一指标就是指数。"
+<div class="quote-author">— 彭域（10:03 / 10:28）</div>
+</div>
+
+<div class="quote">
+"退潮期我们只能先取关再关注回来的方式去等市场寻底。抱团情绪已经见底了，接下来就是修复行情。"
+<div class="quote-author">— 小锦鲤（15:09）</div>
+</div>
+
+<h3>📌 美伊冲突骤变</h3>
+<ul style="margin-left: 24px; font-size: 14px;">
+<li>美东时间周日早，美军对拉腊克岛的伊朗导弹发射器实施打击，伊方原计划向霍尔木兹海峡发射装水雷的火箭</li>
+<li>伊朗革命卫队8月31日凌晨宣布，向美军基地发射导弹（未造成重大损毁）</li>
+<li>特朗普誓言"美军将猛烈打击伊朗"，称制裁正在"强力生效"并表示"德黑兰方面有意谈判"</li>
+<li>美财政部长贝森特：伊朗对制裁非常认真，经济正在失利；"我们会渡过伊朗冲突的这一难关"</li>
+<li>伊朗总统佩泽希齐扬：若霍尔木兹海峡在特定框架下重新开放，美国也必须履行义务</li>
+<li>特朗普发布伊朗哈尔克岛"被炸得粉碎"的AI视频</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>🔥 二、板块热度排行（按提及频率+讨论深度）</h2>
+<table>
+<thead>
+<tr>
+<th style="width: 50px;">排名</th>
+<th style="width: 80px;">热度</th>
+<th>板块</th>
+<th>核心逻辑</th>
+<th>来源群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><span class="star">★★★★★</span></td>
+<td><strong>国产算力/AI芯片/HBM</strong></td>
+<td>寒武纪持续盈利唯王者，技术领先1-2代；紫光股份明确"超节点商用元年"；长鑫H1营收1503亿+874%，净利776亿扭亏；国产HBM3E小规模生产、2027年扩大；腾讯混元Hy4 preview紧急扩容；国产大模型周调用量55.16万亿Token，超美国连续18周；长鑫LPDDR6量产、小米18 Fold首发；The Information披露国产HBM突破</td>
+<td>核心逻辑社/信息早知道</td>
+</tr>
+<tr>
+<td>2</td>
+<td><span class="star">★★★★★</span></td>
+<td><strong>AI视频/影视传媒/AI长剧</strong></td>
+<td>《后西游记》8.31湖南卫视+芒果TV首播，国内首部上星AI长剧、广电21条后首部"边审边播"；Seedance 2.0/2.5技术支持；晚间观感反馈偏超预期，画面质感、场景搭建及特效呈现完成度较高；4条主线：平台/IP/AI工具/字节生态；长剧供给起量打开AI剧行业空间（860亿长剧市场+1000亿微短剧市场）</td>
+<td>信息早知道/核心逻辑社</td>
+</tr>
+<tr>
+<td>3</td>
+<td><span class="star">★★★★★</span></td>
+<td><strong>染料/化工/涨价</strong></td>
+<td>活性艳蓝19再度提价2万元/吨至25万元/吨，年内累计+150%；大柴旦和信H酸出厂价15万元/吨；染料行业8月以来景气度上行；9月看多涨价方向首推染料；推荐：浙江龙盛、海翔药业、闰土股份、亚邦股份、建新股份、锦鸡股份；中间体：H酸/间氨基苯酚</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>4</td>
+<td><span class="star">★★★★★</span></td>
+<td><strong>液冷/散热</strong></td>
+<td>央视财经报道液冷多地产线满产，部分订单排至2026年底、展望2027；Vera Rubin全面投产并交付，液冷从可选变必选，NVL72 100%全液冷无风扇、45℃温水散热；Google CDU订单进入下单窗口；Q3进入订单兑现期；市场规模26年超千亿、28年3000亿；金刚石散热产业化元年</td>
+<td>信息早知道/核心逻辑社</td>
+</tr>
+<tr>
+<td>5</td>
+<td><span class="star">★★★★</span></td>
+<td><strong>PCB/CCL/覆铜板</strong></td>
+<td>建滔积层板年内第七次涨价！对所有厚度FR-4覆铜板统一涨价10%；PP半固化片7628以上厚布PP涨价10%，以下涨价20%；AI机柜需求驱动；生益电子22.57亿元建设芯算智联高速互联电路板；PCB钻针量价齐升（孔径缩小、长径比提升带动单价10-15倍）</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>6</td>
+<td><span class="star">★★★★</span></td>
+<td><strong>苹果链/折叠屏/3D打印</strong></td>
+<td>9.9苹果折叠屏量产在即；苹果测试折叠屏专用手写笔，汉王科技卡位；苹果选3D打印钛金属中框（材料利用率95%+远超CNC 40-50%）；3C厂商都要跟；需求量再翻几倍；设备壁垒高，看打印零部件一致性和良率、激光头数量；HS 9激光头、BLT 8激光头行业领先</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>7</td>
+<td><span class="star">★★★★</span></td>
+<td><strong>射频/BAW滤波器</strong></td>
+<td>卓胜微正式发布调价通知，全系列RF产品9.1起执行新价格；BAW长期被博通等海外巨头主导，壁垒来自专利、工艺、晶圆制造三重叠加；AI终端/卫星通信/6G不断增加频段数量与射频复杂度；经纬辉开持诺思微28.7%股权，BAW国产替代</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>8</td>
+<td><span class="star">★★★</span></td>
+<td><strong>智慧交通/无感支付</strong></td>
+<td>央行/金融监管总局六大房地产新政：房贷年限延长至40年；交通运输部印发《高速公路"手机+"无卡便捷通行实施方案（2026-2028年）》；证监会支持上市房企再融资+综合运用发行股份、定向可转债、现金等工具收购涉房资产；"建议取消ETC设备"冲上热搜第一</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>9</td>
+<td><span class="star">★★★</span></td>
+<td><strong>煤炭/焦炭涨价</strong></td>
+<td>焦炭第三轮涨价落地，湿熄涨幅100元/吨，干熄涨幅110元/吨；煤炭期货拉爆；不少焦企原料煤库存已经降无可降；山西焦煤现货大多已经摸到甚至超过2022年均价；秦皇岛动力煤冲900元关口，冲1000元也不远</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>10</td>
+<td><span class="star">★★★</span></td>
+<td><strong>机器人/具身AI/端侧</strong></td>
+<td>七部门：加快人工智能手机和电脑、智能穿戴设备、智能机器人、智能家居等产品推广应用；Hugging Face开源Microduck双足机器鸭爆火，4秒售出一台，399美元卖断货；众合科技/云汉芯城</td>
+<td>信息早知道</td>
+</tr>
+<tr>
+<td>11</td>
+<td><span class="star">★★</span></td>
+<td><strong>创新药/医药</strong> <span class="group-tag">退潮</span></td>
+<td>医药退潮，万邦跌30+；近岸分批取关；天山暂时不考虑回去；潘凤：医药高潮明天分歧。哈药一字跌停但有反核修复预期；小锦鲤：医药明天还有一次恐慌低吸机会</td>
+<td>小锦鲤/潘凤/洛飞</td>
+</tr>
+<tr>
+<td>12</td>
+<td><span class="star">★★</span></td>
+<td><strong>地产链</strong> <span class="group-tag">轮动</span></td>
+<td>房贷年限延长至40年、央行金融监管总局六大房地产新政；地产股早盘一字一串涨停后回落，金融街涨4%收窄、招商蛇口跌超6%；连板：我爱我家、深物业A 2板；板块轮动，地产和应用做低位pk，地产输了</td>
+<td>彭域/洛飞</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<h2>⭐ 三、重点个股推荐与分析</h2>
+
+<div class="card">
+<div class="card-title">💎 长鑫科技 / 长鑫存储</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-lead">龙头</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">上半年营收1503.1亿元（+873.64%），归母净利润776.05亿元（同比扭亏）；长鑫LPDDR6内存正式量产，小米18 Fold新折叠旗舰首发搭载；国产HBM3E小规模生产，2027年扩大；包括寒武纪、海光在内的头部芯片设计公司最早将于明年测试长鑫HBM产品；展望2026H2，全球DRAM产品供给紧缺格局将继续延续。</div>
+</div>
+
+<div class="card">
+<div class="card-title">💎 寒武纪</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-lead">龙头</span>
+<span>来源群: <span class="group-tag">核心逻辑社</span></span>
+</div>
+<div class="card-logic">摩字辈、沐字辈等算力芯片中报净利润仍亏损，唯有寒王持续盈利，说明技术至少领先1-2代；周一带队炸裂突围；字节算力对应寒王；多头军团战略重心转移至国产算力。多头军团："时间只会证明国产算力的！"</div>
+</div>
+
+<div class="card">
+<div class="card-title">💎 紫光股份</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">核心逻辑社</span></span>
+</div>
+<div class="card-logic">公司明确表态："今年是超节点商用元年，各行业需求释放明显"。UniPoDS80000系列超节点产品已在互联网、运营商、金融等多个行业实现落地商用。未来将细分产品系列，并在双连接架构、高速连接器、新型液冷技术等前沿方向布局。万亿参数模型的发展趋势正持续拉动超节点的市场需求。周五再次强调抄底交换机，今天全面炸裂。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🎬 芒果超媒</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-lead">龙头</span>
+<span>来源群: <span class="group-tag">信息早知道/洛飞</span></span>
+</div>
+<div class="card-logic">《后西游记》8.31上星首播，国内首部上星AI长剧、广电21条后首部"边审边播"；兼具内容制作、IP储备、芒果TV平台和发行渠道；若AI降低制作成本，平台加速采用、内容供给爆发、IP价值重估；洛飞明确：芒果后面首分还是买点，"芒果里面的机构不会短线傻出货"。晚间观感反馈偏超预期。</div>
+</div>
+
+<div class="card">
+<div class="card-title">💎 慧博云通</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">7.17 WAIC华为首次真机展出Atlas950 superPoD，单集群最大8192张昇腾950DT NPU，自研灵衢全光互联16.3PB/S，FP8峰值算力8 EFLOPS。公司收购宝德计算机65.47%股权，宝德是ARI服务器全国销量第一、华为昇腾AI服务器份额全国前三。预测2028年国产超节点市场空间3414亿，中国移动已落地超20亿集采。"慧博云通=超节点放量的A股最强映射"。</div>
+</div>
+
+<div class="card">
+<div class="card-title">💧 申菱环境</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-lead">龙头</span>
+<span>目标市值: <span class="card-target">750亿</span></span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">CDU及液冷EPC重点推荐；目前在手订单接近80亿，明年预计25亿利润；唯一能和英维克市值拉齐的公司；当前位置看翻倍，目标市值750亿；半年报利空落地，叠加周末央视财经消息面刺激，今日液冷板块大涨。</div>
+</div>
+
+<div class="card">
+<div class="card-title">💧 精研科技</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>目标市值: <span class="card-target">240亿</span></span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">全球MIM液冷龙头，看好渗透率今年开始快速提升。内存冷板对接台资，快接头对接NV，光模块散热对接H。预计明年6亿利润，当前位置看三倍以上，目标市值240亿。今日上涨16%。</div>
+</div>
+
+<div class="card">
+<div class="card-title">📱 汇成真空</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">果链PVD设备独家供应商；果链PVD镀膜替代传统电镀，A客户长期存在掉色等可靠性问题，今年开始加速切换至PVD，27年新机型将全面采用。富士康、蓝思订单也在增加，连续式PVD设备价值量近乎翻3倍；2027年果链PVD订单40e；明年业绩有望超12e，对应当前仅不到15x。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🧪 威派格</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">拟收购安徽提曼51%股权，切入PCB钻针高景气赛道；客户覆盖南亚电子（台塑旗下）、健鼎科技等中大型PCB厂商；26年预计月产能达300万支，27年底目标月产能1000万支；假设年1e支出货，均价8-10元/支，对应营收8-10e，净利率25%，净利润2-2.5e，35-40PE=80e市值增量。主业：WDS、WDM系列立式多级离心泵布局"AI+水务"。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🎨 浙江龙盛 / 海翔药业</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-lead">龙头</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">活性艳蓝19再度提价2万元/吨至25万元/吨，较年初10万元/吨大涨150%；国内仅海翔药业、浙江龙盛两家生产，海翔药业产能1.5万吨。染料行业8月以来景气度上行，下游染色成本对需求边际弹性极高。染料龙头：浙江龙盛、闰土股份；小品种：海翔药业、亚邦股份；中间体：建新股份、锦鸡股份。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🛰️ 经纬辉开 (300120)</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">9.1射频全系涨价：产业拐点正式确认；卓胜微全系列RF产品自9.1起执行新价格。BAW滤波器长期被博通等海外巨头主导，壁垒来自专利、工艺、晶圆制造三重叠加。公司7.31完成最新增持后，直接及间接合计持有诺思微28.6961%股权。诺思微长期深耕BAW技术，并已就相关BAW专利向武汉敏声发起侵权诉讼。</div>
+</div>
+
+<div class="card">
+<div class="card-title">💎 中石科技</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">光模块TIM+VC散热模组已批量供货国内外头部客户；冷板推进客户导入/认证/量产落地。中际旭创拟17.47亿受让中石科技10.47%股权，光模块龙头真金白银下注散热赛道，凸显光模块散热刚性需求。光模块散热市场规模超百亿。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🖥️ 立讯精密</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-core">核心</span>
+<span class="card-target">A 98元 / H 93.2港元</span>
+<span>来源群: <span class="group-tag">傅里叶的猫</span></span>
+</div>
+<div class="card-logic">高盛：管理层对AIDC业务仍持积极态度，依托立讯丰富的产品组合，为客户提供AIDC整体解决方案。预计2025-2028年营收CAGR 24%；消费电子+AI驱动设备；汽车电子业务。光模块产线扩张速度较此前预期快约5-6个月，目标27年中10条线具备量产能力。给予A/H股"买入"评级，目标价A 98元/H 93.2港元。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🖥️ 澜起科技</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-core">核心</span>
+<span class="card-target">A 380元 / H 572港元</span>
+<span>来源群: <span class="group-tag">傅里叶的猫</span></span>
+</div>
+<div class="card-logic">高盛：DDR5第三代/第四代RCD芯片已成2026H1主要收入来源，已启动DDR5第五代量产，9200MT/s第六代处于送样阶段。启动PCIe 7.0研发，PCIe交换芯片目标2026年底前流片；CXL 3.2 MXC芯片首次试产2026年7月启动，目标价A 380元/H 572港元。</div>
+</div>
+
+<div class="card">
+<div class="card-title">📱 TCL科技</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">玻璃基板：26H2计划推出12层样品；28年中试线投资超10亿元。光芯片：依托华兆星光深圳项目布局LED芯片技术，按激光芯片→光器件→光模块三步推进。钙钛矿：依托TCL中环晶硅技术优势，布局4T叠层。低轨卫星：围绕太空光伏、航天面板、卫星平板天线、卫星直连终端等场景。印刷OLED中尺寸良率三个月从个位数提升至接近60%。</div>
+</div>
+
+<div class="card">
+<div class="card-title">⚙️ 大胜达</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-short">短线</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">参股芯瞳半导体，GB3000定位高性能GPU；若实测性能确能接近RTX 4090/4080 Ti级别，在5090、5090D及后续特供版本受限背景下，国产高端显卡稀缺性将显著提升。对比砺算相关概念已获得较高估值，大胜达目前约百亿级市值，存在明显估值差与弹性空间。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🧊 国机精工 / 沃尔德</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">今年是金刚石散热产业化验证元年，27年产业有望放量。全球金刚石散热市场规模或超千亿，多家产业链厂商披露大规模扩产、业绩拐点向上。沃尔德320mm*320mm已交付验证。华为韬定律采用逻辑堆叠，论文中明确"热管理是关键挑战"，后续有望在芯片和光互连层级采用金刚石等新散热材料。</div>
+</div>
+
+<div class="card">
+<div class="card-title">⚙️ 麦格米特 / 新雷能 / 江海股份</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">台达18.3KW PSU因NCC电容问题被召回；NV所有相关电容移除NCC供货产品。NV可能需要重新补充PSU产能。NV补充PSU其他供应商份额、台达替换NCC为TDK，皆证明电源功率升级背景下，品控将显著影响竞争格局。NV PSU端推荐：麦格米特、新雷能；电容端：江海股份。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🧪 泸天化 (000912)</div>
+<div class="card-meta">
+<span class="badge badge-bull">强烈看多</span>
+<span class="badge badge-role-short">短线</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">中国对印尿素出口管制放宽，首次发放尿素出口配额。印度RCF招标188.35万吨，中国占100-150万吨，泸天化13.4万吨出口配额（同类型企业第一），是国内唯一出口配额企业。今年尿素国内1600元/吨 vs 印度2600元/吨以上，价差显著。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🚦 通行宝 / 皖通科技</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-core">核心</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">交通运输部印发《高速公路"手机+"无卡便捷通行实施方案（2026-2028年）》，车牌识别+手机支付实现无卡通行，"建议取消ETC设备"冲上热搜第一。通行宝深度参与江苏省手机+无卡便捷通行技术平台建设。皖通科技子公司汉高信息深耕高速公路收费及智慧交通，RSU硬件升级+后台收费系统重构打开双重增量。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🤖 众合科技 / 云汉芯城</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-short">短线</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">Hugging Face开源Microduck双足机器鸭爆火，4秒售出一台，399美元卖断货；公司由矽递科技生产。众合科技布局机器人运动控制器、边缘AI计算平台，适配机器视觉感知接入，可实现多自由度机器人的步态解算、姿态闭环控制。云汉芯城携手矽递科技共建"互联网智能硬件生态体系"。</div>
+</div>
+
+<div class="card">
+<div class="card-title">🎬 中文在线 / 欢瑞世纪 / 数码视讯</div>
+<div class="card-meta">
+<span class="badge badge-bull">看多</span>
+<span class="badge badge-role-short">短线</span>
+<span>来源群: <span class="group-tag">信息早知道</span></span>
+</div>
+<div class="card-logic">"AI+IP+短剧"重要映射；潘凤指中文在线没发酵拉到，晚上发酵赚点。欢瑞世纪和数码视讯完美星空进军AI漫剧，《后西游记》AI视频产业链4条主线：平台/IP/AI工具/字节生态；光线传媒/上海电影/华策影视/浙文影业均受关注。</div>
+</div>
+
+</div>
+
+<div class="section">
+<h2>⚠️ 四、市场情绪与风险提示</h2>
+<div class="two-col">
+<div class="col-risk">
+<h4>🔻 主要风险</h4>
+<ul>
+<li>美伊冲突升级 - 油价冲高、伊朗向美军基地发射导弹、特朗普誓言"猛烈打击"，地缘政治风险持续</li>
+<li>量化轮动太快 - 潘凤、彭域均反映"无法聚焦"、"现阶段量化第一指标就是指数"</li>
+<li>创新药退潮 - 万邦医药已跌30+，彭域直言"药彻底死了"</li>
+<li>地产新政分歧 - 潘凤认为"利空房地产"；地产涨停后回落，招商蛇口跌超6%</li>
+<li>卓胜微全系涨价能否传导存疑 - 仍处于"行业从以价换量切换至价格修复+国产替代"早期</li>
+<li>万邦医药持续下挫 - "退潮了需要小心点"，医药明天还有一次恐慌低吸机会</li>
+<li>特朗普发力压制油价叠加地缘风险 - 万一周一开盘美伊冲突大幅升级，市场将再次承压</li>
+</ul>
+</div>
+<div class="col-bull">
+<h4>🔺 积极信号</h4>
+<ul>
+<li>国产算力逆势炸裂 - 首次脱离光模块牵制，扛住油价上涨外部压力，意义重大</li>
+<li>紫光股份明确"超节点商用元年" - 万亿参数模型持续拉动超节点需求</li>
+<li>长鑫存储H1业绩炸裂 - 营收1503亿+874%，归母776亿扭亏；HBM3E量产在即</li>
+<li>《后西游记》首映观感偏超预期 - AI剧产业工业化能力持续成熟，4条主线带来估值重估</li>
+<li>染料第三轮涨价落地 - 活性艳蓝19累计涨150%，9月景气可持续</li>
+<li>液冷订单兑现期 - 央视财经报道多地产线满产，订单排至2026年底、展望2027</li>
+<li>央行金融监管总局六大房地产新政 - 房贷年限延长至40年、证监会支持房企再融资</li>
+<li>国产大模型周调用量55.16万亿Token - 连续18周超越美国稳居全球首位</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2>📈 五、重要公告/新闻（2026-08-31）</h2>
+<table>
+<thead>
+<tr><th style="width: 90px;">类型</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td><span class="badge badge-bull">业绩炸裂</span></td><td><strong>长鑫存储</strong>：上半年营收1503.1亿元（+873.64%），归母净利776.05亿元同比扭亏；长鑫LPDDR6正式量产，小米18 Fold首发搭载</td></tr>
+<tr><td><span class="badge badge-bull">业绩炸裂</span></td><td><strong>浪潮信息</strong>：H1归母净利29.52亿元（+269.59%）</td></tr>
+<tr><td><span class="badge badge-bull">业绩炸裂</span></td><td><strong>华正新材</strong>：H1归母净利1.73亿元（+305.28%）</td></tr>
+<tr><td><span class="badge badge-bull">业绩炸裂</span></td><td><strong>赣锋锂业</strong>：H1营收230.97亿（+175.75%），归母净利42.57亿扭亏</td></tr>
+<tr><td><span class="badge badge-bull">业绩炸裂</span></td><td><strong>五粮液</strong>：H1营收284.17亿（+20.87%），归母净利87.53亿（+89.3%）</td></tr>
+<tr><td><span class="badge badge-bull">业绩炸裂</span></td><td><strong>中国石油</strong>：H1营收15274.91亿（+5.3%），归母净利1039.36亿（+22.0%）</td></tr>
+<tr><td><span class="badge badge-bear">业绩分化</span></td><td><strong>比亚迪</strong>：H1营收3448.2亿（-7.13%），归母净利123.3亿（-20.5%）</td></tr>
+<tr><td><span class="badge badge-bear">业绩承压</span></td><td><strong>隆基绿能</strong>：H1营收270.45亿（-17.58%），归母亏损36.84亿</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>香山股份</strong>：拟发行股份及支付现金收购武珞智慧100%股权，股票停牌</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>中际旭创</strong>：拟17.47亿元受让中石科技10.47%股权</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>威派格</strong>：拟收购安徽提曼51%股权，切入PCB钻针赛道</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>慧博云通</strong>：收购宝德计算机65.47%股权（华为昇腾AI服务器前三）</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>中坚科技</strong>：拟投资12亿元建设智能机器人产业化项目</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>生益电子</strong>：全资子公司拟投资22.57亿元建设"芯算智联"高速互联电路板制造项目</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>海星股份</strong>：拟定增募资不超21亿元用于AI算力电源用高性能高压电极箔项目</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>华特气体</strong>：拟募资不超7亿元用于江苏华特半导体材料生产基地建设项目</td></tr>
+<tr><td><span class="badge badge-role-core">资本运作</span></td><td><strong>有研硅</strong>：拟收购山东有研艾斯及山东有研半导体股权，预计构成重大资产重组</td></tr>
+<tr><td><span class="badge badge-bull">产能扩张</span></td><td><strong>香江控股</strong>：全资子公司签订不超9.7亿元算力技术服务合同（2连板）</td></tr>
+<tr><td><span class="badge badge-bear">退市风险</span></td><td><strong>*ST元道</strong>：触及重大违法强制退市情形，8.31停牌</td></tr>
+<tr><td><span class="badge badge-bear">监管立案</span></td><td><strong>万里石</strong>：涉嫌信息披露违法违规，公司及实控人被证监会立案</td></tr>
+<tr><td><span class="badge badge-role-long">宏观政策</span></td><td><strong>央行/金融监管总局六大房地产新政</strong>：房贷年限延长至40年、存量浮动利率房贷可协商调整、商品住房现房销售、个人住房贷款发放时点要求、还款困难可协商调整</td></tr>
+<tr><td><span class="badge badge-role-long">宏观政策</span></td><td><strong>证监会《关于资本市场支持构建房地产发展新模式的意见》</strong>：支持上市房企再融资及综合运用发行股份、定向可转债、现金等工具收购涉房资产</td></tr>
+<tr><td><span class="badge badge-role-long">宏观政策</span></td><td><strong>财政部/税务总局/证监会</strong>：关于规范转让上市公司限售股个人所得税政策的公告，适用20%税率</td></tr>
+<tr><td><span class="badge badge-role-long">宏观政策</span></td><td><strong>国家数据局</strong>：要研究探索词元增值订阅、按效付费等商业模式；20余家算力调度主体入驻全国一体化算力网监测调度试验验证平台</td></tr>
+<tr><td><span class="badge badge-role-long">宏观政策</span></td><td><strong>GX部</strong>：加大大模型、智能体、Token等服务采购力度；推动优质人工智能应用项目出海落地</td></tr>
+<tr><td><span class="badge badge-bull">科技突破</span></td><td><strong>地月激光通信试验</strong>：中国成功在超过40万公里地月距离上建立双向激光链路，首次实现地月双向高速激光通信</td></tr>
+<tr><td><span class="badge badge-bull">重大事件</span></td><td><strong>Anthropic</strong>：计划9.7后公布IPO招股说明书，预计9月下旬或10月初在美上市，希望筹资至少1300亿美元</td></tr>
+<tr><td><span class="badge badge-bull">重大事件</span></td><td><strong>AI长剧《后西游记》</strong>：8.31 20:00湖南卫视+芒果TV双平台首播，国内首部上星AI长剧，广电21条后首部"边审边播"</td></tr>
+<tr><td><span class="badge badge-bear">海外风险</span></td><td><strong>美伊冲突</strong>：特朗普誓言"美军将猛烈打击伊朗"，称制裁正在"强力生效"，伊朗向美军基地发射导弹</td></tr>
+<tr><td><span class="badge badge-bear">海外风险</span></td><td><strong>美国限制加码</strong>：美国拟推新规禁止中国AI企业通过东南亚地区调用英伟达芯片</td></tr>
+<tr><td><span class="badge badge-bear">海外风险</span></td><td><strong>美股周五</strong>：道指-0.02%/纳指-0.52%/标普-0.25%；周累涨0.53%/0.85%/0.49%</td></tr>
+<tr><td><span class="badge badge-role-core">回购</span></td><td><strong>中JXC</strong>：拟回购40亿至80亿元股份，回购价格不超过1200元/股</td></tr>
+<tr><td><span class="badge badge-role-core">海外链</span></td><td><strong>"大空头"迈克尔·伯里</strong>：加码做空英伟达，同时买入英伟达看涨期权，认为英伟达垄断地位有限，未来利润率下降</td></tr>
+<tr><td><span class="badge badge-role-core">海外链</span></td><td><strong>OpenRouter</strong>：上周全球AI大模型总调用量113万亿Token（+21.11%），国产大模型周调用55.16万亿Token（+36.26%）连续18周超美</td></tr>
+<tr><td><span class="badge badge-role-core">海外链</span></td><td><strong>沃什</strong>：通胀数据未显示通胀趋势出现显著改善，通胀率不能快速达到2%就还有工作要做</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section highlight-box">
+<h3>🔔 六、明日（2026-09-01）关注要点</h3>
+<ol>
+<li><strong>《后西游记》播出反馈</strong>：收视率、口碑、机构点评，AI视频产业信心能否进一步确立</li>
+<li><strong>卓胜微9.1全系涨价生效</strong>：射频链启动估值重塑，关注经纬辉开/麦格米特/江海股份</li>
+<li><strong>美伊局势演变</strong>：特朗普誓言"猛烈打击伊朗"，油价、美债、美股表现将决定A股情绪方向</li>
+<li><strong>9月开门红能否确认</strong>：核心逻辑社"美伊冲突结束→纳指必新高→算力必主升浪"</li>
+<li><strong>染料第三轮涨价扩散</strong>：活性艳蓝19年内累计涨150%，关注浙江龙盛/海翔药业/亚邦股份/锦鸡股份</li>
+<li><strong>创新药企稳信号</strong>：万邦医药、近岸蛋白、哈药股份 — 龙头若企稳则医药板块修复开启</li>
+<li><strong>国产算力持续性</strong>：寒武纪/中芯国际/长鑫/紫光/中际旭创能否延续逆势突围</li>
+<li><strong>湖南卫视AI长剧首播数据</strong>：国泰海通传媒认为有望打开860亿长剧+1000亿微短剧市场</li>
+<li><strong>9.2-3国泰海通北京策略会</strong>：中文在线、天下秀、元隆雅图、捷成股份、博纳影业、昆仑万维、五一视界</li>
+<li><strong>9月流动性</strong>：8月MLF净回笼1000亿，3M买断式逆回购净投放2000亿；央行呵护资金面</li>
+</ol>
+</div>
+
+<div class="section">
+<h2>📋 七、各群消息分布</h2>
+<table>
+<thead><tr><th>群名</th><th>消息数</th><th>占比</th><th>活跃度</th></tr></thead>
+<tbody>
+<tr><td><strong>潘凤</strong></td><td>95</td><td>23.0%</td><td><span class="badge badge-role-hot">🔥极热</span></td></tr>
+<tr><td><strong>信息早知道</strong></td><td>78</td><td>18.8%</td><td><span class="badge badge-role-hot">🔥极热</span></td></tr>
+<tr><td><strong>彭域</strong></td><td>63</td><td>15.2%</td><td><span class="badge badge-role-hot">🔥极热</span></td></tr>
+<tr><td><strong>小锦鲤</strong></td><td>37</td><td>8.9%</td><td><span class="badge badge-role-hot">🔥活跃</span></td></tr>
+<tr><td><strong>核心逻辑社</strong></td><td>36</td><td>8.7%</td><td><span class="badge badge-role-hot">🔥活跃</span></td></tr>
+<tr><td><strong>洛飞小群</strong></td><td>29</td><td>7.0%</td><td><span class="badge badge-role-long">活跃</span></td></tr>
+<tr><td><strong>傅里叶的猫</strong></td><td>29</td><td>7.0%</td><td><span class="badge badge-role-long">活跃</span></td></tr>
+<tr><td><strong>震哥-胡汉三</strong></td><td>28</td><td>6.8%</td><td><span class="badge badge-role-long">活跃</span></td></tr>
+<tr><td><strong>鑫多多</strong></td><td>8</td><td>1.9%</td><td><span class="badge badge-neutral">普通</span></td></tr>
+<tr><td><strong>杰哥进阶</strong></td><td>5</td><td>1.2%</td><td><span class="badge badge-neutral">普通</span></td></tr>
+<tr><td><strong>黑火信息差</strong></td><td>4</td><td>1.0%</td><td><span class="badge badge-neutral">普通</span></td></tr>
+<tr><td><strong>猫十三</strong></td><td>2</td><td>0.5%</td><td><span class="badge badge-neutral">低活跃</span></td></tr>
+<tr><td><strong>唐史主任</strong></td><td>0</td><td>0%</td><td><span class="badge badge-neutral">无消息</span></td></tr>
+<tr><td><strong>VIP通知新群1</strong></td><td>0</td><td>0%</td><td><span class="badge badge-neutral">无消息</span></td></tr>
+<tr><td><strong>局座</strong></td><td>0</td><td>0%</td><td><span class="badge badge-neutral">无消息</span></td></tr>
+<tr style="background: #fef3c7;"><td><strong>合计</strong></td><td><strong>414</strong></td><td><strong>100%</strong></td><td>13/15 群活跃</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="disclaimer">
+⚠️ <strong>免责声明</strong>：本报告基于15个飞书群聊的公开消息整理而成，仅作为研究素材和个人复盘参考，<strong>不构成任何投资建议</strong>。所有观点和数据均可能存在偏差，决策权完全归用户所有。请独立判断、谨慎决策，市场有风险，投资需谨慎。<br>
+<span style="color:#9ca3af; font-size:11px;">数据来源：飞书群聊 | 报告生成：自动化任务 | 原始消息见 data/messages_2026-08-31.txt</span>
+</div>
+
+</div>
+</body>
+</html>
