@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A股飞书群聊市场观点汇总报告 2026-09-07</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #fff; border-radius: 16px; padding: 36px; margin-bottom: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+.header h1 { font-size: 26px; margin-bottom: 8px; }
+.header .subtitle { font-size: 14px; color: #a0a0b0; margin-bottom: 20px; }
+.header .stats { display: flex; gap: 32px; flex-wrap: wrap; }
+.header .stat-item { text-align: center; }
+.header .stat-value { font-size: 28px; font-weight: 700; color: #ff6b6b; }
+.header .stat-label { font-size: 12px; color: #a0a0b0; margin-top: 4px; }
+.section { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.section h2 { font-size: 20px; color: #1a1a2e; margin-bottom: 16px; border-left: 4px solid #0f3460; padding-left: 12px; }
+.section h3 { font-size: 16px; color: #333; margin: 16px 0 10px; }
+.market-data { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.data-card { background: #f8f9fa; border-radius: 8px; padding: 16px; text-align: center; }
+.data-card .label { font-size: 12px; color: #666; margin-bottom: 4px; }
+.data-card .value { font-size: 20px; font-weight: 700; }
+.value.up { color: #e63946; }
+.value.down { color: #2a9d8f; }
+.value.neutral { color: #333; }
+.view-card { background: #f8f9fa; border-radius: 8px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #0f3460; }
+.view-card .group-tag { display: inline-block; background: #0f3460; color: #fff; padding: 2px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 8px; }
+.view-card .content { font-size: 14px; color: #333; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+table th { background: #0f3460; color: #fff; padding: 10px 12px; text-align: left; font-size: 13px; }
+table td { padding: 10px 12px; border-bottom: 1px solid #e0e0e0; font-size: 13px; }
+table tr:nth-child(even) { background: #f8f9fa; }
+.star { color: #f5a623; letter-spacing: 2px; }
+.stock-card { background: #f8f9fa; border-radius: 10px; padding: 20px; margin-bottom: 14px; border: 1px solid #e8e8e8; }
+.stock-card .stock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.stock-card .stock-name { font-size: 18px; font-weight: 700; color: #1a1a2e; }
+.stock-card .stock-tags { display: flex; gap: 6px; }
+.stock-card .tag { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+.tag.up { background: #ffe0e0; color: #e63946; }
+.tag.down { background: #d4f0ee; color: #2a9d8f; }
+.tag.neutral { background: #e8e8e8; color: #666; }
+.tag.sector { background: #e8eaf6; color: #3f51b5; }
+.stock-card .logic { font-size: 14px; color: #444; margin-bottom: 8px; }
+.stock-card .source { font-size: 12px; color: #999; }
+.risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.risk-col, .positive-col { background: #f8f9fa; border-radius: 10px; padding: 20px; }
+.risk-col { border-left: 4px solid #e63946; }
+.positive-col { border-left: 4px solid #2a9d8f; }
+.risk-col h3, .positive-col h3 { margin-bottom: 12px; font-size: 15px; }
+.risk-col ul, .positive-col ul { list-style: none; }
+.risk-col li, .positive-col li { font-size: 13px; margin-bottom: 8px; padding-left: 16px; position: relative; }
+.risk-col li::before { content: "⚠"; position: absolute; left: 0; color: #e63946; }
+.positive-col li::before { content: "✓"; position: absolute; left: 0; color: #2a9d8f; }
+.focus-list { list-style: none; }
+.focus-list li { background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; font-size: 14px; color: #856404; }
+.focus-list li strong { color: #1a1a2e; }
+.footer { text-align: center; font-size: 12px; color: #999; padding: 20px 0; border-top: 1px solid #e0e0e0; margin-top: 20px; }
+.group-summary { font-size: 13px; color: #666; margin-bottom: 12px; }
+.group-summary span { display: inline-block; background: #e8eaf6; color: #3f51b5; padding: 2px 8px; border-radius: 4px; margin: 2px; }
+@media (max-width: 768px) { .risk-grid { grid-template-columns: 1fr; } .header .stats { gap: 16px; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+<h1>📈 A股飞书群聊市场观点汇总报告</h1>
+<div class="subtitle">2026年9月7日（周一） | 生成时间：23:00</div>
+<div class="stats">
+<div class="stat-item"><div class="stat-value">342</div><div class="stat-label">消息总数</div></div>
+<div class="stat-item"><div class="stat-value">10</div><div class="stat-label">活跃群数</div></div>
+<div class="stat-item"><div class="stat-value">15</div><div class="stat-label">监控群数</div></div>
+<div class="stat-item"><div class="stat-value">106</div><div class="stat-label">提及个股</div></div>
+<div class="stat-item"><div class="stat-value">16</div><div class="stat-label">讨论板块</div></div>
+</div>
+</div>
+
+<!-- 大盘走势与核心观点 -->
+<div class="section">
+<h2>📊 大盘走势与核心观点</h2>
+
+<div class="market-data">
+<div class="data-card"><div class="label">三市成交额</div><div class="value down">19644亿</div><div style="font-size:11px;color:#999;">较前日-868亿</div></div>
+<div class="data-card"><div class="label">主力净流向</div><div class="value up">+382.23亿</div><div style="font-size:11px;color:#999;">净流入</div></div>
+<div class="data-card"><div class="label">两融余额</div><div class="value neutral">26378亿</div><div style="font-size:11px;color:#999;">-188.62亿</div></div>
+<div class="data-card"><div class="label">中信净空单</div><div class="value down">78557</div><div style="font-size:11px;color:#999;">加空573</div></div>
+<div class="data-card"><div class="label">主要玩家净空</div><div class="value down">117007</div><div style="font-size:11px;color:#999;">加空4438</div></div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">核心逻辑社</span>
+<div class="content">美伊持续升级但纳指期货并未大跌，双创高开1.2%后砸一波。盘中"今天双创要大阳线了，算力要全面大涨了"。但策略明确：美伊未明确缓和之前不要无脑格局/无脑梭哈，一部分底仓不动，一部分短线仓位滚动交易。国产重点：设备、封测、代工、存储、端侧、交换机、算芯；海外重点：ABF载板、小光、光模块设备。午后因摩尔大跌压制，国产涨幅不够炸裂，但被情绪错杀压着反而是机会。不再组织多头军团反攻，"少说多做，大方向不变"。</div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">震哥-胡汉三</span>
+<div class="content">上周五上影线试盘后的大涨如约而至，叠加银行保险中阴线，AI科技能否走出新一轮反弹趋势。早盘低吸的科技今天大涨过后都能过新高。蘅东光低吸3次做T收益率6-10%+，15-20%附近分批减仓。腾景6%清仓换德科立，8%加回德科立。东山精密趋势持仓。液冷高澜/中石很强，后面看飞龙轮动。尾盘很多都是最高点收盘，"每次上影线试盘后的大涨都是这样"。</div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">彭域</span>
+<div class="content">开盘加单剑桥/清TF/轻剑桥，思路就是"哪个牛逼买哪个"。小票更有性价比——PCB的20cm/铜箔的20cm。农业是唯一不吃指数波动的方向。创板反馈不错，大的易中天暂时顶住了。液冷中石板/OCS新高，"今天随口说这一串随便买都红"。</div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">小锦鲤</span>
+<div class="content">农业抢太厉害，天山冲高兑现为主，3附近回部分，天山突突突收获4-8%+。"不用纠结选错的，随便做一天就把失去的拿回来了"。北交金钛/花溪做明天科技分歧预期。缩量炒妖最重要是节奏：前面一天阴线（分歧）关注安全，阳线次日关注小心点。今天科技偏取关点，明天预期在别的地方。</div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">潘凤</span>
+<div class="content">开盘卖出炬光科技/长盈通/四方精创，半路0.5兴森科技/0.5太辰光/0.5光迅科技。仓位从周五2成回归1成——"周五反馈没赚钱就回归1"。对科技迟疑但今天认知正常兑现。高位投机票监管很严，"上面想把资金往趋势往科技里面往回赶"。三天买科技不是乱买，方向都在执行当中。</div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">洛飞小群</span>
+<div class="content">金融/应用/农业都有利好，继续看农业，大米横盘符合预期，后面看市场转暖哈药止跌大米能否向上。万邦抢出监管预期头7。科技后面能做个首分（后天），"当首分套利做"，就中石科技。加息基本脱敏了，指数还要向上。</div>
+</div>
+
+<div class="view-card">
+<span class="group-tag">傅里叶的猫</span>
+<div class="content">天风海外月度观点：当前属于多空极度博弈的过渡阶段，仍是长期多头。短期不悲观——去杠杆完成，产业链找不到一个恶化数据，GPT-6是模型范式重大变化。高盛上调光模块出货量预期29-50%，给中际旭创目标价2645（当前838）。大摩目标价1205。长光华芯演讲PPT展示高功率光芯片数据。液冷专家调研纪要分享。</div>
+</div>
+</div>
+
+<!-- 板块热度排行 -->
+<div class="section">
+<h2>🔥 板块热度排行</h2>
+<table>
+<tr><th>排名</th><th>板块名称</th><th>热度</th><th>核心逻辑</th><th>主要来源群</th></tr>
+<tr><td>1</td><td>华为韬定律/LogicFolding</td><td class="star">★★★★★</td><td>麒麟9050 Pro首款逻辑折叠芯片发布，功耗大幅下降66%/58%/41%，带动设备/代工/测试全链条升级</td><td>信息早知道/核心逻辑社</td></tr>
+<tr><td>2</td><td>光模块/CPO/OCS/光芯片</td><td class="star">★★★★★</td><td>高盛大幅上调1.6T出货量29-50%，光博会前瞻OCS/光芯片/薄膜铌酸锂/无源器件四大方向</td><td>信息早知道/震哥/傅里叶的猫</td></tr>
+<tr><td>3</td><td>国产算力/AI芯片/服务器</td><td class="star">★★★★★</td><td>工信部2030年信息基础设施投资3.8万亿/智算9800EFLOPS，黄仁勋称AGI已到来40万GPU即将上线</td><td>核心逻辑社/信息早知道</td></tr>
+<tr><td>4</td><td>半导体设备/封测</td><td class="star">★★★★</td><td>HYDZ：设备股二次崩盘后触底，26H1订单增速50%+，27年订单"非常夸张"，当前PS极低</td><td>信息早知道/震哥</td></tr>
+<tr><td>5</td><td>人形机器人/T链</td><td class="star">★★★★</td><td>T链首次一次性下达5k台大订单，量产S曲线拐点将至，年底周产量有望继续上修</td><td>信息早知道</td></tr>
+<tr><td>6</td><td>大金融/财政注资</td><td class="star">★★★★</td><td>财政部注资保险+国有大行，3000亿资本撬动4万亿资产扩张，系统性重估窗口打开</td><td>信息早知道</td></tr>
+<tr><td>7</td><td>液冷/散热</td><td class="star">★★★★</td><td>金洲管道骅兴提前投产/华光新材液冷钎料增4倍/华升股份冷却塔供货华为字节</td><td>信息早知道/震哥</td></tr>
+<tr><td>8</td><td>AI电源/VPD/功率器件</td><td class="star">★★★★</td><td>电源液冷架构统一，VPD统合多个新技术变量，8寸BCD产能紧缺功率器件弹性</td><td>信息早知道</td></tr>
+<tr><td>9</td><td>特斯拉无稀土电机</td><td class="star">★★★</td><td>Cybercab驱动电机完全不使用稀土，铁氧体/硅钢磁障转子方案受益</td><td>信息早知道</td></tr>
+<tr><td>10</td><td>溴素/化工涨价</td><td class="star">★★★</td><td>全球龙头停产影响供给20%，对标正丹/中毅达，全球定价30-200亿市值标的</td><td>信息早知道</td></tr>
+<tr><td>11</td><td>ABF载板/PCB材料</td><td class="star">★★★</td><td>欣兴1年半赴日十余次求购原材料，世运电路英伟达LPU VPD认证</td><td>信息早知道</td></tr>
+<tr><td>12</td><td>算力租赁/Token出海</td><td class="star">★★★</td><td>GPT-6用10万GPU训练，弘信电子97亿订单+Token工厂双落地，腾讯混元登顶</td><td>信息早知道</td></tr>
+<tr><td>13</td><td>短线抱团/北交</td><td class="star">★★★</td><td>天山电子反复做T/万邦监管预期/金钛花溪北交逆指数做科技分歧预期</td><td>小锦鲤/洛飞</td></tr>
+<tr><td>14</td><td>乳制品/涨价</td><td class="star">★★</td><td>全脂奶粉远期期货4000美元/吨升水15%+，厄尔尼诺压制奶源+饲料成本抬升</td><td>信息早知道</td></tr>
+<tr><td>15</td><td>消费/国庆长假</td><td class="star">★★</td><td>国庆中秋13天长假+消费政策支持，旅游/酒店板块催化</td><td>信息早知道</td></tr>
+<tr><td>16</td><td>AI版权/IP商业化</td><td class="star">★★</td><td>火山引擎内测版权管理平台，Seedance加速IP商业化探索</td><td>信息早知道</td></tr>
+</table>
+</div>
+
+<!-- 重点个股推荐与分析 -->
+<div class="section">
+<h2>💎 重点个股推荐与分析</h2>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">剑桥科技 (603083)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">光模块</span><span class="tag sector">1.6T/NPO</span>
+</div>
+</div>
+<div class="logic">光模块最大弹性标的，明年仅7x估值。净利率由20-25%上修至30%+（超预期），产能年底150w/月→明年200w/月（年化2000w支）。1.6T已通过思科+2家CSP验证，NPO明年Q2/Q3出货。通过南京镭芯向AXT锁定2500w美金磷化铟衬底，硅光5家供应商（源杰/永鼎/仕佳/镭芯/联亚），DSP与Marvell锁料充分。FCC影响有限——18年开始马来布局，美国子公司接单。800G价格350-380美金，1.6T预估700-800美金。</div>
+<div class="source">来源：信息早知道 | 震哥/彭域盘中重点操作标的</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">中际旭创 (300308)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">光模块</span><span class="tag sector">高盛目标价2645</span>
+</div>
+</div>
+<div class="logic">高盛大幅上调2026-28年1.6T+光模块出货量预期29-50%，给中际旭创最新目标价2645（当前838港元），大摩目标价1205。光的需求函数从线性增长转为乘法增长（Scale Out→Scale Up→Scale Across→Scale In），AI架构正在变得"光密集"，TAM不断上修。NVL576光进Scale Up域，Google 6D Torus光配比翻4倍。</div>
+<div class="source">来源：傅里叶的猫（GS/MS研报） | 震哥跟踪</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">芯源微 (688037)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">半导体设备</span><span class="tag sector">看翻倍</span>
+</div>
+</div>
+<div class="logic">强call看翻倍空间：①近期订单大幅上修，下游份额提升叠加客户扩产；②湿法清洗设备（超临界/高温/中温）持续放量；③四代机验证进度良好，三年期待终将落地。今年订单从36-40亿上修到60亿，明年百亿订单，看1500亿市值。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">中石科技 (300684)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">VC板</span><span class="tag sector">液冷TIM2</span>
+</div>
+</div>
+<div class="logic">光模块VC均热板+液冷TIM2双buff加持，VC板市场空间彻底打开。明年VC板收入55亿/10%净利率/5.5-6亿利润。旭创份额70%+Coherent份额40-50%，今年7-8亿收入→明年旭创5000-6000万只对应20-30亿+Coherent翻倍5-10亿+其他15-20亿。液冷TIM2材料龙头市场空间第一步看500亿。洛飞首分套利标的。</div>
+<div class="source">来源：信息早知道 | 洛飞小群</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">世运电路 (603920)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">PCB/VPD</span><span class="tag sector">英伟达认证</span>
+</div>
+</div>
+<div class="logic">VPD埋嵌PCB具备重大预期差，卡位稀缺。内资唯一英伟达LPU VPD埋嵌认证供应商，已进入英伟达Rubin、特斯拉智驾两大核心供应链。底部反转强call中。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">特发信息 (000070)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">MPO</span><span class="tag sector">最大预期差</span>
+</div>
+</div>
+<div class="logic">MPO最大预期差个股。子公司特发光网25H1利润1.4亿/25H2 1.6亿，唯一Q2增长的MPO企业。26年谷歌锁单量超25年两倍，刚拿到Senko代工订单。保守估计26年光网科技利润超6亿，特发信息持股51%并表利润至少超3亿。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">群兴玩具 (002575)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">算力租赁</span><span class="tag sector">腾讯</span>
+</div>
+</div>
+<div class="logic">孙公司杭州图灵引擎与腾讯签订算力服务协议。2025年智算业务收入5337万占营收11.34%，已完成0→1。腾讯混元Hy4 preview周调用量14.7万亿Token环比+379%登顶全球模型调用榜。微信十多亿日活AI调用量+混元Token需求=腾讯算力。市场仍偏酒类+物业定价，预期差大。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">恒辉安防 (603087)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">机器人</span><span class="tag sector">特斯拉Optimus</span>
+</div>
+</div>
+<div class="logic">特斯拉Optimus腱绳核心供应商+波士顿动力柔性材料伙伴。A股唯一量产级机器人腱绳+柔性材料平台。26年机器人材料订单3-5亿占营收30%+，27年腱绳+防护件放量8-10亿。给予10-15倍PS对应80-150亿市值（当前53亿）。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">苏利股份 (603585)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">溴素涨价</span><span class="tag sector">对标正丹</span>
+</div>
+</div>
+<div class="logic">溴素全球龙头停产一条线影响供给20%，停产2个月全球少2万吨。对标正丹/中毅达涨价逻辑——21年高点7万，当前才从2.7万开始。海外三巨头（以色列23万吨/雅宝16万吨/朗盛12万吨）占全球80%不会配合。30亿市值情绪标的，强烈看好溴素价格翻倍机会。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+<div class="stock-card">
+<div class="stock-header">
+<span class="stock-name">麦格米特 (002851)</span>
+<div class="stock-tags">
+<span class="tag up">看多</span><span class="tag sector">AI电源</span><span class="tag sector">VPD</span>
+</div>
+</div>
+<div class="logic">台达炸机催化但二级市场未充分交易。1-8月NXW AI电源收入相当于台达一半量级（数千万），后期实际订单转化需跟踪。电源液冷架构统一趋势下核心受益，电源基础设施供应商将集成部分液冷设施。坚定看好柜外方向。</div>
+<div class="source">来源：信息早知道</div>
+</div>
+
+</div>
+
+<!-- 市场情绪与风险提示 -->
+<div class="section">
+<h2>⚖️ 市场情绪与风险提示</h2>
+<div class="risk-grid">
+<div class="risk-col">
+<h3>🚨 主要风险</h3>
+<ul>
+<li>美伊持续升级未明确缓和，油价上涨压制风险偏好，核心逻辑社明确"不要无脑格局"</li>
+<li>中信+主要玩家合计加空5011手，净空单合计19.5万手，空头力量仍强</li>
+<li>三市成交缩至1.96万亿，较前日减少868亿，量能不足制约反弹持续性</li>
+<li>两融余额减少188亿至2.64万亿，杠杆资金小幅撤离</li>
+<li>摩尔大跌压制国产算力涨幅，科技情绪可能有小高点（震哥提示）</li>
+<li>高位投机票监管趋严，深交所"杀疯了"，短线抱团面临监管退市风险</li>
+<li>美联储9月FOMC在即（9/16），加息与否仍看CPI数据（9/11），不确定性犹存</li>
+<li>FCC对中国光模块制裁悬顶，虽剑桥/旭创全球化布局但政策风险未消除</li>
+</ul>
+</div>
+<div class="positive-col">
+<h3>✨ 积极信号</h3>
+<ul>
+<li>主力净流入382亿，为近期少见净流入日，资金回流市场</li>
+<li>韩国KOSPI涨4%/SK海力士+7%/三星+5%，棒股反弹至前期高点附近</li>
+<li>华为韬定律芯片正式发布，首款LogicFolding产品验证窗口开启</li>
+<li>工信部重磅规划：2030年信息基础设施投资3.8万亿/智算9800EFLOPS</li>
+<li>黄仁勋称AGI已到来，下一批40万GPU即将上线，算力军备竞赛加速</li>
+<li>高盛大幅上调光模块出货量预期29-50%，中际旭创目标价2645（3倍空间）</li>
+<li>T链首次5k台大订单极具里程碑意义，机器人量产S曲线拐点将至</li>
+<li>财政部注资保险+大行，3000亿资本撬动4万亿，大金融系统性重估</li>
+<li>半导体设备触底信号明确，27年订单"非常夸张"，当前PS极低</li>
+<li>光博会9/9-11日即将召开，新技术落地催化密集期</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- 明日关注要点 -->
+<div class="section">
+<h2>📋 明日关注要点</h2>
+<ul class="focus-list">
+<li><strong>光博会9月9-11日</strong>：重点关注OCS整机+零组件、高功率光芯片（200/500mW）、薄膜铌酸锂商业化落地、无源器件价值量升级。剑桥/特发信息等小光模块公司或有超预期产品进展。</li>
+<li><strong>华为韬定律产业链</strong>：今日Mate XT 2发布搭载麒麟9050 Pro，关注大漂亮拆机验证逻辑折叠技术，中芯国际/北方华创/盛美/拓荆/华海清科/中科飞测等设备代工链条。</li>
+<li><strong>国产算力能否带队炸裂</strong>：工信部3.8万亿投资+9800EFLOPS规划利好，核心逻辑社认为"明天该国产算力带队炸裂了"，关注寒武纪/长鑫/中芯/芯源微等。</li>
+<li><strong>T链机器人订单扩散</strong>：首批5k台已下达，后续有望继续看到大订单落地，关注福赛科技/三花智控/新泉股份/北特科技/浙江荣泰等核心进攻组合。</li>
+<li><strong>美伊局势+美联储FOMC</strong>：9/11美国8月CPI数据为加息判断关键，9/16 FOMC决议，美伊缓和与否仍为核心扰动变量。</li>
+<li><strong>小锦鲤明天预期切换</strong>：今天科技偏取关点，明天预期在别的地方（北交金钛/花溪做逆指数抱团），天山收获满满但别上头。</li>
+<li><strong>大金融政策催化持续</strong>：财政部注资保险+大行，关注中国人寿/中国太保/东方财富/楚天龙等系统性重估机会。</li>
+<li><strong>半导体设备底部加仓窗口</strong>：HYDZ认为当前是底部区域，26H1订单增速50%+27年更夸张，北方华创480亿/中微155亿订单对应极低PS。</li>
+</ul>
+</div>
+
+<!-- 群聊活跃度 -->
+<div class="section">
+<h2>💬 群聊活跃度统计</h2>
+<div class="group-summary">
+活跃群（10个）：
+<span>信息早知道 58条</span>
+<span>小锦鲤 56条</span>
+<span>震哥-胡汉三 48条</span>
+<span>傅里叶的猫 41条</span>
+<span>核心逻辑社 25条</span>
+<span>彭域 28条</span>
+<span>洛飞小群 30条</span>
+<span>杰哥进阶 31条</span>
+<span>潘凤 24条</span>
+<span>鑫多多 1条</span>
+</div>
+<div class="group-summary">
+无消息群（5个）：
+<span>唐史主任 0条</span>
+<span>VIP通知新群1 0条</span>
+<span>猫十三 0条</span>
+<span>局座 0条</span>
+<span>黑火信息差 0条</span>
+</div>
+</div>
+
+<div class="footer">
+<p>📊 本报告由WorkBuddy自动生成 | 数据来源：15个飞书交流群 | 仅供个人参考，不构成投资建议</p>
+<p>个股逻辑数据库已更新 | 公网访问：https://juebro.github.io/a-share-research/</p>
+</div>
+
+</div>
+</body>
+</html>
