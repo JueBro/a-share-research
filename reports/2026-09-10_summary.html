@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总报告 - 2026-09-10</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #5a5a6e;
+            --border: #e8e8f0;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --danger: #dc2626;
+            --success: #16a34a;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --red-up: #dc2626;
+            --green-down: #16a34a;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+            --radius: 16px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 24px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+        .header h1 { margin: 0 0 12px 0; font-size: 28px; }
+        .header .meta { display: flex; flex-wrap: wrap; gap: 20px; opacity: 0.9; font-size: 14px; }
+        .header .meta span { display: flex; align-items: center; gap: 6px; }
+        .section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+        .section-title .icon { font-size: 24px; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .kpi-card {
+            background: var(--accent-light);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .kpi-card .value { font-size: 24px; font-weight: 700; color: var(--accent); }
+        .kpi-card .label { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+        .kpi-card.red .value { color: var(--red-up); }
+        .kpi-card.green .value { color: var(--green-down); }
+        .quote {
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 0 12px 12px 0;
+            margin: 12px 0;
+            font-size: 15px;
+        }
+        .quote .source { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+        .opinion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .opinion-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            background: #fafbfc;
+        }
+        .opinion-card .group { font-weight: 700; color: var(--accent); font-size: 14px; margin-bottom: 8px; }
+        .opinion-card .view { font-size: 14px; color: var(--text); }
+        .opinion-card .tag {
+            display: inline-block;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .tag-bull { background: #fee2e2; color: var(--red-up); }
+        .tag-bear { background: #dcfce7; color: var(--green-down); }
+        .tag-neutral { background: #f1f5f9; color: var(--text-secondary); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); font-size: 13px; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .stock-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            background: #fafbfc;
+            transition: transform 0.2s;
+        }
+        .stock-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .stock-card .name { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .stock-card .tags { margin-bottom: 10px; }
+        .stock-card .tag-pill {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: 4px;
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+        .stock-card .logic { font-size: 14px; color: var(--text-secondary); }
+        .stock-card .source { font-size: 12px; color: #888; margin-top: 10px; }
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .risk-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 16px; }
+        .opportunity-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; }
+        .risk-box h4 { color: var(--red-up); margin: 0 0 12px 0; }
+        .opportunity-box h4 { color: var(--green-down); margin: 0 0 12px 0; }
+        .watch-list { display: flex; flex-direction: column; gap: 12px; }
+        .watch-item {
+            background: var(--warning-bg);
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+        .watch-item strong { color: var(--warning); }
+        .disclaimer {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        .group-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .group-pill {
+            background: #e2e8f0;
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            .split-layout { grid-template-columns: 1fr; }
+            body { padding: 12px; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 飞书群聊市场观点汇总报告</h1>
+            <div class="meta">
+                <span>📅 日期：2026-09-10（周四）</span>
+                <span>💬 监控群：15个</span>
+                <span>📝 消息总数：305条</span>
+                <span>⏰ 生成时间：2026-09-10 23:00</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">📈</span>大盘走势与核心观点</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="value">16625亿</div>
+                    <div class="label">三市成交额（较昨-2107亿）</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="value">-315.81亿</div>
+                    <div class="label">主力净流入/流出</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="value">26486亿</div>
+                    <div class="label">两融余额（-29亿）</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="value">77459</div>
+                    <div class="label">中信净空单（减空448）</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="value">114010</div>
+                    <div class="label">主要玩家净空单（加空1950）</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="value">11/15</div>
+                    <div class="label">活跃群数</div>
+                </div>
+            </div>
+
+            <div class="quote">
+                三市成交缩量至1.66万亿，主力净流出315亿，双创低开高走但缺乏持续动能。中信减空而主要玩家加空，多空分歧仍在。市场热点围绕金融政策预期、苹果新品、PCB/电子布涨价、美伊冲突衍生（船舶/化工/农业）展开，整体情绪低迷但结构性题材活跃。
+                <div class="source">来源：信息早知道、核心逻辑社等</div>
+            </div>
+
+            <div class="opinion-grid">
+                <div class="opinion-card">
+                    <div class="group">核心逻辑社</div>
+                    <div class="view">AI产业逻辑持续强化，但大A内生做多动能耗尽、存量极致内卷，现阶段只能放下幻想、保留底仓。美伊冲突短期仍在升级，油价可能冲120-130-150美元，警惕美股补跌带动大A探底。中期选举前开启谈判仍是最大概率，缓和窗口或出现在十一前后。</div>
+                    <span class="tag tag-neutral">控制仓位 · 保留底仓</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">潘凤</div>
+                    <div class="view">早盘卖出彤程新材、半路太辰光、止盈雅克科技，加仓芯原股份。吐槽市场估值体系已变，"现在一万亿都没人买"，情绪低迷但仍在科技里做T。认为一月份商业航天、年中间AI已给足机会，现在来回折腾。</div>
+                    <span class="tag tag-neutral">轻仓博弈 · 科技做T</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">小锦鲤</div>
+                    <div class="view">300情绪杀到冰点，万邦医药今日-10深水接回、近岸蛋白迷你仓位已拉红。农业天山/花溪分歧，北交金钛独立抱团。认为"今天一步到位明天就好做了"，补跌后反而是机会，退潮期少回吐当赢。</div>
+                    <span class="tag tag-bull">冰点博弈 · 看好修复</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">洛飞小群</div>
+                    <div class="view">继续力推糖业，红棉股份3连板后盘中吐槽"红棉离谱"，尾盘看国际糖期货。节前重点看大米（金健米业），其他板块没法看。认为市场超预期弱，修复也是卖点。</div>
+                    <span class="tag tag-neutral">聚焦糖/米 · 防御为主</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🔥</span>板块热度排行</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>板块名称</th>
+                        <th>热度</th>
+                        <th>核心逻辑</th>
+                        <th>主要来源</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>金融/证券保险互联网金融</td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>午后3点金融强国发布会，央行/金融监管总局/证监会/外汇局出席，市场博弈政策催化，新力金融一字涨停预期。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>苹果链/折叠屏/iPhone18</td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>苹果发布首款折叠屏iPhone Duo及iPhone18 Pro（A20 Pro 2nm芯片），利好2nm产线、散热及结构件。</td>
+                        <td>信息早知道/潘凤</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>PCB/CPO/NPO/电子布</td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>电子布9月再涨10-20%，PCB板块性投资机遇被再次强调，PTFE、ABF、陶瓷PCB、ELSFP外置光源成新热点。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>美伊局势/油气/地缘</td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>特朗普称战事中期选举后结束，伊朗强硬回击，布油突破104美元，核心逻辑社警惕油价冲150美元。</td>
+                        <td>核心逻辑社</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>存储/HBM</td>
+                        <td><span class="stars">★★★★</span></td>
+                        <td>海力士美股创新高，万润科技（长江存储同族）、亚威股份（GSI HBM测试设备）受关注。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>半导体设备/AI设备</td>
+                        <td><span class="stars">★★★★</span></td>
+                        <td>国金机械强CALL AI设备四剑客，华虹高盛调研纪要显示订单强劲、12寸扩产推进。</td>
+                        <td>信息早知道/傅里叶的猫</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>旅游/双节消费</td>
+                        <td><span class="stars">★★★★</span></td>
+                        <td>中秋+国庆可连休13天，高校/中小学秋假衔接，机票酒店预订同比+17%/+40%。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>农业/糖业/粮食</td>
+                        <td><span class="stars">★★★★</span></td>
+                        <td>红棉股份3连板，洛飞力推糖业，小锦鲤关注金健米业/天山/花溪，中基健康甲醇+番茄双重题材。</td>
+                        <td>洛飞小群/小锦鲤/信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>医药/创新药/CXO</td>
+                        <td><span class="stars">★★★</span></td>
+                        <td>日本梅毒疫情致青霉素紧缺（华北制药/国药现代）；小锦鲤博弈万邦/近岸/哈药情绪冰点修复。</td>
+                        <td>信息早知道/小锦鲤</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>铜/有色金属</td>
+                        <td><span class="stars">★★★</span></td>
+                        <td>中信证券金属：铜价年内有望突破16000美元/吨，中资矿山主导增产，量增弹性大。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>天然气</td>
+                        <td><span class="stars">★★★</span></td>
+                        <td>欧亚气价创2023年新高，欧盟储气率16年最低，冬季缺气风险尚未充分定价。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>船舶/造船</td>
+                        <td><span class="stars">★★★</span></td>
+                        <td>霍尔木兹受阻油轮需求激增，中国新接订单全球占比82%，VLCC订单份额超80%。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">⭐</span>重点个股推荐与分析</h2>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="name">🔴 东方财富 <span style="font-size:13px;color:#888">300059</span></div>
+                    <div class="tags"><span class="tag-pill">金融</span><span class="tag-pill">证券</span><span class="tag-pill">短线</span></div>
+                    <div class="logic">午后金融强国发布会催化，券商板块预期政策利好，短线博弈资金关注。证券板块跟风持续性差，发布会后容易高开低走。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🍎 蓝思科技 <span style="font-size:13px;color:#888">300433</span></div>
+                    <div class="tags"><span class="tag-pill">苹果链</span><span class="tag-pill">折叠屏</span><span class="tag-pill">散热</span></div>
+                    <div class="logic">苹果首款折叠屏iPhone Duo发布+3倍均热板散热，蓝思作为玻璃/结构件核心供应商直接受益。潘凤认为2万售价太贵，销量存疑。</div>
+                    <div class="source">来源：信息早知道/潘凤</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">💾 万润科技 <span style="font-size:13px;color:#888">002654</span></div>
+                    <div class="tags"><span class="tag-pill">存储</span><span class="tag-pill">HBM</span><span class="tag-pill">长江存储</span></div>
+                    <div class="logic">海力士美股创新高印证HBM高景气，长江存储IPO在即，万润与长江存储同族同宗，子公司万润存储半导体增资扩产。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🔧 亚威股份 <span style="font-size:13px;color:#888">002559</span></div>
+                    <div class="tags"><span class="tag-pill">HBM测试</span><span class="tag-pill">光刻胶</span><span class="tag-pill">稀缺</span></div>
+                    <div class="logic">参股苏州芯测旗下韩国GSI，全球唯三能量产HBM全制程测试设备，深度绑定SK海力士/三星/安靠；参股威迈芯材实现ArF光刻胶PAG国产化。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">⚡ 景旺电子 <span style="font-size:13px;color:#888">603228</span></div>
+                    <div class="tags"><span class="tag-pill">PCB</span><span class="tag-pill">AI服务器</span><span class="tag-pill">Rubin链</span></div>
+                    <div class="logic">国联民生电子强调PCB板块性机遇，景旺为Rubin链核心受益标的，2H26 AI产品迭代ASP高增。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🌾 中粮糖业 <span style="font-size:13px;color:#888">600737</span></div>
+                    <div class="tags"><span class="tag-pill">糖业</span><span class="tag-pill">厄尔尼诺</span><span class="tag-pill">短中线</span></div>
+                    <div class="logic">洛飞继续力推糖业，国际糖期货强势，厄尔尼诺题材延伸。农业题材周期较短，注意节奏。</div>
+                    <div class="source">来源：洛飞小群</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🚢 中国船舶 <span style="font-size:13px;color:#888">600150</span></div>
+                    <div class="tags"><span class="tag-pill">船舶</span><span class="tag-pill">油运</span><span class="tag-pill">地缘</span></div>
+                    <div class="logic">美伊冲突致霍尔木兹航运受阻，全球油轮需求激增，中国造船全球新接订单占比82%，中国船舶为绝对龙头。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">✈️ 君亭酒店 <span style="font-size:13px;color:#888">301073</span></div>
+                    <div class="tags"><span class="tag-pill">旅游</span><span class="tag-pill">酒店</span><span class="tag-pill">双节</span></div>
+                    <div class="logic">中秋+国庆可连休13天，高校秋假催化亲子家庭出游，酒店端受益。需跟踪假期实际客流数据。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">💊 华北制药 <span style="font-size:13px;color:#888">600812</span></div>
+                    <div class="tags"><span class="tag-pill">医药</span><span class="tag-pill">青霉素</span><span class="tag-pill">事件驱动</span></div>
+                    <div class="logic">日本梅毒疫情致青霉素紧缺，华北制药为国内青霉素龙头，深耕日本高端市场并取得PMDA认证。</div>
+                    <div class="source">来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">⚛️ 中国核建 <span style="font-size:13px;color:#888">601611</span></div>
+                    <div class="tags"><span class="tag-pill">核聚变</span><span class="tag-pill">潜伏</span><span class="tag-pill">事件催化</span></div>
+                    <div class="logic">猫十三认为核聚变和脑机是较好潜伏题材，下周有重要会议催化，继续加点中国核建。</div>
+                    <div class="source">来源：猫十三</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">⚖️</span>市场情绪与风险提示</h2>
+            <div class="split-layout">
+                <div class="risk-box">
+                    <h4>⚠️ 主要风险</h4>
+                    <ul>
+                        <li>美伊冲突仍在升级，布油突破104美元，核心逻辑社警告可能冲120-150美元，引发通胀与全球资本市场动荡。</li>
+                        <li>大A内生做多动能耗尽，成交量缩至1.66万亿，主力持续净流出，题材高速轮动。</li>
+                        <li>主要玩家今日加空1950手，净空单升至11.4万手，机构端偏谨慎。</li>
+                        <li>苹果折叠屏售价高达15999-26499元，市场对其销量预期存在明显分歧。</li>
+                        <li>医药/农业等短线抱团方向处于退潮期，高位波动剧烈。</li>
+                    </ul>
+                </div>
+                <div class="opportunity-box">
+                    <h4>✅ 积极信号</h4>
+                    <ul>
+                        <li>AI产业逻辑持续强化：Meta Muse、英伟达/博通上调指引、国产算力需求缺口仍大。</li>
+                        <li>盘后金融强国发布会或释放资本市场政策红利，券商/保险/互金存在事件驱动机会。</li>
+                        <li>PCB/电子布涨价进入Q3业绩兑现期，板块呈现卖方市场。</li>
+                        <li>中秋+国庆超长假期预期差（13天连休）打开旅游消费交易窗口。</li>
+                        <li>小锦鲤等短线资金认为300情绪冰点已现，补跌后反而是机会。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">👀</span>明日关注要点</h2>
+            <div class="watch-list">
+                <div class="watch-item"><strong>1. 金融政策兑现力度：</strong>关注盘后金融强国发布会是否释放超预期资本市场政策，券商/保险/互联网金融高开后的持续性。</div>
+                <div class="watch-item"><strong>2. 美伊局势与油价：</strong>特朗普称战事中期选举后结束，伊朗强硬表态，布油走势将直接影响三桶油、船舶、化工、农业等板块。</div>
+                <div class="watch-item"><strong>3. 苹果链情绪：</strong>iPhone Duo/18 Pro发布后的市场反馈，蓝思/舜宇/鹏鼎/领益等核心供应商能否延续强势。</div>
+                <div class="watch-item"><strong>4. PCB/电子布涨价：</strong>景旺、胜宏、生益、永冠新材等能否在Q3业绩预期下走出板块性行情。</div>
+                <div class="watch-item"><strong>5. 短线抱团修复：</strong>小锦鲤看好的万邦医药、近岸蛋白、天山电子、花溪科技、金钛等能否在冰点修复。</div>
+                <div class="watch-item"><strong>6. 存储/HBM：</strong>海力士创新高后，万润科技、亚威股份、士兰微等映射标的是否发酵。</div>
+                <div class="watch-item"><strong>7. 旅游数据验证：</strong>中秋国庆预订数据继续催化君亭、宋城、西域旅游等出行链标的。</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">📋</span>消息来源分布</h2>
+            <p style="color:var(--text-secondary);font-size:14px;margin-bottom:12px">今日305条消息来自11个活跃群，其中潘凤、小锦鲤、信息早知道、洛飞小群为最主要贡献方。</p>
+            <div class="group-list">
+                <span class="group-pill">潘凤 92条</span>
+                <span class="group-pill">小锦鲤 55条</span>
+                <span class="group-pill">信息早知道 39条</span>
+                <span class="group-pill">洛飞小群 30条</span>
+                <span class="group-pill">核心逻辑社 20条</span>
+                <span class="group-pill">傅里叶的猫 18条</span>
+                <span class="group-pill">震哥-胡汉三 18条</span>
+                <span class="group-pill">彭域 18条</span>
+                <span class="group-pill">杰哥进阶 9条</span>
+                <span class="group-pill">鑫多多 2条</span>
+                <span class="group-pill">黑火信息差 3条</span>
+                <span class="group-pill">猫十三 1条</span>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            ⚠️ 本报告基于飞书群聊消息整理，所有观点均标注来源群名，仅供个人参考，不构成投资建议。市场有风险，投资需谨慎。
+        </div>
+    </div>
+</body>
+</html>
