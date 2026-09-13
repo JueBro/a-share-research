@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总报告 - 2026-09-13（周末简报）</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #5a5a6e;
+            --border: #e8e8f0;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --danger: #dc2626;
+            --success: #16a34a;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --red-up: #dc2626;
+            --green-down: #16a34a;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+            --radius: 16px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 24px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+        .header h1 { margin: 0 0 12px 0; font-size: 26px; }
+        .header .subtitle { font-size: 16px; opacity: 0.92; margin-bottom: 16px; }
+        .header .meta { display: flex; flex-wrap: wrap; gap: 20px; opacity: 0.9; font-size: 14px; }
+        .header .meta span { display: flex; align-items: center; gap: 6px; }
+        .weekend-badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #7c2d12;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+        .section-title .icon { font-size: 24px; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .kpi-card {
+            background: var(--accent-light);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .kpi-card .value { font-size: 20px; font-weight: 700; color: var(--accent); }
+        .kpi-card .label { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+        .kpi-card .note { font-size: 11px; color: var(--text-secondary); margin-top: 4px; opacity: 0.7; }
+        .kpi-card.red .value { color: var(--red-up); }
+        .kpi-card.green .value { color: var(--green-down); }
+        .kpi-card.amber .value { color: var(--warning); }
+        .kpi-card.blue .value { color: var(--accent); }
+        .quote {
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 0 12px 12px 0;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+        .quote .source { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+        .opinion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+        }
+        .opinion-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            background: #fafbfc;
+        }
+        .opinion-card .group { font-weight: 700; color: var(--accent); font-size: 14px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+        .opinion-card .view { font-size: 14px; color: var(--text); }
+        .opinion-card .tag {
+            display: inline-block;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .tag-bull { background: #fee2e2; color: var(--red-up); }
+        .tag-bear { background: #dcfce7; color: var(--green-down); }
+        .tag-neutral { background: #f1f5f9; color: var(--text-secondary); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+        th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); font-size: 13px; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+        .rank-badge {
+            display: inline-block;
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: 700;
+            color: white;
+        }
+        .rank-1 { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .rank-2 { background: linear-gradient(135deg, #94a3b8, #64748b); }
+        .rank-3 { background: linear-gradient(135deg, #fbbf24, #f59e0b); }
+        .rank-other { background: #cbd5e1; color: var(--text); }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .stock-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            background: #fafbfc;
+            transition: transform 0.2s;
+        }
+        .stock-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .stock-card .name { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+        .stock-card .tags { margin-bottom: 10px; }
+        .stock-card .tag-pill {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: 4px;
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+        .stock-card .logic { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+        .stock-card .source { font-size: 12px; color: #888; margin-top: 10px; }
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .risk-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 18px; }
+        .opportunity-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 18px; }
+        .risk-box h4 { color: var(--red-up); margin: 0 0 12px 0; font-size: 16px; }
+        .opportunity-box h4 { color: var(--green-down); margin: 0 0 12px 0; font-size: 16px; }
+        .risk-box ul, .opportunity-box ul { margin: 0; padding-left: 20px; }
+        .risk-box li, .opportunity-box li { margin-bottom: 8px; font-size: 14px; }
+        .watch-list { display: flex; flex-direction: column; gap: 12px; }
+        .watch-item {
+            background: var(--warning-bg);
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 14px;
+            border-left: 4px solid #f59e0b;
+        }
+        .watch-item strong { color: var(--warning); }
+        .disclaimer {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        .group-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .group-pill {
+            background: #e2e8f0;
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .group-pill.active { background: #dbeafe; color: var(--accent); font-weight: 600; }
+        .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 20px;
+            background: #e0e7ff;
+            color: #3730a3;
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .split-layout { grid-template-columns: 1fr; }
+            body { padding: 12px; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 飞书群聊市场观点汇总报告</h1>
+            <div class="subtitle">AI降速辩论 · MLCC结构性缺货 · 数据要素身份证上线</div>
+            <div class="meta">
+                <span>📅 日期：2026-09-13（周日 · 非交易日）</span>
+                <span>💬 监控群：15个（4个活跃）</span>
+                <span>📝 消息总数：38条</span>
+                <span>⏰ 生成时间：2026-09-13 23:00</span>
+            </div>
+            <div class="weekend-badge">🗓️ 周末舆情简报模式 · 聚焦下周展望与机构深度观点</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">💬</span>活跃群聊与消息分布</h2>
+            <div class="group-list"><span class="group-pill active">信息早知道 · 11条</span>
+                <span class="group-pill active">小锦鲤 · 12条</span>
+                <span class="group-pill active">傅里叶的猫 · 14条</span>
+                <span class="group-pill active">洛飞小群 · 1条</span>
+                <span class="group-pill">唐史主任 · 0条</span>
+                <span class="group-pill">鑫多多 · 0条</span>
+                <span class="group-pill">核心逻辑社 · 0条</span>
+                <span class="group-pill">VIP通知新群1 · 0条</span>
+                <span class="group-pill">杰哥进阶 · 0条</span>
+                <span class="group-pill">潘凤 · 0条</span>
+                <span class="group-pill">震哥-胡汉三 · 0条</span>
+                <span class="group-pill">猫十三 · 0条</span>
+                <span class="group-pill">彭域 · 0条</span>
+                <span class="group-pill">局座 · 0条</span>
+                <span class="group-pill">黑火信息差 · 0条</span>
+            </div>
+            <div class="quote" style="margin-top:16px;">
+                周日非交易日，仅「信息早知道」「小锦鲤」「傅里叶的猫」「洛飞小群」4个群有内容输出。今日核心议题：<strong>① Anthropic Dario呼吁AI降速（多券商深度解读）</strong>、<strong>② 英伟达100亿美元参投Anthropic IPO</strong>、<strong>③ 村田MLCC EOL+AI服务器结构性缺货</strong>、<strong>④ 国家级数据要素「身份证」上线</strong>、<strong>⑤ 光博会标的更新</strong>、<strong>⑥ 个人量化交易监管���紧</strong>、<strong>⑦ 小锦鲤冰点抱团节点观点</strong>。研报型内容占主导，游资/短线情绪型内容偏弱。
+                <div class="source">—— 简报模式说明</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">📊</span>今日舆情关键数据</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card amber">
+                    <div class="value">中性偏空</div>
+                    <div class="label">AI板块情绪</div>
+                    <div class="note">AO呼吁降速</div>
+                </div>
+                <div class="kpi-card blue">
+                    <div class="value">$2万亿</div>
+                    <div class="label">Anthropic估值</div>
+                    <div class="note">拟IPO募1000亿</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="value">结构性</div>
+                    <div class="label">MLCC紧缺</div>
+                    <div class="note">村田EOL</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="value">国家级</div>
+                    <div class="label">数据要素</div>
+                    <div class="note">身份证上线</div>
+                </div>
+                <div class="kpi-card amber">
+                    <div class="value">收紧</div>
+                    <div class="label">量化监管</div>
+                    <div class="note">封堵灰色通道</div>
+                </div>
+                <div class="kpi-card blue">
+                    <div class="value">9/15 FOMC</div>
+                    <div class="label">下周一关键</div>
+                    <div class="note">倒计时2天</div>
+                </div>
+            </div>
+            <div class="quote">
+                <strong>🎯 今日主基调</strong>：① <strong>AI治理博弈</strong>主导全球科技板块情绪——Anthropic Dario呼吁「为前沿AI踩刹车」引发广泛讨论，中信/天风/傅里叶的猫等多家深度解读；② <strong>AI资本开支不减</strong>——囚徒困境下英伟达100亿美元参投Anthropic IPO（估值2万亿），AI芯片需求确定性抬升；③ <strong>MLCC结构性缺货</strong>——村田EOL+AI服务器用量8-12倍+三星电机52.5亿元长约；④ <strong>数据要素里程碑</strong>——国家级「数据身份证」上线；⑤ <strong>光博会持续发酵</strong>——华工/永鼎/光库/腾景/中天等公司更新积极。
+                <div class="source">—— 综合舆情判断</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🔥</span>各群核心观点</h2>
+            <div class="opinion-grid">
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">AI大模型</span>
+                    </div>
+                    <div class="view">「中信前瞻·英伟达100亿美元参投Anthropic IPO」：英伟达以股权+长期采购协议锁定头部模型厂商长期需求，未来AI芯片需求侧确定性进一步抬升。Anthropic拟IPO募资至多1000亿美元，估值约2万亿美元。</div>
+                    <span class="tag tag-bull">AI大模型</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">AI治理</span>
+                    </div>
+                    <div class="view">「中信前瞻·Anthropic CEO Dario发文吁控制前沿步伐」：AI呈现「递归自我提升」(RSI)特征，模型加速迭代；RSI是当前大模型能力提升的核心引擎，看好未来半年至一年内模型能力有望突破性跃升，AI4S同步受益。监管/地缘扰动需关注。</div>
+                    <span class="tag tag-neutral">AI治理</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">AI治理</span>
+                    </div>
+                    <div class="view">「天风海外科技·AO呼吁降速，怎么理解？」：经典���徒困境，AI厂商希望放慢竞争节奏但谁都不敢单方面停；Dario一方面呼吁协调研发节奏，另一方面主张加强芯片、远端算力和模型技术保护——美国实验室若放慢速度，<strong>中国厂商可能获得追赶窗口</strong>。</div>
+                    <span class="tag tag-bear">AI治理</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">深度分析</span>
+                    </div>
+                    <div class="view">「深度文·Anthropic Dario长文真正目的」：核心矛盾 = 定价权刚到手 + 开源跨线 + 上市迫在眉睫；Anthropic的核心问题是借「AI安全」向美国政府要工具打压中国开源模型。「满嘴安全，背后全是自己的利益」。但资本开支不会真减，<strong>这是淘汰赛，谁先慢谁先出局</strong>。</div>
+                    <span class="tag tag-bear">深度分析</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">AI硬件</span>
+                    </div>
+                    <div class="view">「浙商计算机·大模型商业化周报第25期」：① DeepSeek V4.1 Flash采用输入输出不对称架构，HBM/SSD需求降至前代1/4、1/8，价格降33-60%；② OpenAI实现自动化研究实习生，1人=3.1个Agent-日；③ GPT-6 Astra在BenchCAD三维重建测试中95.9%几何重合度；④ Ramp 8月洞察：Anthropic/OpAI企业付费43.8%/39.8%，综合有效Token价格较3月高点-41%。</div>
+                    <span class="tag tag-bull">AI硬件</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">数据要素</span>
+                    </div>
+                    <div class="view">「数据要素·国家级「数据身份证」正式上线」：9月11日国家数据产权登记服务系统上线试运行，全国统一的数据产权登记制度进入实操阶段。首日56份凭证公示，北/沪/深三家数据交易所率先纳入。产业链逻辑从#数据交易所#，向#数据确权→数据治理→资产评估→数据交易→数据融资#扩散。</div>
+                    <span class="tag tag-bull">数据要素</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">MLCC涨价</span>
+                    </div>
+                    <div class="view">「村田MLCC EOL事件」：村田首次给出料号退出时间表，停9大系列MLCC料号。AI服务器单机用量为通用服务器8-12倍；GB300 NVL72约44万颗→VR200约60万颗，Rubin单机架价值量+182%。三星电机9/1签1.0722万亿韩元AI服务器MLCC长约覆盖2027全年（公司史上最大MLCC订单）。</div>
+                    <span class="tag tag-bull">MLCC涨价</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">光博会</span>
+                    </div>
+                    <div class="view">「周观点·光博会标的近况」：1.6T规模上量、NPO/CPO/XPO共封装集中爆发、OCS集中发布。<strong>华工科技</strong> H2预计好转/明年有望250e+收入；<strong>永鼎股份</strong> 27年70&100mw光源出货上修；<strong>光库科技</strong> 联合calientai展出320端口OCS；<strong>腾景科技</strong> 光通信占比60%+；<strong>中天科技</strong> 光棒满产、保偏光纤可供货。</div>
+                    <span class="tag tag-bull">光博会</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【信息早知道】</span>
+                        <span class="section-tag">监管收紧</span>
+                    </div>
+                    <div class="view">「个人量化交易正面临系统性收紧」：监管封堵「裸API直连柜台」「外挂破解工具」「公有云跑单」等灰色路径；高频认定门槛大幅降低（每秒申报+撤单≥15笔即认定）；独立交易单元整改（VIP通道暂停新增、存量至少10个账户共用）；策略需转向中低频、基本面或事件驱动。</div>
+                    <span class="tag tag-bear">监管收紧</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【傅里叶的猫】</span>
+                        <span class="section-tag">AI硬件</span>
+                    </div>
+                    <div class="view">「博通448G serdes研发不顺」：博通最新的448G serdes研发不是很顺利，所以TPU V9i选择了<strong>MTK的336G</strong>——博通被绕开，MTK抢占TPU新代际关键卡位。</div>
+                    <span class="tag tag-bear">AI硬件</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【傅里叶的猫】</span>
+                        <span class="section-tag">调研纪要</span>
+                    </div>
+                    <div class="view">「芯原专家访谈」：分享芯原股份（688521）的专家访谈内容，涉及芯片设计服务/IP授权业务的最新进展。</div>
+                    <span class="tag tag-neutral">调研纪要</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【小锦鲤】</span>
+                        <span class="section-tag">短线情绪</span>
+                    </div>
+                    <div class="view">「顽主杯仓位断崖降低，这是市场行情悲观的极致表现」：周末各大群发酵悲观情绪；越是这样越需要打起精神——「8月份其实就是退潮了，只是你们在医药感受不到」。「新的节点已经出现了，机会是在悲观中产生的」。晚上会议照常。</div>
+                    <span class="tag tag-bull">短线情绪</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【小锦鲤】</span>
+                        <span class="section-tag">风格研判</span>
+                    </div>
+                    <div class="view">「新周期在哪」：周末老粉都在讨论新周期在哪的可能性，新粉在问是不是没牛了。「风格转换的时候回撤正常，毕竟只有老周期退干净才有新的，现在退完了，就是咱们好好研究新抱团的时候」。</div>
+                    <span class="tag tag-bull">风格研判</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【小锦鲤】</span>
+                        <span class="section-tag">监管警示</span>
+                    </div>
+                    <div class="view">「jg干预引发退潮」：「上周中石无故延长，龙版无故停牌，到周末哪怕科技也是一样」，普通人抱怨没意义，「踏准节点才能不被jg影响」，共度时艰。</div>
+                    <span class="tag tag-bear">监管警示</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">
+                        <span>【洛飞小群】</span>
+                        <span class="section-tag">公告点评</span>
+                    </div>
+                    <div class="view">「金安国纪异动」：平安喜乐——「金安每次异动公告都是这几句话，从来没变过」，表达对PCB/电子布龙头金安国纪公告老套的调侃。</div>
+                    <span class="tag tag-neutral">公告点评</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">📈</span>板块热度排行</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:60px;">排名</th>
+                        <th style="width:200px;">板块名称</th>
+                        <th style="width:140px;">热度</th>
+                        <th>核心逻辑</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="rank-badge rank-1">1</span></td>
+                        <td><strong>AI大模型/AI Infra</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>Anthropic呼吁AI降速、英伟达100亿参投Anthropic IPO、Dario长文引发中美AI竞争辩论；OpenAI自动化研究实习生/Ramp 8月洞察企业付费采用持续增长；RSI叙事=AI开始研发下一代AI。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-2">2</span></td>
+                        <td><strong>MLCC/陶瓷电容</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>村田首次给出MLCC料号EOL时间表，停9大系列；AI服务器单机MLCC用量为通用8-12倍；Rubin单机架价值量+182%；三星电机AI服务器MLCC长约52.5亿元覆盖2027全年——结构性缺货。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-3">3</span></td>
+                        <td><strong>数据要素/数据确权</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>9/11国家级数据产权登记服务系统上线试运行，全国统一数据产权登记制度进入实操阶段；首日56��凭证公示；产业链向数据确权→数据治理→资产评估→数据交易→数据融资扩散。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-other">4</span></td>
+                        <td><strong>光模块/CPO/OCS/光博会</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>本周光博会核心看点：1.6T规模上量、NPO/CPO/XPO共封装集中爆发、OCS集中发布；华工/永鼎/光库/腾景/中天等公司更新积极；保偏光纤为展会热点指引积极。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-other">5</span></td>
+                        <td><strong>PCB/电子布</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>金安国纪异动引发关注；MLCC高容叠层数升至500-1000层，离型膜需求放大；中信建材核心推荐中国巨石/华正新材/金安国纪/建滔等明年估值不到10x。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-other">6</span></td>
+                        <td><strong>AI硬件/MTK TPU卡位</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>博通448G serdes研发不顺，TPU V9i选择MTK的336G——博通被绕开，MTK抢占TPU新代际关键卡位，利好联发科产业链。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-other">7</span></td>
+                        <td><strong>国产算力/芯原股份</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>芯原专家访谈分享，关注芯片设计服务/IP授权业务进展；DeepSeek V4.1 Flash采用输入输出不对称架构，HBM/SSD需求降至前代1/4、1/8——对国产算力供应链有差异化影响。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-other">8</span></td>
+                        <td><strong>短线抱团/新周期</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>小锦鲤：顽主杯仓位断崖降低=悲观极致；「8月医药行情吃完，本周jg干预撤退」；「新周期在悲观中产生」，「现在退完了，就是咱们好好研究新抱团的时候」。</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank-badge rank-other">9</span></td>
+                        <td><strong>监管收紧/量化交易</strong></td>
+                        <td><span class="stars">★★☆☆☆</span></td>
+                        <td>个人量化交易系统性收紧，封堵灰色外接通道；高频认定门槛大幅降低；独立交易单元整改VIP通道暂停新增；策略需重构转向中低频。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🎯</span>重点个股推荐与分析</h2>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="name">火炬电子</div>
+                    <div class="tags"><span class="tag-pill">MLCC</span><span class="tag-pill">薄膜电容</span><span class="tag-pill">硅电容</span></div>
+                    <div class="logic">国内特种MLCC龙头、民用MLCC稼动率提升；太阳诱电大陆最大代理商，26Q1存货水位23亿元高位；薄膜电容订单已排至年底；超级电容收购中科超容；硅电容契合AI芯片先进封装趋势已实现批量收入。</div>
+                    <div class="source">来源：信息早知道·村田MLCC EOL分析</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">国瓷材料</div>
+                    <div class="tags"><span class="tag-pill">MLCC粉体</span><span class="tag-pill">稀土出口管制</span></div>
+                    <div class="logic">26H1陶瓷粉体出货3600吨同+21%，产能近满产；高端粉2000吨建成已导入部分国内外客户；稀土出口管制下市占率有望提升，高端品拉动毛利率快速上提；MLCC浆料收入1亿同+20%。</div>
+                    <div class="source">来源：信息早知道·村田MLCC EOL分析</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">博迁新材</div>
+                    <div class="tags"><span class="tag-pill">MLCC镍粉</span><span class="tag-pill">全球第二</span></div>
+                    <div class="logic">MLCC内电极用镍粉全球第二、国内第一；80nm镍粉为全球唯一量产供应商；120nm仅与日本昭荣双寡头竞争；物理法PVD工艺壁垒极高，高端产品供不应求、产能满产满销。</div>
+                    <div class="source">来源：信息早知道·村田MLCC EOL分析</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">洁美科技</div>
+                    <div class="tags"><span class="tag-pill">MLCC离型膜</span><span class="tag-pill">AI高容</span></div>
+                    <div class="logic">AI高容MLCC叠层数从100-200层升至500-1000层，离型膜用量放大；日本石油基原料短缺叠加海峡导致日系供应商扩产受阻；供需缺口持续扩大至2028年；国内唯一可量产中高端MLCC离型膜的企业，正加速抢占份额。</div>
+                    <div class="source">来源：信息早知道·村田MLCC EOL分析</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">华工科技</div>
+                    <div class="tags"><span class="tag-pill">光模块</span><span class="tag-pill">NPO/XPO</span><span class="tag-pill">250e+预期</span></div>
+                    <div class="logic">物料紧缺缓解，订单/产能高增。光通信H1受DSP/driver紧缺影响，H2预计好转；测算明年有望250e+收入；快速扩产，卡位下一代NPO/XPO技术。</div>
+                    <div class="source">来源：信息早知道·光博会周观点</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">永鼎股份</div>
+                    <div class="tags"><span class="tag-pill">光芯片</span><span class="tag-pill">光纤</span><span class="tag-pill">70&100mw光源</span></div>
+                    <div class="logic">光芯片+光纤布局。27年预计70&100mw光源出货上修，良率&生产效率超预期；光纤产能主要集中A2，需求旺盛价格坚挺。</div>
+                    <div class="source">来源：信息早知道·光博会周观点</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">光库科技</div>
+                    <div class="tags"><span class="tag-pill">FAU</span><span class="tag-pill">OCS</span><span class="tag-pill">薄膜铌酸锂</span></div>
+                    <div class="logic">展出高密NPO/CPO用fau；武汉光库联合calientai展出320端口OCS交换机；大带宽tfln调制器卡位单通400G高速光模块。</div>
+                    <div class="source">来源：信息早知道·光博会周观点</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">腾景科技</div>
+                    <div class="tags"><span class="tag-pill">光通信60%+</span><span class="tag-pill">OCS/CPO</span><span class="tag-pill">钒酸钇晶体</span></div>
+                    <div class="logic">光通信占比60%+且下半年继续扩大；OCS和CPO布局全面（核心价值量的钒酸钇晶体等）；半导体设备第二增长极。</div>
+                    <div class="source">来源：信息早知道·光博会周观点</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">中天科技</div>
+                    <div class="tags"><span class="tag-pill">光棒满产</span><span class="tag-pill">保偏光纤</span><span class="tag-pill">北美布线</span></div>
+                    <div class="logic">光棒满产，新增产能27年逐步释放；目前主要通过布线厂切入北美市场，后续有望直接进入P供应链；保偏光纤具备相关供货能力。</div>
+                    <div class="source">来源：信息早知道·光博会周观点</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">零点有数</div>
+                    <div class="tags"><span class="tag-pill">数据要素</span><span class="tag-pill">数据资产化</span></div>
+                    <div class="logic">数据资产化核心映射。公司长期从事数据分析和决策支持，同时参与《12345政务服务便民热线数据资产评估指南》编制，直接受益于公共数据从「资源」向「资产」转化。全国登记体系建立后，数据治理、价值评估、数据产品开发需求都有望增加。</div>
+                    <div class="source">来源：信息早知道·数据要素身份证</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">安妮股份</div>
+                    <div class="tags"><span class="tag-pill">数据确权</span><span class="tag-pill">版权家</span><span class="tag-pill">区块链</span></div>
+                    <div class="logic">数据确权题材弹性标。公司「版权家」长期提供数字版权确权、授权、维权和资产管理，并应用区块链等技术。在A股题材交易层面，「确权」标签辨识度较高，容易成为资��做数据产权概念扩散的方向。</div>
+                    <div class="source">来源：信息早知道·数据要素身份证</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">铜牛信息</div>
+                    <div class="tags"><span class="tag-pill">北京国资</span><span class="tag-pill">公共数据开发</span><span class="tag-pill">IDC+算力</span></div>
+                    <div class="logic">明确提出聚焦数据要素价值挖掘，并为地方政府公共数据开发利用提供咨询服务；叠加IDC与算力底座，属于全国数据市场建设的基础设施映射。</div>
+                    <div class="source">来源：信息早知道·数据要素身份证</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">芯原股份</div>
+                    <div class="tags"><span class="tag-pill">芯片设计服务</span><span class="tag-pill">IP授权</span></div>
+                    <div class="logic">傅里叶的猫分享芯原专家访谈内容，涉及芯片设计服务/IP授权业务的最新进展；国产IP授权龙头，受益国产替代逻辑。</div>
+                    <div class="source">来源：傅里叶的猫·调研纪要</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">金安国纪</div>
+                    <div class="tags"><span class="tag-pill">PCB/电子布</span><span class="tag-pill">异动公告</span></div>
+                    <div class="logic">洛飞点评「金安每次异动公告都是这几句话」——表达对老套公告的调侃；PCB/电子布龙头，受益AI服务器CCL/电子布涨价。</div>
+                    <div class="source">来源：洛飞小群·公告点评</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">⚖️</span>市场情绪与风险提示</h2>
+            <div class="split-layout">
+                <div class="risk-box">
+                    <h4>⚠️ 主要风险</h4>
+                    <ul>
+                        <li>Anthropic Dario长文显示中美AI脱钩风险加剧，可能影响国内大模型/算力产业链情绪</li>
+                        <li>个人量化交易系统性收紧，封堵裸API直连/外挂破解/公有云跑单，存量高频策略受冲击</li>
+                        <li>上周中石无故延长、龙版无故停牌等jg干预频发，短线抱团退潮风险持续</li>
+                        <li>美联储FOMC 9/16-17召开，加息预期升温可能压制全球科技股</li>
+                        <li>MLCC结构性缺货对下游AI服务器成本传导压力，可能挤压其他元器件利润</li>
+                        <li>博通448G serdes研发不顺警示TPU路径变数，AI硬件供应链波动加剧</li>
+                    </ul>
+                </div>
+                <div class="opportunity-box">
+                    <h4>✅ 积极信号</h4>
+                    <ul>
+                        <li>Anthropic Dario主张「对内减速+对外维持领先」——美国实验室若放慢，<strong>中国厂商可能获得追赶窗口</strong></li>
+                        <li>MLCC结构性缺货确定性高，村田EOL+AI服务器用量8-12倍+三星电机52.5亿元长约，覆盖2027全年</li>
+                        <li>国家级数据要素「身份证」上线，数据确权→数据治理→数据交易→数据融资全产业链受益</li>
+                        <li>光博会1.6T/NPO/CPO/XPO/OCS集中爆发，华工科技明年250e+收入预期</li>
+                        <li>DeepSeek V4.1 Flash使HBM/SSD需求降至1/4、1/8，价格降33-60%——<strong>模型降本驱动应用爆发</strong></li>
+                        <li>小锦鲤判断新抱团节点即将出现：「现在退完了，就是咱们好好��究新抱团的时候」</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">💡</span>下周关键日历与明日（周一）关注</h2>
+            <div class="watch-list">
+                <div class="watch-item">
+                    <span style="margin-right:8px;">1️⃣</span><strong>【9/14 周一】</strong>伊朗与海湾国家谈霍尔木兹协议——若达成将压制油价，利好航运/航空，利空油气
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">2️⃣</span><strong>【9/15 周二】</strong>美国8月零售销售数据——若超预期强化美联储9月加息理由
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">3️⃣</span><strong>【9/16-17 周三四】</strong>美联储FOMC议息会议——市场关注点从就业转向通胀；9/11 CPI是关键
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">4️⃣</span><strong>【9/18 周四】</strong>日本央行议息——若加息将冲击套息交易，利好日元/利空日股
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">5️⃣</span><strong>光博会持续</strong>9/9-11/深圳光博会1.6T/CPO/OCS/TFLN新产品集中亮相，关注腾景科技/光库科技/中天科技等
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">6️⃣</span><strong>短线节点</strong>小锦鲤判断新抱团周期正在酝酿，关注周一盘面情绪修复与新方向
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">7️⃣</span><strong>Anthropic IPO进展</strong>英伟达100亿美元参投，估值2万亿美元——后续IPO节奏将影响AI板块情绪
+                </div>
+                <div class="watch-item">
+                    <span style="margin-right:8px;">8️⃣</span><strong>数据要素扩散</strong>国家级身份证上线后，看北京/上海/深圳数据交易所后续政策细则与首单落地
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            📋 本报告基于15个飞书交流群的公开讨论整理，仅汇总群友/卖方机构个人观点，不构成任何投资建议。<br>
+            投资有风险，入市需谨慎。仅供个人参考，请勿作为交易依据。<br>
+            生成时间：2026-09-13 23:00 | 自动化任务 ID: automation-1783859976506
+        </div>
+    </div>
+</body>
+</html>
