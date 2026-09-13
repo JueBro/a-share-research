@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总报告 - 2026-09-12（周末简报）</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #5a5a6e;
+            --border: #e8e8f0;
+            --accent: #2563eb;
+            --accent-light: #eff6ff;
+            --danger: #dc2626;
+            --success: #16a34a;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --red-up: #dc2626;
+            --green-down: #16a34a;
+            --shadow: 0 4px 20px rgba(0,0,0,0.06);
+            --radius: 16px;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 24px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white;
+            padding: 32px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+        }
+        .header h1 { margin: 0 0 12px 0; font-size: 28px; }
+        .header .meta { display: flex; flex-wrap: wrap; gap: 20px; opacity: 0.9; font-size: 14px; }
+        .header .meta span { display: flex; align-items: center; gap: 6px; }
+        .weekend-badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #7c2d12;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+        .section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+        }
+        .section-title .icon { font-size: 24px; }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .kpi-card {
+            background: var(--accent-light);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+        .kpi-card .value { font-size: 22px; font-weight: 700; color: var(--accent); }
+        .kpi-card .label { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+        .kpi-card.red .value { color: var(--red-up); }
+        .kpi-card.green .value { color: var(--green-down); }
+        .kpi-card.amber .value { color: var(--warning); }
+        .quote {
+            background: #f1f5f9;
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 0 12px 12px 0;
+            margin: 12px 0;
+            font-size: 14px;
+        }
+        .quote .source { font-size: 12px; color: var(--text-secondary); margin-top: 8px; }
+        .opinion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .opinion-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            background: #fafbfc;
+        }
+        .opinion-card .group { font-weight: 700; color: var(--accent); font-size: 14px; margin-bottom: 8px; }
+        .opinion-card .view { font-size: 14px; color: var(--text); }
+        .opinion-card .tag {
+            display: inline-block;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        .tag-bull { background: #fee2e2; color: var(--red-up); }
+        .tag-bear { background: #dcfce7; color: var(--green-down); }
+        .tag-neutral { background: #f1f5f9; color: var(--text-secondary); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+        th { background: #f8fafc; font-weight: 600; color: var(--text-secondary); font-size: 13px; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #f59e0b; letter-spacing: 2px; }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .stock-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            background: #fafbfc;
+            transition: transform 0.2s;
+        }
+        .stock-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .stock-card .name { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .stock-card .tags { margin-bottom: 10px; }
+        .stock-card .tag-pill {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: 4px;
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+        .stock-card .logic { font-size: 14px; color: var(--text-secondary); }
+        .stock-card .source { font-size: 12px; color: #888; margin-top: 10px; }
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .risk-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 16px; }
+        .opportunity-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; }
+        .risk-box h4 { color: var(--red-up); margin: 0 0 12px 0; }
+        .opportunity-box h4 { color: var(--green-down); margin: 0 0 12px 0; }
+        .watch-list { display: flex; flex-direction: column; gap: 12px; }
+        .watch-item {
+            background: var(--warning-bg);
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+        .watch-item strong { color: var(--warning); }
+        .disclaimer {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        .group-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .group-pill {
+            background: #e2e8f0;
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .group-pill.active { background: #dbeafe; color: var(--accent); font-weight: 600; }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .cal-card {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: 10px;
+            padding: 14px;
+            border-left: 4px solid #f59e0b;
+        }
+        .cal-card .date { font-weight: 700; color: #92400e; }
+        .cal-card .event { color: #78350f; font-size: 14px; margin-top: 6px; }
+        @media (max-width: 768px) {
+            .split-layout { grid-template-columns: 1fr; }
+            body { padding: 12px; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 飞书群聊市场观点汇总报告</h1>
+            <div class="meta">
+                <span>📅 日期：2026-09-12（周六 · 非交易日）</span>
+                <span>💬 监控群：15个（2个活跃）</span>
+                <span>📝 消息总数：22条</span>
+                <span>⏰ 生成时间：2026-09-12 23:00</span>
+            </div>
+            <div class="weekend-badge">🗓️ 周末舆情简报模式 · 聚焦下周展望</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">💬</span>活跃群聊与消息分布</h2>
+            <div class="group-list">
+                <span class="group-pill active">信息早知道 · 5条</span>
+                <span class="group-pill active">傅里叶的猫 · 17条</span>
+                <span class="group-pill">唐史主任 · 0条</span>
+                <span class="group-pill">鑫多多 · 0条</span>
+                <span class="group-pill">核心逻辑社 · 0条</span>
+                <span class="group-pill">VIP通知新群1 · 0条</span>
+                <span class="group-pill">杰哥进阶 · 0条</span>
+                <span class="group-pill">小锦鲤 · 0条</span>
+                <span class="group-pill">洛飞小群 · 0条</span>
+                <span class="group-pill">潘凤 · 0条</span>
+                <span class="group-pill">震哥-胡汉三 · 0条</span>
+                <span class="group-pill">猫十三 · 0条</span>
+                <span class="group-pill">彭域 · 0条</span>
+                <span class="group-pill">局座 · 0条</span>
+                <span class="group-pill">黑火信息差 · 0条</span>
+            </div>
+            <div class="quote" style="margin-top:16px;">
+                周六非交易日，仅「信息早知道」「傅里叶的猫」两个研报型活跃群有内容输出。今日内容主要为海外研报与大模型周报，机构色彩较浓；其他13个群多主休息。今日重点放在 <strong>本周海外市场回顾</strong>、<strong>下周重点事件日历</strong> 与 <strong>优质个股研报</strong>。
+                <div class="source">—— 简报模式说明</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🌍</span>本周海外市场回顾与下周展望</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card green">
+                    <div class="value">-0.80%</div>
+                    <div class="label">标普500（周）</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="value">-0.66%</div>
+                    <div class="label">纳指（周）</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="value">-3.29%</div>
+                    <div class="label">恒生指数（周）</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="value">+3.33%</div>
+                    <div class="label">韩国KOSPI（周）</div>
+                </div>
+                <div class="kpi-card red">
+                    <div class="value">+8.81%</div>
+                    <div class="label">布伦特原油</div>
+                </div>
+                <div class="kpi-card amber">
+                    <div class="value">+25bp</div>
+                    <div class="label">2Y美债收益率</div>
+                </div>
+            </div>
+
+            <div class="quote">
+                <strong>🌐 本周宏观要点</strong>：美伊冲突推动油价大幅上涨，美债收益率上行压制全球股市，主要股指多数下跌。① 美股：美债收益率上行叠加油价上涨，标普500/纳指双双走弱；② 非美股市：欧元区斯托克50 -1.06%、德国DAX -1.83%、日经225 -1.55%、恒生指数 -3.29%（受科技股与内房股拖累）；③ 韩国KOSPI +3.33%（受芯片股上涨带动，半导体周期预期改善，外资早期积极买入）；④ 美债：2Y升25bp、10Y升19bp、30Y升11bp，油价上涨推升加息预期；⑤ 商品：布伦特原油周涨8.81%至 <strong>104.3美元</strong>，WTI周涨9.38%至99.9美元，受美伊互袭油轮和曼德海峡通行受阻推动；伦敦金周跌1.85%至4348美元，LME铜周跌1.13%至14219美元。
+                <div class="source">—— 来源：信息早知道 · 海外市场周度回顾</div>
+            </div>
+
+            <div class="quote">
+                <strong>🇰🇷 韩国KOSPI深度点评</strong>：KOSPI本周收报6,909.9点，周涨幅3.3%；KOSDAQ 820.6点，周涨0.9%。半导体板块在GPT-6 Astra带来的AI热情升温、存储芯片周期展望改善以及外资早期积极买入的推动下领涨，<strong>带动KOSPI重新站上重要技术位</strong>。但随着布伦特原油突破100美元、美国10年期国债收益率逼近5%，市场重新担忧通胀压力。中东局势持续紧张的背景下，美国财政部扩大债券回购计划的支持作用受到限制。半导体仍是影响指数表现的核心板块，但波动明显加剧，<strong>早期涨幅在外资随后转为大规模净卖出后逐步回吐</strong>。板块表现进一步从科技股扩散至金融、建筑、核电及部分造船股；半导体和电池板块则在本周后半段走弱。本周KOSPI市场外资 <strong>净卖出1.695万亿韩元</strong>，国内机构净买入3.680万亿韩元。
+                <div class="source">—— 来源：信息早知道 · 外资韩国股市周报</div>
+            </div>
+
+            <div class="quote">
+                <strong>🇺🇸 美国通胀与货币政策</strong>：美国8月PPI同比5.4%（预期5.3%），核心PPI同比4.6%；8月CPI同比3.4%（预期3.4%），核心CPI同比2.4%，<strong>核心CPI环比+0.3%超预期</strong>，强化美联储9月加息理由。欧洲央行加息25个基点至2.5%符合预期，上调未来两年通胀预期，官员暗示进一步紧缩。
+                <div class="source">—— 来源：信息早知道 · 海外市场周度回顾</div>
+            </div>
+
+            <h3 style="margin-top:20px;font-size:16px;">📅 下周重点事件日历</h3>
+            <div class="calendar-grid">
+                <div class="cal-card">
+                    <div class="date">09/14 周一</div>
+                    <div class="event">伊朗与海湾国家在阿曼谈霍尔木兹海峡交通管理协议</div>
+                </div>
+                <div class="cal-card">
+                    <div class="date">09/16 周三</div>
+                    <div class="event">美国8月零售销售数据</div>
+                </div>
+                <div class="cal-card">
+                    <div class="date">09/17 周四</div>
+                    <div class="event">美联储FOMC议息会议（关键）</div>
+                </div>
+                <div class="cal-card">
+                    <div class="date">09/18 周五</div>
+                    <div class="event">日本央行议息会议</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🤖</span>大模型与AI应用周报（浙商计算机 第25期）</h2>
+
+            <div class="quote">
+                <strong>🚀 DeepSeek V4.1 Flash架构升级</strong>：采用输入、输出不对称架构，在基准测试中超越包括 V4 Pro 在内的多款旗舰模型；HBM、SSD 需求分别降至前代的 <strong>1/4、1/8</strong>。Flash API 缓存命中输入价格下降 60%，未命中输入及输出价格分别下降约 33%、11%。Harness 版本更新至v0.1.5，与模型联合优化，推出实验性 Agent Teams。
+                <div class="source">—— 来源：浙商计算机 · 刘雯蜀团队</div>
+            </div>
+
+            <div class="quote">
+                <strong>🧪 OpenAI自动化研究实习生 + GPT-6 Astra 3D能力</strong>：① OpenAI表示，系统可在人类指导下完成需要数天的明确研究任务；8月中旬，研究团队每个人类工作日对应约 <strong>3.1个Agent工作日</strong>；② GPT-6 Astra 在 BenchCAD 三维重建测试中取得 <strong>95.9%几何重合度</strong>，预估API成本较Sol低约43%；官方演示可在Blender建模并生成虚幻引擎5可漫游场景。
+                <div class="source">—— 来源：浙商计算机 · 刘雯蜀团队</div>
+            </div>
+
+            <div class="quote">
+                <strong>📊 Ramp 8月企业AI支出洞察</strong>：Anthropic、OpenAI企业付费采用率分别为 <strong>43.8%、39.8%</strong>，新增采用速度放缓；头部1%企业人均月AI支出下降9.7%，但前10%及整体中位数仍增长。截至报告发布当周，<strong>综合有效Token价格较3月高点下降约41%</strong>，前沿模型Token份额由8月峰值53%回落至约45%，增量更多来自低价标准模型。开源模型仅覆盖其AI付费企业的6.4%、全部企业的3.6%，尚非支出变化的主要解释。
+                <div class="source">—— 来源：浙商计算机 · 刘雯蜀团队</div>
+            </div>
+
+            <div class="quote">
+                <strong>🎬 多模态进入生产流程</strong>：① 豆包模型用于完美世界素材制作与研发，部分视频素材生成由天级缩至分钟级；网易《天下》AI短片《倩影》上线3天 <strong>播放过千万</strong>，TVC成本下降 <strong>95%</strong>；② MiniMax与NVIDIA Sol团队在8张B300上约1.653秒生成5秒视频；③ ChatGPT Images 2.5改善多轮编辑一致性，延迟最高降低50%。
+                <div class="source">—— 来源：浙商计算机 · 刘雯蜀团队</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">💼</span>海外科技巨头财报：ORCL/ADBE双解读</h2>
+
+            <div class="opinion-grid">
+                <div class="opinion-card">
+                    <div class="group">🔵 甲骨文 ORCL · FQ1'27</div>
+                    <div class="view">
+                        营收 <strong>$193.45B（+29.6% y/y）</strong>，非GAAP EPS $1.92，均超预期。<strong>OCI营收$73.88B（+120.7% y/y）</strong>，本季交付 <strong>850MW / 超30万GPU</strong>，RPO达 <strong>$664B（+45.9%）</strong>，$20B ATM完成。但管理层承认FQ1受益于部分FQ2交付提前，且FY27仍有至多$20B融资需求未明确，CFO拒绝给出合并FCF转正时间表。
+                        <br/><br/>多头认为OCI正从"堆硬件"转向"变现运营能力"；空头则质疑客户预付款掩盖了真实现金流，且最大AI客户集中度风险仍高。下一个催化剂为 <strong>10月28日投资者日</strong>。
+                    </div>
+                    <span class="tag tag-bull">OCI超预期120%</span>
+                </div>
+                <div class="opinion-card">
+                    <div class="group">🟠 奥多比 ADBE · FQ3</div>
+                    <div class="view">
+                        营收 <strong>$67.6B（+12.9%）</strong>超预期，EPS $6.13亦超预期，但营业利润率 <strong>44.0%略低于预期</strong>。Creative免费用户MAU突破 <strong>1亿（+70%）</strong>，AI-first ARR超 $650M（+150%），但仅占总ARR约 2.4%。增量ARR持续恶化，FQ4营收指引中值 $68.25B 略低于Street。管理层将年度收入上调主要归因于FX而非业务改善。
+                        <br/><br/>多头认为ADBE可凭借工作流嵌入和企业集成守住"变现层"地位；空头则担忧AI降低创意产出门槛后用户付费意愿下降，免费用户增长尚未转化为付费ARR。<strong>12月1日CEO交接</strong>也增加不确定性。
+                    </div>
+                    <span class="tag tag-neutral">AI变现存疑</span>
+                </div>
+            </div>
+
+            <div class="quote">
+                <strong>🏗️ 微软 + Blackstone 双重加码AI基建</strong>：① <strong>微软计划到2032年将全球数据中心容量从约12GW扩至38GW以上</strong>（3倍扩张）；② Blackstone拟大幅加码Google TPU投资（远超初始$5B/500MW），并融资英伟达GPU及Broadcom/Anthropic TPU部署；③ OpenAI CEO Sam Altman告知员工<strong>可能放缓前沿AI开发</strong>；④ Anthropic披露disrupt了涉及生物武器研究、俄罗斯黑客及中国实验室（阿里、月之暗面、DeepSeek等）的Claude滥用。
+                <div class="source">—— 来源：傅里叶的猫 · TMTB早报</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">📡</span>PCD/CCL/电子布：景气全面强化</h2>
+
+            <div class="quote">
+                <strong>📊 Jefferies PCB最新观点（4大要点）</strong>：① PCB供应链Q3动能 <strong>全面增强</strong>，AI与非AI双轮驱动；② 非AI板块触底：价格传导变得可行，行业整合推升涨价；③ 上游材料领涨：<strong>CCL / 玻璃纤维布价格飙升</strong>，涨价未见放缓；④ Q2盈利数据：AI/数据中心厂商强劲，<strong>CCL厂商爆发式增长</strong>。
+                <div class="source">—— 来源：傅里叶的猫 · Jefferies研报转载</div>
+            </div>
+
+            <div class="quote">
+                <strong>🧱 中信建材电子布-CCL链条为何连续强势</strong>：#行情在分歧中成长，在转向一致时爆发。7月市场回调打掉了所有预期，也放大了所有利空，<strong>坚定看好基本面向上趋势</strong>！#基本面高度会明显超过此前市场预期，资金就会回来。按照中性假设，明年估值而言：
+                <br/><br/>
+                💎 <strong>不到10x</strong>：中国巨石、华正新材、金安国纪、建滔；
+                <br/>
+                💎 <strong>10-20x区间</strong>：国际复材、中材科技。
+                <br/><br/>
+                #目前先赚EPS的钱，稳稳的幸福！后面一致预期上修时，就坐稳扶好呗！
+                <div class="source">—— 来源：信息早知道 · 中信建材冷威/孙林潇</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🔥</span>本周热点板块热度排行</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:60px;">排名</th>
+                        <th>板块</th>
+                        <th style="width:120px;">热度</th>
+                        <th>核心逻辑</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>海外AI基建</strong>（ORCL/微软38GW/Blackstone TPU）</td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>ORCL OCI超预期+120%、微软10年3倍扩张、Blackstone加码Google TPU，全球AI硬件需求持续确认</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>大模型/AI Agent</strong>（DeepSeek/OpAI/CL/Cursor）</td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>DeepSeek V4.1 Flash价格降33-60%、OpenAI Agent 1人=3.1 agent-日、Anthropic企业付费44%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>存储/特种DRAM/SLC NAND</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>兆易创新目标价391元、SLC NAND 2027高速增长、3D DRAM 2027-2028贡献收入</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>PCB/CCL/电子布</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>Jefferies看Q3动能全面增强、上游CCL/玻纤布涨价未见放缓、中国巨石等明年估值不到10x</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>美伊局势/油气</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>布油周涨8.81%至104.3美元、胡塞控制曼德海峡、美伊互袭油轮；下周09/14关键谈判</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>AIDC交换机/网络设备</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>锐捷网络Q2营收60亿+42%/净利+66%/Q2单季爆，落地中国移动/阿里/字节等头部AI客户</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>韩国KOSPI/存储周期</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>KOSPI周涨3.33%、半导体领涨后冲高回落、外资后期净卖出1.695万亿韩元</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">📌</span>重点个股研报与逻辑卡</h2>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="name">🔷 兆易创新（603986）</div>
+                    <div class="tags">
+                        <span class="tag-pill">存储/SLC NAND</span>
+                        <span class="tag-pill">特种DRAM</span>
+                        <span class="tag-pill">3D DRAM</span>
+                    </div>
+                    <div class="logic">
+                        管理层判断特种DRAM、NAND的ASP将逐季环比走高但增速随高基数放缓；2027年受益代工厂产能扩张SLC NAND晶圆出货将高速增长；特种DRAM晶圆放量尚需时间；高密度NOR驱动其ASP温和上行；同时推进3D DRAM项目，预计2027-2028年贡献实质收入。<strong>2Q26毛利率提升至66.6%</strong>，预计三四季度仍有改善后续逐步企稳。高盛维持买入评级，<strong>12个月目标价391元</strong>。
+                    </div>
+                    <div class="source">—— 高盛研报 · 来源：傅里叶的猫</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🔷 锐捷网络</div>
+                    <div class="tags">
+                        <span class="tag-pill">AIDC交换机</span>
+                        <span class="tag-pill">1.6T高速互联</span>
+                        <span class="tag-pill">51.2T CPO</span>
+                    </div>
+                    <div class="logic">
+                        公司受益国内云厂商带动AIDC交换机出货。<strong>二季度营收60亿元，同比增42%、环比大增94%</strong>，净利润5.71亿元，同比+66%、环比+365%，毛利率29.5%符合预期。IDC数据显示其一季度国内数据中心交换机市场排第三，200G/400G交换机位列第二，已布局1.6T高速互联设备、发布51.2T CPO交换机，产品落地于中国移动、阿里、字节等头部AI客户。高盛上调2026-2030年收入与盈利预测，但白盒交换机业务拉低整体毛利率，维持中性评级。风险来自国内云资本开支、产品迭代节奏以及行业价格竞争。
+                    </div>
+                    <div class="source">—— 高盛研报 · 来源：傅里叶的猫</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🔷 中国巨石 / 华正新材 / 金安国纪 / 建滔</div>
+                    <div class="tags">
+                        <span class="tag-pill">电子布</span>
+                        <span class="tag-pill">CCL</span>
+                        <span class="tag-pill">低估值（&lt;10x）</span>
+                    </div>
+                    <div class="logic">
+                        <strong>中信建材核心推荐组合</strong>：电子布-CCL链条在分歧中成长、转向一致时爆发。7月市场回调打掉了所有预期，也放大了所有利空，#我们坚持跟踪全产业链上下游，坚定看好基本面向上趋势！基本面高度会明显超过此前市场预期。<strong>明年估值不到10x</strong>，目前先赚EPS的钱，稳稳的幸福。
+                    </div>
+                    <div class="source">—— 中信建材冷威/孙林潇 · 来源：信息早知道</div>
+                </div>
+                <div class="stock-card">
+                    <div class="name">🔷 国际复材 / 中材科技</div>
+                    <div class="tags">
+                        <span class="tag-pill">电子布</span>
+                        <span class="tag-pill">玻纤</span>
+                        <span class="tag-pill">10-20x估值</span>
+                    </div>
+                    <div class="logic">
+                        电子布-CCL链条高景气。按中性假设，明年估值 <strong>10-20x区间</strong>，相比不到10x组具备一定估值溢价但仍合理。基本面高度会明显超过此前市场预期，资金就会回来。<strong>一致预期上修时坐稳扶好</strong>。
+                    </div>
+                    <div class="source">—— 中信建材冷威/孙林潇 · 来源：信息早知道</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">⚖️</span>市场情绪与风险提示</h2>
+            <div class="split-layout">
+                <div class="risk-box">
+                    <h4>⚠️ 主要风险</h4>
+                    <ul style="margin:0;padding-left:20px;line-height:1.9;">
+                        <li><strong>油价持续上涨</strong>：布伦特周涨8.81%至104.3美元；胡塞控制曼德海峡+美伊互袭油轮；可能冲击通胀与全球需求</li>
+                        <li><strong>美联储9月加息预期强化</strong>：核心CPI环比+0.3%超预期，10Y美债收益率逼近5%；下周9/17 FOMC会议前波动加大</li>
+                        <li><strong>AI应用变现不确定性</strong>：ADBE FQ4指引低于Street、Snowflake/企业AI付费增速放缓、Token价格较3月高点下降41%</li>
+                        <li><strong>韩股半导体冲高回落</strong>：外资后期净卖出1.695万亿韩元、半导体板块波动明显加剧</li>
+                        <li><strong>OpenAI或放缓前沿开发</strong>：Sam Altman告知员工可能放缓，引发市场对AI Capex可持续性担忧</li>
+                        <li><strong>恒生指数周跌3.29%</strong>：受科技股与内房股拖累，港股流动性与情绪面脆弱</li>
+                    </ul>
+                </div>
+                <div class="opportunity-box">
+                    <h4>✅ 积极信号</h4>
+                    <ul style="margin:0;padding-left:20px;line-height:1.9;">
+                        <li><strong>ORCL OCI超预期+120%</strong>：850MW产能/30万GPU交付，RPO达$664B（+45.9%）</li>
+                        <li><strong>微软10年扩张3倍</strong>：2032年数据中心从12GW扩至38GW以上，AI基建长周期不变</li>
+                        <li><strong>DeepSeek V4.1 Flash降本</strong>：HBM/SSD需求降至前代1/4、1/8，价格降33-60%</li>
+                        <li><strong>兆易创新目标价391元</strong>：高盛维持买入，3D DRAM 2027-2028贡献实质收入</li>
+                        <li><strong>PCB Q3全面增强</strong>：Jefferies看AI与非AI双轮驱动，上游CCL/玻纤布涨价未见放缓</li>
+                        <li><strong>锐捷网络Q2爆量</strong>：营收环比+94%/净利+365%，51.2T CPO落地头部AI客户</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><span class="icon">🔮</span>下周展望与关注要点</h2>
+            <div class="watch-list">
+                <div class="watch-item">
+                    <strong>📅 09/14 周一</strong>：<strong>伊朗与海湾国家在阿曼谈霍尔木兹海峡交通管理协议</strong>。若达成将显著缓解油价上行压力，是下周最重要的事件。如果谈判破裂或霍尔木兹受阻持续，油价可能进一步冲高，全球风险资产承压。
+                </div>
+                <div class="watch-item">
+                    <strong>📅 09/16 周三</strong>：<strong>美国8月零售销售数据</strong>。消费是美国经济最大支柱，若数据强劲则强化"不着陆"叙事、若走弱则提升降息预期；将直接影响FOMC决议倾向。
+                </div>
+                <div class="watch-item">
+                    <strong>📅 09/17 周四</strong>：<strong>美联储FOMC议息会议</strong>。市场高度关注9月是否加息（核心CPI环比+0.3%超预期强化加息理由）；同时关注点阵图、鲍威尔表态、对核心通胀容忍度的措辞。决议夜波动可能放大。
+                </div>
+                <div class="watch-item">
+                    <strong>📅 09/18 周五</strong>：<strong>日本央行议息会议</strong>。日本是否进一步加息，将影响日元套息交易逆转节奏，对亚太股市流动性有直接影响。
+                </div>
+                <div class="watch-item">
+                    <strong>🛢️ 油价中枢观察</strong>：若布伦特站稳104美元、伊朗谈判破裂，可能冲击150美元预期，重新激活煤炭/油气/船舶链；反之油价回落则利好科技/航空/消费。
+                </div>
+                <div class="watch-item">
+                    <strong>📊 A股国内映射</strong>：① 国联/中信建材反复强调的电子布-CCL链条（中国巨石/华正新材/金安国纪/建滔/国际复材/中材科技）② 锐捷网络映射下的AIDC交换机/光模块（CPO概念）③ 兆易创新目标价391元映射的存储/SLC NAND板块（兆易/长鑫/江波龙/普冉/澜起）。
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            ⚠️ 本报告由AI根据15个飞书群聊的2026-09-12当日消息汇总整理而成，仅供个人参考，不构成投资建议。<br/>
+            报告中的多数观点来源于机构研报与海外反馈，<strong>不代表国内市场即时观点</strong>。请投资者独立判断、自担风险。<br/>
+            📅 报告生成时间：2026-09-12 23:00
+        </div>
+    </div>
+</body>
+</html>
