@@ -26,7 +26,9 @@
         "AI散热/液冷",
         "光模块/CPO/OCS",
         "光模块/800G/1.6T/CPO",
-        "光模块/CPO/OCS/光芯片"
+        "光模块/CPO/OCS/光芯片",
+        "海外AI基建",
+        "AIDC交换机/光网络"
       ],
       "logs": [
         {
@@ -1034,7 +1036,8 @@
         "存储DRAM/NAND",
         "国产算力/AI芯片/HBM",
         "国产HBM/先进存储",
-        "存储/HBM/DRAM"
+        "存储/HBM/DRAM",
+        "存储/SLC NAND/特种DRAM"
       ],
       "logs": [
         {
@@ -1251,7 +1254,8 @@
         "国产算力/AI芯片/HBM",
         "AI算力/国产算力",
         "国产算力/服务器/IDC",
-        "国产算力/AI服务器"
+        "国产算力/AI服务器",
+        "AIDC交换机/光网络"
       ],
       "logs": [
         {
@@ -1634,11 +1638,11 @@
     {
       "name": "兆易创新",
       "code": "603986",
-      "sectors": "半导体 | 存储/DRAM | 存储/DRAM/HBM | 存储/DRAM/国产存储 | 存储/HBM/CXL | 存储/HBM/DRAM | 存储/MCU | 存储/半导体 | 存储DRAM | 存储芯片",
+      "sectors": "半导体 | 存储/DRAM | 存储/DRAM/HBM | 存储/DRAM/国产存储 | 存储/HBM/CXL | 存储/HBM/DRAM | 存储/MCU | 存储/半导体 | 存储/特种DRAM/SLC NAND | 存储DRAM | 存储芯片",
       "style": "中长线",
       "first_seen": "2026-07-26",
-      "last_seen": "2026-09-06",
-      "mention_count": 13,
+      "last_seen": "2026-09-12",
+      "mention_count": 14,
       "linked_sectors": [
         "国产算力",
         "存储芯片",
@@ -1651,9 +1655,21 @@
         "半导体设备 / 材料",
         "国产HBM/先进存储",
         "存储/HBM/DRAM",
-        "存储/HBM/CXL"
+        "存储/HBM/CXL",
+        "存储/SLC NAND/特种DRAM",
+        "韩国KOSPI/存储周期"
       ],
       "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "傅里叶的猫",
+          "sector": "存储/特种DRAM/SLC NAND",
+          "style": "中长线",
+          "logic": "管理层判断特种DRAM、NAND的ASP将逐季环比走高但增速随高基数放缓；2027年受益代工厂产能扩张SLC NAND晶圆出货将高速增长；高密度NOR驱动其ASP温和上行；推进3D DRAM项目，预计2027-2028年贡献实质收入。2Q26毛利率提升至66.6%，预计三四季度仍有改善。高盛维持买入评级，12个月目标价391元。",
+          "sentiment": "看多",
+          "target": "391元（高盛12个月目标价）",
+          "risk": "高基数下增速放缓；3D DRAM量产时点不确定"
+        },
         {
           "date": "2026-09-06",
           "group": "信息早知道",
@@ -2107,7 +2123,8 @@
         "光模块/CPO/NPO/OCS",
         "光模块/800G/1.6T/CPO",
         "光模块/CPO/OCS/光芯片",
-        "OCS光交换/光模块"
+        "OCS光交换/光模块",
+        "AIDC交换机/光网络"
       ],
       "logs": [
         {
@@ -2644,7 +2661,8 @@
         "光模块/CPO/NPO",
         "光模块 / CPO",
         "光模块/800G/1.6T/CPO",
-        "光模块/CPO/OCS/光芯片"
+        "光模块/CPO/OCS/光芯片",
+        "海外AI基建"
       ],
       "logs": [
         {
@@ -3838,7 +3856,8 @@
         "国产算力/AI芯片/HBM",
         "国产HBM/先进存储",
         "存储/HBM/DRAM",
-        "存储/HBM/CXL"
+        "存储/HBM/CXL",
+        "存储/SLC NAND/特种DRAM"
       ],
       "logs": [
         {
@@ -4016,6 +4035,111 @@
           "sector": "液冷",
           "style": "中长线",
           "logic": "英伟达Rubin重塑散热需求，液冷价值量翻倍增量。建议重视液冷三标的之一。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "锐捷网络",
+      "code": "301165",
+      "sectors": "AIDC交换机/网络设备 | AI硬件/数据中心 | 交换机 | 交换机/国产算力 | 国产算力 | 国产算力/服务器/IDC | 数据中心交换机/网络设备",
+      "style": "中长线",
+      "first_seen": "2026-08-05",
+      "last_seen": "2026-09-12",
+      "mention_count": 8,
+      "linked_sectors": [
+        "国产算力/半导体",
+        "国产算力",
+        "交换机/AI网络",
+        "国产算力/AI自主可控",
+        "PCB/交换机",
+        "国产算力/交换机",
+        "国产算力/AI算力",
+        "数据中心交换机/网络设备",
+        "AI硬件/数据中心",
+        "国产算力/服务器/IDC",
+        "海外AI基建",
+        "AIDC交换机/光网络"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "傅里叶的猫",
+          "sector": "AIDC交换机/网络设备",
+          "style": "中长线",
+          "logic": "受益国内云厂商带动AIDC交换机出货。二季度营收60亿元同比+42%/环比+94%，净利润5.71亿元同比+66%/环比+365%，毛利率29.5%符合预期。一季度国内数据中心交换机市场排第三，200G/400G交换机位列第二，已布局1.6T高速互联设备、发布51.2T CPO交换机，落地中国移动/阿里/字节等头部AI客户。高盛上调2026-2030年收入与盈利预测，但白盒交换机业务拉低整体毛利率，维持中性评级。",
+          "sentiment": "中性偏多",
+          "target": "维持中性评级，未给具体目标价",
+          "risk": "白盒交换机业务拉低毛利率；国内云资本开支波动；产品迭代节奏与行业价格竞争"
+        },
+        {
+          "date": "2026-09-04",
+          "group": "信息早知道/核心逻辑社/傅里叶的猫",
+          "sector": "国产算力/服务器/IDC",
+          "style": "短中线",
+          "logic": "下半年交换机收入100亿预期不变，是目前几个ODM里业绩趋势最好的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "市场缩量/题材轮动快/量化扰动"
+        },
+        {
+          "date": "2026-08-20",
+          "group": "信息早知道",
+          "sector": "AI硬件/数据中心",
+          "style": "中长线",
+          "logic": "阿里链交换机主供，阿里capex今晚发布预计超预期。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-16",
+          "group": "信息早知道",
+          "sector": "数据中心交换机/网络设备",
+          "style": "中长线",
+          "logic": "26H1营收88.32亿(+32.8%)，归母净利6.94亿(+53.5%)超预期。Q2营收58.33亿(+41.8%)，净利率升至9.79%。数据中心交换机占比提升推动毛利率略降但净利率显著提升。预付款项14.33亿(+3125%)、存货56.14亿(+90%)积极备货。JDM模式形成护城河，在字节阿里等云厂商Scale-up/超节点中占据领先份额。看好26/27年数据中心交换机收入持续高增，戴维斯双击。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "Q2毛利率29.51%较Q1的35.70%下降，核心客户直供模式对毛利率有压低效应"
+        },
+        {
+          "date": "2026-08-14",
+          "group": "彭域/猫十三",
+          "sector": "交换机",
+          "style": "中短线",
+          "logic": "昨日算力小修复中服务器紫光锐捷都给修复了，猫十三作为核心标的提及",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "估值已高"
+        },
+        {
+          "date": "2026-08-13",
+          "group": "核心逻辑社/猫十三",
+          "sector": "交换机",
+          "style": "中长线",
+          "logic": "核心逻辑社'锐字辈'交换机龙头，历史新高。猫十三群'锐捷太狠了'。交换机筹码干净+业绩炸裂，过去没怎么炒过。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-07",
+          "group": "核心逻辑社",
+          "sector": "国产算力",
+          "style": "中长线",
+          "logic": "字节第一个交换机供应商，份额高达50-60%。核心逻辑社国产算力全景图核心标的。猫十三群友紫光换网宿科技，锐捷走了换紫光。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-05",
+          "group": "信息早知道",
+          "sector": "交换机/国产算力",
+          "style": "中长线",
+          "logic": "国产交换机龙头，ANET业绩催化+AI网络高景气。猫十三群友评价：目前看锐捷网络是最强的。",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -4639,99 +4763,6 @@
           "sector": "电子布/覆铜板",
           "style": "中长线",
           "logic": "M9必炒，高端挺进是村里的希望。上游（电子布）和下游（覆铜板）国产替代都在加速。高端CCL一定会被炒。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
-      "name": "锐捷网络",
-      "code": "301165",
-      "sectors": "AI硬件/数据中心 | 交换机 | 交换机/国产算力 | 国产算力 | 国产算力/服务器/IDC | 数据中心交换机/网络设备",
-      "style": "短中线",
-      "first_seen": "2026-08-05",
-      "last_seen": "2026-09-04",
-      "mention_count": 7,
-      "linked_sectors": [
-        "国产算力/半导体",
-        "国产算力",
-        "交换机/AI网络",
-        "国产算力/AI自主可控",
-        "PCB/交换机",
-        "国产算力/交换机",
-        "国产算力/AI算力",
-        "数据中心交换机/网络设备",
-        "AI硬件/数据中心",
-        "国产算力/服务器/IDC"
-      ],
-      "logs": [
-        {
-          "date": "2026-09-04",
-          "group": "信息早知道/核心逻辑社/傅里叶的猫",
-          "sector": "国产算力/服务器/IDC",
-          "style": "短中线",
-          "logic": "下半年交换机收入100亿预期不变，是目前几个ODM里业绩趋势最好的。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "市场缩量/题材轮动快/量化扰动"
-        },
-        {
-          "date": "2026-08-20",
-          "group": "信息早知道",
-          "sector": "AI硬件/数据中心",
-          "style": "中长线",
-          "logic": "阿里链交换机主供，阿里capex今晚发布预计超预期。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-08-16",
-          "group": "信息早知道",
-          "sector": "数据中心交换机/网络设备",
-          "style": "中长线",
-          "logic": "26H1营收88.32亿(+32.8%)，归母净利6.94亿(+53.5%)超预期。Q2营收58.33亿(+41.8%)，净利率升至9.79%。数据中心交换机占比提升推动毛利率略降但净利率显著提升。预付款项14.33亿(+3125%)、存货56.14亿(+90%)积极备货。JDM模式形成护城河，在字节阿里等云厂商Scale-up/超节点中占据领先份额。看好26/27年数据中心交换机收入持续高增，戴维斯双击。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "Q2毛利率29.51%较Q1的35.70%下降，核心客户直供模式对毛利率有压低效应"
-        },
-        {
-          "date": "2026-08-14",
-          "group": "彭域/猫十三",
-          "sector": "交换机",
-          "style": "中短线",
-          "logic": "昨日算力小修复中服务器紫光锐捷都给修复了，猫十三作为核心标的提及",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "估值已高"
-        },
-        {
-          "date": "2026-08-13",
-          "group": "核心逻辑社/猫十三",
-          "sector": "交换机",
-          "style": "中长线",
-          "logic": "核心逻辑社'锐字辈'交换机龙头，历史新高。猫十三群'锐捷太狠了'。交换机筹码干净+业绩炸裂，过去没怎么炒过。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-08-07",
-          "group": "核心逻辑社",
-          "sector": "国产算力",
-          "style": "中长线",
-          "logic": "字节第一个交换机供应商，份额高达50-60%。核心逻辑社国产算力全景图核心标的。猫十三群友紫光换网宿科技，锐捷走了换紫光。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-08-05",
-          "group": "信息早知道",
-          "sector": "交换机/国产算力",
-          "style": "中长线",
-          "logic": "国产交换机龙头，ANET业绩催化+AI网络高景气。猫十三群友评价：目前看锐捷网络是最强的。",
           "sentiment": "看多",
           "target": "",
           "risk": ""
@@ -5540,7 +5571,8 @@
         "存储/DRAM/HBM",
         "存储/DRAM/HBM/国产存储",
         "存储/DRAM",
-        "存储DRAM/NAND"
+        "存储DRAM/NAND",
+        "存储/SLC NAND/特种DRAM"
       ],
       "logs": [
         {
@@ -5995,6 +6027,73 @@
       ]
     },
     {
+      "name": "中国巨石",
+      "code": "",
+      "sectors": "PCB/CCL/电子布 | 化工/纤维/玻纤涨价 | 电子布/CCL/玻纤 | 电子布/玻纤 | 电子布/覆铜板",
+      "style": "中长线",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-09-12",
+      "mention_count": 5,
+      "linked_sectors": [
+        "电子布/覆铜板",
+        "PCB/CCL/电子布",
+        "化工/纤维/玻纤涨价",
+        "PCB/CPO/NPO/电子布"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "信息早知道",
+          "sector": "电子布/CCL/玻纤",
+          "style": "中长线",
+          "logic": "电子布-CCL链条核心标的。中信建材判断在分歧中成长、在转向一致时爆发。按中性假设，明年估值不到10x，先赚EPS的钱。基本面前度会明显超过此前市场预期。Jefferies看Q3动能全面增强，CCL/玻纤布涨价未见放缓。",
+          "sentiment": "看多",
+          "target": "中性假设明年估值不到10x",
+          "risk": "涨价兑现节奏不及预期；下游PCB需求疲软"
+        },
+        {
+          "date": "2026-09-10",
+          "group": "信息早知道",
+          "sector": "电子布/玻纤",
+          "style": "短中线",
+          "logic": "电子布制造龙头，电子布供给紧张价格上行受益。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "玻纤行业周期波动。"
+        },
+        {
+          "date": "2026-09-03",
+          "group": "信息早知道",
+          "sector": "化工/纤维/玻纤涨价",
+          "style": "中长线",
+          "logic": "电子布涨价。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "板块轮动快、成交量萎缩"
+        },
+        {
+          "date": "2026-09-01",
+          "group": "信息早知道",
+          "sector": "PCB/CCL/电子布",
+          "style": "中线",
+          "logic": "电子布龙头，正式上调9月份电子布价格（厚布+15%、薄布+20%）。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "下游需求不及预期"
+        },
+        {
+          "date": "2026-07-31",
+          "group": "信息早知道",
+          "sector": "电子布/覆铜板",
+          "style": "中长线",
+          "logic": "每个月都涨价的7628。扩产影响的是28年对27年没影响，忍一忍海阔天空。扩产可控，关键是缺口有多大。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "扩产影响远期供给"
+        }
+      ]
+    },
+    {
       "name": "中文在线",
       "code": "300364",
       "sectors": "AI影视/AI长剧/AI应用 | AI影视/IP应用 | AI短剧/IP | AI视频/文学IP",
@@ -6325,6 +6424,74 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "华正新材",
+      "code": "603186",
+      "sectors": "ABF载板/PCB材料 | PCB/CCL | PTFE高频覆铜板 | 新材料（ABF膜/RCC/硅片/金刚石散热） | 电子布/CCL",
+      "style": "中长线",
+      "first_seen": "2026-08-18",
+      "last_seen": "2026-09-12",
+      "mention_count": 5,
+      "linked_sectors": [
+        "新材料（ABF膜/RCC/硅片/金刚石散热）",
+        "PCB/CCL",
+        "PTFE高频覆铜板",
+        "ABF载板/PCB材料",
+        "PCB/CCL/电子布"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "信息早知道",
+          "sector": "电子布/CCL",
+          "style": "中长线",
+          "logic": "电子布-CCL链条核心标的。中信建材推荐，按中性假设明年估值不到10x。基本面向上趋势确定，预计一致预期上修时将坐稳扶好。",
+          "sentiment": "看多",
+          "target": "中性假设明年估值不到10x",
+          "risk": "涨价持续性；产能投放节奏"
+        },
+        {
+          "date": "2026-09-07",
+          "group": "信息早知道",
+          "sector": "ABF载板/PCB材料",
+          "style": "短中线",
+          "logic": "ABF载板紧缺暴涨，关注ABF载板方向",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-27",
+          "group": "信息早知道",
+          "sector": "PTFE高频覆铜板",
+          "style": "短线",
+          "logic": "华立集团旗下覆铜板企业，高频高速CCL已送测英伟达，PTFE排序或为国内次优；昇腾950系列一供，CBF载板膜国产替代标的。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
+        },
+        {
+          "date": "2026-08-20",
+          "group": "信息早知道",
+          "sector": "PCB/CCL",
+          "style": "中长线",
+          "logic": "天风电新继续看好，明年23亿利润当前10x PE出头。看好高频+高速明年占比40%、ABF膜国产化加速、BT载板core层国产化。CCL扩产延迟（EMC台光、斗山）利好。南亚塑料CCL涨价20-25%。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "龙虎榜机构卖盘引发讨论"
+        },
+        {
+          "date": "2026-08-18",
+          "group": "信息早知道",
+          "sector": "新材料（ABF膜/RCC/硅片/金刚石散热）",
+          "style": "中长线",
+          "logic": "ABF膜年产能300万平，客户端已在国内主要IC载板厂商验证通过，终端通过H验证并小批量供货。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "验证进度"
         }
       ]
     },
@@ -7011,7 +7178,8 @@
         "PCB/交换机",
         "PCB / 交换机",
         "PCB/CCL",
-        "PCB/CPO/NPO/电子布"
+        "PCB/CPO/NPO/电子布",
+        "PCB/CCL/电子布"
       ],
       "logs": [
         {
@@ -7709,63 +7877,6 @@
       ]
     },
     {
-      "name": "中国巨石",
-      "code": "",
-      "sectors": "PCB/CCL/电子布 | 化工/纤维/玻纤涨价 | 电子布/玻纤 | 电子布/覆铜板",
-      "style": "短中线",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-09-10",
-      "mention_count": 4,
-      "linked_sectors": [
-        "电子布/覆铜板",
-        "PCB/CCL/电子布",
-        "化工/纤维/玻纤涨价",
-        "PCB/CPO/NPO/电子布"
-      ],
-      "logs": [
-        {
-          "date": "2026-09-10",
-          "group": "信息早知道",
-          "sector": "电子布/玻纤",
-          "style": "短中线",
-          "logic": "电子布制造龙头，电子布供给紧张价格上行受益。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "玻纤行业周期波动。"
-        },
-        {
-          "date": "2026-09-03",
-          "group": "信息早知道",
-          "sector": "化工/纤维/玻纤涨价",
-          "style": "中长线",
-          "logic": "电子布涨价。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "板块轮动快、成交量萎缩"
-        },
-        {
-          "date": "2026-09-01",
-          "group": "信息早知道",
-          "sector": "PCB/CCL/电子布",
-          "style": "中线",
-          "logic": "电子布龙头，正式上调9月份电子布价格（厚布+15%、薄布+20%）。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "下游需求不及预期"
-        },
-        {
-          "date": "2026-07-31",
-          "group": "信息早知道",
-          "sector": "电子布/覆铜板",
-          "style": "中长线",
-          "logic": "每个月都涨价的7628。扩产影响的是28年对27年没影响，忍一忍海阔天空。扩产可控，关键是缺口有多大。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "扩产影响远期供给"
-        }
-      ]
-    },
-    {
       "name": "中科曙光",
       "code": "603019",
       "sectors": "国产算力 | 国产算力/HPC | 国产算力/服务器 | 算力",
@@ -7938,63 +8049,6 @@
           "sentiment": "看多",
           "target": "",
           "risk": "供应链风险"
-        }
-      ]
-    },
-    {
-      "name": "华正新材",
-      "code": "603186",
-      "sectors": "ABF载板/PCB材料 | PCB/CCL | PTFE高频覆铜板 | 新材料（ABF膜/RCC/硅片/金刚石散热）",
-      "style": "短中线",
-      "first_seen": "2026-08-18",
-      "last_seen": "2026-09-07",
-      "mention_count": 4,
-      "linked_sectors": [
-        "新材料（ABF膜/RCC/硅片/金刚石散热）",
-        "PCB/CCL",
-        "PTFE高频覆铜板",
-        "ABF载板/PCB材料"
-      ],
-      "logs": [
-        {
-          "date": "2026-09-07",
-          "group": "信息早知道",
-          "sector": "ABF载板/PCB材料",
-          "style": "短中线",
-          "logic": "ABF载板紧缺暴涨，关注ABF载板方向",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-08-27",
-          "group": "信息早知道",
-          "sector": "PTFE高频覆铜板",
-          "style": "短线",
-          "logic": "华立集团旗下覆铜板企业，高频高速CCL已送测英伟达，PTFE排序或为国内次优；昇腾950系列一供，CBF载板膜国产替代标的。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        },
-        {
-          "date": "2026-08-20",
-          "group": "信息早知道",
-          "sector": "PCB/CCL",
-          "style": "中长线",
-          "logic": "天风电新继续看好，明年23亿利润当前10x PE出头。看好高频+高速明年占比40%、ABF膜国产化加速、BT载板core层国产化。CCL扩产延迟（EMC台光、斗山）利好。南亚塑料CCL涨价20-25%。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "龙虎榜机构卖盘引发讨论"
-        },
-        {
-          "date": "2026-08-18",
-          "group": "信息早知道",
-          "sector": "新材料（ABF膜/RCC/硅片/金刚石散热）",
-          "style": "中长线",
-          "logic": "ABF膜年产能300万平，客户端已在国内主要IC载板厂商验证通过，终端通过H验证并小批量供货。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "验证进度"
         }
       ]
     },
@@ -8459,7 +8513,8 @@
         "存储芯片",
         "存储/HBM/DRAM",
         "存储/HBM/CXL",
-        "存储/DRAM/HBM"
+        "存储/DRAM/HBM",
+        "存储/SLC NAND/特种DRAM"
       ],
       "logs": [
         {
@@ -9135,7 +9190,8 @@
       "linked_sectors": [
         "AI算力/算芯",
         "软件/企业AI",
-        "AI应用/MCP协议"
+        "AI应用/MCP协议",
+        "大模型/AI Agent"
       ],
       "logs": [
         {
@@ -10805,6 +10861,51 @@
           "sentiment": "看多",
           "target": "",
           "risk": "题材炒作"
+        }
+      ]
+    },
+    {
+      "name": "国际复材",
+      "code": "",
+      "sectors": "PCB/CCL/电子布 | 电子布/玻纤 | 电子布/覆铜板",
+      "style": "中长线",
+      "first_seen": "2026-07-31",
+      "last_seen": "2026-09-12",
+      "mention_count": 3,
+      "linked_sectors": [
+        "电子布/覆铜板",
+        "PCB/CCL/电子布"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "信息早知道",
+          "sector": "电子布/玻纤",
+          "style": "中长线",
+          "logic": "电子布-CCL链条玻纤龙头。中信建材推荐，按中性假设明年估值10-20x区间，相对不到10x组具备一定估值溢价但仍合理。",
+          "sentiment": "看多",
+          "target": "中性假设明年估值10-20x",
+          "risk": "玻纤价格周期波动；下游需求"
+        },
+        {
+          "date": "2026-09-01",
+          "group": "信息早知道",
+          "sector": "PCB/CCL/电子布",
+          "style": "中线",
+          "logic": "拟定增募资不超50亿元投建高性能电子纤维布及AI用超低介电损耗Q布。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "定增稀释"
+        },
+        {
+          "date": "2026-07-31",
+          "group": "信息早知道",
+          "sector": "电子布/覆铜板",
+          "style": "中长线",
+          "logic": "电子布唯一20cm标的，风险偏好最高资金最先抄了复材。7628涨至8.5-8.7元/米，8月预计再涨1.5元+。供给端光远停产+材料端G75涨17%，下游库存告急。",
+          "sentiment": "看多",
+          "target": "",
+          "risk": ""
         }
       ]
     },
@@ -15527,41 +15628,6 @@
       ]
     },
     {
-      "name": "国际复材",
-      "code": "",
-      "sectors": "PCB/CCL/电子布 | 电子布/覆铜板",
-      "style": "中线",
-      "first_seen": "2026-07-31",
-      "last_seen": "2026-09-01",
-      "mention_count": 2,
-      "linked_sectors": [
-        "电子布/覆铜板",
-        "PCB/CCL/电子布"
-      ],
-      "logs": [
-        {
-          "date": "2026-09-01",
-          "group": "信息早知道",
-          "sector": "PCB/CCL/电子布",
-          "style": "中线",
-          "logic": "拟定增募资不超50亿元投建高性能电子纤维布及AI用超低介电损耗Q布。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "定增稀释"
-        },
-        {
-          "date": "2026-07-31",
-          "group": "信息早知道",
-          "sector": "电子布/覆铜板",
-          "style": "中长线",
-          "logic": "电子布唯一20cm标的，风险偏好最高资金最先抄了复材。7628涨至8.5-8.7元/米，8月预计再涨1.5元+。供给端光远停产+材料端G75涨17%，下游库存告急。",
-          "sentiment": "看多",
-          "target": "",
-          "risk": ""
-        }
-      ]
-    },
-    {
       "name": "士兰微",
       "code": "",
       "sectors": "半导体/功率 | 半导体设备/功率半导体",
@@ -16309,6 +16375,41 @@
           "sentiment": "看多",
           "target": "",
           "risk": "行业景气度波动"
+        }
+      ]
+    },
+    {
+      "name": "建滔积层板",
+      "code": "",
+      "sectors": "电子布/CCL/覆铜板 | 覆铜板/CCL涨价",
+      "style": "中长线",
+      "first_seen": "2026-08-31",
+      "last_seen": "2026-09-12",
+      "mention_count": 2,
+      "linked_sectors": [
+        "PCB/CCL/覆铜板",
+        "PCB/CCL/电子布"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "信息早知道",
+          "sector": "电子布/CCL/覆铜板",
+          "style": "中长线",
+          "logic": "电子布-CCL链条核心标的，中信建材推荐。按中性假设明年估值不到10x。8月已宣布年内第七次涨价，覆铜板统一涨价10%、PP半固化片厚布涨10%/以下涨20%。",
+          "sentiment": "看多",
+          "target": "中性假设明年估值不到10x",
+          "risk": "涨价兑现节奏；下游接受度"
+        },
+        {
+          "date": "2026-08-31",
+          "group": "信息早知道",
+          "sector": "覆铜板/CCL涨价",
+          "style": "中短线",
+          "logic": "年内第七次涨价！对所有厚度FR-4覆铜板统一涨价10%；PP半固化片分规格调价，7628以上厚布PP涨价10%，以下涨价20%；AI机柜需求驱动",
+          "sentiment": "看多",
+          "target": "",
+          "risk": "涨价持续性"
         }
       ]
     },
@@ -21074,6 +21175,30 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
+        }
+      ]
+    },
+    {
+      "name": "中材科技",
+      "code": "002080",
+      "sectors": "电子布/玻纤",
+      "style": "中长线",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "linked_sectors": [
+        "PCB/CCL/电子布"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "信息早知道",
+          "sector": "电子布/玻纤",
+          "style": "中长线",
+          "logic": "电子布-CCL链条玻纤龙头。中信建材推荐，按中性假设明年估值10-20x区间。基本面上行趋势确定，一致预期上修时具备重估空间。",
+          "sentiment": "看多",
+          "target": "中性假设明年估值10-20x",
+          "risk": "玻纤价格波动；新业务（风电叶片）景气"
         }
       ]
     },
@@ -26543,30 +26668,6 @@
           "sentiment": "看多",
           "target": "",
           "risk": ""
-        }
-      ]
-    },
-    {
-      "name": "建滔积层板",
-      "code": "",
-      "sectors": "覆铜板/CCL涨价",
-      "style": "中短线",
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
-      "mention_count": 1,
-      "linked_sectors": [
-        "PCB/CCL/覆铜板"
-      ],
-      "logs": [
-        {
-          "date": "2026-08-31",
-          "group": "信息早知道",
-          "sector": "覆铜板/CCL涨价",
-          "style": "中短线",
-          "logic": "年内第七次涨价！对所有厚度FR-4覆铜板统一涨价10%；PP半固化片分规格调价，7628以上厚布PP涨价10%，以下涨价20%；AI机柜需求驱动",
-          "sentiment": "看多",
-          "target": "",
-          "risk": "涨价持续性"
         }
       ]
     },
@@ -33566,6 +33667,30 @@
       ]
     },
     {
+      "name": "金安国纪",
+      "code": "002636",
+      "sectors": "电子布/CCL/覆铜板",
+      "style": "中长线",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "linked_sectors": [
+        "PCB/CCL/电子布"
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "group": "信息早知道",
+          "sector": "电子布/CCL/覆铜板",
+          "style": "中长线",
+          "logic": "电子布-CCL链条核心标的，中信建材推荐。覆铜板业务受益AI与非AI双轮驱动，按中性假设明年估值不到10x。",
+          "sentiment": "看多",
+          "target": "中性假设明年估值不到10x",
+          "risk": "原材料价格波动；下游PCB景气度"
+        }
+      ]
+    },
+    {
       "name": "金宏气体",
       "code": "688106",
       "sectors": "工业气体",
@@ -35321,7 +35446,7 @@
           "role": "核心",
           "logic": "字节交换机50-60%份额",
           "mentions": 2,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "盛科通信",
@@ -35356,7 +35481,7 @@
           "role": "热门",
           "logic": "超跌补涨，潘凤半路一成",
           "mentions": 2,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "铜牛信息",
@@ -35501,7 +35626,7 @@
           "role": "龙头",
           "logic": "竞价封单第一，与长鑫联动最紧密",
           "mentions": 2,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "普冉股份",
@@ -36986,7 +37111,7 @@
           "role": "关注",
           "logic": "电子布制造龙头",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         }
       ],
       "logs": [
@@ -37038,7 +37163,7 @@
           "role": "热门",
           "logic": "高频高速CCL已送测英伟达，昇腾950一供",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         },
         {
           "name": "玉马科技",
@@ -37257,7 +37382,7 @@
           "role": "国产龙头",
           "logic": "弹性显著放大+超预期属性突出。",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "共进股份",
@@ -38072,7 +38197,7 @@
           "role": "存储MCU",
           "logic": "今日潘凤全部兑现，但短期波动",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "紫光股份",
@@ -38086,7 +38211,7 @@
           "role": "交换机",
           "logic": "数据中心交换机，紧跟紫光",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "长鑫科技",
@@ -38238,6 +38363,44 @@
       ]
     },
     {
+      "name": "大模型/AI Agent",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "last_hotness": 5,
+      "linked_stocks": [
+        {
+          "name": "云从科技",
+          "role": "关注",
+          "logic": "AI Agent概念",
+          "mentions": 1,
+          "stock_mentions": 0
+        },
+        {
+          "name": "金山办公",
+          "role": "国内映射",
+          "logic": "WPS AI",
+          "mentions": 1,
+          "stock_mentions": 4
+        },
+        {
+          "name": "科大讯飞",
+          "role": "国内映射",
+          "logic": "中文大模型",
+          "mentions": 1,
+          "stock_mentions": 0
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 5,
+          "logic": "DeepSeek V4.1 Flash采用输入输出不对称架构、超越V4 Pro，HBM/SSD需求降至前代1/4、1/8，价格降33-60%；OpenAI实现自动化研究实习生（1人=3.1个Agent工作日），GPT-6 Astra在BenchCAD三维重建测试取得95.9%重合度；Anthropic/OpAI企业付费采用率43.8%/39.8%；综合有效Token价格较3月高点下降约41%。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
       "name": "存储/DRAM/HBM/国产存储",
       "first_seen": "2026-08-19",
       "last_seen": "2026-08-19",
@@ -38249,7 +38412,7 @@
           "role": "核心",
           "logic": "H1净利+1091%，长鑫DRAM+NOR/MCU",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "普冉股份",
@@ -38294,7 +38457,7 @@
           "role": "核心",
           "logic": "NOR Flash国内第一、全球第三，深度绑定长鑫DRAM",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "澜起科技",
@@ -38338,6 +38501,58 @@
           "hotness": 5,
           "logic": "TrendForce上调Q3 PC DRAM价格涨幅预测至环比+18-23%；摩根士丹利预测DRAM容量今年增长30%以上，市场低估供应紧张；长鑫LPDDR6全球首发量产；HBM现货价格飙至长协五倍；英伟达推出NVHBM技术。",
           "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "存储/SLC NAND/特种DRAM",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "last_hotness": 5,
+      "linked_stocks": [
+        {
+          "name": "江波龙",
+          "role": "关注",
+          "logic": "存储模组龙头",
+          "mentions": 1,
+          "stock_mentions": 4
+        },
+        {
+          "name": "普冉股份",
+          "role": "关注",
+          "logic": "NOR Flash与EEPROM",
+          "mentions": 1,
+          "stock_mentions": 6
+        },
+        {
+          "name": "澜起科技",
+          "role": "关注",
+          "logic": "DDR5内存接口芯片",
+          "mentions": 1,
+          "stock_mentions": 8
+        },
+        {
+          "name": "兆易创新",
+          "role": "核心/高盛买入",
+          "logic": "目标价391元，SLC NAND受益代工厂产能",
+          "mentions": 1,
+          "stock_mentions": 14
+        },
+        {
+          "name": "长鑫科技",
+          "role": "国产DRAM核心",
+          "logic": "H1营收1503亿同比+874%",
+          "mentions": 1,
+          "stock_mentions": 19
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 5,
+          "logic": "兆易创新管理层指引特种DRAM/NAND ASP逐季环比走高；2027年SLC NAND晶圆出货高速增长；高密度NOR驱动ASP温和上行；3D DRAM项目预计2027-2028年贡献实质收入；2Q26毛利率提升至66.6%、三四季度仍有改善。高盛维持买入，目标价391元。韩国KOSPI周涨3.33%受存储周期展望改善带动。",
+          "group": "傅里叶的猫"
         }
       ]
     },
@@ -38440,7 +38655,7 @@
           "role": "龙头",
           "logic": "中报超预期，数据中心交换机核心标的，JDM模式护城河",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "共进股份",
@@ -38501,6 +38716,44 @@
           "hotness": 5,
           "logic": "国瓷材料7.27起氧化锆粉体全线涨价10%-40%，上游原辅材料持续抬升，行业供需收紧涨价浪潮全面启动。下游固态电池电解质刚需+AI服务器MLCC陶瓷耗材+CPO光模块LTCC基板+牙科陶瓷+耐火建材同步放量。原料端锆矿供给紧张，叠加下游需求持续扩张，涨价趋势具备持续性。",
           "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "海外AI基建",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "last_hotness": 5,
+      "linked_stocks": [
+        {
+          "name": "中际旭创",
+          "role": "关注",
+          "logic": "受益全球AI资本开支",
+          "mentions": 1,
+          "stock_mentions": 23
+        },
+        {
+          "name": "新易盛",
+          "role": "关注",
+          "logic": "国内映射1.6T光模块龙头",
+          "mentions": 1,
+          "stock_mentions": 10
+        },
+        {
+          "name": "锐捷网络",
+          "role": "国内映射/AIDC交换机龙头",
+          "logic": "二季度营收60亿+42%/净利+66%/Q2单季爆，落地中国移动/阿里/字节",
+          "mentions": 1,
+          "stock_mentions": 8
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 5,
+          "logic": "ORCL OCI超预期+120%（FQ1营收$193.45B/+29.6%，OCI $73.88B/+120.7%，交付850MW/30万GPU，RPO $664B/+45.9%）；微软计划到2032年将全球数据中心从12GW扩至38GW以上（3倍扩张）；Blackstone加码Google TPU、融资英伟达GPU及Broadcom/Anthropic TPU部署。下一个催化剂为10月28日ORCL投资者日。",
+          "group": "傅里叶的猫"
         }
       ]
     },
@@ -39654,7 +39907,7 @@
           "role": "热门",
           "logic": "修复行情重点",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "芯联集成",
@@ -40132,7 +40385,7 @@
           "role": "核心",
           "logic": "存储涨价周期受益",
           "mentions": 4,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "雅克科技",
@@ -40425,7 +40678,7 @@
           "role": "核心",
           "logic": "NOR Flash+DRAM双线，H1净利+1091.5%（山西证券目标400元）",
           "mentions": 2,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "澜起科技",
@@ -40566,6 +40819,99 @@
           "date": "2026-07-30",
           "hotness": 2,
           "logic": "顺网科技ChinaJoy全网唯一A股，海看股份AI短剧《桃花潭记》上星。AI蛋白质改造概念（索宝蛋白、近岸蛋白）受《自然》杂志论文催化。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "PCB/CCL/电子布",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-09-12",
+      "mention_count": 2,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "东山精密",
+          "role": "核心",
+          "logic": "PCB/软板龙头，趋势持仓核心",
+          "mentions": 1,
+          "stock_mentions": 11
+        },
+        {
+          "name": "生益电子",
+          "role": "核心",
+          "logic": "高端PCB/AI服务器电路板",
+          "mentions": 1,
+          "stock_mentions": 2
+        },
+        {
+          "name": "生益科技",
+          "role": "关注",
+          "logic": "覆铜板龙头",
+          "mentions": 2,
+          "stock_mentions": 7
+        },
+        {
+          "name": "胜宏科技",
+          "role": "关注",
+          "logic": "AI服务器PCB",
+          "mentions": 1,
+          "stock_mentions": 5
+        },
+        {
+          "name": "中国巨石",
+          "role": "核心/不到10x",
+          "logic": "玻纤龙头、电子布-CCL核心",
+          "mentions": 2,
+          "stock_mentions": 5
+        },
+        {
+          "name": "国际复材",
+          "role": "核心/10-20x",
+          "logic": "玻纤龙头",
+          "mentions": 2,
+          "stock_mentions": 3
+        },
+        {
+          "name": "华正新材",
+          "role": "核心/不到10x",
+          "logic": "覆铜板受益涨价",
+          "mentions": 1,
+          "stock_mentions": 5
+        },
+        {
+          "name": "金安国纪",
+          "role": "核心/不到10x",
+          "logic": "覆铜板涨价直接受益",
+          "mentions": 1,
+          "stock_mentions": 1
+        },
+        {
+          "name": "建滔积层板",
+          "role": "核心/不到10x",
+          "logic": "年内第七次涨价",
+          "mentions": 1,
+          "stock_mentions": 2
+        },
+        {
+          "name": "中材科技",
+          "role": "核心/10-20x",
+          "logic": "玻纤龙头",
+          "mentions": 1,
+          "stock_mentions": 1
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 4,
+          "logic": "Jefferies PCB观点：Q3动能全面增强AI与非AI双轮驱动；非AI板块触底、价格传导变得可行；上游CCL/玻纤布价格飙升、涨价未见放缓；Q2盈利AI/数据中心强劲、CCL爆发式增长。中信建材判断电子布-CCL链条在分歧中成长、转向一致时爆发；中国巨石/华正新材/金安国纪/建滔明年估值不到10x。",
+          "group": "信息早知道"
+        },
+        {
+          "date": "2026-09-01",
+          "hotness": 4,
+          "logic": "英伟达重启Rubin CPX，预计1Q27开始生产，独立MGX ETL机柜、168GB HBM4。中国巨石上调9月电子布价格（厚布+15%、薄布+20%），国际复材定增扩产高速电子玻纤布及AI用超低介电损耗Q布。",
           "group": "信息早知道"
         }
       ]
@@ -41342,7 +41688,7 @@
           "role": "核心",
           "logic": "锐字辈交换机，历史新高",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "寒武纪",
@@ -41639,6 +41985,51 @@
           "hotness": 4,
           "logic": "AI for Science成为AI应用新主线，深入材料/生命科学/化学/物理领域。政治局会议强调人工智能+，OpenAI Astra催化。预期差极大，整个市场还没意识到。医疗是AI4S重要落地场景，高质量数据是核心生产资料。半导体痕量金属检测也是AI4S+科研智能化映射。",
           "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "AIDC交换机/光网络",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "紫光股份",
+          "role": "关注",
+          "logic": "新华三AIDC交换机",
+          "mentions": 1,
+          "stock_mentions": 18
+        },
+        {
+          "name": "中际旭创",
+          "role": "关注",
+          "logic": "1.6T光模块龙头",
+          "mentions": 1,
+          "stock_mentions": 23
+        },
+        {
+          "name": "天孚通信",
+          "role": "关注",
+          "logic": "光模块上游",
+          "mentions": 1,
+          "stock_mentions": 12
+        },
+        {
+          "name": "锐捷网络",
+          "role": "核心/高盛中性",
+          "logic": "Q2业绩爆量",
+          "mentions": 1,
+          "stock_mentions": 8
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 4,
+          "logic": "锐捷网络Q2营收60亿+42%/净利+365%，落地中国移动/阿里/字节，1.6T高速互联设备+51.2T CPO交换机布局完整。全球数据中心扩张态势明确（微软10年3倍、ORCL 850MW）。",
+          "group": "傅里叶的猫"
         }
       ]
     },
@@ -41994,7 +42385,7 @@
           "role": "核心",
           "logic": "阿里链交换机主供",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "浪潮信息",
@@ -42305,58 +42696,6 @@
       ]
     },
     {
-      "name": "PCB/CCL/电子布",
-      "first_seen": "2026-09-01",
-      "last_seen": "2026-09-01",
-      "mention_count": 1,
-      "last_hotness": 4,
-      "linked_stocks": [
-        {
-          "name": "东山精密",
-          "role": "核心",
-          "logic": "PCB/软板龙头，趋势持仓核心",
-          "mentions": 1,
-          "stock_mentions": 11
-        },
-        {
-          "name": "生益电子",
-          "role": "核心",
-          "logic": "高端PCB/AI服务器电路板",
-          "mentions": 1,
-          "stock_mentions": 2
-        },
-        {
-          "name": "中国巨石",
-          "role": "核心",
-          "logic": "电子布龙头，9月提价",
-          "mentions": 1,
-          "stock_mentions": 4
-        },
-        {
-          "name": "生益科技",
-          "role": "热门",
-          "logic": "CCL/覆铜板龙头",
-          "mentions": 1,
-          "stock_mentions": 7
-        },
-        {
-          "name": "国际复材",
-          "role": "热门",
-          "logic": "定增扩产高速电子玻纤布及AI用Q布",
-          "mentions": 1,
-          "stock_mentions": 2
-        }
-      ],
-      "logs": [
-        {
-          "date": "2026-09-01",
-          "hotness": 4,
-          "logic": "英伟达重启Rubin CPX，预计1Q27开始生产，独立MGX ETL机柜、168GB HBM4。中国巨石上调9月电子布价格（厚布+15%、薄布+20%），国际复材定增扩产高速电子玻纤布及AI用超低介电损耗Q布。",
-          "group": "信息早知道"
-        }
-      ]
-    },
-    {
       "name": "PCB/CCL/覆铜板",
       "first_seen": "2026-08-31",
       "last_seen": "2026-08-31",
@@ -42382,7 +42721,7 @@
           "role": "龙头",
           "logic": "年内第七次涨价FC-CB涨价10%",
           "mentions": 1,
-          "stock_mentions": 1
+          "stock_mentions": 2
         },
         {
           "name": "沃特股份",
@@ -43757,7 +44096,7 @@
           "role": "关注",
           "logic": "首次回购1亿元",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "华天科技",
@@ -44211,7 +44550,7 @@
           "role": "关注",
           "logic": "国产网络设备",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "盛科通信",
@@ -44277,7 +44616,7 @@
           "role": "热门",
           "logic": "下半年交换机收入100亿预期不变，是目前几个ODM里业绩趋势最好的。",
           "mentions": 1,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "华勤技术",
@@ -44532,7 +44871,7 @@
           "role": "核心",
           "logic": "董事长提议回购10-20亿",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "联讯仪器",
@@ -45298,7 +45637,7 @@
           "role": "核心",
           "logic": "每月涨价的7628，扩产可控",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         },
         {
           "name": "生益科技",
@@ -45312,7 +45651,7 @@
           "role": "龙头",
           "logic": "电子布唯一20cm，风险偏好最高资金首选",
           "mentions": 1,
-          "stock_mentions": 2
+          "stock_mentions": 3
         },
         {
           "name": "铜冠铜箔",
@@ -45489,6 +45828,44 @@
           "hotness": 4,
           "logic": "光模块一跌，金属铟全面炸裂。以前炒自主可控，现在炒反制——算力金属必须炸裂。铟价年内暴涨200%+。ST京蓝转型铟金属/ITO靶材，8月下旬中报后申请摘帽更名铟靶新材。核心逻辑社全景图覆盖算力金属方向。",
           "group": "核心逻辑社"
+        }
+      ]
+    },
+    {
+      "name": "美伊局势/油气",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "last_hotness": 4,
+      "linked_stocks": [
+        {
+          "name": "中国石油",
+          "role": "关注",
+          "logic": "高油价直接受益",
+          "mentions": 1,
+          "stock_mentions": 0
+        },
+        {
+          "name": "中国海油",
+          "role": "关注",
+          "logic": "上游油气龙头",
+          "mentions": 1,
+          "stock_mentions": 0
+        },
+        {
+          "name": "中海油服",
+          "role": "关注",
+          "logic": "油服受益",
+          "mentions": 1,
+          "stock_mentions": 0
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 4,
+          "logic": "本周布伦特原油周涨8.81%至104.3美元、WTI周涨9.38%至99.9美元，受美伊互袭油轮和胡塞武装控制曼德海峡推动。美国10年期国债收益率逼近5%重新点燃通胀担忧。核心CPI环比+0.3%超预期强化美联储9月加息理由。下周09/14伊朗与海湾国家在阿曼谈霍尔木兹海峡交通管理协议为关键节点。",
+          "group": "信息早知道"
         }
       ]
     },
@@ -45943,7 +46320,7 @@
           "role": "核心",
           "logic": "交换机国产替代",
           "mentions": 2,
-          "stock_mentions": 7
+          "stock_mentions": 8
         },
         {
           "name": "紫光股份",
@@ -46321,7 +46698,7 @@
           "role": "核心",
           "logic": "明年23亿利润10x PE，ABF膜国产化",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         },
         {
           "name": "胜宏科技",
@@ -46800,7 +47177,7 @@
           "role": "热门",
           "logic": "ABF载板暴涨",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         },
         {
           "name": "康达新材",
@@ -47682,7 +48059,7 @@
           "role": "短线",
           "logic": "光上游+存储双重",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "中石科技",
@@ -48062,7 +48439,7 @@
           "role": "核心",
           "logic": "电子布涨价。",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         },
         {
           "name": "山东玻纤",
@@ -48746,7 +49123,7 @@
           "role": "核心",
           "logic": "存储行业见底核心标的",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         },
         {
           "name": "澜起科技",
@@ -49098,7 +49475,7 @@
           "role": "关注",
           "logic": "存储设计龙头。",
           "mentions": 1,
-          "stock_mentions": 13
+          "stock_mentions": 14
         }
       ],
       "logs": [
@@ -49402,7 +49779,7 @@
           "role": "核心",
           "logic": "ABF膜进展最快",
           "mentions": 1,
-          "stock_mentions": 4
+          "stock_mentions": 5
         },
         {
           "name": "西安奕材",
@@ -51328,6 +51705,30 @@
           "date": "2026-07-23",
           "hotness": 3,
           "logic": "鸣鸣很忙签约门店达3万家，26年开店有望达9000家；万辰26H1开店超25年全年；两者均处于15XPE以下，回调即布局点位，社区折扣零售天花板依然海阔天空。",
+          "group": "信息早知道"
+        }
+      ]
+    },
+    {
+      "name": "韩国KOSPI/存储周期",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "mention_count": 1,
+      "last_hotness": 3,
+      "linked_stocks": [
+        {
+          "name": "兆易创新",
+          "role": "核心",
+          "logic": "国内映射存储周期",
+          "mentions": 1,
+          "stock_mentions": 14
+        }
+      ],
+      "logs": [
+        {
+          "date": "2026-09-12",
+          "hotness": 3,
+          "logic": "KOSPI本周收报6909.9点周涨3.3%，半导体板块在GPT-6 Astra带来的AI热情升温、存储芯片周期展望改善以及外资早期积极买入推动下领涨，KOSPI重新站上重要技术位。但随着油价和美债收益率持续上行，半导体冲高回落，外资后期转为大规模净卖出1.695万亿韩元，板块扩散至金融/建筑/核电/造船。",
           "group": "信息早知道"
         }
       ]
@@ -54020,7 +54421,7 @@
       ]
     }
   ],
-  "generated_at": "2026-09-10 23:03:36",
-  "total_stocks": 1041,
-  "total_sectors": 372
+  "generated_at": "2026-09-13 19:23:58",
+  "total_stocks": 1043,
+  "total_sectors": 378
 }
