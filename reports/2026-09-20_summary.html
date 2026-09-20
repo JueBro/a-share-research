@@ -3,197 +3,239 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>飞书群聊市场观点汇总 · 2026-09-20（周日）</title>
+<title>A股群聊市场观点汇总 2026-09-20</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:"Microsoft YaHei","PingFang SC",sans-serif; background:#f5f6f8; color:#2c3e50; line-height:1.7; padding:24px 12px; }
-  .container { max-width:960px; margin:0 auto; }
-  .card { background:#fff; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 2px 10px rgba(0,0,0,0.06); }
-  h1 { font-size:24px; color:#1a2b4a; margin-bottom:6px; }
-  h2 { font-size:18px; color:#1a2b4a; border-left:5px solid #c0392b; padding-left:12px; margin-bottom:16px; }
-  .subtitle { color:#7f8c8d; font-size:13px; }
-  .meta-grid { display:flex; flex-wrap:wrap; gap:14px; margin-top:14px; }
-  .meta-item { flex:1; min-width:130px; background:#f8f9fb; border-radius:10px; padding:12px; text-align:center; }
-  .meta-num { font-size:22px; font-weight:bold; color:#c0392b; }
-  .meta-label { font-size:12px; color:#7f8c8d; }
-  .viewpoint { padding:12px 16px; border-radius:10px; background:#f8f9fb; margin-bottom:10px; }
-  .viewpoint .src { font-size:12px; color:#2980b9; font-weight:bold; margin-right:8px; background:#eaf3fb; padding:2px 8px; border-radius:6px; }
-  .viewpoint .tag { font-size:12px; color:#fff; padding:2px 8px; border-radius:6px; margin-right:6px; }
-  .tag-long { background:#c0392b; } .tag-short { background:#27ae60; } .tag-neutral { background:#f39c12; }
-  table { width:100%; border-collapse:collapse; font-size:14px; }
-  th { background:#1a2b4a; color:#fff; padding:9px 10px; text-align:left; }
-  td { padding:9px 10px; border-bottom:1px solid #ecf0f1; vertical-align:top; }
-  tr:nth-child(even) { background:#f8f9fb; }
-  .stars { color:#e67e22; letter-spacing:1px; white-space:nowrap; }
-  .stock-card { border:1px solid #ecf0f1; border-radius:12px; padding:16px 18px; margin-bottom:12px; background:#fdfdfd; }
-  .stock-head { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px; }
-  .stock-name { font-size:17px; font-weight:bold; color:#1a2b4a; }
-  .stock-code { font-size:12px; color:#95a5a6; }
-  .chip { font-size:12px; padding:2px 10px; border-radius:12px; }
-  .chip-sector { background:#eef3fb; color:#2980b9; }
-  .chip-style { background:#f4ecf7; color:#8e44ad; }
-  .chip-up { background:#fdecea; color:#c0392b; font-weight:bold; }
-  .chip-flat { background:#fef5e7; color:#b9770e; font-weight:bold; }
-  .stock-logic { font-size:13.5px; color:#4a5a6a; }
-  .stock-src { font-size:12px; color:#95a5a6; margin-top:6px; }
-  .two-col { display:flex; gap:16px; flex-wrap:wrap; }
-  .two-col > div { flex:1; min-width:280px; border-radius:12px; padding:16px 18px; }
-  .risk-box { background:#fdf0ee; border:1px solid #f5d0cb; }
-  .pos-box { background:#eef8f0; border:1px solid #cdebd3; }
-  .two-col h3 { font-size:15px; margin-bottom:10px; }
-  .risk-box h3 { color:#c0392b; } .pos-box h3 { color:#1e8449; }
-  .risk-box li, .pos-box li { font-size:13.5px; margin-bottom:8px; margin-left:18px; }
-  .tomorrow li { background:#fffbe6; border:1px solid #f5e6a8; border-radius:10px; padding:12px 16px; margin-bottom:10px; list-style:none; font-size:14px; }
-  .tomorrow li b { color:#b9770e; }
-  .footer { text-align:center; color:#95a5a6; font-size:12px; padding:16px 0 6px; }
-  .note { font-size:12px; color:#95a5a6; margin-top:8px; }
-  .weekend-badge { display:inline-block; background:#8e44ad; color:#fff; font-size:12px; padding:3px 12px; border-radius:12px; margin-left:8px; vertical-align:middle; }
+  body { font-family:"Microsoft YaHei","PingFang SC",sans-serif; background:#f4f6fa; color:#2c3e50; line-height:1.7; padding-bottom:40px; }
+  .container { max-width:1080px; margin:0 auto; padding:0 20px; }
+  .header { background:linear-gradient(135deg,#1a2a4a 0%,#2c4a7c 100%); color:#fff; border-radius:0 0 20px 20px; padding:36px 20px 30px; text-align:center; }
+  .header h1 { font-size:26px; margin-bottom:8px; letter-spacing:1px; }
+  .header .date { font-size:15px; opacity:.85; }
+  .meta { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:18px; }
+  .meta-item { background:rgba(255,255,255,.12); border-radius:10px; padding:8px 18px; font-size:13px; }
+  .meta-item b { font-size:18px; display:block; }
+  .card { background:#fff; border-radius:14px; padding:26px 28px; margin-top:22px; box-shadow:0 2px 10px rgba(30,50,90,.06); }
+  .card h2 { font-size:19px; color:#1a2a4a; border-left:5px solid #e63946; padding-left:12px; margin-bottom:16px; }
+  .card h3 { font-size:15.5px; color:#2c4a7c; margin:16px 0 8px; }
+  .up { color:#e02020; font-weight:bold; }
+  .down { color:#00a854; font-weight:bold; }
+  .tag { display:inline-block; font-size:11.5px; padding:2px 9px; border-radius:10px; margin:0 5px 4px 0; }
+  .tag-red { background:#fdeaea; color:#e02020; }
+  .tag-blue { background:#e8f1fd; color:#2c4a7c; }
+  .tag-green { background:#e6f7ef; color:#00a854; }
+  .tag-orange { background:#fff3e0; color:#e67e22; }
+  .tag-purple { background:#f3e9fd; color:#8e44ad; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin-top:8px; }
+  th { background:#eef2f8; color:#1a2a4a; padding:10px 8px; text-align:left; font-size:13px; }
+  td { padding:10px 8px; border-bottom:1px solid #eef1f5; vertical-align:top; }
+  tr:hover td { background:#fafbfd; }
+  .stars { color:#f39c12; letter-spacing:1px; white-space:nowrap; }
+  .stock-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(480px,1fr)); gap:16px; }
+  @media (max-width:1080px){ .stock-grid{grid-template-columns:1fr;} }
+  .stock-card { border:1px solid #e8edf4; border-radius:12px; padding:16px 18px; background:#fdfefe; }
+  .stock-card .name { font-size:16px; font-weight:bold; color:#1a2a4a; }
+  .stock-card .logic { font-size:13px; color:#444; margin-top:8px; }
+  .stock-card .src { font-size:12px; color:#8395a7; margin-top:8px; }
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media (max-width:800px){ .two-col{grid-template-columns:1fr;} }
+  .risk-box, .positive-box { border-radius:12px; padding:18px 20px; font-size:13.5px; }
+  .risk-box { background:#fdf0f0; border:1px solid #f5c6c6; }
+  .positive-box { background:#eef9f2; border:1px solid #bfe8cf; }
+  .risk-box h3 { color:#c0392b; margin-top:0; }
+  .positive-box h3 { color:#1e8e5a; margin-top:0; }
+  .risk-box ul, .positive-box ul { padding-left:18px; }
+  .risk-box li, .positive-box li { margin-bottom:7px; }
+  .tomorrow { background:#fffbe6; border:1px solid #ffe58f; border-radius:12px; padding:16px 20px; margin-bottom:12px; font-size:14px; }
+  .tomorrow b { color:#d48806; }
+  .view-item { border-left:3px solid #2c4a7c; background:#f8fafd; padding:12px 16px; border-radius:0 10px 10px 0; margin-bottom:12px; font-size:13.5px; }
+  .view-item .g { color:#2c4a7c; font-weight:bold; }
+  .footer { text-align:center; font-size:12px; color:#95a5a6; margin-top:30px; }
+  .disclaimer { background:#eef2f8; border-radius:10px; padding:12px 18px; font-size:12.5px; color:#576574; margin-top:24px; text-align:center; }
+  .weekend-badge { display:inline-block; background:#8e44ad; color:#fff; font-size:12px; padding:3px 12px; border-radius:12px; margin-left:10px; vertical-align:middle; }
+  .section-note { font-size:12.5px; color:#7f8c8d; margin-top:8px; font-style:italic; }
 </style>
 </head>
 <body>
+
+<div class="header">
+  <h1>📈 A股群聊市场观点汇总报告<span class="weekend-badge">周末专刊 · 非交易日</span></h1>
+  <div class="date">2026年9月20日 · 星期日（非交易日）</div>
+  <div class="meta">
+    <div class="meta-item"><b>15</b>监控群数</div>
+    <div class="meta-item"><b>84</b>今日消息</div>
+    <div class="meta-item"><b>5</b>活跃群</div>
+    <div class="meta-item"><b>23:00</b>生成时间</div>
+  </div>
+</div>
+
 <div class="container">
 
-  <div class="card">
-    <h1>📊 飞书群聊市场观点汇总报告<span class="weekend-badge">周末专刊 · 非交易日</span></h1>
-    <div class="subtitle">生成时间：2026-09-20 23:00（周日） · 数据来源：15个飞书交流群 · 仅供个人参考，不构成投资建议</div>
-    <div class="meta-grid">
-      <div class="meta-item"><div class="meta-num">15</div><div class="meta-label">监控群数</div></div>
-      <div class="meta-item"><div class="meta-num">55</div><div class="meta-label">今日消息总数</div></div>
-      <div class="meta-item"><div class="meta-num">2</div><div class="meta-label">有内容输出群</div></div>
-      <div class="meta-item"><div class="meta-num">8</div><div class="meta-label">收录个股</div></div>
-      <div class="meta-item"><div class="meta-num">11</div><div class="meta-label">收录板块</div></div>
-    </div>
-    <p class="note">📌 今日为周日（非交易日），多数群消息稀少：洛飞小群48条多为生活闲聊（已过滤），震哥-胡汉三、信息早知道仅发图片，核心内容来自<b>猫十三周末复盘</b>与<b>傅里叶的猫调研纪要转发</b>。</p>
+<!-- 大盘走势 -->
+<div class="card">
+  <h2>🧭 大盘走势与核心观点</h2>
+  <div class="view-item"><span class="g">【猫十三·周末复盘】</span>临近924，<b>中美元首会晤预期越来越强</b>，整体氛围向好。但市场不太可能发动科技类普涨，缺乏足够做多力量，更可能做<b>科技细分、科技中盘小盘交易</b>。预期较强的方向：<b>MLCC（周末央视打call）、电子布、液冷（三季度放量）、NPO、半导体设备</b>。交易重心放在200-500亿的科技细分中盘股，100亿以下科技可能走连板。</div>
+  <div class="view-item"><span class="g">【核心逻辑社·周末国际局势】</span>美伊缓和临近，<b>TACO节点与促和节点高度重合</b>，局势有望缓和，下周有望反攻。判断冲突升级无赢家，年底若顺利度过中期选举且油价明显回落，压制市场的通胀和加息压力可能缓解，出现一波“全资产上涨”机会。持续看好<b>国产算力</b>：2027年国产算力中心建设相较今年增速加快，国产芯片与半导体零部件/材料自主可控是近期科技推荐重点。</div>
+  <div class="view-item"><span class="g">【傅里叶的猫·机构会谈】</span>转发第278期每周机构会谈及调研纪要，提示英伟达散热路线相关预期修正：英伟达从未明确使用金刚石散热，Rubin用不起、Rubin Ultra不需要、Feynman也只是maybe，围绕金刚石散热的炒作需降温。</div>
+  <div class="view-item"><span class="g">【洛飞小群·交易节奏】</span>震荡市共识提醒：“十点之前尽量别开仓”。群友闲聊中也反映出短线选手对网速、交易手速的重视，侧面说明当前市场对日内反应速度要求较高。</div>
+  <div class="section-note">注：今日为周日，多数群消息稀少或纯闲聊；核心投资内容来自“信息早知道”机构快讯、“猫十三”周末复盘、“核心逻辑社”国际局势汇总。</div>
+</div>
+
+<!-- 板块热度 -->
+<div class="card">
+  <h2>🔥 板块热度排行（按提及频率与讨论深度）</h2>
+  <table>
+    <tr><th style="width:50px">排名</th><th style="width:150px">板块</th><th style="width:120px">热度</th><th>核心逻辑</th><th style="width:110px">来源</th></tr>
+    <tr><td>1</td><td><b>AI Agent / System One</b></td><td class="stars">★★★★★</td><td>TypeSafe AI发布System One模型Jev，36小时14万开发者内测；AI决策层独立成新范式，Agent、MCP网关、端侧决策、企业流程自动化成主要映射方向</td><td>信息早知道</td></tr>
+    <tr><td>2</td><td><b>光模块 / CPO / 光互联</b></td><td class="stars">★★★★★</td><td>长光华芯100G EML批量出货、200G年底小批量，26Q3单月出货预计达200w颗；罗博特科到访剑桥科技，全球制造合作深化，港股上市聆讯中</td><td>信息早知道</td></tr>
+    <tr><td>3</td><td><b>国资传媒 / 并购重组</b></td><td class="stars">★★★★☆</td><td>新华传媒拟发行股份购买界面财联社100%%，下周一复牌；国资传媒估值体系重构，伴生龙首板交易机会受关注</td><td>信息早知道、猫十三</td></tr>
+    <tr><td>4</td><td><b>液冷</b></td><td class="stars">★★★★☆</td><td>三季度放量兑现期，冰轮环境下周公司交流催化；科技细分中盘首选方向</td><td>猫十三</td></tr>
+    <tr><td>5</td><td><b>新能源金属 / 锂电材料</b></td><td class="stars">★★★★☆</td><td>大摩看多华友钴业：硫酸自给率提升、华新OSEBF镍冶炼2027年产出4万吨、津巴布韦锂本土转化降本超1万元/吨LCE，目标价75元，潜在上行113%</td><td>信息早知道</td></tr>
+    <tr><td>6</td><td><b>先进封装 / CoWoP</b></td><td class="stars">★★★☆☆</td><td>AI驱动1.6T光模块批量上量叠加CoWoP先进封装落地，托伦斯、华天科技、中旗新材、惠科股份、和顺石油、沃格光电等受关注</td><td>信息早知道</td></tr>
+    <tr><td>7</td><td><b>光学材料 / TAC膜</b></td><td class="stars">★★★☆☆</td><td>天禄科技TAC膜产线各环节设备到位，预计10月如期完成；海外核心专家到岗，带料调试周期有望大幅缩短；二期及DBEF项目推进中</td><td>信息早知道</td></tr>
+    <tr><td>8</td><td><b>算力基础设施</b></td><td class="stars">★★★☆☆</td><td>超达装备成立超达智算（南京），布局先进算力装备、算力节点、算力网络、算力运营及Token调度分发一体化产业体系</td><td>信息早知道</td></tr>
+    <tr><td>9</td><td><b>SAF / 生物航油</b></td><td class="stars">★★★☆☆</td><td>8月中国SAF出口13.15万吨双创历史新高；香港首份五年规划纳入SAF，美欧补贴加码；海新能科、山高环能、嘉澳环保深度受益</td><td>信息早知道</td></tr>
+    <tr><td>10</td><td><b>国产算力 / 半导体自主可控</b></td><td class="stars">★★★☆☆</td><td>2027年国产算力中心建设提速，国产芯片与半导体零部件、材料相关自主可控国产线是近期科技推荐重点</td><td>核心逻辑社</td></tr>
+    <tr><td>11</td><td><b>MLCC / 电子布 / NPO</b></td><td class="stars">★★★☆☆</td><td>924前预期较强的科技细分：MLCC周末央视打call，电子布涨价逻辑延续，昇腾960 NPO超节点提前就绪</td><td>猫十三</td></tr>
+    <tr><td>12</td><td><b>外贸 / 出口链</b></td><td class="stars">★★☆☆☆</td><td>中美新一轮经贸磋商展开，美国企业和行业组织期待双边经贸关系取得积极进展</td><td>信息早知道</td></tr>
+    <tr><td>13</td><td><b>房地产 / 住房公积金</b></td><td class="stars">★★☆☆☆</td><td>“十五五”时期将推动住房公积金高质量发展，地产链政策预期持续</td><td>信息早知道</td></tr>
+    <tr><td>14</td><td><b>网安 / 钽电容 / 核电</b></td><td class="stars">★★☆☆☆</td><td>猫十三持仓方向：网安为下半年必然交易方向；宏达电子钽电容进入强势期；中国核建为低位题材底仓</td><td>猫十三</td></tr>
+  </table>
+</div>
+
+<!-- 重点个股 -->
+<div class="card">
+  <h2>💎 重点个股推荐与分析</h2>
+  <h3>研报 / 机构观点类</h3>
+  <div class="stock-grid">
+
+    <div class="stock-card"><span class="name">华友钴业</span><span class="tag tag-red">大摩增持</span><span class="tag tag-orange">目标价75元</span>
+      <div class="logic">大摩BEST会议反馈：硫酸自给率提升路径清晰（石膏法+黄铁矿法），华新OSEBF镍冶炼项目2027年镍产量指引约4万吨，津巴布韦锂产业链本土化提速，2027年锂化合物出货量目标100-120千吨LCE。当前股价35.18元，目标价75元，潜在上行空间113%，评级增持。催化剂包括硫酸项目投产、战投落地、镍钴价格周期上行等。</div>
+      <div class="src">来源：信息早知道 · 大摩研报</div></div>
+
+    <div class="stock-card"><span class="name">长光华芯</span><span class="tag tag-blue">光芯片</span><span class="tag tag-orange">100G EML放量</span>
+      <div class="logic">100G EML已批量出货，200G目标年底小批量出货；26H1平均月出货100w颗以上，26Q3单月预计可达200w以上，26Q4可达400w/月，27H2可达800w/月。客户结构从苏州头部光模块厂拓展至成都头部厂，27年产品价格预计提升，整体产能建设预计27年6月完成。</div>
+      <div class="src">来源：信息早知道 · 调研更新</div></div>
+
+    <div class="stock-card"><span class="name">罗博特科</span><span class="tag tag-blue">光互联设备</span><span class="tag tag-purple">港股聆讯</span>
+      <div class="logic">管理团队到访剑桥科技，双方围绕“全球制造合作”深入交流，或表征公司在国内主流光模块厂商处取得突破性进展。依托高精度光子学对准技术，卡位最前沿光互联方案。港股上市聆讯进行中：9月10日聆讯、9月11日公告、9月13日披露聆讯后资料集。后续催化：国内客户突破、CPO/NPO/OCS订单释放。</div>
+      <div class="src">来源：信息早知道 · 浙商大制造</div></div>
+
+    <div class="stock-card"><span class="name">天禄科技</span><span class="tag tag-orange">TAC膜</span><span class="tag tag-blue">高端光学材料</span>
+      <div class="logic">TAC膜产线move in顺利，产线各环节设备和零部件已到位，陆续安装调试中，预计10月如期完成。海外核心专家及下游客户专家均已到岗，预计带料调试周期较海外至少缩短6个月。一期10月拉通投产送样，二期已开始提前询价，投资额及交期有望大幅缩减。DBEF项目明年上半年落成。</div>
+      <div class="src">来源：信息早知道 · 产线调研</div></div>
+
+    <div class="stock-card"><span class="name">海新能科</span><span class="tag tag-green">SAF</span><span class="tag tag-red">出口放量</span>
+      <div class="logic">国内SAF先发企业，山东三聚20万吨/年SAF产能，首批获出口白名单及15.8万吨核定配额。具备ISCC CORSIA、ISCC-EU、RSB认证，8月完成国内首个餐厨废油制SAF全链条闭环加注。8月中国SAF出口双创历史新高，出口放量+资质稀缺，业绩弹性极大。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">山高环能</span><span class="tag tag-green">UCO原料</span><span class="tag tag-blue">ISCC认证</span>
+      <div class="logic">餐厨废弃油脂（UCO）龙头，自产UCO约9.3万吨/年，HEFA路线核心原料供应商。UCO获ISCC认证直供欧盟，拟建10万吨酯基+40万吨烃基生物柴油项目。SAF扩产拉动UCO刚需，原料端率先受益。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">嘉澳环保</span><span class="tag tag-green">生物航油</span><span class="tag tag-orange">出口配额领先</span>
+      <div class="logic">国内首家获生物航油出口白名单企业，连云港50万吨/年SAF项目满产可产37.24万吨。获中国航油战略入股及BP投资，出口配额37.24万吨领先，订单已排至明年。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">中科创达</span><span class="tag tag-purple">AI Agent</span><span class="tag tag-blue">端侧决策</span>
+      <div class="logic">AgentOS+AquaClaw，将智能决策前移端侧，强调低时延与自主执行。受益于System One模型Jev带来的“AI决策层独立”新范式，端侧Agent决策是主要映射方向之一。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">彩讯股份</span><span class="tag tag-purple">AI Agent</span><span class="tag tag-orange">MCP网关</span>
+      <div class="logic">AIBox布局MCP网关、工作流编排及企业智能体，贴合Decision Agent逻辑。Jev模型推动AI从“生成内容”走向“机器自主决策”，MCP网关和工作流编排是核心受益环节。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">汉得信息</span><span class="tag tag-purple">AI Agent</span><span class="tag tag-blue">B端智能体</span>
+      <div class="logic">将企业规则沉淀为API、MCP、Skills，主攻复杂B端Agent。Jev带来的新范式下，企业流程自动化和复杂B端Agent是主要落地场景。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">鼎捷数智</span><span class="tag tag-purple">AI Agent</span><span class="tag tag-orange">制造业智能体</span>
+      <div class="logic">制造业已有400余个智能体，覆盖决策、调度和执行闭环。Jev模型强调“LLM负责复杂思考+SystemOne负责高频决策+MCP负责调用工具”，制造业决策-调度-执行闭环是典型落地场景。</div>
+      <div class="src">来源：信息早知道</div></div>
+
+    <div class="stock-card"><span class="name">新华传媒</span><span class="tag tag-red">财联社注入</span><span class="tag tag-orange">下周一复牌</span>
+      <div class="logic">拟发行股份购买界面财联社100%股权，下周一复牌。这不是普通资产收购，而是国资传媒板块估值体系重构的标志性事件。财联社作为AI+金融信息平台自带流量，是传媒领域近几年最大事件之一。</div>
+      <div class="src">来源：信息早知道、猫十三</div></div>
+
+    <div class="stock-card"><span class="name">超达装备</span><span class="tag tag-blue">算力装备</span><span class="tag tag-orange">智算平台</span>
+      <div class="logic">成立超达智算（南京）科技有限公司，依托上市公司产业基础布局先进算力产业，聚焦算力装备、算力基础设施、分布式算网、算力运营及Token调度与分发，构建“算力装备—算力节点—算力网络—算力平台—算力服务—AI生态”一体化产业体系。</div>
+      <div class="src">来源：信息早知道</div></div>
+
   </div>
 
-  <div class="card">
-    <h2>🎯 周末核心观点与下周展望</h2>
-    <div class="viewpoint">
-      <span class="src">猫十三</span>
-      <b>924会晤预期升温，科技从普涨转向细分交易：</b>临近9/24中美元首会晤，预期越来越强，整体氛围向好。但市场不太可能再发动科技类普涨——没有那么多做多的力量，比较可能做<b>科技细分、科技中盘小盘交易</b>。预期比较强的分支：<b>MLCC（周末央视打call）、电子布、液冷（三季度放量）、NPO、半导体设备</b>。
-    </div>
-    <div class="viewpoint">
-      <span class="src">猫十三</span>
-      <b>仓位结构策略：</b>不再像6月之前那样全仓交易科技几个分支。交易重心放在<b>200-500亿的科技细分中盘股</b>，100亿以下的科技可能走连板。整体思路：<b>持有看好的科技（底仓）+ 布局低位题材（底仓，启动加仓，不启动止损）</b>。
-    </div>
-    <div class="viewpoint">
-      <span class="src">猫十三</span>
-      <b>周末最大题材——国资传媒（财联社注入）：</b>市场对新华传媒的关注度不够。财联社这种AI+金融的信息平台自带流量，是传媒里近几年最大的一件事，恰逢924节点，市场容易联想到银之杰（普遍预期一字板到国庆后）。市场已提前交易部分"华字"标的，但按2021年西仪股份上市伴生湖南天雁的规律，<b>周一的首板才是伴生龙</b>——伴生不应比龙头身位高。
-    </div>
-    <div class="viewpoint">
-      <span class="src">傅里叶的猫</span>
-      <span class="tag tag-short">预期修正</span>
-      <b>金刚石散热逻辑证伪：</b>转发调研纪要分析——<b>英伟达从未说过要用金刚石散热，Rubin用不起金刚石</b>，"Rubin Ultra不需要Feynman"也只是maybe。此前市场围绕"英伟达金刚石散热"的炒作缺乏依据，相关概念需降温对待。
-    </div>
-    <div class="viewpoint">
-      <span class="src">洛飞小群</span>
-      <b>交易情绪侧写（闲聊中的干货）：</b>"震荡市，十点之前尽量别开仓"——短线选手对当前震荡市节奏的共识性提醒。
-    </div>
-  </div>
+  <h3>群主 / 主理人个人观点类</h3>
+  <div class="stock-grid">
 
-  <div class="card">
-    <h2>🔥 板块热度排行（周末讨论）</h2>
-    <table>
-      <tr><th style="width:50px">排名</th><th style="width:180px">板块</th><th style="width:110px">热度</th><th>核心逻辑</th><th style="width:110px">来源</th></tr>
-      <tr><td>1</td><td><b>国资传媒/财联社重组</b></td><td class="stars">★★★★☆</td><td>财联社（AI+金融平台）注入预期+924节点，周一博瑞传播/新华网首板定伴生龙；预期龙头一字板到国庆后</td><td>猫十三</td></tr>
-      <tr><td>2</td><td><b>液冷</b></td><td class="stars">★★★★☆</td><td>三季度放量兑现期，冰轮环境下周公司交流催化；科技细分中盘首选方向</td><td>猫十三</td></tr>
-      <tr><td>3</td><td>MLCC</td><td class="stars">★★★☆☆</td><td>周末央视打call，924前预期较强的科技细分</td><td>猫十三</td></tr>
-      <tr><td>4</td><td>电子布</td><td class="stars">★★★☆☆</td><td>涨价逻辑延续（中材指引上修、戈碧迦），列入优选细分</td><td>猫十三</td></tr>
-      <tr><td>5</td><td>NPO/华为昇腾链</td><td class="stars">★★★☆☆</td><td>昇腾960业界首个NPO超节点（提前3季度就绪）</td><td>猫十三</td></tr>
-      <tr><td>6</td><td>半导体设备</td><td class="stars">★★★☆☆</td><td>924会晤预期下国产替代主线延续</td><td>猫十三</td></tr>
-      <tr><td>7</td><td>网安</td><td class="stars">★★★☆☆</td><td>"下半年必然交易的方向"，持仓不动等发酵</td><td>猫十三</td></tr>
-      <tr><td>8</td><td>金刚石散热</td><td class="stars">★★☆☆☆</td><td><span style="color:#27ae60">⚠预期修正</span>：英伟达从未确认金刚石散热路线，Rubin用不起，炒作降温</td><td>傅里叶的猫</td></tr>
-      <tr><td>9</td><td>钽电容/军工电子</td><td class="stars">★★☆☆☆</td><td>宏达电子进入强势期，继续持有</td><td>猫十三</td></tr>
-      <tr><td>10</td><td>华字金融</td><td class="stars">★★☆☆☆</td><td>博弈发酵反转预期，与国资传媒事件共振</td><td>猫十三</td></tr>
-      <tr><td>11</td><td>核电</td><td class="stars">★☆☆☆☆</td><td>低位题材底仓策略：下周不启动就走，启动加仓</td><td>猫十三</td></tr>
-    </table>
-  </div>
+    <div class="stock-card"><span class="name">冰轮环境</span><span class="tag tag-green">液冷</span><span class="tag tag-purple">个人重仓</span>
+      <div class="logic">液冷板块中目前最有看点的标的，三季度液冷放量兑现期，下周公司要出来交流，催化明确。猫十三把融资仓位都压在这只上（参考价位37左右），属于激进的个人重仓观点。</div>
+      <div class="src">来源：猫十三 · 周末复盘</div></div>
 
-  <div class="card">
-    <h2>💼 重点个股与个人观点（均为主理人个人观点，非研报）</h2>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">冰轮环境</span><span class="stock-code">000811</span><span class="chip chip-sector">液冷</span><span class="chip chip-style">短中线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">液冷板块中目前<b>最有看点</b>的标的，三季度液冷放量兑现期；<b>下周公司要出来交流</b>，催化明确。参考价位37左右。博主把融资仓位都压在这只上——注意这是激进的个人重仓观点。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">博瑞传播</span><span class="stock-code">600880</span><span class="chip chip-sector">国资传媒</span><span class="chip chip-style">短线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">国资传媒炒作中对标2021年西仪股份→湖南天雁伴生逻辑的最正标的：<b>周一（明天）首板则大概率坐实伴生龙</b>；如果不够强，说明里面资金不认可。高度依赖临盘确认的博弈型交易。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">新华网</span><span class="stock-code">603888</span><span class="chip chip-sector">国资传媒</span><span class="chip chip-style">短线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">新华系中<b>尚未启动</b>的低位品种，且有<b>证券报注入预期</b>；周一首板是关注信号。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">新华传媒</span><span class="stock-code">600826</span><span class="chip chip-sector">国资传媒</span><span class="chip chip-style">短线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">财联社注入预期主体，"市场关注度不够"——财联社AI+金融信息平台自带流量，是传媒近几年最大的一件事，恰逢924节点。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">银之杰</span><span class="stock-code">300085</span><span class="chip chip-sector">华字金融</span><span class="chip chip-style">短线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">财联社事件叠加924行情记忆，普遍预期<b>一字板到国庆后</b>；华字金融博弈发酵反转预期。注意：一字板预期下实际难以买入。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">宏达电子</span><span class="stock-code">300726</span><span class="chip chip-sector">钽电容/军工电子</span><span class="chip chip-style">短中线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">最近在交易钽电容，<b>进入强势期</b>，还可以继续拿。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">澳柯玛</span><span class="stock-code">600336</span><span class="chip chip-sector">制冷家电/冷链</span><span class="chip chip-style">短中线</span><span class="chip chip-up">看多</span></div>
-      <div class="stock-logic">逻辑没变，继续持有观察。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-    <div class="stock-card">
-      <div class="stock-head"><span class="stock-name">中国核建</span><span class="stock-code">601611</span><span class="chip chip-sector">核电</span><span class="chip chip-style">短线</span><span class="chip chip-flat">中性</span></div>
-      <div class="stock-logic"><b>下周不启动就走了，启动加仓</b>——典型低位题材"底仓+启动确认"交易法，纪律清晰。</div>
-      <div class="stock-src">来源：猫十三 · 周末复盘</div>
-    </div>
-  </div>
+    <div class="stock-card"><span class="name">博瑞传播</span><span class="tag tag-red">国资传媒</span><span class="tag tag-orange">伴生龙</span>
+      <div class="logic">国资传媒炒作中对标2021年西仪股份→湖南天雁伴生逻辑的最正标的。周一（明天）首板则大概率坐实伴生龙；如果不够强，说明里面资金不认可。高度依赖临盘确认的博弈型交易。</div>
+      <div class="src">来源：猫十三 · 周末复盘</div></div>
 
-  <div class="card">
-    <h2>⚖️ 市场情绪与风险提示</h2>
-    <div class="two-col">
-      <div class="risk-box">
-        <h3>🔻 主要风险</h3>
-        <ul>
-          <li><b>金刚石散热证伪：</b>英伟达从未确认金刚石散热路线，Rubin用不起金刚石（傅里叶的猫调研纪要），相关前期炒作标的注意回撤风险</li>
-          <li><b>做多力量不足：</b>924会晤预期下也难现科技普涨，只有细分轮动——追高普涨逻辑容易踏空陷阱</li>
-          <li><b>题材兑现风险：</b>国资传媒周一首板是试金石，首板不强=资金不认可，伴生逻辑当场证伪</li>
-          <li><b>个人重仓警示：</b>冰轮环境为融资压仓的激进个人观点，不可简单跟随</li>
-        </ul>
-      </div>
-      <div class="pos-box">
-        <h3>🔺 积极信号</h3>
-        <ul>
-          <li><b>924中美元首会晤预期强化</b>，整体氛围向好（猫十三）</li>
-          <li><b>MLCC获央视打call</b>，涨价+政策背书双击</li>
-          <li><b>液冷三季度放量</b>进入业绩兑现期，公司交流催化临近</li>
-          <li><b>国资传媒为近年传媒最大事件</b>，持续性可能贯穿国庆</li>
-          <li>震荡市节奏共识："十点前别开仓"（洛飞小群），等待为主</li>
-        </ul>
-      </div>
+    <div class="stock-card"><span class="name">新华网</span><span class="tag tag-red">国资传媒</span><span class="tag tag-blue">证券报注入预期</span>
+      <div class="logic">新华系中尚未启动的低位品种，且有证券报注入预期；周一首板是关注信号。与新华传媒同属“新华”系，存在事件驱动下的补涨可能。</div>
+      <div class="src">来源：猫十三 · 周末复盘</div></div>
+
+    <div class="stock-card"><span class="name">银之杰</span><span class="tag tag-orange">华字金融</span><span class="tag tag-red">924记忆</span>
+      <div class="logic">财联社事件叠加924行情记忆，市场容易联想到银之杰，普遍预期一字板到国庆后；华字金融博弈发酵反转预期。注意：一字板预期下实际难以买入。</div>
+      <div class="src">来源：猫十三 · 周末复盘</div></div>
+
+    <div class="stock-card"><span class="name">宏达电子</span><span class="tag tag-blue">钽电容</span><span class="tag tag-green">军工电子</span>
+      <div class="logic">最近在交易钽电容，进入强势期，还可以继续拿。</div>
+      <div class="src">来源：猫十三 · 周末复盘</div></div>
+
+    <div class="stock-card"><span class="name">中国核建</span><span class="tag tag-purple">核电</span><span class="tag tag-orange">低位题材</span>
+      <div class="logic">低位题材底仓策略：下周不启动就走了，启动加仓。纪律清晰的“底仓+启动确认”交易法。</div>
+      <div class="src">来源：猫十三 · 周末复盘</div></div>
+
+  </div>
+</div>
+
+<!-- 市场情绪 -->
+<div class="card">
+  <h2>⚖️ 市场情绪与风险提示</h2>
+  <div class="two-col">
+    <div class="risk-box">
+      <h3>🔻 主要风险</h3>
+      <ul>
+        <li><b>题材兑现风险：</b>国资传媒周一首板是试金石，首板不强=资金不认可，伴生逻辑当场证伪</li>
+        <li><b>个人重仓警示：</b>冰轮环境为猫十三融资压仓的激进个人观点，不可简单跟随</li>
+        <li><b>预期修正风险：</b>英伟达金刚石散热路线缺乏官方确认，Rubin用不起金刚石，相关前期炒作标的注意回撤</li>
+        <li><b>做多力量不足：</b>924会晤预期下也难现科技普涨，只有细分轮动——追高普涨逻辑容易踏空</li>
+        <li><b>地缘政治反复：</b>美伊缓和概率提升但变数仍存，谈判过程可能反复拉扯</li>
+        <li><b>AI Agent主题波动：</b>Jev概念尚处海外发酵初期，A股映射以主题炒作为主，业绩兑现周期长</li>
+      </ul>
+    </div>
+    <div class="positive-box">
+      <h3>🔺 积极信号</h3>
+      <ul>
+        <li><b>924中美元首会晤预期强化</b>，整体氛围向好，利好科技细分和风险偏好修复</li>
+        <li><b>AI Agent新范式：</b>System One模型Jev发布，AI从“生成内容”推向“机器自主决策”，Agent、MCP、端侧决策、企业流程自动化成新主线</li>
+        <li><b>光模块景气延续：</b>长光华芯EML出货量指引强劲，罗博特科国内外客户共振+港股临近</li>
+        <li><b>新能源金属拐点预期：</b>大摩看多华友钴业，硫酸自给、镍冶炼、锂本土转化三重降本</li>
+        <li><b>国资传媒为近年传媒最大事件</b>，新华传媒复牌有望带动板块情绪贯穿国庆</li>
+        <li><b>国产算力：</b>2027年国产算力中心建设提速，自主可控仍是科技推荐重点</li>
+      </ul>
     </div>
   </div>
+</div>
 
-  <div class="card">
-    <h2>📌 明日（周一 9/21）关注要点</h2>
-    <ul class="tomorrow">
-      <li><b>国资传媒首板验证：</b>博瑞传播、新华网能否首板 → 决定伴生龙逻辑是否坐实；新华传媒（龙头）开盘情况</li>
-      <li><b>冰轮环境：</b>下周公司交流，液冷放量兑现期，注意信息发布节奏</li>
-      <li><b>科技细分轮动：</b>MLCC（央视背书）、电子布、NPO、半导体设备哪个承接资金</li>
-      <li><b>中国核建：</b>启动则加仓，不启动执行止损</li>
-      <li><b>924会晤临近：</b>中美元首会晤前的情绪与资金动向，关注华字金融发酵</li>
-      <li><b>金刚石散热概念：</b>证伪信息发酵后的兑现/回撤情况，回避追高</li>
-    </ul>
-  </div>
+<!-- 明日关注 -->
+<div class="card">
+  <h2>🎯 明日（9月21日周一）关注要点</h2>
+  <div class="tomorrow"><b>1. 国资传媒复牌与伴生龙：</b>新华传媒复牌表现、博瑞传播/新华网是否首板，决定伴生龙逻辑能否成立。</div>
+  <div class="tomorrow"><b>2. AI Agent映射持续性：</b>关注中科创达、彩讯股份、汉得信息、鼎捷数智等System One/Jev概念的开盘强度与资金认可度。</div>
+  <div class="tomorrow"><b>3. 光模块/光芯片业绩兑现：</b>长光华芯、罗博特科、剑桥科技等是否能获得机构资金继续抱团。</div>
+  <div class="tomorrow"><b>4. 液冷催化：</b>冰轮环境下周公司交流，观察是否有超预期订单或产能释放。</div>
+  <div class="tomorrow"><b>5. 科技细分中盘股：</b>200-500亿科技细分中盘股是猫十三认为的主战场，MLCC、电子布、NPO、半导体设备等方向轮动。</div>
+  <div class="tomorrow"><b>6. 华友钴业联动：</b>大摩报告催化下，镍钴锂相关标的（华友钴业、相关正极/前驱体）是否有资金跟进。</div>
+  <div class="tomorrow"><b>7. 交易纪律：</b>震荡市“十点前尽量别开仓”，等待方向明朗后再动。</div>
+</div>
 
-  <div class="footer">
-    📅 报告生成：2026-09-20 23:00 · 监控群：15个 · 有效内容来源：猫十三、傅里叶的猫<br>
-    ⚠️ 本报告仅为群聊观点整理，仅供个人参考，不构成投资建议 · 个股逻辑数据库已同步更新
-  </div>
+<div class="disclaimer">⚠️ 仅供个人参考，不构成投资建议。报告中个股与板块观点均来自飞书群聊，需区分研报观点与群主个人观点，据此操作风险自担。</div>
+
+<div class="footer">飞书群聊市场观点汇总 · 2026-09-20 · 自动生成</div>
 
 </div>
 </body>
