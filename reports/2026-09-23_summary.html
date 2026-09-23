@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总报告 - 2026-09-23</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #1a1a2e;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(30,58,95,0.2);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 12px; }
+        .header-meta { display: flex; flex-wrap: wrap; gap: 24px; opacity: 0.95; font-size: 14px; }
+        .header-meta span { display: flex; align-items: center; gap: 6px; }
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #eef1f5;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8eef4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+        .tag-red { background: #ffebee; color: #c62828; }
+        .tag-green { background: #e8f5e9; color: #2e7d32; }
+        .tag-blue { background: #e3f2fd; color: #1565c0; }
+        .tag-orange { background: #fff3e0; color: #ef6c00; }
+        .tag-purple { background: #f3e5f5; color: #6a1b9a; }
+        .up { color: #d32f2f; font-weight: 600; }
+        .down { color: #2e7d32; font-weight: 600; }
+        .section-subtitle { font-size: 16px; font-weight: 700; color: #34495e; margin: 18px 0 10px; }
+        .viewpoint {
+            background: #f8fafc;
+            border-left: 4px solid #2d5a87;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border-radius: 0 10px 10px 0;
+        }
+        .viewpoint-source { font-size: 12px; color: #5a6c7d; margin-bottom: 6px; font-weight: 600; }
+        .viewpoint p { font-size: 14px; color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eef1f5; font-size: 14px; }
+        th { background: #f4f6f8; font-weight: 700; color: #1e3a5f; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #ff9800; letter-spacing: 2px; }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .stock-card {
+            background: #fafbfc;
+            border: 1px solid #e8eef4;
+            border-radius: 12px;
+            padding: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stock-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        .stock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .stock-name { font-size: 18px; font-weight: 700; color: #1a1a2e; }
+        .stock-code { font-size: 12px; color: #7f8c8d; }
+        .stock-logic { font-size: 13px; color: #4a5568; margin: 10px 0; }
+        .stock-source { font-size: 11px; color: #90a4ae; margin-top: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .risk-col { background: #fff5f5; border-radius: 10px; padding: 16px; }
+        .signal-col { background: #f0fff4; border-radius: 10px; padding: 16px; }
+        .col-title { font-weight: 700; margin-bottom: 10px; font-size: 15px; }
+        .risk-col .col-title { color: #c53030; }
+        .signal-col .col-title { color: #276749; }
+        .col-list { list-style: none; }
+        .col-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .col-list li:last-child { border-bottom: none; }
+        .highlight-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .highlight-item {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 14px;
+            border-radius: 0 10px 10px 0;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #90a4ae;
+            margin-top: 20px;
+        }
+        .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+        .metric-box {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 14px 18px;
+            min-width: 140px;
+            border: 1px solid #e8eef4;
+        }
+        .metric-label { font-size: 12px; color: #7f8c8d; }
+        .metric-value { font-size: 18px; font-weight: 700; color: #1e3a5f; }
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+            .stock-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 飞书群聊市场观点汇总报告</h1>
+            <div class="header-meta">
+                <span>📅 日期：2026-09-23</span>
+                <span>👥 监控群数：15个</span>
+                <span>💬 消息总数：281条</span>
+                <span>🕐 生成时间：2026-09-23 23:00</span>
+                <span>📈 交易日：是</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📈 大盘走势与核心观点</div>
+            <div class="metric-row">
+                <div class="metric-box">
+                    <div class="metric-label">上证指数</div>
+                    <div class="metric-value">高开低走</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">三市成交</div>
+                    <div class="metric-value">1.78万亿</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">环比变化</div>
+                    <div class="metric-value down">-3705亿</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">主力流向</div>
+                    <div class="metric-value down">净流出394.84亿</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-label">中信净空单</div>
+                    <div class="metric-value">79,747</div>
+                </div>
+            </div>
+
+            <div class="section-subtitle">核心观点</div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：核心逻辑社</div>
+                <p>美股费城半导体指数三连阳累计涨超9%，而科创50连续三天高开低走累计涨幅不足1%，市场内卷严重。美伊缓和趋势未变，AI产业逻辑持续加强，建议无视短期内卷，持股算力。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：洛飞小群</div>
+                <p>今天震荡，指数下午应回升、明天修复；尾盘布局金安博弈次日指数向上。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：小锦鲤</div>
+                <p>节前出金日情绪不好，抱团分歧后资金易去跷跷板方向的科技或次新；今天空着都是对的，建议轻仓火中取栗。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：潘凤</div>
+                <p>地产和黄酒属于科技反向交易，没有产业逻辑只有抱团逻辑；钢铁水泥、地产消费不是主要方向，科技大跌后的反弹才有持续性。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：彭域</div>
+                <p>中大盘表现差，机构轿子太沉；迷你盘表现更好，未来重点布局一两百亿小盘，方向看PCB、液冷、3D打印。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：傅里叶的猫（高盛）</div>
+                <p>A股接近平盘，焦点重回AI交易，老经济主题降温；习主席访美不太可能带中国企业代表团，此前预期的比亚迪、宁德时代、小米、中际旭创CEO随行已降温。港股延长交易时间有望提升15%-20%成交额。</p>
+            </div>
+
+            <div class="section-subtitle">操作建议</div>
+            <p style="font-size:14px;color:#4a5568;">
+                <span class="tag tag-blue">持股过节</span> AI算力产业逻辑未变，逢低关注VPD/HVDC、PCB/CCL、半导体设备与先进封装等业绩确定性方向；<br>
+                <span class="tag tag-orange">谨慎追高</span> 节前效应明显，高开后容易低走，短线 avoid 中大盘机构重仓股，转向一两百亿迷你盘题材；<br>
+                <span class="tag tag-purple">事件驱动</span> 关注Meta Connect大会、中美会晤、伊朗霍尔木兹海峡谈判进展对油/军工/稀土的扰动。
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🔥 板块热度排行</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>板块名称</th>
+                        <th>热度</th>
+                        <th>核心逻辑</th>
+                        <th>来源群</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>AI算力基础设施 / Token工厂</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>Agent时代Token成为持续生产的"AI工业品"，数据中心、电力、网络、运维价值重估；阿里2032年全球数据中心目标20GW。</td>
+                        <td>信息早知道、傅里叶的猫</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>VPD/HVDC电源</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>Vicor大幅上调Q3指引，Rubin单机柜240kW、90%用HVDC；800V HVDC 2027年量产，国产AD-DC/DC-DC/SST/电感受益。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>PCB/CCL</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>CPU价值重估+1.6T光模块拉动高端PCB需求，涨价周期延续；天承科技高端PCB药水、凌玮科技硅微粉超预期。</td>
+                        <td>信息早知道、彭域、震哥-胡汉三</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>半导体设备 / 先进封装</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>芯源微订单上修、四代Track验证超预期；引线框架高景气（康强电子+79%、新恒汇+92%）；翰博高新DBF对标ABF。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>矢量网络分析仪 VNA</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>光通信/1.6T测试需求爆发，高端VNA紧缺，2027年供应缺口2000-3000台；创远信科110G已量产出货。</td>
+                        <td>信息早知道、黑火信息差</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>玻璃基板 / TGV</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>京东方玻璃基板量产线提前，英伟达要求韩日台基板厂两年内完成开发；金辰股份40亿市值跨界TGV预期差大。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>AI应用 / Agent Commerce</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>Shopify接入Meta Muse两日涨15%，GPT-6 API降价50%，AI营销/电商导购迎来新流量入口。</td>
+                        <td>信息早知道、傅里叶的猫</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>3D打印</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>AI补齐建模短板，消费级3D打印爆发前夜；金丹科技/海正生材翻倍，关注拓竹供应链（三协电机、科力尔、思看科技）。</td>
+                        <td>信息早知道、彭域</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><strong>上海国资改革</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>新华传媒一字板带动上海本地股，兰生股份、飞乐音响同属大集团小市值平台，资产注入预期强烈。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><strong>量子计算</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>IonQ首次展示实时量子纠错，408逻辑量子比特、延迟低至0.02%，商业化瓶颈突破。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><strong>储能 / BESS</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>英伟达首次将BESS纳入AI Factory核心供应链，首批认证Hitachi、LGES Vertech、Tesla。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><strong>创新药</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>Viking单日涨35%、流感疫苗提价、乙肝表观遗传疗法进临床；低位翰宇药业、舒泰神、广生堂企稳。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🎯 重点个股推荐与分析</div>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">新雷能 <span class="stock-code">300593</span></span>
+                        <span class="tag tag-red">VPD电源</span>
+                    </div>
+                    <div class="stock-logic">国内少数突破VPD垂直供电、Power Block核心技术厂商，布局800V HVDC母线电源，与ADI深度合作切入海外数据中心供应链，直接对标Vicor技术路线。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">麦格米特 <span class="stock-code">002851</span></span>
+                        <span class="tag tag-red">AD-DC</span>
+                    </div>
+                    <div class="stock-logic">800V HVDC AD-DC核心标的，Rubin单机柜240kW下HVDC成为刚需，27年量产进度超预期，AIDC电源价值量大幅提升。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">欧陆通 <span class="stock-code">300870</span></span>
+                        <span class="tag tag-red">AD-DC</span>
+                    </div>
+                    <div class="stock-logic">AIDC服务器电源龙头，受益AI芯片功耗提升与HVDC渗透率提升，海外大厂供应链向国内开放。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">铂科新材 <span class="stock-code">300811</span></span>
+                        <span class="tag tag-red">电感</span>
+                    </div>
+                    <div class="stock-logic">高功耗CPU/GPU升级抬升供电端大电流、高频、高瞬态响应电感需求；芯片电感、TLVR覆盖CPU/GPU供电，单机价值量上行。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">龙磁科技 <span class="stock-code">300835</span></span>
+                        <span class="tag tag-red">电感</span>
+                    </div>
+                    <div class="stock-logic">CPU价值重估下容易被忽视的上游弹性标的，已布局芯片电感、TLVR，覆盖CPU/GPU高性能芯片供电。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">海光信息 <span class="stock-code">688041</span></span>
+                        <span class="tag tag-red">CPU</span>
+                    </div>
+                    <div class="stock-logic">发布1000系列端侧CPU，首款集成iGPU、10W低功耗、工业级宽温，算力版图延伸至边缘和端侧；C86架构国产替代核心。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">沪电股份 <span class="stock-code">002463</span></span>
+                        <span class="tag tag-blue">PCB</span>
+                    </div>
+                    <div class="stock-logic">AI服务器/交换机高端PCB龙头，CPU价值重估与1.6T光模块拉动高端PCB需求，涨价周期延续，盘中表现抗跌。</div>
+                    <div class="stock-source">来源：信息早知道、洛飞小群、彭域</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">深南电路 <span class="stock-code">002916</span></span>
+                        <span class="tag tag-blue">PCB/载板</span>
+                    </div>
+                    <div class="stock-logic">ABF载板涨价+CPU载板供需缺口扩大，未来2年供需缺口50%+；科技修复日盘中冲高。</div>
+                    <div class="stock-source">来源：信息早知道、震哥-胡汉三</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">天承科技 <span class="stock-code">688603</span></span>
+                        <span class="tag tag-blue">PCB药水</span>
+                    </div>
+                    <div class="stock-logic">高端PCB药水+玻璃基板TGV电镀液双主线；主营PCB沉铜/电镀药水国内第一，1.6T光模块MSAP工艺拉动用量翻倍。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">凌玮科技 <span class="stock-code">301373</span></span>
+                        <span class="tag tag-blue">CCL材料</span>
+                    </div>
+                    <div class="stock-logic">硅微粉格局优异，生益科技份额+台光链预期差大；高端CCL上游材料国产替代，盘中大涨10%以上。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">创远信科 <span class="stock-code">831961</span></span>
+                        <span class="tag tag-purple">VNA</span>
+                    </div>
+                    <div class="stock-logic">北交所唯一已量产110G矢量网络分析仪标的，已向光通信客户出货；2027年高端VNA供应缺口2000-3000台，替代20%份额对应100亿市值目标。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">优利德 <span class="stock-code">688628</span></span>
+                        <span class="tag tag-purple">VNA</span>
+                    </div>
+                    <div class="stock-logic">矢量网络分析仪核心标的，期待1.6T光模块采样示波器产品突破，光通信测试设备国产替代。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">振芯科技 <span class="stock-code">300101</span></span>
+                        <span class="tag tag-purple">ADC/DAC</span>
+                    </div>
+                    <div class="stock-logic">VNA第一核心上游高速ADC/DAC，公司年报披露高性能集成电路以频率合成器、SoC、高速ADC/DAC、高速接口为主。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">芯源微 <span class="stock-code">688037</span></span>
+                        <span class="tag tag-orange">半导体设备</span>
+                    </div>
+                    <div class="stock-logic">上半年新签超24亿订单，全年指引上修至60亿；四代Track提前2个月完成验证，化学清洗冲刺30亿订单，目标市值先看1200亿。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">康强电子 <span class="stock-code">002119</span></span>
+                        <span class="tag tag-orange">引线框架</span>
+                    </div>
+                    <div class="stock-logic">引线框架高景气，26H1营收10.3亿同比+79%，估值在板块内最合理；产品结构向高毛利蚀刻框架升级。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">翰博高新 <span class="stock-code">301321</span></span>
+                        <span class="tag tag-orange">先进封装材料</span>
+                    </div>
+                    <div class="stock-logic">困境反转+湿化学品并表+DBF先进封装材料对标味之素ABF；1.42亿美元并购韩国东进世美肯在华资产，Q1单季扭亏。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">金辰股份 <span class="stock-code">603396</span></span>
+                        <span class="tag tag-green">玻璃基板</span>
+                    </div>
+                    <div class="stock-logic">底部最新玻璃基板标的，40亿市值投资10亿跨界TGV玻璃基封装，尚未加概念，预期差极大。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">福石控股 <span class="stock-code">300071</span></span>
+                        <span class="tag tag-green">AI营销</span>
+                    </div>
+                    <div class="stock-logic">A股最低位AI营销标的，自研FlinkAi全链路智能营销平台；Shopify+Meta Muse验证Agent Commerce，GPT-6降价50%打开盈利空间，中报扭亏为盈。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">三协电机 <span class="stock-code">873669</span></span>
+                        <span class="tag tag-green">3D打印</span>
+                    </div>
+                    <div class="stock-logic">北交所3D打印龙头拓竹科技步进电机核心供应商，2025年向拓竹销售0.35亿，跟随消费级3D打印爆发。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">惠通科技 <span class="stock-code">301220</span></span>
+                        <span class="tag tag-green">PLA/3D打印</span>
+                    </div>
+                    <div class="stock-logic">PLA扩产卖设备+自产PLA材料+3D打印专用料三重弹性；3万吨PLA装置试车，高韧性3D打印PLA专用料完成初期验证。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">新华传媒 <span class="stock-code">600825</span></span>
+                        <span class="tag tag-blue">上海国资</span>
+                    </div>
+                    <div class="stock-logic">上海国资资产注入预期驱动，控股股东上海新华发行集团归属上海报业集团，带动上海本地股发酵。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">国盾量子 <span class="stock-code">688027</span></span>
+                        <span class="tag tag-blue">量子计算</span>
+                    </div>
+                    <div class="stock-logic">IonQ展示实时量子纠错商业化关键突破，A股量子计算核心映射标的。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">新朋股份 <span class="stock-code">002328</span></span>
+                        <span class="tag tag-blue">储能/特斯拉</span>
+                    </div>
+                    <div class="stock-logic">特斯拉储能供应商，英伟达首次将BESS纳入AI Factory核心供应链；另有海关供货单客户含施耐德、戴尔、亚马逊、超微电脑预期差。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">聚灿光电 <span class="stock-code">300708</span></span>
+                        <span class="tag tag-red">CPO光芯片</span>
+                    </div>
+                    <div class="stock-logic">低位CPO光芯片黑马，Micro LED平台做CPO阵列芯片首批样品送海外客户；中报创新高，机构目标价10.50-18.60元。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">新天科技 <span class="stock-code">300259</span></span>
+                        <span class="tag tag-red">液冷</span>
+                    </div>
+                    <div class="stock-logic">AI液冷电磁流量计新技术路径确立，子公司上海肯特卡位全球头部液冷客户，CDU侧电磁流量计有望26Q3批量供货。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">同花顺 <span class="stock-code">300033</span></span>
+                        <span class="tag tag-orange">金融科技</span>
+                    </div>
+                    <div class="stock-logic">香港证监会拟延长股票交易时间，港股日均成交额或提升15%-20%；同花顺iFinD与问财AI工具受益跨市场交易与散户决策门槛降低。</div>
+                    <div class="stock-source">来源：信息早知道</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">⚖️ 市场情绪与风险提示</div>
+            <div class="two-col">
+                <div class="risk-col">
+                    <div class="col-title">🔻 主要风险</div>
+                    <ul class="col-list">
+                        <li>节前效应+出金日：成交缩量3705亿至1.78万亿，主力净流出近400亿</li>
+                        <li>高开后惯性低走：科创50连三天高开低走，与美股半导体涨幅背离</li>
+                        <li>中大盘机构股抛压沉重：彭域反馈几百亿市值大票难以拉升</li>
+                        <li>地产/消费政策博弈：摩根大通提示国庆前若无房贷补贴落地将面临抛售</li>
+                        <li>伊朗局势反复：霍尔木兹海峡开放条件仍存不确定性，扰动油价</li>
+                        <li>中信/主要玩家净空单仍高：分别为79,747与134,440手</li>
+                    </ul>
+                </div>
+                <div class="signal-col">
+                    <div class="col-title">🔺 积极信号</div>
+                    <ul class="col-list">
+                        <li>AI产业逻辑持续强化：Vicor、IonQ、Meta Muse、GPT-6等海外催化密集</li>
+                        <li>费城半导体指数三连阳涨超9%，美股AI空头投降</li>
+                        <li>PCB/CCL、半导体设备订单/涨价数据不断验证景气度</li>
+                        <li>阿里2032年20GW数据中心目标给出算力长期确定性</li>
+                        <li>央行9.28-10.8连续开展隔夜逆回购，维护跨季流动性</li>
+                        <li>两融余额继续增加35亿至2.656万亿，杠杆资金仍在流入</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">💡 明日关注要点</div>
+            <div class="highlight-list">
+                <div class="highlight-item"><strong>Meta Connect大会：</strong>Muse个人AI智能体与Agent Commerce生态进展，关注福石控股、Shopify/Meta映射。</div>
+                <div class="highlight-item"><strong>中美会晤：</strong>习主席与特朗普会面，留意稀土、半导体、关税等议题；此前预期的中企CEO随行降温。</div>
+                <div class="highlight-item"><strong>光模块/PCB：</strong>科技若继续修复，重点关注沪电、深南、天承、新易盛、中际旭创的承接力度。</div>
+                <div class="highlight-item"><strong>VPD/HVDC：</strong>Rubin电源主线扩散，新雷能、麦格米特、欧陆通、铂科新材能否持续。</div>
+                <div class="highlight-item"><strong>节前最后交易日：</strong>9月24日为节前最后一个交易日，关注资金持仓过节方向与指数尾盘表现。</div>
+                <div class="highlight-item"><strong>次新股/迷你盘：</strong>情绪分歧日关注北交所及一两百亿小盘的题材轮动（3D打印、VNA、量子）。</div>
+                <div class="highlight-item"><strong>创新药：</strong>Viking大涨+疫苗提价+慢病长效化，低位翰宇药业、舒泰神等是否轮动。</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>数据来源：15个飞书交流群聊观点整理 | 生成时间：2026-09-23 23:00</p>
+            <p>⚠️ 仅供个人参考，不构成投资建议。股市有风险，投资需谨慎。</p>
+        </div>
+    </div>
+</body>
+</html>
