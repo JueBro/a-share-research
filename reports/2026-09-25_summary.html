@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书群聊市场观点汇总报告 - 2026-09-25</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            color: #1a1a2e;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 32px rgba(30,58,95,0.2);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 12px; }
+        .header-meta { display: flex; flex-wrap: wrap; gap: 24px; opacity: 0.95; font-size: 14px; }
+        .header-meta span { display: flex; align-items: center; gap: 6px; }
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #eef1f5;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e8eef4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+        .tag-red { background: #ffebee; color: #c62828; }
+        .tag-green { background: #e8f5e9; color: #2e7d32; }
+        .tag-blue { background: #e3f2fd; color: #1565c0; }
+        .tag-orange { background: #fff3e0; color: #ef6c00; }
+        .tag-purple { background: #f3e5f5; color: #6a1b9a; }
+        .up { color: #d32f2f; font-weight: 600; }
+        .down { color: #2e7d32; font-weight: 600; }
+        .section-subtitle { font-size: 16px; font-weight: 700; color: #34495e; margin: 18px 0 10px; }
+        .viewpoint {
+            background: #f8fafc;
+            border-left: 4px solid #2d5a87;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border-radius: 0 10px 10px 0;
+        }
+        .viewpoint-source { font-size: 12px; color: #5a6c7d; margin-bottom: 6px; font-weight: 600; }
+        .viewpoint p { font-size: 14px; color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eef1f5; font-size: 14px; }
+        th { background: #f4f6f8; font-weight: 700; color: #1e3a5f; }
+        tr:hover { background: #f8fafc; }
+        .stars { color: #ff9800; letter-spacing: 2px; }
+        .stock-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .stock-card {
+            background: #fafbfc;
+            border: 1px solid #e8eef4;
+            border-radius: 12px;
+            padding: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stock-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+        .stock-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .stock-name { font-size: 18px; font-weight: 700; color: #1a1a2e; }
+        .stock-code { font-size: 12px; color: #7f8c8d; }
+        .stock-logic { font-size: 13px; color: #4a5568; margin: 10px 0; }
+        .stock-source { font-size: 11px; color: #90a4ae; margin-top: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .risk-col { background: #fff5f5; border-radius: 10px; padding: 16px; }
+        .signal-col { background: #f0fff4; border-radius: 10px; padding: 16px; }
+        .col-title { font-weight: 700; margin-bottom: 10px; font-size: 15px; }
+        .risk-col .col-title { color: #c53030; }
+        .signal-col .col-title { color: #276749; }
+        .col-list { list-style: none; }
+        .col-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .col-list li:last-child { border-bottom: none; }
+        .highlight-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .highlight-item {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 14px;
+            border-radius: 0 10px 10px 0;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #90a4ae;
+            margin-top: 20px;
+        }
+        .metric-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+        .metric-box {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 14px 18px;
+            min-width: 140px;
+            border: 1px solid #e8eef4;
+        }
+        .metric-label { font-size: 12px; color: #7f8c8d; }
+        .metric-value { font-size: 18px; font-weight: 700; color: #1e3a5f; }
+        .brief-note {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #5d4037;
+        }
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+            .stock-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 飞书群聊市场观点汇总报告</h1>
+            <div class="header-meta">
+                <span>📅 日期：2026-09-25</span>
+                <span>👥 监控群数：15个</span>
+                <span>💬 消息总数：16条</span>
+                <span>🕐 生成时间：2026-09-25 23:00</span>
+                <span>📈 交易日：否（中秋节假期）</span>
+            </div>
+        </div>
+
+        <div class="brief-note">
+            <strong>📌 假期简报：</strong>今日为中秋节假期（周四），A股休市。15个监控群中仅5个群有少量消息（共16条），主要围绕海外资讯、产业研报和地缘政治解读展开。以下为假期期间值得关注的要点整理。
+        </div>
+
+        <div class="card">
+            <div class="card-title">🌍 假期海外动态与宏观解读</div>
+
+            <div class="section-subtitle">地缘政治：美伊谈判最新进展</div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：核心逻辑社</div>
+                <p>美伊谈判寻求重启霍尔木兹海峡航运，双方讨论分阶段安排。伊朗可能先恢复航运，美国放松经济封锁，伊朗获得被冻结资产部分解冻。但双方都不愿率先放弃筹码，11月中期选举前达成协议概率有限。核心逻辑社认为：双方都有现实压力（伊朗经济撑不住、美国怕油价推升通胀），局势走向缓和概率更大。G2会晤结束后，关注懂王何时做出妥协。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：核心逻辑社</div>
+                <p>伊朗总统表态"不想拥有核武器，愿推进与美谈判"；伊朗外长称愿在七天内重开霍尔木兹海峡但需满足条件。假期期间美股延续上涨，核心逻辑社调侃"大A放假，世界又和平了"。</p>
+            </div>
+
+            <div class="section-subtitle">AI产业：海外持续催化</div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：信息早知道（华西计算机）</div>
+                <p>马斯克称若保持强劲加速度，SpaceX AI约6个月后就能领跑。影石正布局AI眼镜，或采用"分体电池"设计。DeepSeek Harness官方桌面版预览偷跑。OpenAI、Anthropic被要求在完成白宫测试前不能向英国分享新模型。谷歌推出搭载实时虚拟形象功能的Gemini 3.8 Live。</p>
+            </div>
+            <div class="viewpoint">
+                <div class="viewpoint-source">来源：傅里叶的猫（天风海外）</div>
+                <p>AI4S（AI for Science）板块再度爆发：TWIST大涨16%，DNA涨19%，BRKR/TEM均涨7%。资本市场开始定价OpenAI和Anthropic的"科研主权"对湿实验生物制药的拉动，但跨行业趋势仍未被重视。预测明年用于科研突破的Agent将突破百万级，仪器、试验、研发支出均将大幅增长。</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🔥 板块热度排行</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>板块名称</th>
+                        <th>热度</th>
+                        <th>核心逻辑</th>
+                        <th>来源群</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>碳化硅 / SiC</strong></td>
+                        <td><span class="stars">★★★★★</span></td>
+                        <td>瀚天天成公布巨额增购合作（最高销售额约9580万美元），SiC产业景气度再度验证。衬底需求有望从25年85亿元增长至约2000亿元。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>AI4S / AI for Science</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>美股AI4S板块爆发，科研Agent明年或突破百万级。湿实验层CAGR需上修34%，仪器与纳米表征上修30%，EDA编排上修5-10%。</td>
+                        <td>傅里叶的猫</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>内存接口芯片 / MRDIMM</strong></td>
+                        <td><span class="stars">★★★★☆</span></td>
+                        <td>Bernstein看好澜起：Agentic AI带动CPU价值重估，DDR成为HBM与存储间关键桥梁。全球内存接口芯片市场从16亿美元增至200亿美元（CAGR 65%）。</td>
+                        <td>傅里叶的猫</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>AI眼镜 / 智能硬件</strong></td>
+                        <td><span class="stars">★★★☆☆</span></td>
+                        <td>影石正布局AI眼镜，或采用"分体电池"设计。AI硬件创新持续，关注节后相关产业链表现。</td>
+                        <td>信息早知道</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📌 重点个股推荐与分析</div>
+            <div class="stock-grid">
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">澜起科技</span>
+                        <span class="tag tag-blue">中长线</span>
+                    </div>
+                    <div class="stock-logic">
+                        Bernstein给予A股400元、H股520港元目标价。Agentic AI带动CPU价值重估，DDR成为HBM与存储间关键桥梁。全球内存接口芯片市场CAGR约65%，MRDIMM渗透率将从2%-3%提升至25%以上，届时MRCD和MDB可能贡献市场约73%收入。CXL是第二增长曲线，DDR4复用对应的CXL控制器市场到2030年或达82亿美元。
+                    </div>
+                    <div class="stock-source">来源：傅里叶的猫（Bernstein研报）| 目标价：A股400元</div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">天岳先进</span>
+                        <span class="tag tag-blue">中长线</span>
+                    </div>
+                    <div class="stock-logic">
+                        碳化硅衬底龙头，9月公告产品销量实现显著增长，市场需求积极释放，产能供给已较为紧张，预计下半年产能将更加紧张。SiC衬底需求有望从25年85亿元增长至约2000亿元。
+                    </div>
+                    <div class="stock-source">来源：信息早知道（华西电子）| 板块：碳化硅衬底</div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">晶升股份</span>
+                        <span class="tag tag-orange">短线</span>
+                    </div>
+                    <div class="stock-logic">
+                        碳化硅设备受益标的，SiC行业进入高速成长期，AI、工业、消费、车规等多方位需求持续增长，设备端率先受益。
+                    </div>
+                    <div class="stock-source">来源：信息早知道（华西电子）| 板块：SiC设备</div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">新洁能</span>
+                        <span class="tag tag-orange">短线</span>
+                    </div>
+                    <div class="stock-logic">
+                        碳化硅芯片器件受益标的，SiC功率器件需求爆发，涵盖新能源汽车、光伏储能、工业电源等多场景。
+                    </div>
+                    <div class="stock-source">来源：信息早知道（华西电子）| 板块：SiC芯片器件</div>
+                </div>
+                <div class="stock-card">
+                    <div class="stock-header">
+                        <span class="stock-name">阳光电源</span>
+                        <span class="tag tag-blue">中长线</span>
+                    </div>
+                    <div class="stock-logic">
+                        SST（固态变压器）受益标的，SiC在电力电子领域的应用拓展，固态变压器是SiC器件的重要应用场景之一。
+                    </div>
+                    <div class="stock-source">来源：信息早知道（华西电子）| 板块：SST/电力电子</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">⚖️ 市场情绪与风险提示</div>
+            <div class="two-col">
+                <div class="risk-col">
+                    <div class="col-title">⚠️ 主要风险</div>
+                    <ul class="col-list">
+                        <li>美伊谈判存在长期化可能，霍尔木兹海峡通航时间不确定</li>
+                        <li>11月美国中期选举前地缘政治博弈可能加剧</li>
+                        <li>假期海外市场波动可能传导至节后A股开盘</li>
+                        <li>SiC行业竞争加剧，订单落地交付存在风险</li>
+                    </ul>
+                </div>
+                <div class="signal-col">
+                    <div class="col-title">✅ 积极信号</div>
+                    <ul class="col-list">
+                        <li>伊朗明确表态愿推进谈判，重开霍尔木兹海峡意愿积极</li>
+                        <li>美股假期延续上涨，AI产业催化不断</li>
+                        <li>SiC产业景气度获订单验证，需求端高增长确定性强</li>
+                        <li>AI4S等前沿方向获资本市场认可，长期空间打开</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">💡 节后关注要点</div>
+            <div class="highlight-list">
+                <div class="highlight-item">
+                    <strong>1. 美伊谈判进展</strong><br>
+                    关注伊朗是否如期重开霍尔木兹海峡，以及美方是否放松经济封锁。油价波动将直接影响通胀预期和全球风险偏好。
+                </div>
+                <div class="highlight-item">
+                    <strong>2. 碳化硅产业链</strong><br>
+                    瀚天天成巨额订单验证行业高景气，关注天岳先进、晶升股份、新洁能等设备/衬底/器件端标的节后表现。
+                </div>
+                <div class="highlight-item">
+                    <strong>3. AI硬件创新</strong><br>
+                    影石布局AI眼镜、DeepSeek Harness桌面版发布，关注AI硬件创新对消费电子板块的催化。
+                </div>
+                <div class="highlight-item">
+                    <strong>4. 内存接口芯片</strong><br>
+                    Bernstein看好澜起科技长期逻辑，MRDIMM渗透率提升+CXL第二曲线，关注节后半导体板块情绪。
+                </div>
+                <div class="highlight-item">
+                    <strong>5. AI4S跨行业机会</strong><br>
+                    科研Agent爆发带动仪器、试验、研发支出增长，关注湿实验层、仪器测量、EDA编排等细分方向。
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            数据来源：15个飞书交流群每日观点整理 · 仅供个人参考，不构成投资建议 · 生成时间：2026-09-25 23:00
+        </div>
+    </div>
+</body>
+</html>
